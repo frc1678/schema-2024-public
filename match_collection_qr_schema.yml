@@ -48,14 +48,13 @@ subjective_aim:
 
 
 # Contains all the enums and their values
-enums:
-  # Action type is a string representation of a base 36 integer
-  action_type:
-    score_ball_high: '00'
-    score_ball_low: '01'
-    start_incap: '02'
-    end_incap: '03'
-    control_panel_rotation: '04'
-    control_panel_position: '05'
-    start_climb: '06'
-    end_climb: '07'
+# Action type is a string representation of a base 36 integer
+action_type:
+  score_ball_high: '00'
+  score_ball_low: '01'
+  start_incap: '02'
+  end_incap: '03'
+  control_panel_rotation: '04'
+  control_panel_position: '05'
+  start_climb: '06'
+  end_climb: '07'
