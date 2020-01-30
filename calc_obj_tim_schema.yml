@@ -6,7 +6,7 @@ schema_file:
   # Incremented every merged schema change
   version: 1
 
-# Calculations built around counting timeline actions with certain specifications.
+# Calculations built around counting timeline actions with certain key:value pairs.
 timeline_counts:
   auto_balls_low:
     action_type: outtake
@@ -32,12 +32,15 @@ timeline_bools:
   control_panel_position:
     action_type: control_panel_position
 
-# Calculations built around measuring the time between two actions.
-cycle_time:
+# Calculations built around measuring the time between two timeline actions.
+# First item in each list is the start item key:value pair requirements, second item is the end item.
+timeline_cycle_time:
   incap:
-    action_type: [start_incap, end_incap]
+    - action_type: start_incap
+    - action_type: end_incap
 
 # Calculations built around pulling data from TBA.
+# key is the name in our local MongoDB database, value is a dict of TBA key to TBA value
 tba:
   auto_line:
     initLineRobot: Exited
