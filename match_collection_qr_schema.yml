@@ -28,7 +28,8 @@ objective_tim:
   _separator: '$' # Separates key:value pairs
   team_number: [Z, int] # int properties not needed but int is more intuitive
   scout_name: [Y, str]
-  timeline: [X, list, dict] # List of dictionaries
+  scout_id: [X, int] # Used to determine which tablets have not submitted
+  timeline: [W, list, dict] # List of dictionaries
 
 # Timeline is part of objective match collection QR
 # Data for an action in the timeline
@@ -44,8 +45,9 @@ subjective_aim:
   _start_character: '*' # First character in QR used to identify QR type
   _separator: '$' # Separates each key:value pair
   _separator_internal: ':' # Separates each ranking list item
-  speed_rankings: [A, list, int] # List of team numbers (ints)
-  agility_rankings: [B, list, int] # List of team numbers (ints)
+  alliance_color: [A, str] # Used to determine which (if any) subjective scouts have not submitted data
+  speed_rankings: [B, list, int] # List of team numbers (ints)
+  agility_rankings: [C, list, int] # List of team numbers (ints)
 
 
 # Contains all the enums and their values
