@@ -9,7 +9,7 @@ schema_file:
 # Stores fields that will be added to database but do not require calculations
 data:
   match_number: int
-  alliance_color: Enum
+  alliance_color_is_red: bool
 
 # Information on calculations that will be performed
 calculations:
@@ -24,8 +24,3 @@ calculations:
   predicted_rp2:
     type: float
     requires: [calc_obj_team]
-
-enums:
-  alliance_color:
-    red: red
-    blue: blue
