@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 data:
   team_number: int
@@ -19,6 +19,8 @@ calculations:
     type: float
   team_name:
     type: str
+  climb_percent_success:
+    type: float
 
 # Calcs based on counting team in match bools
 counts:
