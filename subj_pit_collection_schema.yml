@@ -4,11 +4,11 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Stores data type/structure
 schema:
   team_number: int
-  climber_strap_installation_time: int
+  climber_strap_installation_difficulty: int
   climber_strap_installation_notes: str
 
