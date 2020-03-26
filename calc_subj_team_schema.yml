@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -21,4 +21,4 @@ calculations:
   driver_ability:
     type: float
     requires: [driver_agility, driver_rendezvous_agility]
-    weights: [0.5, 0.5]
+    weights: [0.8, 0.2]

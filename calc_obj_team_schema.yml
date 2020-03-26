@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -47,5 +47,5 @@ counts:
   climb_all_attempts:
     tim_fields:
       not:
-        climb_time: null
+        climb_time: 0
     type: int

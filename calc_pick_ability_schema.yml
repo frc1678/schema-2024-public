@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 data:
   team_number: int
@@ -19,26 +19,26 @@ calculations:
       - tele_avg_balls_outer
       - auto_avg_balls_inner
       - tele_avg_balls_inner
+      - climb_percent_success
     weights:
-      - 2
-      - 1
-      - 4
-      - 2
-      - 6
-      - 3
+      - 2 # auto_avg_balls_low
+      - 1 # tele_avg_balls_low
+      - 4 # auto_avg_balls_outer
+      - 2 # tele_avg_balls_outer
+      - 6 # auto_avg_balls_inner
+      - 3 # tele_avg_balls_inner
+      - 25 # climb_percent_success
   second_pick_ability:
     type: float
     requires:
       - auto_avg_balls_low
-      - tele_avg_balls_low
       - auto_avg_balls_outer
-      - tele_avg_balls_outer
       - auto_avg_balls_inner
-      - tele_avg_balls_inner
+      - climb_percent_success
+      - driver_ability
     weights:
-      - 2
-      - 1
-      - 4
-      - 2
-      - 6
-      - 3
+      - 2 # auto_avg_balls_low
+      - 4 # auto_avg_balls_outer
+      - 6 # auto_avg_balls_inner
+      - 25 # climb_percent_success
+      - -15 # driver_ability, negative because better driver abilities are negative
