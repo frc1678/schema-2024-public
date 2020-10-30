@@ -1,0 +1,73 @@
+# Holds information about Collections
+
+# Contains information about this schema file
+schema_file:
+  # Version of schema file
+  # Incremented every merged schema change
+  version: 1
+
+collections:
+  # Each key is a collection within a competition database
+  # schema is the collection's associated schema file
+  # indexes are what fields will have indexes added to them within the collection
+  raw_obj_pit:
+    schema: 'obj_pit_collection_schema.yml'
+    indexes:
+      - 'team_number'
+  raw_qr:
+    schema: 'match_collection_qr_schema.yml'
+    indexes: null 
+  raw_subj_pit:
+    schema: 'subj_pit_collection_schema.yml'
+    indexes:
+      - 'team_number'
+  tba_cache:
+    schema: null
+    indexes:
+      - 'api_url'
+  unconsolidated_obj_tim:
+    schema: 'match_collection_qr_schema.yml'
+    indexes:
+      - 'match_number'
+      - 'team_number'
+  obj_tim: 
+    schema: 'calc_obj_tim_schema.yml'
+    indexes:
+      - 'match_number'
+      - 'team_number'
+  obj_team:
+    schema: 'calc_obj_team_schema.yml'
+    indexes:
+      - 'team_number'
+  subj_aim:
+    schema: 'calc_subj_team_schema.yml'
+    indexes:
+      - 'match_number'
+  subj_team:
+    schema: 'calc_subj_team_schema.yml'
+    indexes:
+      - 'team_number'
+  tba_tim:
+    schema: 'calc_tba_tim_schema.yml'
+    indexes:
+      - 'match_number'
+      - 'team_number'
+  tba_team:
+    schema: 'calc_tba_team_schema.yml'
+    indexes:
+      - 'team_number'
+  predicted_aim:
+    schema: 'calc_predicted_aim_schema.yml'
+    indexes:
+      - 'match_number'
+  predicted_team:
+    schema: 'calc_predicted_team_schema.yml'
+    indexes:
+      - 'team_number'
+  pickability:
+    schema: 'calc_pick_ability_schema.yml'
+    indexes:
+      - 'team_number'
+  viewer_data:
+    schema: null
+    indexes: null
