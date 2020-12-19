@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 collections:
   # Each key is a collection within a competition database
@@ -40,7 +40,7 @@ collections:
     indexes:
       - 'team_number'
   subj_aim:
-    schema: 'calc_subj_team_schema.yml'
+    schema: 'match_collection_qr_schema.yml'
     indexes:
       - 'match_number'
   subj_team:

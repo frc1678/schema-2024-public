@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -14,11 +14,11 @@ data:
 calculations:
   driver_agility:
     type: float
-    requires: [agility]
+    requires: [subj_aim.agility_rankings]
   driver_rendezvous_agility:
     type: float
-    requires: [speed]
+    requires: [subj_aim.rendezvous_agility_rankings]
   driver_ability:
     type: float
-    requires: [driver_agility, driver_rendezvous_agility]
+    requires: [subj_team.driver_agility, subj_team.driver_rendezvous_agility]
     weights: [0.8, 0.2]

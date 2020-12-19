@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 data:
   team_number: int
@@ -13,13 +13,13 @@ calculations:
   first_pick_ability:
     type: float
     requires:
-      - auto_avg_balls_low
-      - tele_avg_balls_low
-      - auto_avg_balls_outer
-      - tele_avg_balls_outer
-      - auto_avg_balls_inner
-      - tele_avg_balls_inner
-      - climb_percent_success
+      - obj_team.auto_avg_balls_low
+      - obj_team.tele_avg_balls_low
+      - obj_team.auto_avg_balls_outer
+      - obj_team.tele_avg_balls_outer
+      - tba_team.auto_avg_balls_inner
+      - tba_team.tele_avg_balls_inner
+      - tba_team.climb_percent_success
     weights:
       - 2 # auto_avg_balls_low
       - 1 # tele_avg_balls_low
@@ -31,11 +31,11 @@ calculations:
   second_pick_ability:
     type: float
     requires:
-      - auto_avg_balls_low
-      - auto_avg_balls_outer
-      - auto_avg_balls_inner
-      - climb_percent_success
-      - driver_ability
+      - obj_team.auto_avg_balls_low
+      - obj_team.auto_avg_balls_outer
+      - tba_team.auto_avg_balls_inner
+      - tba_team.climb_percent_success
+      - subj_team.driver_ability
     weights:
       - 2 # auto_avg_balls_low
       - 4 # auto_avg_balls_outer

@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -13,39 +13,39 @@ data:
 # Averages of fields in consolidated TIMs
 averages:
   auto_avg_balls_low:
-    tim_fields: [auto_balls_low]
+    tim_fields: [obj_tim.auto_balls_low]
     type: float
   auto_avg_balls_high:
-    tim_fields: [auto_balls_high]
+    tim_fields: [obj_tim.auto_balls_high]
     type: float
   auto_avg_balls_total:
-    tim_fields: [auto_balls_low, auto_balls_high]
+    tim_fields: [obj_tim.auto_balls_low, obj_tim.auto_balls_high]
     type: float
   tele_avg_balls_low:
-    tim_fields: [tele_balls_low]
+    tim_fields: [obj_tim.tele_balls_low]
     type: float
   tele_avg_balls_high:
-    tim_fields: [tele_balls_high]
+    tim_fields: [obj_tim.tele_balls_high]
     type: float
   tele_avg_balls_total:
-    tim_fields: [tele_balls_low, tele_balls_high]
+    tim_fields: [obj_tim.tele_balls_low, obj_tim.tele_balls_high]
     type: float
   avg_incap_time:
-    tim_fields: [incap]
+    tim_fields: [obj_tim.incap]
     type: float
 
 # Counts of occurrences in consolidated TIMs
 counts:
   tele_cp_rotation_successes:
     tim_fields:
-      control_panel_rotation: True
+      obj_tim.control_panel_rotation: True
     type: int
   tele_cp_position_successes:
     tim_fields:
-      control_panel_position: True
+      obj_tim.control_panel_position: True
     type: int
   climb_all_attempts:
     tim_fields:
       not:
-        climb_time: 0
+        obj_tim.climb_time: 0
     type: int

@@ -6,6 +6,7 @@ schema_file:
   # Incremented every merged schema change
   version: 1
 
+# TODO: Add collection information to data fields once schema is implemented
 # Non-calculated data
 data:
   scout_name: str
