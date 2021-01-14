@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 collections:
   # Each key is a collection within a competition database
@@ -13,61 +13,71 @@ collections:
   raw_obj_pit:
     schema: 'obj_pit_collection_schema.yml'
     indexes:
-      - 'team_number'
+      - fields: ['team_number']
+        unique: True
   raw_qr:
     schema: 'match_collection_qr_schema.yml'
     indexes: null 
   raw_subj_pit:
     schema: 'subj_pit_collection_schema.yml'
     indexes:
-      - 'team_number'
+      - fields: ['team_number']
+        unique: True
   tba_cache:
     schema: null
     indexes:
-      - 'api_url'
+      - fields: ['api_url']
+        unique: False
   unconsolidated_obj_tim:
     schema: 'match_collection_qr_schema.yml'
     indexes:
-      - 'match_number'
-      - 'team_number'
+      - fields: ['team_number', 'match_number']
+        unique: False
   obj_tim: 
     schema: 'calc_obj_tim_schema.yml'
     indexes:
-      - 'match_number'
-      - 'team_number'
+      - fields: ['team_number', 'match_number']
+        unique: True
   obj_team:
     schema: 'calc_obj_team_schema.yml'
     indexes:
-      - 'team_number'
+      - fields: ['team_number']
+        unique: True
   subj_aim:
     schema: 'match_collection_qr_schema.yml'
     indexes:
-      - 'match_number'
+      - fields: ['match_number']
+        unique: False
   subj_team:
     schema: 'calc_subj_team_schema.yml'
     indexes:
-      - 'team_number'
+      - fields: ['team_number']
+        unique: True
   tba_tim:
     schema: 'calc_tba_tim_schema.yml'
     indexes:
-      - 'match_number'
-      - 'team_number'
+      - fields: ['team_number', 'match_number']
+        unique: True
   tba_team:
     schema: 'calc_tba_team_schema.yml'
     indexes:
-      - 'team_number'
+      - fields: ['team_number']
+        unique: True
   predicted_aim:
     schema: 'calc_predicted_aim_schema.yml'
     indexes:
-      - 'match_number'
+      - fields: ['match_number']
+        unique: False
   predicted_team:
     schema: 'calc_predicted_team_schema.yml'
     indexes:
-      - 'team_number'
+      - fields: ['team_number']
+        unique: True
   pickability:
     schema: 'calc_pick_ability_schema.yml'
     indexes:
-      - 'team_number'
+      - fields: ['team_number']
+        unique: True
   viewer_data:
     schema: null
     indexes: null
