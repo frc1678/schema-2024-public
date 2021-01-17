@@ -1,4 +1,12 @@
 # Used for calculating pick ability
+#
+# Example:
+#
+# {'first_pick_ability': 79.2763,
+# 'second_pick_ability': 89.7082,
+# 'team_number': 28}
+#
+
 
 # Contains information about this schema file
 schema_file:

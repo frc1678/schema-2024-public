@@ -1,4 +1,20 @@
 # Used for running team calcs in Server
+#
+# Example:
+#
+# {'auto_avg_balls_high': 3.8381,
+# 'auto_avg_balls_low': 56.4716,
+# 'auto_avg_balls_total': 10.4353,
+# 'avg_incap_time': 70.5843,
+# 'climb_all_attempts': 23,
+# 'team_number': 29,
+# 'tele_avg_balls_high': 92.9179,
+# 'tele_avg_balls_low': 17.4558,
+# 'tele_avg_balls_total': 5.5324,
+# 'tele_cp_position_successes': 54,
+# 'tele_cp_rotation_successes': 66}
+#
+
 
 # Contains information about this schema file
 schema_file:

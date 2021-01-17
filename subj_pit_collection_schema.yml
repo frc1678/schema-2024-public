@@ -1,4 +1,12 @@
 # Used for Pit Collection data storage by Pit Scout and for storage of this data in MongoDB
+#
+# Example:
+#
+# {'climber_strap_installation_difficulty': 62,
+# 'climber_strap_installation_notes': 'Robot did not exist, curious',
+# 'team_number': 61}
+#
+
 
 # Contains information about this schema file
 schema_file:

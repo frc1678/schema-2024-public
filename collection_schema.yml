@@ -1,4 +1,20 @@
 # Holds information about Collections
+#
+# Example:
+#
+# {'calc_obj_team_schema.yml',
+# 'calc_obj_tim_schema.yml',
+# 'calc_pick_ability_schema.yml',
+# 'calc_predicted_aim_schema.yml',
+# 'calc_predicted_team_schema.yml',
+# 'calc_subj_team_schema.yml',
+# 'calc_tba_team_schema.yml',
+# 'calc_tba_tim_schema.yml',
+# 'match_collection_qr_schema.yml',
+# 'obj_pit_collection_schema.yml',
+# 'subj_pit_collection_schema.yml'}
+#
+
 
 # Contains information about this schema file
 schema_file:

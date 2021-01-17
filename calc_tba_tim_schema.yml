@@ -1,4 +1,15 @@
 # Used for calculating objective team in match data based on TBA data
+#
+# Example:
+#
+# {'auto_line': False,
+# 'climb': True,
+# 'level_climb': True,
+# 'match_number': 34,
+# 'park': True,
+# 'team_number': 88}
+#
+
 
 # Contains information about this schema file
 schema_file:
@@ -7,8 +18,8 @@ schema_file:
   version: 4
 
 data:
-  matchNumber: int
-  teamNumber: int
+  match_number: int
+  team_number: int
 
 # Calculations built around pulling data from TBA.
 # key is the name in our local MongoDB database, value is a dict of TBA key to TBA value

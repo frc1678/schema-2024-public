@@ -1,4 +1,20 @@
 # Used for calculating objective team in match data in Server
+#
+# Example:
+#
+# {'auto_balls_high': 67,
+# 'auto_balls_low': 31,
+# 'climb_time': 8,
+# 'confidence_rating': 86,
+# 'control_panel_position': False,
+# 'control_panel_rotation': True,
+# 'incap': 8,
+# 'match_number': 8,
+# 'team_number': 79,
+# 'tele_balls_high': 97,
+# 'tele_balls_low': 11}
+#
+
 
 # Contains information about this schema file
 schema_file:

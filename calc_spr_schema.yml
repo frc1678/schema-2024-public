@@ -1,4 +1,10 @@
 # Schema for scout precision rankings
+#
+# Example:
+#
+# {'scout_name': 'Vand', 'spr': 73.1566}
+#
+
 
 # Contains information about this schema file
 schema_file:

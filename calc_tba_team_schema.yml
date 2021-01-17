@@ -1,4 +1,19 @@
 # Used for calculating team data based on tba data
+#
+# Example:
+#
+# {'auto_high_balls_percent_inner': 3.8169,
+# 'auto_line_successes': 29,
+# 'climb_all_success_avg_time': 30.7254,
+# 'climb_all_successes': 4,
+# 'climb_level_successes': 38,
+# 'climb_percent_success': 18.0845,
+# 'park_successes': 99,
+# 'team_name': 'Ray of Hope',
+# 'team_number': 75,
+# 'tele_high_balls_percent_inner': 92.8527}
+#
+
 
 # Contains information about this schema file
 schema_file:

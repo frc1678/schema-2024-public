@@ -1,4 +1,14 @@
 # Used for calculating match predictions about an alliance in Server
+#
+# Example:
+#
+# {'alliance_color_is_red': True,
+# 'match_number': 74,
+# 'predicted_rp1': 41.7888,
+# 'predicted_rp2': 62.5841,
+# 'predicted_score': 24.3065}
+#
+
 
 # Contains information about this schema file
 schema_file:
