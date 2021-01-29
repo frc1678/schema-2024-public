@@ -4,7 +4,7 @@
 #
 # {'calc_obj_team_schema.yml',
 # 'calc_obj_tim_schema.yml',
-# 'calc_pick_ability_schema.yml',
+# 'calc_pickability_schema.yml',
 # 'calc_predicted_aim_schema.yml',
 # 'calc_predicted_team_schema.yml',
 # 'calc_subj_team_schema.yml',
@@ -20,7 +20,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 collections:
   # Each key is a collection within a competition database
@@ -90,7 +90,7 @@ collections:
       - fields: ['team_number']
         unique: True
   pickability:
-    schema: 'calc_pick_ability_schema.yml'
+    schema: 'calc_pickability_schema.yml'
     indexes:
       - fields: ['team_number']
         unique: True

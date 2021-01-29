@@ -2,8 +2,8 @@
 #
 # Example:
 #
-# {'first_pick_ability': 79.2763,
-# 'second_pick_ability': 89.7082,
+# {'first_pickability': 79.2763,
+# 'second_pickability': 89.7082,
 # 'team_number': 28}
 #
 
@@ -12,13 +12,13 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 data:
   team_number: int
 
 calculations:
-  first_pick_ability:
+  first_pickability:
     type: float
     requires:
       - obj_team.auto_avg_balls_low
@@ -36,7 +36,7 @@ calculations:
       - 6 # auto_avg_balls_inner
       - 3 # tele_avg_balls_inner
       - 25 # climb_percent_success
-  second_pick_ability:
+  second_pickability:
     type: float
     requires:
       - obj_team.auto_avg_balls_low
