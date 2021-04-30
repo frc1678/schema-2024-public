@@ -12,7 +12,11 @@
 # 'tele_avg_balls_low': 17.4558,
 # 'tele_avg_balls_total': 5.5324,
 # 'tele_cp_position_successes': 54,
-# 'tele_cp_rotation_successes': 66}
+# 'tele_cp_rotation_successes': 66,
+# 'auto_sd_balls_low': 4.6602,
+# 'auto_sd_balls_high': 3.2754,
+# 'tele_sd_balls_low': 8.9442,
+# 'tele_sd_balls_high': 2.7654}
 #
 
 
@@ -20,7 +24,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -48,6 +52,22 @@ averages:
     type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap]
+    type: float
+
+# Standard deviations of fields in consolidated TIMs
+# Used for predictions
+standard_deviations:
+  auto_sd_balls_low:
+    tim_fields: [obj_tim.auto_balls_low]
+    type: float
+  auto_sd_balls_high:
+    tim_fields: [obj_tim.auto_balls_high]
+    type: float
+  tele_sd_balls_low:
+    tim_fields: [obj_tim.tele_balls_low]
+    type: float
+  tele_sd_balls_high:
+    tim_fields: [obj_tim.tele_balls_high]
     type: float
 
 # Counts of occurrences in consolidated TIMs
