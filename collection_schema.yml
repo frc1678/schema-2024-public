@@ -20,7 +20,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 collections:
   # Each key is a collection within a competition database
@@ -82,8 +82,8 @@ collections:
   predicted_aim:
     schema: 'calc_predicted_aim_schema.yml'
     indexes:
-      - fields: ['match_number']
-        unique: False
+      - fields: ['match_number', 'alliance_color_is_red']
+        unique: True
   predicted_team:
     schema: 'calc_predicted_team_schema.yml'
     indexes:

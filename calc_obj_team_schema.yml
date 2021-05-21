@@ -24,7 +24,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -84,4 +84,9 @@ counts:
     tim_fields:
       not:
         obj_tim.climb_time: 0
+    type: int
+  matches_played:
+    tim_fields:
+      not:
+        match_number: 0
     type: int
