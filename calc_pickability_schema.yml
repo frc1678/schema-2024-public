@@ -12,7 +12,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 data:
   team_number: int
@@ -23,8 +23,8 @@ calculations:
     requires:
       - obj_team.auto_avg_balls_low
       - obj_team.tele_avg_balls_low
-      - obj_team.auto_avg_balls_outer
-      - obj_team.tele_avg_balls_outer
+      - tba_team.auto_avg_balls_outer
+      - tba_team.tele_avg_balls_outer
       - tba_team.auto_avg_balls_inner
       - tba_team.tele_avg_balls_inner
       - tba_team.climb_percent_success
@@ -40,7 +40,7 @@ calculations:
     type: float
     requires:
       - obj_team.auto_avg_balls_low
-      - obj_team.auto_avg_balls_outer
+      - tba_team.auto_avg_balls_outer
       - tba_team.auto_avg_balls_inner
       - tba_team.climb_percent_success
       - subj_team.driver_ability

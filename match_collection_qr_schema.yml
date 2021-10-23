@@ -46,8 +46,8 @@ subjective_aim:
   _start_character: '*' # First character in QR used to identify QR type
   _separator: '$' # Separates each key:value pair
   _separator_internal: ':' # Separates each ranking list item
-  rendezvous_agility_rankings: [A, list, int] # List of team numbers (ints)
-  agility_rankings: [B, list, int] # List of team numbers (ints)
+  quickness_rankings: [A, list, int] # List of team numbers (ints)
+  field_awareness_rankings: [B, list, int] # List of team numbers (ints)
 
 
 # Contains all the enums and their values

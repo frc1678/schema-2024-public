@@ -19,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 7
+  version: 8
 
 data:
   team_number: int
@@ -29,6 +29,14 @@ calculations:
   auto_high_balls_percent_inner:
     type: float
   tele_high_balls_percent_inner:
+    type: float
+  auto_avg_balls_outer:
+    type: float
+  tele_avg_balls_outer:
+    type: float
+  auto_avg_balls_inner:
+    type: float
+  tele_avg_balls_inner:
     type: float
   climb_all_success_avg_time:
     type: float
