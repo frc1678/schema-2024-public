@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 18
+  version: 19
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
