@@ -4,6 +4,10 @@
 #
 # {'alliance_color_is_red': True,
 # 'match_number': 74,
+# 'has_actual_data': True,
+# 'actual_score': 30,
+# 'actual_rp1': 1.0
+# 'actual_rp2': 0.0
 # 'predicted_rp1': 41.7888,
 # 'predicted_rp2': 62.5841,
 # 'predicted_score': 24.3065}
@@ -14,12 +18,17 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Stores fields that will be added to database but do not require calculations
 data:
   match_number: int
   alliance_color_is_red: bool
+  # Whether or not actual TBA data has been pulled to replace the predicted data
+  has_actual_data: bool
+  actual_score: int
+  actual_rp1: float
+  actual_rp2: float
 
 # Information on calculations that will be performed
 calculations:
