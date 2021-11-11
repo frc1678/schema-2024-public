@@ -12,7 +12,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 data:
   team_number: int
@@ -49,4 +49,4 @@ calculations:
       - 4 # auto_avg_balls_outer
       - 6 # auto_avg_balls_inner
       - 25 # climb_percent_success
-      - -15 # driver_ability, negative because better driver abilities are negative
+      - 15 # driver_ability
