@@ -2,11 +2,17 @@
 #
 # Example:
 #
+# {'team_number': 98,
 # 'drivetrain': 1,
 # 'drivetrain_motor_type': 1,
 # 'drivetrain_motors': 86,
 # 'has_ground_intake': True,
-# 'team_number': 98}
+# 'can_eject_terminal': False,
+# 'has_vision': True,
+# 'can_cheescake': True,
+# 'can_intake_terminal': False,
+# 'can_under_low_rung': False,
+# 'can_climb': True}
 #
 
 
@@ -23,6 +29,12 @@ schema:
   drivetrain_motors: int
   drivetrain_motor_type: Enum
   has_ground_intake: bool
+  can_eject_terminal: bool
+  has_vision: bool
+  can_cheescake: bool
+  can_intake_terminal: bool
+  can_under_low_rung: bool
+  can_climb: bool
 
 
 # Stores Enum data
