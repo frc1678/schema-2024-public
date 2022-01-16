@@ -30,9 +30,9 @@ objective_tim:
   _separator: '$' # Separates key:value pairs
   team_number: [Z, int] # int properties not needed but int is more intuitive
   scout_id: ['Y', int] # Used to determine which tablets have not submitted ('Y' in quotes because it's a keyword on its own)
-  start_position: [X, Enum] # Encoded as an int from [1, 4]
+  start_position: [X, str] # str representing where a robot starts in auto ('one', 'two', 'three', or 'four')
   timeline: [W, list, dict] # List of dictionaries
-  climb_level: [V, Enum] # Encoded as an int from [0, 4]
+  climb_level: [V, str] # str representing where a robot climbs to ('none', 'low', 'mid', 'high' or 'traversal')
 
 
 # Timeline is part of objective match collection QR
@@ -71,17 +71,3 @@ action_type:
   end_incap: AL
   start_climb: AM
   end_climb: AN
-
-climb_level:
-  none: 0
-  low: 1
-  mid: 2
-  high: 3
-  traversal: 4
-
-start_position:
-  one: 1
-  two: 2
-  three: 3
-  four: 4
-  
