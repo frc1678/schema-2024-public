@@ -2,7 +2,6 @@
 #
 # Example:
 #
-# {'can_cross_trench': True,
 # 'drivetrain': 1,
 # 'drivetrain_motor_type': 1,
 # 'drivetrain_motors': 86,
@@ -20,7 +19,6 @@ schema_file:
 # Stores data type/structure
 schema:
   team_number: int
-  can_cross_trench: bool
   drivetrain: Enum
   drivetrain_motors: int
   drivetrain_motor_type: Enum
