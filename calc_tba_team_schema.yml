@@ -2,16 +2,9 @@
 #
 # Example:
 #
-# {'auto_high_balls_percent_inner': 3.8169,
-# 'auto_line_successes': 29,
-# 'climb_all_success_avg_time': 30.7254,
-# 'climb_all_successes': 4,
-# 'climb_level_successes': 38,
-# 'climb_percent_success': 18.0845,
-# 'park_successes': 99,
+# {'auto_line_successes': 29,
 # 'team_name': 'Ray of Hope',
-# 'team_number': 75,
-# 'tele_high_balls_percent_inner': 92.8527}
+# 'team_number': 75}
 #
 
 
@@ -19,50 +12,18 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 8
+  version: 1
 
 data:
   team_number: int
 
 # Special calculations that can't be grouped into other calcs
 calculations:
-  auto_high_balls_percent_inner:
-    type: float
-  tele_high_balls_percent_inner:
-    type: float
-  auto_avg_balls_outer:
-    type: float
-  tele_avg_balls_outer:
-    type: float
-  auto_avg_balls_inner:
-    type: float
-  tele_avg_balls_inner:
-    type: float
-  climb_all_success_avg_time:
-    type: float
   team_name:
     type: str
-  climb_percent_success:
-    type: float
 
 # Calcs based on counting team in match bools
 counts:
-  climb_all_successes:
-    type: int
-    tim_fields:
-      tba_tim.climb: true
-      obj_tim.climb_time:
-        not: 0
-  climb_level_successes:
-    type: int
-    tim_fields:
-      obj_tim.climb_time:
-        not: 0
-      tba_tim.level_climb: True
-  park_successes:
-    type: int
-    tim_fields:
-      tba_tim.park: true
   auto_line_successes:
     type: int
     tim_fields:
