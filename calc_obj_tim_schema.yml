@@ -2,17 +2,31 @@
 #
 # Example:
 #
-# {'auto_balls_high': 67,
-# 'auto_balls_low': 31,
-# 'climb_time': 8,
-# 'confidence_rating': 86,
-# 'control_panel_position': False,
-# 'control_panel_rotation': True,
-# 'incap': 8,
+# {'confidence_rating': 86,
 # 'match_number': 8,
-# 'team_number': 79,
+# 'team_number': 79
+# 'auto_near_hub_highs': 3,
+# 'auto_far_hub_highs': 4,
+# 'auto_launchpad_highs': 2,
+# 'auto_near_other_highs': 5,
+# 'auto_far_other_highs': 9,
+# 'auto_near_hub_lows': 3,
+# 'auto_far_hub_lows': 4,
+# 'tele_near_hub_highs': 3,
+# 'tele_far_hub_highs': 4,
+# 'tele_launchpad_highs': 2,
+# 'tele_near_other_highs': 5,
+# 'tele_far_other_highs': 9,
+# 'tele_near_hub_lows': 3,
+# 'tele_far_hub_lows': 4,
+# 'auto_balls_high': 67,
+# 'auto_balls_low': 31,
 # 'tele_balls_high': 97,
-# 'tele_balls_low': 11}
+# 'tele_balls_low': 11,
+# 'incap': 8,
+# 'climb_time': 8,
+# 'climb_level': 'traversal',
+# 'start_position': 'one'}
 #
 
 
@@ -20,7 +34,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 1
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -28,36 +42,94 @@ data:
   team_number: int
   match_number: int
 
-# Calculations built around counting timeline actions with certain key:value pairs.
+# Calculations built around counting timeline actions with certain key:value pairs
 timeline_counts:
+  auto_near_hub_highs:
+    type: int
+    action_type: score_ball_high_near_hub
+    time: [135, 150]
+  auto_far_hub_highs:
+    type: int
+    action_type: score_ball_high_far_hub
+    time: [135, 150]
+  auto_launchpad_highs:
+    type: int
+    action_type: score_ball_high_launchpad
+    time: [135, 150]
+  auto_near_other_highs:
+    type: int
+    action_type: score_ball_high_near_other
+    time: [135, 150]
+  auto_far_other_highs:
+    type: int
+    action_type: score_ball_high_far_other
+    time: [135, 150]
+  auto_near_hub_lows:
+    type: int
+    action_type: score_ball_low_near_hub
+    time: [135, 150]
+  auto_far_hub_lows:
+    type: int
+    action_type: score_ball_low_far_hub
+    time: [135, 150]
+  tele_near_hub_highs:
+    type: int
+    action_type: score_ball_high_near_hub
+    time: [0, 134]
+  tele_far_hub_highs:
+    type: int
+    action_type: score_ball_high_far_hub
+    time: [0, 134]
+  tele_launchpad_highs:
+    type: int
+    action_type: score_ball_high_launchpad
+    time: [0, 134]
+  tele_near_other_highs:
+    type: int
+    action_type: score_ball_high_near_other
+    time: [0, 134]
+  tele_far_other_highs:
+    type: int
+    action_type: score_ball_high_near_other
+    time: [0, 134]
+  tele_near_hub_lows:
+    type: int
+    action_type: score_ball_low_near_hub
+    time: [0, 134]
+  tele_far_hub_lows:
+    type: int
+    action_type: score_ball_low_far_hub
+    time: [0, 134]
+  intakes:
+    type: int
+    action_type: intake
+    time: [0, 150]
+  exit_ball_catches:
+    type: int
+    action_type: catch_exit_ball
+    time: [0, 150]
+  opp_balls_scored:
+    type: int
+    action_type: score_opponent_ball
+    time: [0, 150]
+
+# Calculations made by adding up other counts
+aggregates:
   auto_balls_low:
     type: int
-    action_type: score_ball_low
-    time: [135, 150]
+    counts: [auto_near_hub_lows, auto_far_hub_lows]
   auto_balls_high:
     type: int
-    action_type: score_ball_high
-    time: [135, 150]
+    counts: [auto_near_hub_highs, auto_far_hub_highs, auto_launchpad_highs, auto_near_other_highs, auto_far_other_highs]
   tele_balls_low:
     type: int
-    action_type: score_ball_low
-    time: [0, 134]
+    counts: [tele_near_hub_lows, tele_far_hub_lows]
   tele_balls_high:
     type: int
-    action_type: score_ball_high
-    time: [0, 134]
+    counts: [tele_near_hub_highs, tele_far_hub_highs, tele_launchpad_highs, tele_near_other_highs, tele_far_other_highs]
 
-# Calculations built around saying whether or not a robot has completed a certain action in a match.
-timeline_bools:
-  control_panel_rotation:
-    type: bool
-    action_type: control_panel_rotation
-  control_panel_position:
-    type: bool
-    action_type: control_panel_position
-
-# Calculations built around measuring the time between two timeline actions.
-# First item in each list is the start item key:value pair requirements, second item is the end item.
+# Calculations built around measuring the time between two timeline actions
+# First item in each list is the start item key:value pair requirements, second item is the end item
 timeline_cycle_time:
   incap:
     type: int
@@ -67,3 +139,10 @@ timeline_cycle_time:
     type: int
     start_action: start_climb
     end_action: end_climb
+
+# Robot actions which are one out of a list of possible actions
+categorical_actions:
+  climb_level:
+    type: str
+  start_position:
+    type: str
