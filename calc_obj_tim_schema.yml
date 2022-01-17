@@ -90,7 +90,7 @@ timeline_counts:
     time: [0, 134]
   tele_far_other_highs:
     type: int
-    action_type: score_ball_high_near_other
+    action_type: score_ball_high_far_other
     time: [0, 134]
   tele_near_hub_lows:
     type: int
