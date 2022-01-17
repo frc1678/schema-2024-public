@@ -2,26 +2,92 @@
 #
 # Example:
 #
-# {'auto_avg_balls_high': 3.8381,
+# {'team_number': 29,
+# 'auto_avg_near_hub_highs': 4.2394,
+# 'auto_avg_far_hub_highs': 7.4532,
+# 'auto_avg_launchpad_highs': 9.3723,
+# 'auto_avg_near_other_highs': 8.2612,
+# 'auto_avg_far_other_highs': 5.2341,
+# 'auto_avg_near_hub_lows': 1.3244,
+# 'auto_avg_far_hub_lows': 8.2354,
+# 'tele_avg_near_hub_highs': 4.2394,
+# 'tele_avg_far_hub_highs': 7.4532,
+# 'tele_avg_launchpad_highs': 9.3723,
+# 'tele_avg_near_other_highs': 8.2612,
+# 'tele_avg_far_other_highs': 5.2341,
+# 'tele_avg_near_hub_lows': 1.3244,
+# 'auto_avg_far_hub_lows': 8.2354,
+# 'auto_avg_balls_high': 3.8381,
 # 'auto_avg_balls_low': 56.4716,
 # 'auto_avg_balls_total': 10.4353,
-# 'avg_incap_time': 70.5843,
-# 'climb_all_attempts': 23,
-# 'team_number': 29,
 # 'tele_avg_balls_high': 92.9179,
 # 'tele_avg_balls_low': 17.4558,
 # 'tele_avg_balls_total': 5.5324,
-# 'tele_cp_position_successes': 54,
-# 'tele_cp_rotation_successes': 66,
+# 'avg_incap_time': 70.5843,
+# 'avg_intakes': 14.3243,
+# 'avg_exit_ball_catches': 1.3247,
+# 'avg_opp_balls_scored': 8.2342,
+# 'lfm_auto_avg_near_hub_highs': 4.2394,
+# 'lfm_auto_avg_far_hub_highs': 7.4532,
+# 'lfm_auto_avg_launchpad_highs': 9.3723,
+# 'lfm_auto_avg_near_other_highs': 8.2612,
+# 'lfm_auto_avg_far_other_highs': 5.2341,
+# 'lfm_auto_avg_near_hub_lows': 1.3244,
+# 'lfm_auto_avg_far_hub_lows': 8.2354,
+# 'lfm_tele_avg_near_hub_highs': 4.2394,
+# 'lfm_tele_avg_far_hub_highs': 7.4532,
+# 'lfm_tele_avg_launchpad_highs': 9.3723,
+# 'lfm_tele_avg_near_other_highs': 8.2612,
+# 'lfm_tele_avg_far_other_highs': 5.2341,
+# 'lfm_tele_avg_near_hub_lows': 1.3244,
+# 'lfm_auto_avg_far_hub_lows': 8.2354,
+# 'lfm_auto_avg_balls_high': 3.8381,
+# 'lfm_auto_avg_balls_low': 56.4716,
+# 'lfm_tele_avg_balls_high': 92.9179,
+# 'lfm_tele_avg_balls_low': 17.4558,
+# 'lfm_avg_incap_time': 5.2341,
+# 'lfm_avg_exit_ball_catches': 3.3241,
+# 'lfm_avg_opp_balls_scored': 5.1392,
 # 'auto_sd_balls_low': 4.6602,
 # 'auto_sd_balls_high': 3.2754,
 # 'tele_sd_balls_low': 8.9442,
 # 'tele_sd_balls_high': 2.7654,
+# 'climb_all_attempts': 23,
+# 'low_rung_successes': 4,
+# 'mid_rung_successes': 2,
+# 'high_rung_successes': 3,
+# 'traversal_rung_successes': 0,
+# 'lfm_climb_all_attempts': 23,
+# 'lfm_low_rung_successes': 4,
+# 'lfm_mid_rung_successes': 2,
+# 'lfm_high_rung_successes': 3,
+# 'lfm_traversal_rung_successes': 0,
 # 'auto_max_balls_low': 5,
 # 'auto_max_balls_high': 5,
 # 'tele_max_balls_low': 5,
 # 'tele_max_balls_high': 5,
-# 'max_incap': 6,}
+# 'max_incap': 6,
+# 'max_exit_ball_catches': 3,
+# 'max_opp_balls_scored': 5,
+# 'max_climb_level': 'HIGH',
+# 'lfm_auto_max_balls_low': 5,
+# 'lfm_auto_max_balls_high': 5,
+# 'lfm_tele_max_balls_low': 5,
+# 'lfm_tele_max_balls_high': 5,
+# 'lfm_max_incap': 6,
+# 'lfm_max_exit_ball_catches': 3,
+# 'lfm_max_opp_balls_scored': 5,
+# 'max_climb_level': 'HIGH',
+# 'mode_climb_level': 'LOW',
+# 'mode_start_position': 'TWO',
+# 'low_avg_time': 10,
+# 'mid_avg_time': 23,
+# 'high_avg_time': 34,
+# 'traversal_avg_time': 0,
+# 'lfm_low_avg_time': 10,
+# 'lfm_mid_avg_time': 23,
+# 'lfm_high_avg_time': 34,
+# 'lfm_traversal_avg_time': 0}
 #
 
 
@@ -29,7 +95,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 8
+  version: 1
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -37,6 +103,48 @@ data:
 
 # Averages of fields in consolidated TIMs
 averages:
+  auto_avg_near_hub_highs:
+    tim_fields: [obj_tim.auto_near_hub_highs]
+    type: float
+  auto_avg_far_hub_highs:
+    tim_fields: [obj_tim.auto_far_hub_highs]
+    type: float
+  auto_avg_launchpad_highs:
+    tim_fields: [obj_tim.auto_launchpad_highs]
+    type: float
+  auto_avg_near_other_highs:
+    tim_fields: [obj_tim.auto_near_other_highs]
+    type: float
+  auto_avg_far_other_highs:
+    tim_fields: [obj_tim.auto_far_other_highs]
+    type: float
+  auto_avg_near_hub_lows:
+    tim_fields: [obj_tim.auto_near_hub_lows]
+    type: float
+  auto_avg_far_hub_lows:
+    tim_fields: [obj_tim.auto_far_hub_lows]
+    type: float
+  tele_avg_near_hub_highs:
+    tim_fields: [obj_tim.tele_near_hub_highs]
+    type: float
+  tele_avg_far_hub_highs:
+    tim_fields: [obj_tim.tele_far_hub_highs]
+    type: float
+  tele_avg_launchpad_highs:
+    tim_fields: [obj_tim.tele_launchpad_highs]
+    type: float
+  tele_avg_near_other_highs:
+    tim_fields: [obj_tim.tele_near_other_highs]
+    type: float
+  tele_avg_far_other_highs:
+    tim_fields: [obj_tim.tele_far_other_highs]
+    type: float
+  tele_avg_near_hub_lows:
+    tim_fields: [obj_tim.tele_near_hub_lows]
+    type: float
+  tele_avg_far_hub_lows:
+    tim_fields: [obj_tim.tele_far_hub_lows]
+    type: float
   auto_avg_balls_low:
     tim_fields: [obj_tim.auto_balls_low]
     type: float
@@ -58,6 +166,78 @@ averages:
   avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
+  avg_intakes:
+    tim_fields: [obj_tim.intakes]
+    type: float
+  avg_exit_ball_catches:
+    tim_fields: [obj_tim.exit_ball_catches]
+    type: float
+  avg_opp_balls_scored:
+    tim_fields: [obj_tim.opp_balls_scored]
+    type: float
+  lfm_auto_avg_near_hub_highs:
+    tim_fields: [obj_tim.auto_near_hub_highs]
+    type: float
+  lfm_auto_avg_far_hub_highs:
+    tim_fields: [obj_tim.auto_far_hub_highs]
+    type: float
+  lfm_auto_avg_launchpad_highs:
+    tim_fields: [obj_tim.auto_launchpad_highs]
+    type: float
+  lfm_auto_avg_near_other_highs:
+    tim_fields: [obj_tim.auto_near_other_highs]
+    type: float
+  lfm_auto_avg_far_other_highs:
+    tim_fields: [obj_tim.auto_far_other_highs]
+    type: float
+  lfm_auto_avg_near_hub_lows:
+    tim_fields: [obj_tim.auto_near_hub_lows]
+    type: float
+  lfm_auto_avg_far_hub_lows:
+    tim_fields: [obj_tim.auto_far_hub_lows]
+    type: float
+  lfm_tele_avg_near_hub_highs:
+    tim_fields: [obj_tim.tele_near_hub_highs]
+    type: float
+  lfm_tele_avg_far_hub_highs:
+    tim_fields: [obj_tim.tele_far_hub_highs]
+    type: float
+  lfm_tele_avg_launchpad_highs:
+    tim_fields: [obj_tim.tele_launchpad_highs]
+    type: float
+  lfm_tele_avg_near_other_highs:
+    tim_fields: [obj_tim.tele_near_other_highs]
+    type: float
+  lfm_tele_avg_far_other_highs:
+    tim_fields: [obj_tim.tele_far_other_highs]
+    type: float
+  lfm_tele_avg_near_hub_lows:
+    tim_fields: [obj_tim.tele_near_hub_lows]
+    type: float
+  lfm_tele_avg_far_hub_lows:
+    tim_fields: [obj_tim.tele_far_hub_lows]
+    type: float
+  lfm_auto_avg_balls_low:
+    tim_fields: [obj_tim.auto_balls_low]
+    type: float
+  lfm_auto_avg_balls_high:
+    tim_fields: [obj_tim.auto_balls_high]
+    type: float
+  lfm_tele_avg_balls_low:
+    tim_fields: [obj_tim.tele_balls_low]
+    type: float
+  lfm_tele_avg_balls_high:
+    tim_fields: [obj_tim.tele_balls_high]
+    type: float
+  lfm_avg_incap_time:
+    tim_fields: [obj_tim.incap]
+    type: float
+  lfm_avg_exit_ball_catches:
+    tim_fields: [obj_tim.exit_ball_catches]
+    type: float
+  lfm_avg_opp_balls_scored:
+    tim_fields: [obj_tim.opp_balls_scored]
+    type: float
 
 # Standard deviations of fields in consolidated TIMs
 # Used for predictions
@@ -77,23 +257,62 @@ standard_deviations:
 
 # Counts of occurrences in consolidated TIMs
 counts:
-  tele_cp_rotation_successes:
-    tim_fields:
-      obj_tim.control_panel_rotation: True
-    type: int
-  tele_cp_position_successes:
-    tim_fields:
-      obj_tim.control_panel_position: True
-    type: int
   climb_all_attempts:
     tim_fields:
       not:
         obj_tim.climb_time: 0
     type: int
+  low_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'LOW'
+    type: int
+  mid_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'MID'
+    type: int
+  high_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'HIGH'
+    type: int
+  traversal_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'TRAVERSAL'
+    type: int
   matches_played:
     tim_fields:
       not:
         match_number: 0
+    type: int
+  matches_incap:
+    tim_fields:
+      not:
+        obj_tim.incap: 0
+    type: int
+  lfm_climb_all_attempts:
+    tim_fields:
+      not:
+        obj_tim.climb_time: 0
+    type: int
+  lfm_low_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'LOW'
+    type: int
+  lfm_mid_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'MID'
+    type: int
+  lfm_high_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'HIGH'
+    type: int
+  lfm_traversal_rung_successes:
+    tim_fields:
+      obj_tim.climb_level: 'TRAVERSAL'
+    type: int
+  lfm_matches_incap:
+    tim_fields:
+      not:
+        obj_tim.incap: 0
     type: int
 
 # Maximum or minimum values in consolidated TIMs
@@ -118,3 +337,104 @@ extrema:
     extrema_type: max
     tim_fields: [obj_tim.incap]
     type: int
+  max_exit_ball_catches:
+    extrema_type: max
+    tim_fields: [obj_tim.exit_ball_catches]
+    type: int
+  max_opp_balls_scored:
+    extrema_type: max
+    tim_fields: [obj_tim.opp_balls_scored]
+    type: int
+  max_climb_level:
+    extrema_type: max
+    tim_fields: [obj_tim.climb_level]
+    type: str
+  lfm_auto_max_balls_low:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_balls_low]
+  lfm_auto_max_balls_high:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_balls_high]
+  lfm_tele_max_balls_low:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_balls_low]
+    type: int
+  lfm_tele_max_balls_high:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_balls_high]
+    type: int
+  lfm_max_incap:
+    extrema_type: max
+    tim_fields: [obj_tim.incap]
+    type: int
+  lfm_max_exit_ball_catches:
+    extrema_type: max
+    tim_fields: [obj_tim.exit_ball_catches]
+    type: int
+  lfm_max_opp_balls_scored:
+    extrema_type: max
+    tim_fields: [obj_tim.opp_balls_scored]
+    type: int
+  lfm_max_climb_level:
+    extrema_type: max
+    tim_fields: [obj_tim.climb_level]
+    type: str
+
+# Most common values
+modes:
+  mode_climb_level:
+    tim_fields: [obj_tim.climb_level]
+    type: str
+  mode_start_position:
+    tim_fields: [obj_tim.start_position]
+    type: str
+  lfm_mode_start_position:
+    tim_fields: [obj_tim.start_position]
+    type: str
+
+# Special calculations for climb times of different levels
+climb_times:
+  low_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'LOW'
+    type: float
+  mid_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'MID'
+    type: float
+  high_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'HIGH'
+    type: float
+  traversal_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'TRAVERSAL'
+    type: float
+  lfm_low_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'LOW'
+    type: float
+  lfm_mid_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'MID'
+    type: float
+  lfm_high_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'HIGH'
+    type: float
+  lfm_traversal_success_avg_time:
+    tim_fields:
+      obj_tim.climb_level: 'TRAVERSAL'
+    type: float
+
+success_rates:
+  climb_percent_success:
+    team_successes: [low_rung_successes, mid_rung_successes, high_rung_successes, traversal_rung_successes]
+    team_attempts: [climb_all_attempts]
+    type: float
+  lfm_climb_percent_success:
+    team_successes: [lfm_low_rung_successes, lfm_mid_rung_successes, lfm_high_rung_successes, lfm_traversal_rung_successes]
+    team_attempts: [lfm_climb_all_attempts]
+    type: float
