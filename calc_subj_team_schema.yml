@@ -13,7 +13,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+version: 2
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -23,14 +23,14 @@ data:
 calculations:
   driver_near_field_awareness:
     type: float
-    requires: [subj_team.near_field_awareness_rankings]
+    requires: [subj_aim.near_field_awareness_rankings]
   driver_far_field_awareness:
     type: float
-    requires: [subj_team.far_field_awareness_rankings]
+    requires: [subj_aim.far_field_awareness_rankings]
   driver_quickness:
     type: float
-    requires: [subj_team.quickness_rankings]
+    requires: [subj_aim.quickness_rankings]
   driver_ability:
     type: float
-    requires: [subj_team.near_field_awareness, subj_team.far_field_awareness, subj_team.driver_quickness]
+    requires: [subj_team.driver_near_field_awareness, subj_team.driver_far_field_awareness, subj_team.driver_quickness]
     weights: [0.3, 0.3, 0.3]
