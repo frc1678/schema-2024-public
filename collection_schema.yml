@@ -11,8 +11,7 @@
 # 'calc_tba_team_schema.yml',
 # 'calc_tba_tim_schema.yml',
 # 'match_collection_qr_schema.yml',
-# 'obj_pit_collection_schema.yml',
-# 'subj_pit_collection_schema.yml'}
+# 'obj_pit_collection_schema.yml'}
 #
 
 
@@ -20,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 1
 
 collections:
   # Each key is a collection within a competition database
@@ -34,11 +33,6 @@ collections:
   raw_qr:
     schema: 'match_collection_qr_schema.yml'
     indexes: null 
-  raw_subj_pit:
-    schema: 'subj_pit_collection_schema.yml'
-    indexes:
-      - fields: ['team_number']
-        unique: True
   tba_cache:
     schema: null
     indexes:
