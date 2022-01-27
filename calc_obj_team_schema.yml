@@ -386,13 +386,13 @@ extrema:
 modes:
   mode_climb_level:
     tim_fields: [obj_tim.climb_level]
-    type: str
+    type: List
   mode_start_position:
     tim_fields: [obj_tim.start_position]
-    type: str
+    type: List
   lfm_mode_start_position:
     tim_fields: [obj_tim.start_position]
-    type: str
+    type: List
 
 # Special calculations for climb times of different levels
 climb_times:
