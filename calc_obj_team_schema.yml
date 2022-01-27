@@ -95,7 +95,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 3
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -424,7 +424,7 @@ climb_times:
     tim_fields:
       obj_tim.climb_level: 'HIGH'
     type: float
-  lfm_traversal_success_avg_time:
+  lfm_traversal_avg_time:
     tim_fields:
       obj_tim.climb_level: 'TRAVERSAL'
     type: float
