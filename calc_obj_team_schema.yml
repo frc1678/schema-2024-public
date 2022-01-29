@@ -57,11 +57,18 @@
 # 'mid_rung_successes': 2,
 # 'high_rung_successes': 3,
 # 'traversal_rung_successes': 0,
+# 'position_one_starts': 3,
+# 'position_two_starts': 9,
+# 'position_three_starts': 1,
+# 'position_four_starts': 0,
+# 'matches_played': 10,
+# 'matches_incap': 1,
 # 'lfm_climb_all_attempts': 23,
 # 'lfm_low_rung_successes': 4,
 # 'lfm_mid_rung_successes': 2,
 # 'lfm_high_rung_successes': 3,
 # 'lfm_traversal_rung_successes': 0,
+# 'lfm_matches_incap': 0,
 # 'auto_max_balls_low': 5,
 # 'auto_max_balls_high': 5,
 # 'tele_max_balls_low': 5,
@@ -95,7 +102,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -277,6 +284,22 @@ counts:
   traversal_rung_successes:
     tim_fields:
       obj_tim.climb_level: 'TRAVERSAL'
+    type: int
+  position_one_starts:
+    tim_fields:
+      obj_tim.start_position: 'ONE'
+    type: int
+  position_two_starts:
+    tim_fields:
+      obj_tim.start_position: 'TWO'
+    type: int
+  position_three_starts:
+    tim_fields:
+      obj_tim.start_position: 'THREE'
+    type: int
+  position_four_starts:
+    tim_fields:
+      obj_tim.start_position: 'FOUR'
     type: int
   matches_played:
     tim_fields:
