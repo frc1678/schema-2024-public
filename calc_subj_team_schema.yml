@@ -3,7 +3,8 @@
 # Example:
 #
 # {'driver_ability': 29.5912,
-# 'driver_field_awareness': 42.6533,
+# 'driver_far_field_awareness': 42.6533,
+# 'driver_near_field_awareness': 67.7321,
 # 'driver_quickness': 85.6003,
 # 'team_number': 57}
 #
