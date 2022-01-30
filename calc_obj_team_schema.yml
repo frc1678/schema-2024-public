@@ -159,7 +159,7 @@ averages:
     tim_fields: [obj_tim.auto_balls_high]
     type: float
   auto_avg_balls_total:
-    tim_fields: [obj_tim.auto_balls_low, obj_tim.auto_balls_high]
+    tim_fields: [obj_tim.auto_balls_total]
     type: float
   tele_avg_balls_low:
     tim_fields: [obj_tim.tele_balls_low]
@@ -168,7 +168,7 @@ averages:
     tim_fields: [obj_tim.tele_balls_high]
     type: float
   tele_avg_balls_total:
-    tim_fields: [obj_tim.tele_balls_low, obj_tim.tele_balls_high]
+    tim_fields: [obj_tim.tele_balls_total]
     type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap]
