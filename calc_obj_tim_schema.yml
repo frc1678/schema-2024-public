@@ -5,14 +5,20 @@
 # {'confidence_rating': 86,
 # 'match_number': 8,
 # 'team_number': 79
-# 'auto_hub_highs': 3,
+# 'auto_near_hub_highs': 3,
+# 'auto_far_hub_highs': 4,
 # 'auto_launchpad_highs': 2,
-# 'auto_other_highs': 5,
-# 'auto_hub_lows': 3,
-# 'tele_hub_highs': 3,
+# 'auto_near_other_highs': 5,
+# 'auto_far_other_highs': 9,
+# 'auto_near_hub_lows': 3,
+# 'auto_far_hub_lows': 4,
+# 'tele_near_hub_highs': 3,
+# 'tele_far_hub_highs': 4,
 # 'tele_launchpad_highs': 2,
-# 'tele_other_highs': 5,
-# 'tele_hub_lows': 3,
+# 'tele_near_other_highs': 5,
+# 'tele_far_other_highs': 9,
+# 'tele_near_hub_lows': 3,
+# 'tele_far_hub_lows': 4,
 # 'auto_balls_high': 67,
 # 'auto_balls_low': 31,
 # 'tele_balls_high': 97,
@@ -28,7 +34,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 2
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -38,37 +44,61 @@ data:
 
 # Calculations built around counting timeline actions with certain key:value pairs
 timeline_counts:
-  auto_hub_highs:
+  auto_near_hub_highs:
     type: int
-    action_type: score_ball_high_hub
+    action_type: score_ball_high_near_hub
+    time: [135, 150]
+  auto_far_hub_highs:
+    type: int
+    action_type: score_ball_high_far_hub
     time: [135, 150]
   auto_launchpad_highs:
     type: int
     action_type: score_ball_high_launchpad
     time: [135, 150]
-  auto_other_highs:
+  auto_near_other_highs:
     type: int
-    action_type: score_ball_high_other
+    action_type: score_ball_high_near_other
     time: [135, 150]
-  auto_hub_lows:
+  auto_far_other_highs:
     type: int
-    action_type: score_ball_low_hub
+    action_type: score_ball_high_far_other
     time: [135, 150]
-  tele_hub_highs:
+  auto_near_hub_lows:
     type: int
-    action_type: score_ball_high_hub
+    action_type: score_ball_low_near_hub
+    time: [135, 150]
+  auto_far_hub_lows:
+    type: int
+    action_type: score_ball_low_far_hub
+    time: [135, 150]
+  tele_near_hub_highs:
+    type: int
+    action_type: score_ball_high_near_hub
+    time: [0, 134]
+  tele_far_hub_highs:
+    type: int
+    action_type: score_ball_high_far_hub
     time: [0, 134]
   tele_launchpad_highs:
     type: int
     action_type: score_ball_high_launchpad
     time: [0, 134]
-  tele_other_highs:
+  tele_near_other_highs:
     type: int
-    action_type: score_ball_high_other
+    action_type: score_ball_high_near_other
     time: [0, 134]
-  tele_hub_lows:
+  tele_far_other_highs:
     type: int
-    action_type: score_ball_low_hub
+    action_type: score_ball_high_far_other
+    time: [0, 134]
+  tele_near_hub_lows:
+    type: int
+    action_type: score_ball_low_near_hub
+    time: [0, 134]
+  tele_far_hub_lows:
+    type: int
+    action_type: score_ball_low_far_hub
     time: [0, 134]
   intakes:
     type: int
@@ -87,22 +117,22 @@ timeline_counts:
 aggregates:
   auto_balls_low:
     type: int
-    counts: [auto_hub_lows]
+    counts: [auto_near_hub_lows, auto_far_hub_lows]
   auto_balls_high:
     type: int
-    counts: [auto_hub_highs, auto_launchpad_highs, auto_other_highs]
+    counts: [auto_near_hub_highs, auto_far_hub_highs, auto_launchpad_highs, auto_near_other_highs, auto_far_other_highs]
   tele_balls_low:
     type: int
-    counts: [tele_hub_lows]
+    counts: [tele_near_hub_lows, tele_far_hub_lows]
   tele_balls_high:
     type: int
-    counts: [tele_hub_highs, tele_launchpad_highs, tele_other_highs]
+    counts: [tele_near_hub_highs, tele_far_hub_highs, tele_launchpad_highs, tele_near_other_highs, tele_far_other_highs]
   auto_balls_total:
     type: int
-    counts: [auto_hub_lows, auto_hub_highs, auto_launchpad_highs, auto_other_highs]
+    counts: [auto_near_hub_lows, auto_far_hub_lows, auto_near_hub_highs, auto_far_hub_highs, auto_launchpad_highs, auto_near_other_highs, auto_far_other_highs]
   tele_balls_total:
     type: int
-    counts: [tele_hub_lows, tele_hub_highs, tele_launchpad_highs, tele_other_highs]
+    counts: [tele_near_hub_lows, tele_far_hub_lows, tele_near_hub_highs, tele_far_hub_highs, tele_launchpad_highs, tele_near_other_highs, tele_far_other_highs]
 
 # Calculations built around measuring the time between two timeline actions
 # First item in each list is the start item key:value pair requirements, second item is the end item
