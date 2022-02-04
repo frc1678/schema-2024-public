@@ -3,20 +3,14 @@
 # Example:
 #
 # {'team_number': 29,
-# 'auto_avg_near_hub_highs': 4.2394,
-# 'auto_avg_far_hub_highs': 7.4532,
+# 'auto_avg_hub_highs': 4.2394,
 # 'auto_avg_launchpad_highs': 9.3723,
-# 'auto_avg_near_other_highs': 8.2612,
-# 'auto_avg_far_other_highs': 5.2341,
-# 'auto_avg_near_hub_lows': 1.3244,
-# 'auto_avg_far_hub_lows': 8.2354,
-# 'tele_avg_near_hub_highs': 4.2394,
-# 'tele_avg_far_hub_highs': 7.4532,
+# 'auto_avg_other_highs': 8.2612,
+# 'auto_avg_lows': 1.3244,
+# 'tele_avg_hub_highs': 4.2394,
 # 'tele_avg_launchpad_highs': 9.3723,
-# 'tele_avg_near_other_highs': 8.2612,
-# 'tele_avg_far_other_highs': 5.2341,
-# 'tele_avg_near_hub_lows': 1.3244,
-# 'auto_avg_far_hub_lows': 8.2354,
+# 'tele_avg_other_highs': 8.2612,
+# 'tele_avg_lows': 1.3244,
 # 'auto_avg_balls_high': 3.8381,
 # 'auto_avg_balls_low': 56.4716,
 # 'auto_avg_balls_total': 10.4353,
@@ -27,20 +21,14 @@
 # 'avg_intakes': 14.3243,
 # 'avg_exit_ball_catches': 1.3247,
 # 'avg_opp_balls_scored': 8.2342,
-# 'lfm_auto_avg_near_hub_highs': 4.2394,
-# 'lfm_auto_avg_far_hub_highs': 7.4532,
+# 'lfm_auto_avg_hub_highs': 4.2394,
 # 'lfm_auto_avg_launchpad_highs': 9.3723,
-# 'lfm_auto_avg_near_other_highs': 8.2612,
-# 'lfm_auto_avg_far_other_highs': 5.2341,
-# 'lfm_auto_avg_near_hub_lows': 1.3244,
-# 'lfm_auto_avg_far_hub_lows': 8.2354,
-# 'lfm_tele_avg_near_hub_highs': 4.2394,
-# 'lfm_tele_avg_far_hub_highs': 7.4532,
+# 'lfm_auto_avg_other_highs': 8.2612,
+# 'lfm_auto_avg_lows': 1.3244,
+# 'lfm_tele_avg_hub_highs': 4.2394,
 # 'lfm_tele_avg_launchpad_highs': 9.3723,
-# 'lfm_tele_avg_near_other_highs': 8.2612,
-# 'lfm_tele_avg_far_other_highs': 5.2341,
-# 'lfm_tele_avg_near_hub_lows': 1.3244,
-# 'lfm_auto_avg_far_hub_lows': 8.2354,
+# 'lfm_tele_avg_other_highs': 8.2612,
+# 'lfm_tele_avg_lows': 1.3244,
 # 'lfm_auto_avg_balls_high': 3.8381,
 # 'lfm_auto_avg_balls_low': 56.4716,
 # 'lfm_tele_avg_balls_high': 92.9179,
@@ -102,7 +90,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -110,50 +98,32 @@ data:
 
 # Averages of fields in consolidated TIMs
 averages:
-  auto_avg_near_hub_highs:
-    tim_fields: [obj_tim.auto_near_hub_highs]
-    type: float
-  auto_avg_far_hub_highs:
-    tim_fields: [obj_tim.auto_far_hub_highs]
+  auto_avg_hub_highs:
+    tim_fields: [obj_tim.auto_hub_highs]
     type: float
   auto_avg_launchpad_highs:
     tim_fields: [obj_tim.auto_launchpad_highs]
     type: float
-  auto_avg_near_other_highs:
-    tim_fields: [obj_tim.auto_near_other_highs]
+  auto_avg_other_highs:
+    tim_fields: [obj_tim.auto_other_highs]
     type: float
-  auto_avg_far_other_highs:
-    tim_fields: [obj_tim.auto_far_other_highs]
+  auto_avg_lows:
+    tim_fields: [obj_tim.auto_lows]
     type: float
-  auto_avg_near_hub_lows:
-    tim_fields: [obj_tim.auto_near_hub_lows]
-    type: float
-  auto_avg_far_hub_lows:
-    tim_fields: [obj_tim.auto_far_hub_lows]
-    type: float
-  tele_avg_near_hub_highs:
-    tim_fields: [obj_tim.tele_near_hub_highs]
-    type: float
-  tele_avg_far_hub_highs:
-    tim_fields: [obj_tim.tele_far_hub_highs]
+  tele_avg_hub_highs:
+    tim_fields: [obj_tim.tele_hub_highs]
     type: float
   tele_avg_launchpad_highs:
     tim_fields: [obj_tim.tele_launchpad_highs]
     type: float
-  tele_avg_near_other_highs:
-    tim_fields: [obj_tim.tele_near_other_highs]
+  tele_avg_other_highs:
+    tim_fields: [obj_tim.tele_other_highs]
     type: float
-  tele_avg_far_other_highs:
-    tim_fields: [obj_tim.tele_far_other_highs]
-    type: float
-  tele_avg_near_hub_lows:
-    tim_fields: [obj_tim.tele_near_hub_lows]
-    type: float
-  tele_avg_far_hub_lows:
-    tim_fields: [obj_tim.tele_far_hub_lows]
+  tele_avg_lows:
+    tim_fields: [obj_tim.tele_lows]
     type: float
   auto_avg_balls_low:
-    tim_fields: [obj_tim.auto_balls_low]
+    tim_fields: [obj_tim.auto_lows]
     type: float
   auto_avg_balls_high:
     tim_fields: [obj_tim.auto_balls_high]
@@ -162,7 +132,7 @@ averages:
     tim_fields: [obj_tim.auto_balls_total]
     type: float
   tele_avg_balls_low:
-    tim_fields: [obj_tim.tele_balls_low]
+    tim_fields: [obj_tim.tele_lows]
     type: float
   tele_avg_balls_high:
     tim_fields: [obj_tim.tele_balls_high]
@@ -182,56 +152,38 @@ averages:
   avg_opp_balls_scored:
     tim_fields: [obj_tim.opp_balls_scored]
     type: float
-  lfm_auto_avg_near_hub_highs:
-    tim_fields: [obj_tim.auto_near_hub_highs]
-    type: float
-  lfm_auto_avg_far_hub_highs:
-    tim_fields: [obj_tim.auto_far_hub_highs]
+  lfm_auto_avg_hub_highs:
+    tim_fields: [obj_tim.auto_hub_highs]
     type: float
   lfm_auto_avg_launchpad_highs:
     tim_fields: [obj_tim.auto_launchpad_highs]
     type: float
-  lfm_auto_avg_near_other_highs:
-    tim_fields: [obj_tim.auto_near_other_highs]
+  lfm_auto_avg_other_highs:
+    tim_fields: [obj_tim.auto_other_highs]
     type: float
-  lfm_auto_avg_far_other_highs:
-    tim_fields: [obj_tim.auto_far_other_highs]
+  lfm_auto_avg_lows:
+    tim_fields: [obj_tim.auto_lows]
     type: float
-  lfm_auto_avg_near_hub_lows:
-    tim_fields: [obj_tim.auto_near_hub_lows]
-    type: float
-  lfm_auto_avg_far_hub_lows:
-    tim_fields: [obj_tim.auto_far_hub_lows]
-    type: float
-  lfm_tele_avg_near_hub_highs:
-    tim_fields: [obj_tim.tele_near_hub_highs]
-    type: float
-  lfm_tele_avg_far_hub_highs:
-    tim_fields: [obj_tim.tele_far_hub_highs]
+  lfm_tele_avg_hub_highs:
+    tim_fields: [obj_tim.tele_hub_highs]
     type: float
   lfm_tele_avg_launchpad_highs:
     tim_fields: [obj_tim.tele_launchpad_highs]
     type: float
-  lfm_tele_avg_near_other_highs:
-    tim_fields: [obj_tim.tele_near_other_highs]
+  lfm_tele_avg_other_highs:
+    tim_fields: [obj_tim.tele_other_highs]
     type: float
-  lfm_tele_avg_far_other_highs:
-    tim_fields: [obj_tim.tele_far_other_highs]
-    type: float
-  lfm_tele_avg_near_hub_lows:
-    tim_fields: [obj_tim.tele_near_hub_lows]
-    type: float
-  lfm_tele_avg_far_hub_lows:
-    tim_fields: [obj_tim.tele_far_hub_lows]
+  lfm_tele_avg_lows:
+    tim_fields: [obj_tim.tele_lows]
     type: float
   lfm_auto_avg_balls_low:
-    tim_fields: [obj_tim.auto_balls_low]
+    tim_fields: [obj_tim.auto_lows]
     type: float
   lfm_auto_avg_balls_high:
     tim_fields: [obj_tim.auto_balls_high]
     type: float
   lfm_tele_avg_balls_low:
-    tim_fields: [obj_tim.tele_balls_low]
+    tim_fields: [obj_tim.tele_lows]
     type: float
   lfm_tele_avg_balls_high:
     tim_fields: [obj_tim.tele_balls_high]
@@ -250,13 +202,13 @@ averages:
 # Used for predictions
 standard_deviations:
   auto_sd_balls_low:
-    tim_fields: [obj_tim.auto_balls_low]
+    tim_fields: [obj_tim.auto_lows]
     type: float
   auto_sd_balls_high:
     tim_fields: [obj_tim.auto_balls_high]
     type: float
   tele_sd_balls_low:
-    tim_fields: [obj_tim.tele_balls_low]
+    tim_fields: [obj_tim.tele_lows]
     type: float
   tele_sd_balls_high:
     tim_fields: [obj_tim.tele_balls_high]
@@ -349,14 +301,14 @@ extrema:
   auto_max_balls_low:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_balls_low]
+    tim_fields: [obj_tim.auto_lows]
   auto_max_balls_high:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_balls_high]
   tele_max_balls_low:
     extrema_type: max
-    tim_fields: [obj_tim.tele_balls_low]
+    tim_fields: [obj_tim.tele_lows]
     type: int
   tele_max_balls_high:
     extrema_type: max
@@ -381,14 +333,14 @@ extrema:
   lfm_auto_max_balls_low:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_balls_low]
+    tim_fields: [obj_tim.auto_lows]
   lfm_auto_max_balls_high:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_balls_high]
   lfm_tele_max_balls_low:
     extrema_type: max
-    tim_fields: [obj_tim.tele_balls_low]
+    tim_fields: [obj_tim.tele_lows]
     type: int
   lfm_tele_max_balls_high:
     extrema_type: max
