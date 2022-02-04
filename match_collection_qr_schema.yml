@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -52,22 +52,20 @@ subjective_aim:
   quickness_rankings: [A, list, int] # List of team numbers (ints)
   near_field_awareness_rankings: [B, list, int] # List of team numbers (ints)
   far_field_awareness_rankings: [C, list, int] # List of team numbers (ints)
+  teams_scored_far: [D, list, int] # List of team numbers (ints)
 
 
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
 action_type:
-  score_ball_high_near_hub: AA
-  score_ball_high_far_hub: AB
-  score_ball_high_launchpad: AC
-  score_ball_high_far_other: AD
-  score_ball_high_near_other: AE
-  score_ball_low_near_hub: AF
-  score_ball_low_far_hub: AG
-  intake: AH
-  catch_exit_ball: AI
-  score_opponent_ball: AJ
-  start_incap: AK
-  end_incap: AL
-  start_climb: AM
-  end_climb: AN
+  score_ball_high_hub: AA
+  score_ball_high_launchpad: AB
+  score_ball_high_other: AC
+  score_ball_low: AD
+  intake: AE
+  catch_exit_ball: AF
+  score_opponent_ball: AG
+  start_incap: AH
+  end_incap: AI
+  start_climb: AJ
+  end_climb: AK
