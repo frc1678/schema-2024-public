@@ -12,10 +12,8 @@
 # 'tele_avg_other_highs': 8.2612,
 # 'tele_avg_lows': 1.3244,
 # 'auto_avg_balls_high': 3.8381,
-# 'auto_avg_balls_low': 56.4716,
 # 'auto_avg_balls_total': 10.4353,
 # 'tele_avg_balls_high': 92.9179,
-# 'tele_avg_balls_low': 17.4558,
 # 'tele_avg_balls_total': 5.5324,
 # 'avg_incap_time': 70.5843,
 # 'avg_intakes': 14.3243,
@@ -30,9 +28,7 @@
 # 'lfm_tele_avg_other_highs': 8.2612,
 # 'lfm_tele_avg_lows': 1.3244,
 # 'lfm_auto_avg_balls_high': 3.8381,
-# 'lfm_auto_avg_balls_low': 56.4716,
 # 'lfm_tele_avg_balls_high': 92.9179,
-# 'lfm_tele_avg_balls_low': 17.4558,
 # 'lfm_avg_incap_time': 5.2341,
 # 'lfm_avg_exit_ball_catches': 3.3241,
 # 'lfm_avg_opp_balls_scored': 5.1392,
@@ -90,7 +86,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 7
+  version: 8
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -122,17 +118,11 @@ averages:
   tele_avg_lows:
     tim_fields: [obj_tim.tele_lows]
     type: float
-  auto_avg_balls_low:
-    tim_fields: [obj_tim.auto_lows]
-    type: float
   auto_avg_balls_high:
     tim_fields: [obj_tim.auto_balls_high]
     type: float
   auto_avg_balls_total:
     tim_fields: [obj_tim.auto_balls_total]
-    type: float
-  tele_avg_balls_low:
-    tim_fields: [obj_tim.tele_lows]
     type: float
   tele_avg_balls_high:
     tim_fields: [obj_tim.tele_balls_high]
@@ -176,14 +166,8 @@ averages:
   lfm_tele_avg_lows:
     tim_fields: [obj_tim.tele_lows]
     type: float
-  lfm_auto_avg_balls_low:
-    tim_fields: [obj_tim.auto_lows]
-    type: float
   lfm_auto_avg_balls_high:
     tim_fields: [obj_tim.auto_balls_high]
-    type: float
-  lfm_tele_avg_balls_low:
-    tim_fields: [obj_tim.tele_lows]
     type: float
   lfm_tele_avg_balls_high:
     tim_fields: [obj_tim.tele_balls_high]
