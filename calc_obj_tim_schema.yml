@@ -26,7 +26,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -107,10 +107,12 @@ timeline_cycle_time:
     type: int
     start_action: start_incap
     end_action: end_incap
+    minimum_time: 8
   climb_time:
     type: int
     start_action: start_climb
     end_action: end_climb
+    minimum_time: 0
 
 
 # Robot actions which are one out of a list of possible actions
