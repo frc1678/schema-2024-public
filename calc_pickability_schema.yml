@@ -12,7 +12,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 7
+  version: 2
 
 data:
   team_number:
@@ -22,32 +22,26 @@ calculations:
   first_pickability:
     type: float
     requires:
-      - obj_team.auto_avg_balls_low
-      - obj_team.tele_avg_balls_low
-      - tba_team.auto_avg_balls_outer
-      - tba_team.tele_avg_balls_outer
-      - tba_team.auto_avg_balls_inner
-      - tba_team.tele_avg_balls_inner
-      - tba_team.climb_percent_success
+      - obj_team.tele_avg_lows
+      - obj_team.tele_avg_balls_high
+      - obj_team.auto_avg_lows
+      - obj_team.auto_avg_balls_high
+      - obj_team.climb_percent_success
     weights:
-      - 2 # auto_avg_balls_low
-      - 1 # tele_avg_balls_low
-      - 4 # auto_avg_balls_outer
-      - 2 # tele_avg_balls_outer
-      - 6 # auto_avg_balls_inner
-      - 3 # tele_avg_balls_inner
-      - 25 # climb_percent_success
+      - 1 # tele_avg_lows
+      - 2 # tele_avg_balls_high
+      - 2 # auto_avg_lows
+      - 4 # auto_avg_balls_high
+      - 8.75 # climb_percent_success
   second_pickability:
     type: float
     requires:
-      - obj_team.auto_avg_balls_low
-      - tba_team.auto_avg_balls_outer
-      - tba_team.auto_avg_balls_inner
-      - tba_team.climb_percent_success
+      - obj_team.auto_avg_lows
+      - obj_team.auto_avg_balls_high
+      - obj_team.climb_percent_success
       - subj_team.driver_ability
     weights:
-      - 2 # auto_avg_balls_low
-      - 4 # auto_avg_balls_outer
-      - 6 # auto_avg_balls_inner
-      - 25 # climb_percent_success
+      - 2 # auto_avg_lows
+      - 4 # auto_avg_balls_high
+      - 8.75 # climb_percent_success
       - 15 # driver_ability
