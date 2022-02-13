@@ -12,10 +12,11 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 data:
-  team_number: int
+  team_number:
+    type: int
 
 calculations:
   first_pickability:

@@ -19,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 collections:
   # Each key is a collection within a competition database
@@ -31,7 +31,7 @@ collections:
       - fields: ['team_number']
         unique: True
   raw_qr:
-    schema: 'match_collection_qr_schema.yml'
+    schema: null
     indexes: null 
   tba_cache:
     schema: null
@@ -39,7 +39,7 @@ collections:
       - fields: ['api_url']
         unique: False
   unconsolidated_obj_tim:
-    schema: 'match_collection_qr_schema.yml'
+    schema: 'calc_obj_tim_schema.yml'
     indexes:
       - fields: ['team_number', 'match_number']
         unique: False
@@ -54,7 +54,7 @@ collections:
       - fields: ['team_number']
         unique: True
   subj_aim:
-    schema: 'match_collection_qr_schema.yml'
+    schema: null
     indexes:
       - fields: ['match_number']
         unique: False

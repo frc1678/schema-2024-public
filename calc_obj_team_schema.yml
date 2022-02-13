@@ -86,11 +86,12 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 8
+  version: 9
 
 # Stores fields that will be added to database but do not require calculations
 data:
-  team_number: int
+  team_number:
+    type: int
 
 # Averages of fields in consolidated TIMs
 averages:

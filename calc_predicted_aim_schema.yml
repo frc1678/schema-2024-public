@@ -18,17 +18,23 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 # Stores fields that will be added to database but do not require calculations
 data:
-  match_number: int
-  alliance_color_is_red: bool
+  match_number:
+    type: int
+  alliance_color_is_red:
+    type: bool
   # Whether or not actual TBA data has been pulled to replace the predicted data
-  has_actual_data: bool
-  actual_score: int
-  actual_rp1: float
-  actual_rp2: float
+  has_actual_data:
+    type: bool
+  actual_score:
+    type: int
+  actual_rp1:
+    type: float
+  actual_rp2:
+    type: float
 
 # Information on calculations that will be performed
 calculations:

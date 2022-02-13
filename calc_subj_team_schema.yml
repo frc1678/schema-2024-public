@@ -14,11 +14,12 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Stores fields that will be added to database but do not require calculations
 data:
-  team_number: int
+  team_number:
+    type: int
 
 # Information on calculations that will be performed
 calculations:

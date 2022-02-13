@@ -30,9 +30,12 @@ schema_file:
 
 # Data that doesn't fit into other categorical calculations
 data:
-  confidence_rating: int
-  team_number: int
-  match_number: int
+  confidence_rating:
+    type: int
+  team_number:
+    type: int
+  match_number:
+    type: int
 
 # Calculations built around counting timeline actions with certain key:value pairs
 timeline_counts:
