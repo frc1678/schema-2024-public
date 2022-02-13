@@ -26,7 +26,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 4
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -100,14 +100,17 @@ aggregates:
     counts: [tele_lows, tele_hub_highs, tele_launchpad_highs, tele_other_highs]
 
 
-# Data points storing the amount of time it took a robot to perform an action
-action_times:
-  climb_time:
-    type: int
-    time: climb_time
+# Calculations built around measuring the time between two timeline actions.
+# First item in each list is the start item key:value pair requirements, second item is the end item.
+timeline_cycle_time:
   incap:
     type: int
-    time: incap_time
+    start_action: start_incap
+    end_action: end_incap
+  climb_time:
+    type: int
+    start_action: start_climb
+    end_action: end_climb
 
 
 # Robot actions which are one out of a list of possible actions

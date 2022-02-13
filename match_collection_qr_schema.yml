@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 2
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -33,8 +33,6 @@ objective_tim:
   start_position: [X, str] # str representing where a robot starts in auto ('one', 'two', 'three', or 'four')
   timeline: [W, list, dict] # List of dictionaries
   climb_level: [V, str] # str representing where a robot climbs to ('none', 'low', 'mid', 'high' or 'traversal')
-  climb_time: [U, int] # int representing the number of seconds a robot took to climb
-  incap_time: [T, int] # int representing the number of seconds a robot was incap
 
 
 # Timeline is part of objective match collection QR
@@ -67,3 +65,7 @@ action_type:
   intake: AE
   catch_exit_ball: AF
   score_opponent_ball: AG
+  start_incap: AH
+  end_incap: AI
+  start_climb: AJ
+  end_climb: AK
