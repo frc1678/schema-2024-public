@@ -12,7 +12,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 data:
   match_number:
@@ -25,4 +25,4 @@ data:
 tba:
   auto_line:
     type: bool
-    initLineRobot: Exited
+    taxiRobot: Yes
