@@ -38,7 +38,7 @@ averaged_calculations:
     weights: [0.5, 0.5]
 
 # Calculations not involved in averaged_calculations
-other_calculations:
+ratings:
   driver_far_field_rating:
     type: float
     requires: [subj_tim.far_field_rating]
