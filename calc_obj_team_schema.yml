@@ -86,7 +86,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 9
+  version: 10
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -279,7 +279,7 @@ counts:
 super_counts:
   matches_scored_far:
     type: int
-    aim_fields: [subj_aim.teams_scored_far]
+    tim_fields: [subj_tim.scored_far]
 
 # Maximum or minimum values in consolidated TIMs
 extrema:

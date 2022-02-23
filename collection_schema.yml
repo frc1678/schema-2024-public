@@ -19,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 collections:
   # Each key is a collection within a competition database
@@ -53,7 +53,7 @@ collections:
     indexes:
       - fields: ['team_number']
         unique: True
-  subj_aim:
+  subj_tim:
     schema: null
     indexes:
       - fields: ['match_number']

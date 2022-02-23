@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -48,11 +48,13 @@ timeline:
 subjective_aim:
   _start_character: '*' # First character in QR used to identify QR type
   _separator: '$' # Separates each key:value pair
-  _separator_internal: ':' # Separates each ranking list item
-  quickness_rankings: [A, list, int] # List of team numbers (ints)
-  near_field_awareness_rankings: [B, list, int] # List of team numbers (ints)
-  far_field_awareness_rankings: [C, list, int] # List of team numbers (ints)
-  teams_scored_far: [D, list, int] # List of team numbers (ints)
+  _team_separator: '#' # Separates each team's section
+  team_number: [A, int] # int properties not needed but int is more intuitive
+  quickness_score: [B, int] # A ranking value between 1 and 3
+  field_awareness_score: [C, int] # A ranking value between 1 and 3
+  far_field_rating: [D, int] # A ranking value between 1 and 3
+  scored_far: [E, bool] # True if robot scored from far side at least once in the match, else False
+  alliance_color_is_red: [F, bool] # True if robot was on the red alliance, else False
 
 
 # Contains all the enums and their values
