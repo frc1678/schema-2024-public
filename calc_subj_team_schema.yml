@@ -25,10 +25,10 @@ data:
 component_calculations:
   driver_field_awareness:
     type: float
-    requires: [subj_tim.field_awareness_score]
+    requires: [subj_team.unadjusted_field_awareness]
   driver_quickness:
     type: float
-    requires: [subj_tim.quickness_score]
+    requires: [subj_team.unadjusted_quickness]
 
 # Calculations made by averaging values of component_calculations
 averaged_calculations:
@@ -36,6 +36,15 @@ averaged_calculations:
     type: float
     requires: [subj_team.driver_field_awareness, subj_team.driver_quickness]
     weights: [0.5, 0.5]
+
+# Values of component_calculations before adjusting for teammate scores
+unadjusted_calculations:
+  unadjusted_field_awareness:
+    type: float
+    requires: [subj_tim.field_awareness_score]
+  unadjusted_quickness:
+    type: float
+    requires: [subj_tim.quickness_score]
 
 # Calculations not involved in averaged_calculations
 ratings:
