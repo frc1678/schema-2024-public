@@ -41,6 +41,7 @@
 # 'mid_rung_successes': 2,
 # 'high_rung_successes': 3,
 # 'traversal_rung_successes': 0,
+# 'position_zero_starts': 0
 # 'position_one_starts': 3,
 # 'position_two_starts': 9,
 # 'position_three_starts': 1,
@@ -86,7 +87,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 10
+  version: 11
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -222,6 +223,10 @@ counts:
     tim_fields:
       obj_tim.climb_level: 'TRAVERSAL'
     type: int
+  position_zero_starts:
+    tim_fields:
+      obj_tim.start_position: 'ZERO'
+    type: int
   position_one_starts:
     tim_fields:
       obj_tim.start_position: 'ONE'
@@ -352,12 +357,15 @@ extrema:
 modes:
   mode_climb_level:
     tim_fields: [obj_tim.climb_level]
+    ignore: None
     type: List
   mode_start_position:
     tim_fields: [obj_tim.start_position]
+    ignore: 'ZERO'
     type: List
   lfm_mode_start_position:
     tim_fields: [obj_tim.start_position]
+    ignore: 'ZERO'
     type: List
 
 # Special calculations for climb times of different levels
