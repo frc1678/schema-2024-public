@@ -412,3 +412,11 @@ success_rates:
     team_successes: [lfm_low_rung_successes, lfm_mid_rung_successes, lfm_high_rung_successes, lfm_traversal_rung_successes]
     team_attempts: [lfm_climb_all_attempts]
     type: float
+
+# Calculates average points for given fields
+average_points:
+  avg_climb_points:
+    point_fields: [low_rung_successes, mid_rung_successes, high_rung_successes, traversal_rung_successes]
+    point_values: [4, 6, 10, 15]
+    success_field: climb_all_attempts
+    type: float
