@@ -87,7 +87,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 11
+  version: 12
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -418,5 +418,4 @@ average_points:
   avg_climb_points:
     point_fields: [low_rung_successes, mid_rung_successes, high_rung_successes, traversal_rung_successes]
     point_values: [4, 6, 10, 15]
-    success_field: climb_all_attempts
     type: float
