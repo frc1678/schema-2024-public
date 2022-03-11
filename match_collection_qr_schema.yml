@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -53,7 +53,7 @@ subjective_aim:
   quickness_score: [B, int] # A ranking value between 1 and 3
   field_awareness_score: [C, int] # A ranking value between 1 and 3
   far_field_rating: [D, int] # A ranking value between 1 and 3
-  scored_far: [E, bool] # True if robot scored from far side at least once in the match, else False
+  played_defense: [E, bool] # True if robot played defense at least once in the match, else False
   alliance_color_is_red: [F, bool] # True if robot was on the red alliance, else False
 
 
@@ -61,13 +61,12 @@ subjective_aim:
 # Action type is a alphabet base 26 string representation
 action_type:
   score_ball_high_hub: AA
-  score_ball_high_launchpad: AB
-  score_ball_high_other: AC
-  score_ball_low: AD
-  intake: AE
-  catch_exit_ball: AF
-  score_opponent_ball: AG
-  start_incap: AH
-  end_incap: AI
-  start_climb: AJ
-  end_climb: AK
+  score_ball_high_other: AB
+  score_ball_low: AC
+  intake: AD
+  catch_exit_ball: AE
+  score_opponent_ball: AF
+  start_incap: AG
+  end_incap: AH
+  start_climb: AI
+  end_climb: AJ
