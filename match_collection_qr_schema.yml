@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -61,12 +61,10 @@ subjective_aim:
 # Action type is a alphabet base 26 string representation
 action_type:
   score_ball_high_hub: AA
+  # Not used at Sac, using score_ball_high_hub to represent all high goals
   score_ball_high_other: AB
   score_ball_low: AC
   intake: AD
-  catch_exit_ball: AE
-  score_opponent_ball: AF
-  start_incap: AG
-  end_incap: AH
-  start_climb: AI
-  end_climb: AJ
+  start_incap: AE
+  end_incap: AF
+  climb_attempt: AG

@@ -5,20 +5,17 @@
 # {'confidence_rating': 86,
 # 'match_number': 8,
 # 'team_number': 79
-# 'auto_hub_highs': 3,
-# 'auto_launchpad_highs': 2,
-# 'auto_other_highs': 5,
-# 'auto_lows': 3,
-# 'tele_hub_highs': 3,
-# 'tele_launchpad_highs': 2,
-# 'tele_other_highs': 5,
-# 'tele_lows': 3,
-# 'auto_balls_high': 67,
-# 'tele_balls_high': 97,
+# 'auto_hub_high_balls': 3,
+# 'auto_other_high_balls': 5,
+# 'auto_low_balls': 3,
+# 'tele_hub_high_balls': 3,
+# 'tele_other_high_balls': 5,
+# 'tele_low_balls': 3,
+# 'auto_high_balls': 67,
+# 'tele_high_balls': 97,
 # 'incap': 8,
-# 'climb_time': 8,
-# 'climb_level': 'traversal',
-# 'start_position': 'one'}
+# 'climb_level': 'TRAVERSAL',
+# 'start_position': 'ONE'}
 #
 
 
@@ -26,7 +23,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -39,35 +36,27 @@ data:
 
 # Calculations built around counting timeline actions with certain key:value pairs
 timeline_counts:
-  auto_hub_highs:
+  auto_hub_high_balls:
     type: int
     action_type: score_ball_high_hub
     time: [135, 150]
-  auto_launchpad_highs:
-    type: int
-    action_type: score_ball_high_launchpad
-    time: [135, 150]
-  auto_other_highs:
+  auto_other_high_balls:
     type: int
     action_type: score_ball_high_other
     time: [135, 150]
-  auto_lows:
+  auto_low_balls:
     type: int
     action_type: score_ball_low
     time: [135, 150]
-  tele_hub_highs:
+  tele_hub_high_balls:
     type: int
     action_type: score_ball_high_hub
     time: [0, 134]
-  tele_launchpad_highs:
-    type: int
-    action_type: score_ball_high_launchpad
-    time: [0, 134]
-  tele_other_highs:
+  tele_other_high_balls:
     type: int
     action_type: score_ball_high_other
     time: [0, 134]
-  tele_lows:
+  tele_low_balls:
     type: int
     action_type: score_ball_low
     time: [0, 134]
@@ -75,29 +64,25 @@ timeline_counts:
     type: int
     action_type: intake
     time: [0, 150]
-  exit_ball_catches:
+  climb_attempts:
     type: int
-    action_type: catch_exit_ball
-    time: [0, 150]
-  opp_balls_scored:
-    type: int
-    action_type: score_opponent_ball
+    action_type: climb_attempt
     time: [0, 150]
 
 # Calculations made by adding up other counts
 aggregates:
-  auto_balls_high:
+  auto_high_balls:
     type: int
-    counts: [auto_hub_highs, auto_launchpad_highs, auto_other_highs]
-  tele_balls_high:
+    counts: [auto_hub_high_balls, auto_other_high_balls]
+  tele_high_balls:
     type: int
-    counts: [tele_hub_highs, tele_launchpad_highs, tele_other_highs]
-  auto_balls_total:
+    counts: [tele_hub_high_balls, tele_other_high_balls]
+  auto_total_balls:
     type: int
-    counts: [auto_lows, auto_hub_highs, auto_launchpad_highs, auto_other_highs]
-  tele_balls_total:
+    counts: [auto_low_balls, auto_other_high_balls]
+  tele_total_balls:
     type: int
-    counts: [tele_lows, tele_hub_highs, tele_launchpad_highs, tele_other_highs]
+    counts: [tele_low_balls, tele_hub_high_balls, tele_other_high_balls]
 
 
 # Calculations built around measuring the time between two timeline actions.
@@ -108,11 +93,6 @@ timeline_cycle_time:
     start_action: start_incap
     end_action: end_incap
     minimum_time: 8
-  climb_time:
-    type: int
-    start_action: start_climb
-    end_action: end_climb
-    minimum_time: 0
 
 
 # Robot actions which are one out of a list of possible actions
