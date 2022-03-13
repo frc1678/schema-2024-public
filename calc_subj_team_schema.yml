@@ -35,7 +35,7 @@ averaged_calculations:
     type: float
     requires: [subj_team.driver_field_awareness, subj_team.driver_quickness]
     weights: [0.5, 0.5]
-  test_driver_ability
+  test_driver_ability:
     type: float
     requires: [subj_team.driver_field_awareness, subj_team.driver_quickness]
     weights: [0.5, 0.5]
