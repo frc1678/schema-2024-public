@@ -3,8 +3,7 @@
 # Example:
 #
 # {'driver_ability': 29.5912,
-# 'driver_far_field_awareness': 42.6533,
-# 'driver_near_field_awareness': 67.7321,
+# 'driver_field_awareness': 42.6533,
 # 'driver_quickness': 85.6003,
 # 'team_number': 57}
 #
@@ -14,7 +13,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -45,9 +44,3 @@ unadjusted_calculations:
   unadjusted_quickness:
     type: float
     requires: [subj_tim.quickness_score]
-
-# Calculations not involved in averaged_calculations
-ratings:
-  driver_far_field_rating:
-    type: float
-    requires: [subj_tim.far_field_rating]
