@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -52,9 +52,8 @@ subjective_aim:
   team_number: [A, int] # int properties not needed but int is more intuitive
   quickness_score: [B, int] # A ranking value between 1 and 3
   field_awareness_score: [C, int] # A ranking value between 1 and 3
-  far_field_rating: [D, int] # A ranking value between 1 and 3
-  played_defense: [E, bool] # True if robot played defense at least once in the match, else False
-  alliance_color_is_red: [F, bool] # True if robot was on the red alliance, else False
+  played_defense: [D, bool] # True if robot played defense at least once in the match, else False
+  alliance_color_is_red: [E, bool] # True if robot was on the red alliance, else False
 
 
 # Contains all the enums and their values
