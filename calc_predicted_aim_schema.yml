@@ -18,7 +18,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -41,11 +41,21 @@ calculations:
   predicted_score:
     type: float
     requires: [obj_team, tba_team]
-  # Climb RP
+  # Cargo RP
   predicted_rp1:
     type: float
     requires: [obj_team, tba_team]
-  # Energizer RP
+  # Hangar RP
   predicted_rp2:
+    type: float
+    requires: [obj_team]
+  # Predicted values at time of the actual match
+  final_predicted_score:
+    type: float
+    requires: [obj_team, tba_team]
+  final_predicted_rp1:
+    type: float
+    requires: [obj_team, tba_team]
+  final_predicted_rp2:
     type: float
     requires: [obj_team]
