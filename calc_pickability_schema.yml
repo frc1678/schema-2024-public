@@ -12,7 +12,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 data:
   team_number:
@@ -32,7 +32,7 @@ calculations:
       - 2 # tele_avg_high_balls
       - 2 # auto_avg_low_balls
       - 4 # auto_avg_high_balls
-      - obj_team.avg_climb_points # climb_percent_success
+      - obj_team.avg_climb_points: 1 # climb_percent_success
   second_pickability:
     type: float
     requires:
@@ -43,7 +43,7 @@ calculations:
     weights:
       - 2 # auto_avg_low_balls
       - 4 # auto_avg_high_balls
-      - obj_team.avg_climb_points # climb_percent_success
+      - obj_team.avg_climb_points: 1 # climb_percent_success
       - 7 # driver_ability
   test_first_pickability:
     type: float
@@ -58,7 +58,7 @@ calculations:
       - 2 # tele_avg_high_balls
       - 2 # auto_avg_low_balls
       - 4 # auto_avg_high_balls
-      - obj_team.avg_climb_points # climb_percent_success
+      - obj_team.avg_climb_points: 1 # climb_percent_success
   test_second_pickability:
     type: float
     requires:
@@ -69,5 +69,5 @@ calculations:
     weights:
       - 2 # auto_avg_low_balls
       - 4 # auto_avg_high_balls
-      - obj_team.avg_climb_points # climb_percent_success
+      - obj_team.avg_climb_points: 1 # climb_percent_success
       - 7 # driver_ability
