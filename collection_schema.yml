@@ -93,6 +93,11 @@ collections:
     indexes:
       - fields: ['team_number']
         unique: True
+  scout_precision:
+    schema: 'calc_scout_precision_schema.yml'
+    indexes:
+    - fields: ['scout_name']
+      unique: True
   picklist:
     schema: null
     indexes:
