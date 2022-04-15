@@ -19,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 7
+  version: 8
 
 collections:
   # Each key is a collection within a competition database
@@ -92,6 +92,11 @@ collections:
     schema: 'calc_pickability_schema.yml'
     indexes:
       - fields: ['team_number']
+        unique: True
+  sim_precision:
+    schema: 'calc_sim_precision_schema.yml'
+    indexes:
+      - fields: ['match_number', 'scout_name']
         unique: True
   scout_precision:
     schema: 'calc_scout_precision_schema.yml'

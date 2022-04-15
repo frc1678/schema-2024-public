@@ -10,7 +10,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # TODO: Add collection information to data fields once schema is implemented
 # Non-calculated data
@@ -22,14 +22,4 @@ data:
 calculations:
   scout_precision:
     type: float
-    requires:
-      unconsolidated_totals.auto_high_balls: 4
-      unconsolidated_totals.auto_low_balls: 2
-      unconsolidated_totals.tele_high_balls: 2
-      unconsolidated_totals.tele_low_balls: 1
-      unconsolidated_totals.climb_level:
-          NONE: 0
-          LOW: 4
-          MID: 6
-          HIGH: 10
-          TRAVERSAL: 15
+    requires: scout_in_match_precision.sim_precision

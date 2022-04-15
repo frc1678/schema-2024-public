@@ -1,0 +1,38 @@
+# Schema for scout precisions in individual matches
+#
+# Example:
+#
+# {'scout_name': 'Vand',
+#  'match_number': 4,
+#  'team_number': 1678,
+#  'alliance_color_is_red': True
+#  'sim_precision': 73.1566}
+#
+
+
+# Contains information about this schema file
+schema_file:
+  # Version of schema file
+  # Incremented every merged schema change
+  version: 2
+
+# TODO: Add collection information to data fields once schema is implemented
+# Non-calculated data
+data:
+  scout_name:
+    type: str
+  match_number:
+    type: int
+  team_number:
+    type: int
+  alliance_color_is_red:
+    type: bool
+  
+calculations:
+  sim_precision:
+    type: float
+    requires:
+      unconsolidated_totals.auto_high_balls: 4
+      unconsolidated_totals.auto_low_balls: 2
+      unconsolidated_totals.tele_high_balls: 2
+      unconsolidated_totals.tele_low_balls: 1
