@@ -9,7 +9,6 @@
 # 'has_ground_intake': True,
 # 'can_eject_terminal': False,
 # 'has_vision': True,
-# 'can_cheesecake': True,
 # 'can_intake_terminal': False,
 # 'can_under_low_rung': False,
 # 'can_climb': True}
@@ -20,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Stores data type/structure
 schema:
@@ -37,8 +36,6 @@ schema:
   can_eject_terminal:
     type: bool
   has_vision:
-    type: bool
-  can_cheesecake:
     type: bool
   can_intake_terminal:
     type: bool
