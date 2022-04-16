@@ -14,7 +14,8 @@
 # 'final_predicted_rp2': 0.0,
 # 'predicted_rp1': 41.7888,
 # 'predicted_rp2': 62.5841,
-# 'predicted_score': 24.3065}
+# 'predicted_score': 24.3065,
+# 'win_chance': 0.6}
 #
 
 
@@ -22,7 +23,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 8
+  version: 9
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -54,8 +55,8 @@ data:
     type: float
     requires: [obj_team]
 
-# Information on calculations that will be performed
-calculations:
+# Information on predicted values that will be performed
+predicted_values:
   predicted_score:
     type: float
     requires: [obj_team, tba_team]
@@ -67,3 +68,8 @@ calculations:
   predicted_rp2:
     type: float
     requires: [obj_team]
+
+predicted_probabilities:
+  win_chance:
+    type: float
+    requires: predicted_score
