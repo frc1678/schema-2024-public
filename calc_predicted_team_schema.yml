@@ -6,7 +6,8 @@
 # 'current_rank': 31,
 # 'current_rps': 18,
 # 'predicted_rank': 39,
-# 'predicted_rps': 65.1}
+# 'predicted_rps': 65.1,
+# 'team_number': '254'}
 #
 
 
@@ -19,7 +20,7 @@ schema_file:
 # Not used for calcs
 data:
   team_number:
-    type: int
+    type: str
   current_rank:
     type: int
   current_rps:

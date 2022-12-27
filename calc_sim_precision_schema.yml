@@ -4,7 +4,7 @@
 #
 # {'scout_name': 'Vand',
 #  'match_number': 4,
-#  'team_number': 1678,
+#  'team_number': '1678',
 #  'alliance_color_is_red': True
 #  'sim_precision': 73.1566}
 #
@@ -24,7 +24,7 @@ data:
   match_number:
     type: int
   team_number:
-    type: int
+    type: str
   alliance_color_is_red:
     type: bool
   

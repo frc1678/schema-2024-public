@@ -2,7 +2,7 @@
 #
 # Example:
 #
-# {'team_number': 98,
+# {'team_number': '98',
 # 'drivetrain': 1,
 # 'drivetrain_motor_type': 1,
 # 'drivetrain_motors': 86,
@@ -24,7 +24,7 @@ schema_file:
 # Stores data type/structure
 schema:
   team_number:
-    type: int
+    type: str
   drivetrain:
     type: Enum
   drivetrain_motors:

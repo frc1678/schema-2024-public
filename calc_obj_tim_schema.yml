@@ -4,7 +4,7 @@
 #
 # {'confidence_rating': 86,
 # 'match_number': 8,
-# 'team_number': 79
+# 'team_number': '79',
 # 'auto_high_balls': 3,
 # 'auto_low_balls': 3,
 # 'tele_high_balls': 3,
@@ -28,7 +28,7 @@ data:
   confidence_rating:
     type: int
   team_number:
-    type: int
+    type: str
   match_number:
     type: int
 

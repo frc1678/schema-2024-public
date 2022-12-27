@@ -5,7 +5,7 @@
 # {'driver_ability': 29.5912,
 # 'driver_field_awareness': 42.6533,
 # 'driver_quickness': 85.6003,
-# 'team_number': 57}
+# 'team_number': '57'}
 #
 
 
@@ -18,7 +18,7 @@ schema_file:
 # Stores fields that will be added to database but do not require calculations
 data:
   team_number:
-    type: int
+    type: str
 
 # Calculations that will be averaged to make up averaged_calculations
 component_calculations:

@@ -2,7 +2,7 @@
 #
 # Example:
 #
-# {'team_number': 29,
+# {'team_number': '29',
 # 'auto_avg_high_balls': 4.2394,
 # 'auto_avg_low_balls': 1.3244,
 # 'auto_avg_total_balls': 10.4353,
@@ -64,7 +64,7 @@ schema_file:
 # Stores fields that will be added to database but do not require calculations
 data:
   team_number:
-    type: int
+    type: str
 
 # Averages of fields in consolidated TIMs
 averages:

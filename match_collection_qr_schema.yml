@@ -30,7 +30,7 @@ generic_data:
 objective_tim:
   _start_character: '+' # First character in QR used to identify QR type
   _separator: '$' # Separates key:value pairs
-  team_number: [Z, int] # int properties not needed but int is more intuitive
+  team_number: [Z, str] # The team number
   scout_id: ['Y', int] # Used to determine which tablets have not submitted ('Y' in quotes because it's a keyword on its own)
   start_position: [X, str] # str representing where a robot starts in auto ('one', 'two', 'three', or 'four')
   timeline: [W, list, dict] # List of dictionaries
@@ -51,7 +51,7 @@ subjective_aim:
   _start_character: '*' # First character in QR used to identify QR type
   _separator: '$' # Separates each key:value pair
   _team_separator: '#' # Separates each team's section
-  team_number: [A, int] # int properties not needed but int is more intuitive
+  team_number: [A, str] # The team number
   quickness_score: [B, int] # A ranking value between 1 and 3
   field_awareness_score: [C, int] # A ranking value between 1 and 3
   played_defense: [D, bool] # True if robot played defense at least once in the match, else False

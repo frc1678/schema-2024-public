@@ -4,7 +4,7 @@
 #
 # {'auto_line_successes': 29,
 # 'team_name': 'Ray of Hope',
-# 'team_number': 75}
+# 'team_number': '75'}
 #
 
 
@@ -16,7 +16,7 @@ schema_file:
 
 data:
   team_number:
-    type: int
+    type: str
 
 # Special calculations that can't be grouped into other calcs
 calculations:

@@ -4,7 +4,7 @@
 #
 # {'auto_line': False,
 # 'match_number': 34,
-# 'team_number': 88}
+# 'team_number': '88'}
 #
 
 
@@ -18,7 +18,7 @@ data:
   match_number:
     type: int
   team_number:
-    type: int
+    type: str
 
 # Calculations built around pulling data from TBA.
 # key is the name in our local MongoDB database, value is a dict of TBA key to TBA value
