@@ -22,6 +22,9 @@ data:
 calculations:
   team_name:
     type: str
+  # Foul calculated contribution
+  foul_cc:
+    type: float
 
 # Calcs based on counting team in match bools
 counts:
