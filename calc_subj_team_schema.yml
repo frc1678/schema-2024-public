@@ -13,7 +13,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 9
+  version: 1
 
 # Stores fields that will be added to database but do not require calculations
 data:
