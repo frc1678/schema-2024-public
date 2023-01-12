@@ -19,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Stores data type/structure
 schema:
@@ -33,10 +33,6 @@ schema:
     type: Enum
   has_vision:
     type: bool
-  can_cheesecake:
-    type: bool
-  construction_quality:
-    type: int
   weight:
     type: int
   dimensions:
