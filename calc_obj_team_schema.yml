@@ -3,63 +3,98 @@
 # Example:
 #
 # {'team_number': '29',
-# 'auto_avg_high_balls': 4.2394,
-# 'auto_avg_low_balls': 1.3244,
-# 'auto_avg_total_balls': 10.4353,
-# 'tele_avg_high_balls': 4.2394,
-# 'tele_avg_low_balls': 1.3244,
-# 'tele_avg_total_balls': 5.5324,
+# 'auto_avg_cone_high': 4.2394,
+# 'auto_avg_cone_mid': 1.3244,
+# 'auto_avg_cone_low': 5.5123,
+# 'auto_avg_cone_total': 10.8712,
+# 'auto_avg_cube_high': 4.2394,
+# 'auto_avg_cube_mid': 1.3244,
+# 'auto_avg_cube_low': 1.3233,
+# 'auto_avg_cube_total': 5.5324,
+# 'tele_avg_cone_high': 4.2394,
+# 'tele_avg_cone_mid': 1.3244,
+# 'tele_avg_cone_low': 5.5123,
+# 'tele_avg_cone_total': 10.8712,
+# 'tele_avg_cube_high': 4.2394,
+# 'tele_avg_cube_mid': 1.3244,
+# 'tele_avg_cube_low': 1.3233,
+# 'tele_avg_cube_total': 5.5324,
 # 'avg_incap_time': 70.5843,
-# 'avg_intakes': 14.3243,
-# 'lfm_auto_avg_high_balls': 4.2394,
-# 'lfm_auto_avg_low_balls': 1.3244,
-# 'lfm_tele_avg_high_balls': 4.2394,
-# 'lfm_tele_avg_low_balls': 1.3244,
-# 'lfm_avg_incap_time': 5.2341,
-# 'auto_sd_low_balls': 4.6602,
-# 'auto_sd_high_balls': 3.2754,
-# 'tele_sd_low_balls': 8.9442,
-# 'tele_sd_high_balls': 2.7654,
-# 'climb_all_attempts': 23,
-# 'low_rung_successes': 4,
-# 'mid_rung_successes': 2,
-# 'high_rung_successes': 3,
-# 'traversal_rung_successes': 0,
-# 'position_zero_starts': 0
+# 'avg_intakes_ground': 2.3432,
+# 'avg_intakes_shelf': 12.9923,
+# 'avg_intakes_low_row': 3.7159,
+# 'total_intakes': 3.421,
+# 'lfm_auto_avg_cone_high': 4.2394,
+# 'lfm_auto_avg_cone_mid': 1.3244,
+# 'lfm_auto_avg_cone_low': 5.5123,
+# 'lfm_auto_avg_cone_total': 10.8712,
+# 'lfm_auto_avg_cube_high': 4.2394,
+# 'lfm_auto_avg_cube_mid': 1.3244,
+# 'lfm_auto_avg_cube_low': 1.3233,
+# 'lfm_auto_avg_cube_total': 5.5324,
+# 'lfm_tele_avg_cone_high': 4.2394,
+# 'lfm_tele_avg_cone_mid': 1.3244,
+# 'lfm_tele_avg_cone_low': 5.5123,
+# 'lfm_tele_avg_cone_total': 10.8712,
+# 'lfm_tele_avg_cube_high': 4.2394,
+# 'lfm_tele_avg_cube_mid': 1.3244,
+# 'lfm_tele_avg_cube_low': 1.3233,
+# 'lfm_tele_avg_cube_total': 5.5324,
+# 'lfm_avg_incap_time': 70.5843,
+# 'lfm_avg_intakes_ground': 2.3432,
+# 'lfm_avg_intakes_shelf': 12.9923,
+# 'lfm_avg_intakes_low_row': 3.7159,
+# 'lfm_total_intakes': 40,
+# 'auto_sd_cone_high': 2.2394,
+# 'auto_sd_cone_mid': 3.3244,
+# 'auto_sd_cone_low': 1.5123,
+# 'auto_sd_cube_high': 4.2394,
+# 'auto_sd_cube_mid': 6.3244,
+# 'auto_sd_cube_low': 1.3233,
+# 'auto_sd_cube_total': 0.5324,
+# 'tele_sd_cone_high': 2.2394,
+# 'tele_sd_cone_mid': 5.3244,
+# 'tele_sd_cone_low': 3.5123,
+# 'tele_sd_cube_high': 2.2394,
+# 'tele_sd_cube_mid': 7.3244,
+# 'tele_sd_cube_low': 0.3233,
+# 'auto_charge_attempts': 6,
+# 'auto_dock': 2,
+# 'auto_engage': 4,
+# 'tele_charge_attempts': 10,
+# 'tele_dock': 5,
+# 'tele_engage': 7,
+# 'tele_park': 2,
+# 'matches_incap': 3,
+# 'position_zero_starts': 0,
 # 'position_one_starts': 3,
 # 'position_two_starts': 9,
 # 'position_three_starts': 1,
-# 'position_four_starts': 0,
-# 'matches_played': 10,
-# 'matches_incap': 1,
-# 'lfm_climb_all_attempts': 23,
-# 'lfm_low_rung_successes': 4,
-# 'lfm_mid_rung_successes': 2,
-# 'lfm_high_rung_successes': 3,
-# 'lfm_traversal_rung_successes': 0,
-# 'lfm_matches_incap': 0,
-# 'auto_max_low_balls': 5,
-# 'auto_max_high_balls': 5,
-# 'tele_max_low_balls': 5,
-# 'tele_max_high_balls': 5,
-# 'max_incap': 6,
-# 'max_climb_level': 'HIGH',
-# 'lfm_auto_max_low_balls': 5,
-# 'lfm_auto_max_high_balls': 5,
-# 'lfm_tele_max_low_balls': 5,
-# 'lfm_tele_max_high_balls': 5,
-# 'lfm_max_incap': 6,
-# 'max_climb_level': 'HIGH',
-# 'mode_climb_level': 'LOW',
-# 'mode_start_position': 'TWO',}
+# 'lfm_auto_charge_attempts': 8,
+# 'lfm_auto_dock': 4,
+# 'lfm_auto_engage': 3,
+# 'lfm_tele_charge_attempts': 10,
+# 'lfm_tele_dock': 0,
+# 'lfm_tele_engage': 9,
+# 'lfm_tele_park': 1,
+# 'lfm_matches_incap': 4,
+# 'lfm_position_zero_starts': 3,
+# 'lfm_position_one_starts': 2,
+# 'lfm_position_two_starts': 5,
+# 'lfm_position_three_starts': 2,
+# 'mode_start_position': 'TWO',
+# 'lfm_mode_start_position': 'FOUR',
+# 'mode_auto_charge_level': 'ENGAGE',
+# 'lfm_mode_auto_charge_level': ENGAGE',
+# 'mode_tele_charge_level': 'DOCK',
+# 'lfm_mode_tele_charge_level': 'PARK',}
 #
-
 
 # Contains information about this schema file
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 13
+  version: 1
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -68,41 +103,116 @@ data:
 
 # Averages of fields in consolidated TIMs
 averages:
-  auto_avg_high_balls:
-    tim_fields: [obj_tim.auto_high_balls]
+  auto_avg_cone_high:
+    tim_fields: [obj_tim.auto_cone_high]
     type: float
-  auto_avg_low_balls:
-    tim_fields: [obj_tim.auto_low_balls]
+  auto_avg_cone_mid:
+    tim_fields: [obj_tim.auto_cone_mid]
     type: float
-  auto_avg_total_balls:
-    tim_fields: [obj_tim.auto_total_balls]
+  auto_avg_cone_low:
+    tim_fields: [obj_tim.auto_cone_low]
     type: float
-  tele_avg_high_balls:
-    tim_fields: [obj_tim.tele_high_balls]
+  auto_avg_cone_total:
+    tim_fields: [obj_tim.auto_total_cones]
     type: float
-  tele_avg_low_balls:
-    tim_fields: [obj_tim.tele_low_balls]
+  auto_avg_cube_high:
+    tim_fields: [obj_tim.auto_cube_high]
     type: float
-  tele_avg_total_balls:
-    tim_fields: [obj_tim.tele_total_balls]
+  auto_avg_cube_mid:
+    tim_fields: [obj_tim.auto_cube_mid]
+    type: float
+  auto_avg_cube_low:
+    tim_fields: [obj_tim.auto_cube_low]
+    type: float
+  auto_avg_cube_total:
+    tim_fields: [obj_tim.auto_total_cubes]
+    type: float
+  tele_avg_cone_high:
+    tim_fields: [obj_tim.tele_cone_high]
+    type: float
+  tele_avg_cone_mid:
+    tim_fields: [obj_tim.tele_cone_mid]
+    type: float
+  tele_avg_cone_low:
+    tim_fields: [obj_tim.tele_cone_low]
+    type: float
+  tele_avg_cone_total:
+    tim_fields: [obj_tim.tele_total_cones]
+    type: float
+  tele_avg_cube_high:
+    tim_fields: [obj_tim.tele_cube_high]
+    type: float
+  tele_avg_cube_mid:
+    tim_fields: [obj_tim.tele_cube_mid]
+    type: float
+  tele_avg_cube_low:
+    tim_fields: [obj_tim.tele_cube_low]
+    type: float
+  tele_avg_cube_total:
+    tim_fields: [obj_tim.tele_cube_total_cubes]
     type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
-  avg_intakes:
-    tim_fields: [obj_tim.intakes]
+  avg_intakes_ground:
+    tim_fields: [obj_tim.intakes_ground]
     type: float
-  lfm_auto_avg_high_balls:
-    tim_fields: [obj_tim.auto_high_balls]
+  avg_intakes_shelf:
+    tim_fields: [obj_tim.intakes_shelf]
     type: float
-  lfm_auto_avg_low_balls:
-    tim_fields: [obj_tim.auto_low_balls]
+  avg_intakes_low_row:
+    tim_fields: [obj_tim.intakes_low_row]
     type: float
-  lfm_tele_avg_high_balls:
-    tim_fields: [obj_tim.tele_high_balls]
+  total_intakes:
+    tim_fields: [obj_tim.total_intakes]
     type: float
-  lfm_tele_avg_low_balls:
-    tim_fields: [obj_tim.tele_low_balls]
+  lfm_auto_avg_cone_high:
+    tim_fields: [obj_tim.auto_cone_high]
+    type: float
+  lfm_auto_avg_cone_mid:
+    tim_fields: [obj_tim.auto_cone_mid]
+    type: float
+  lfm_auto_avg_cone_low:
+    tim_fields: [obj_tim.auto_cone_low]
+    type: float
+  lfm_auto_avg_cube_high:
+    tim_fields: [obj_tim.auto_cube_high]
+    type: float
+  lfm_auto_avg_cube_mid:
+    tim_fields: [obj_tim.auto_cube_mid]
+    type: float
+  lfm_auto_avg_cube_low:
+    tim_fields: [obj_tim.auto_cube_low]
+    type: float
+  lfm_tele_avg_cone_high:
+    tim_fields: [obj_tim.tele_cone_high]
+    type: float
+  lfm_tele_avg_cone_mid:
+    tim_fields: [obj_tim.tele_cone_mid]
+    type: float
+  lfm_tele_avg_cone_low:
+    tim_fields: [obj_tim.tele_cone_low]
+    type: float
+  lmf_tele_avg_cube_high:
+    tim_fields: [obj_tim.tele_cube_high]
+    type: float
+  lfm_tele_avg_cube_mid:
+    tim_fields: [obj_tim.tele_cube_mid]
+    type: float
+  lfm_tele_avg_cube_low:
+    tim_fields: [obj_tim.tele_cube_low]
+    type: float
+  lfm_avg_intakes_ground:
+    tim_fields: [obj_tim.intakes_ground]
+    type: float
+  lfm_avg_intakes_shelf:
+    tim_fields: [obj_tim.intakes_shelf]
+    type: float
+  lfm_avg_intakes_low_row:
+    tim_fields: [obj_tim.intakes_low_row]
+    type: float
+  lfm_total_intakes:
+    tim_fields: [obj_tim.total_intakes]
     type: float
   lfm_avg_incap_time:
     tim_fields: [obj_tim.incap]
@@ -111,45 +221,78 @@ averages:
 # Standard deviations of fields in consolidated TIMs
 # Used for predictions
 standard_deviations:
-  auto_sd_low_balls:
-    tim_fields: [obj_tim.auto_low_balls]
+  auto_sd_cone_high:
+    tim_fields: [obj_tim.auto_cone_high]
     type: float
-  auto_sd_high_balls:
-    tim_fields: [obj_tim.auto_high_balls]
+  auto_sd_cone_mid:
+    tim_fields: [obj_tim.auto_cone_mid]
     type: float
-  tele_sd_low_balls:
-    tim_fields: [obj_tim.tele_low_balls]
+  auto_sd_cone_low:
+    tim_fields: [obj_tim.auto_cone_low]
     type: float
-  tele_sd_high_balls:
-    tim_fields: [obj_tim.tele_high_balls]
+  auto_sd_cube_high:
+    tim_fields: [obj_tim.auto_cube_high]
+    type: float
+  auto_sd_cube_mid:
+    tim_fields: [obj_tim.auto_cube_mid]
+    type: float
+  auto_sd_cube_low:
+    tim_fields: [obj_tim.auto_cube_low]
+    type: float
+  tele_sd_cone_high:
+    tim_fields: [obj_tim.tele_cone_high]
+    type: float
+  tele_sd_cone_mid:
+    tim_fields: [obj_tim.tele_cone_mid]
+    type: float
+  tele_sd_cone_low:
+    tim_fields: [obj_tim.tele_cone_low]
+    type: float
+  tele_sd_cube_high:
+    tim_fields: [obj_tim.tele_cube_high]
+    type: float
+  tele_sd_cube_mid:
+    tim_fields: [obj_tim.tele_cube_mid]
+    type: float
+  tele_sd_cube_low:
+    tim_fields: [obj_tim.tele_cube_low]
     type: float
 
 # Counts of occurrences in consolidated TIMs
 counts:
-  climb_all_attempts:
+  auto_charge_attempts:
     tim_fields:
       not:
-        obj_tim.climb_attempts: 0
+        obj_tim.auto_charge_attempt: 0
     type: int
-  low_rung_successes:
+  auto_dock:
     tim_fields:
-      obj_tim.climb_level: 'LOW'
+      obj_tim.auto_charge_level: 'DOCK'
     type: int
-  mid_rung_successes:
+  auto_engage:
     tim_fields:
-      obj_tim.climb_level: 'MID'
+      obj_tim.auto_charge_level: 'ENGAGE'
     type: int
-  high_rung_successes:
+  tele_charge_attempts:
     tim_fields:
-      obj_tim.climb_level: 'HIGH'
+      not:
+        obj_tim.tele_charge_attempt: 0
     type: int
-  traversal_rung_successes:
+  tele_dock:
     tim_fields:
-      obj_tim.climb_level: 'TRAVERSAL'
+      obj_tim.tele_charge_level: 'DOCK'
+    type: int
+  tele_engage:
+    tim_fields:
+      obj_tim.tele_charge_level: 'ENGAGE'
+    type: int
+  tele_park:
+    tim_fields:
+      obj_tim.tele_charge_level: 'PARK'
     type: int
   position_zero_starts:
     tim_fields:
-      obj_tim.start_position: 'ZERO'
+      obj_tim.: 'ZERO'
     type: int
   position_one_starts:
     tim_fields:
@@ -167,36 +310,40 @@ counts:
     tim_fields:
       obj_tim.start_position: 'FOUR'
     type: int
-  matches_played:
-    tim_fields:
-      not:
-        match_number: 0
-    type: int
   matches_incap:
     tim_fields:
       not:
         obj_tim.incap: 0
     type: int
-  lfm_climb_all_attempts:
+  lfm_auto_charge_attempts:
     tim_fields:
       not:
-        obj_tim.climb_attempts: 0
+        obj_tim.auto_charge_attempt: 0
     type: int
-  lfm_low_rung_successes:
+  lfm_auto_dock:
     tim_fields:
-      obj_tim.climb_level: 'LOW'
+      obj_tim.auto_charge_level: 'DOCK'
     type: int
-  lfm_mid_rung_successes:
+  lfm_auto_engage:
     tim_fields:
-      obj_tim.climb_level: 'MID'
+      obj_tim.auto_charge_level: 'ENGAGE'
     type: int
-  lfm_high_rung_successes:
+  lfm_tele_charge_attempts:
     tim_fields:
-      obj_tim.climb_level: 'HIGH'
+      not:
+        obj_tim.tele_charge_attempt: 0
     type: int
-  lfm_traversal_rung_successes:
+  lfm_tele_dock:
     tim_fields:
-      obj_tim.climb_level: 'TRAVERSAL'
+      obj_tim.tele_charge_level: 'DOCK'
+    type: int
+  lfm_tele_engage:
+    tim_fields:
+      obj_tim.tele_charge_level: 'ENGAGE'
+    type: int
+  lfm_tele_park:
+    tim_fields:
+      obj_tim.tele_charge_level: 'PARK'
     type: int
   lfm_matches_incap:
     tim_fields:
@@ -212,61 +359,113 @@ super_counts:
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
-  auto_max_low_balls:
+  auto_max_cone_high:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_low_balls]
-  auto_max_high_balls:
+    tim_fields: [obj_tim.auto_cone_high]
+  auto_max_cone_mid:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_high_balls]
-  tele_max_low_balls:
+    tim_fields: [obj_tim.auto_cone_mid]
+  auto_max_cone_low:
     extrema_type: max
-    tim_fields: [obj_tim.tele_low_balls]
     type: int
-  tele_max_high_balls:
+    tim_fields: [obj_tim.auto_cone_low]
+  auto_max_cube_high:
     extrema_type: max
-    tim_fields: [obj_tim.tele_high_balls]
     type: int
+    tim_fields: [obj_tim.auto_cube_high]
+  auto_max_cube_mid:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_cube_mid]
+  auto_max_cube_low:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_cube_low]
+  tele_max_cone_high:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cone_high]
+  tele_max_cone_mid:
+      extrema_type: max
+      type: int
+      tim_fields: [obj_tim.tele_cone_mid]
+  tele_max_cone_low:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cone_low]
+  tele_max_cube_high:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cube_high]
+  tele_max_cube_mid:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cube_mid]
+  tele_max_cube_low:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cube_low]
   max_incap:
     extrema_type: max
     tim_fields: [obj_tim.incap]
     type: int
-  max_climb_level:
-    extrema_type: max
-    tim_fields: [obj_tim.climb_level]
-    type: str
-  lfm_auto_max_low_balls:
+  lfm_auto_max_cone_high:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_low_balls]
-  lfm_auto_max_high_balls:
+    tim_fields: [obj_tim.auto_cone_high]
+  lfm_auto_max_cone_mid:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_high_balls]
-  lfm_tele_max_low_balls:
+    tim_fields: [obj_tim.auto_cone_mid]
+  lfm_auto_max_cone_low:
     extrema_type: max
-    tim_fields: [obj_tim.tele_low_balls]
     type: int
-  lfm_tele_max_high_balls:
+    tim_fields: [obj_tim.auto_cone_low]
+  lfm_auto_max_cube_high:
     extrema_type: max
-    tim_fields: [obj_tim.tele_high_balls]
     type: int
+    tim_fields: [obj_tim.auto_cube_high]
+  lfm_auto_max_cube_mid:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_cube_mid]
+  lfm_auto_max_cube_low:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_cube_low]
+  lfm_tele_max_cone_high:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cone_high]
+  lfm_tele_max_cone_mid:
+      extrema_type: max
+      type: int
+      tim_fields: [obj_tim.tele_cone_mid]
+  lfm_tele_max_cone_low:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cone_low]
+  lfm_tele_max_cube_high:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cube_high]
+  lfm_tele_max_cube_mid:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cube_mid]
+  lfm_tele_max_cube_low:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cube_low]
   lfm_max_incap:
     extrema_type: max
     tim_fields: [obj_tim.incap]
     type: int
-  lfm_max_climb_level:
-    extrema_type: max
-    tim_fields: [obj_tim.climb_level]
-    type: str
 
 # Most common values
 modes:
-  mode_climb_level:
-    tim_fields: [obj_tim.climb_level]
-    ignore: None
-    type: List
   mode_start_position:
     tim_fields: [obj_tim.start_position]
     ignore: 'ZERO'
@@ -275,20 +474,40 @@ modes:
     tim_fields: [obj_tim.start_position]
     ignore: 'ZERO'
     type: List
+  mode_auto_charge_level:
+    tim_fields: [obj_tim.auto_charge_level]
+    ignore: 'None'
+    type: List
+  lfm_mode_auto_charge_level:
+    tim_fields: [obj_tim.auto_charge_level]
+    ignore: 'None'
+    type: List
+  mode_tele_charge_level:
+    tim_fields: [obj_tim.tele_charge_level]
+    ignore: 'None'
+    type: List
+  lfm_tele_auto_charge_level:
+    tim_fields: [obj_tim.tele_charge_level]
+    ignore: 'None'
+    type: List
 
 success_rates:
-  climb_percent_success:
-    team_successes: [low_rung_successes, mid_rung_successes, high_rung_successes, traversal_rung_successes]
-    team_attempts: [climb_all_attempts]
+  charge_percent_success:
+    team_dock_successes: [auto_dock, tele_dock]
+    team_engage_successes: [auto_engage, tele_engage]
+    team_attempts: [auto_charge_attempts, tele_charge_attempts]
+    team_park_successes: [tele_park]
     type: float
-  lfm_climb_percent_success:
-    team_successes: [lfm_low_rung_successes, lfm_mid_rung_successes, lfm_high_rung_successes, lfm_traversal_rung_successes]
-    team_attempts: [lfm_climb_all_attempts]
+  lfm_charge_percent_success:
+    team_dock_successes: [lfm_auto_dock, lfm_tele_dock]
+    team_engage_successes: [lfm_auto_engage, lfm_tele_engage]
+    team_attempts: [lfm_auto_charge_attempts, lfm_tele_charge_attempts]
+    team_park_successes: [lfm_tele_park]
     type: float
 
 # Calculates average points for given fields
 average_points:
-  avg_climb_points:
-    point_fields: [low_rung_successes, mid_rung_successes, high_rung_successes, traversal_rung_successes]
-    point_values: [4, 6, 10, 15]
+  avg_charge_points:
+    point_fields: [auto_dock, auto_engage, tele_dock, tele_engage, tele_park]
+    point_values: [8, 12, 6, 10, 2]
     type: float
