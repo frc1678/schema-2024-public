@@ -94,7 +94,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -388,9 +388,9 @@ extrema:
     type: int
     tim_fields: [obj_tim.tele_cone_high]
   tele_max_cone_mid:
-      extrema_type: max
-      type: int
-      tim_fields: [obj_tim.tele_cone_mid]
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cone_mid]
   tele_max_cone_low:
     extrema_type: max
     type: int
@@ -411,6 +411,14 @@ extrema:
     extrema_type: max
     tim_fields: [obj_tim.incap]
     type: int
+  max_auto_charge_level:
+    extrema_type: max
+    tim_fields: [obj_tim.auto_charge_level]
+    type: str
+  max_tele_charge_level:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_charge_level]
+    type: str
   lfm_auto_max_cone_high:
     extrema_type: max
     type: int
@@ -463,6 +471,14 @@ extrema:
     extrema_type: max
     tim_fields: [obj_tim.incap]
     type: int
+  lfm_max_auto_charge_level:
+     extrema_type: max
+     tim_fields: [obj_tim.auto_charge_level]
+     type: str
+  lfm_max_tele_charge_level:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_charge_level]
+    type: str
 
 # Most common values
 modes:
