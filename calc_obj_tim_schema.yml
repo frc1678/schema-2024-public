@@ -36,7 +36,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -151,4 +151,6 @@ categorical_actions:
   tele_charge_level:
     type: str
   start_position:
+    type: str
+  preloaded_gamepiece:
     type: str

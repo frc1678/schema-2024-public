@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -36,7 +36,7 @@ objective_tim:
   timeline: [W, list, dict] # List of dictionaries
   auto_charge_level: [V, str] # str representing where a robot finishes in auto to ('none', 'docked', 'engaged')
   tele_charge_level: [U, str] # str representing where a robot finished in the endgame ('none', 'park', 'docked', 'engaged')
-
+  preloaded_piece: [T, str] # str representing the preloaded game piece of a robot ('NONE', 'CONE', 'CUBE')
 
 # Timeline is part of objective match collection QR
 # Data for an action in the timeline

@@ -94,7 +94,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -482,6 +482,9 @@ extrema:
 
 # Most common values
 modes:
+  mode_preloaded_gamepiece:
+    tim_fields: [obj_tim.preloaded_gamepiece]
+    type: List
   mode_start_position:
     tim_fields: [obj_tim.start_position]
     ignore: 'ZERO'
