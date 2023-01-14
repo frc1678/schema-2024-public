@@ -36,7 +36,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -73,6 +73,10 @@ timeline_counts:
     type: int
     action_type: score_cone_high
     time: [135, 153]
+  auto_charge_attempt:
+    type: int
+    action_type: charge_attempt
+    time: [135, 153]
   tele_cube_low:
     type: int
     action_type: score_cube_low
@@ -96,6 +100,10 @@ timeline_counts:
   tele_cone_high:
     type: int
     action_type: score_cone_high
+    time: [0, 135]
+  tele_charge_attempt:
+    type: int
+    action_type: charge_attempt
     time: [0, 135]
   intakes_ground:
     type: int
@@ -133,6 +141,9 @@ aggregates:
   total_intakes:
     type: int
     counts: [intakes_low_node, intakes_shelf, intakes_ground]
+  total_charge_attempts:
+    type: int
+    counts: [tele_charge_attempt, auto_charge_attempt]
 
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
