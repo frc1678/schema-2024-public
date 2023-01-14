@@ -94,7 +94,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -149,7 +149,7 @@ averages:
     tim_fields: [obj_tim.tele_cube_low]
     type: float
   tele_avg_cube_total:
-    tim_fields: [obj_tim.tele_cube_total_cubes]
+    tim_fields: [obj_tim.tele_total_cubes]
     type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap]
