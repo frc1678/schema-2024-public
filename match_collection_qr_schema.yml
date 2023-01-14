@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -68,7 +68,7 @@ action_type:
   score_cube_mid: AE
   score_cube_low: AF
   intake_ground: AG
-  intake_shelf: AH
+  intake_station: AH
   intake_low_row: AI
   start_incap: AJ
   end_incap: AK

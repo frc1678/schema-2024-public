@@ -36,7 +36,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -109,9 +109,9 @@ timeline_counts:
     type: int
     action_type: intake_ground
     time: [0, 153]
-  intakes_shelf:
+  intakes_station:
     type: int
-    action_type: intake_shelf
+    action_type: intake_station
     time: [0, 153]
   intakes_low_node:
     type: int
@@ -140,7 +140,7 @@ aggregates:
     counts: [tele_total_cubes, tele_total_cones]
   total_intakes:
     type: int
-    counts: [intakes_low_node, intakes_shelf, intakes_ground]
+    counts: [intakes_low_node, intakes_station, intakes_ground]
   total_charge_attempts:
     type: int
     counts: [tele_charge_attempt, auto_charge_attempt]
