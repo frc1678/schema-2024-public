@@ -36,7 +36,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -158,15 +158,27 @@ timeline_cycle_time:
 # Robot actions which are one out of a dict of possible actions
 # Dict items should be ordered, keys are shortened string
 categorical_actions:
+  auto_charge_level: Enum[str]
+  tele_charge_level: Enum[str]
+  start_position: Enum[int]
+  preloaded_gamepiece: Enum[str]
+
+enums:
   auto_charge_level:
-    type: str
-    actions: {"N": "NONE", "D": "DOCK", "E": "ENGAGE"}
+    NONE: "N"
+    DOCK: D
+    ENGAGE: E
   tele_charge_level:
-    type: str
-    actions: {"N": "NONE", "P": "PARK", "D": "DOCK", "E": "ENGAGE"}
+    NONE: "N"
+    PARK: P
+    DOCK: D
+    ENGAGE: E
   start_position:
-    type: str
-    actions: {"Z": "ZERO", "O": "ONE", "T": "TWO", "H": "THREE", "F": "FOUR"}
+    ZERO: 0
+    ONE: 1
+    TWO: 2
+    THREE: 3
+    FOUR: 4
   preloaded_gamepiece:
-    type: str
-    actions: {"B": "CUBE", "N": "CONE"}
+    CUBE: B
+    CONE: "N"

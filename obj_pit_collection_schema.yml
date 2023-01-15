@@ -19,18 +19,18 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Stores data type/structure
 schema:
   team_number:
     type: str
   drivetrain:
-    type: Enum
+    type: Enum[int]
   drivetrain_motors:
     type: int
   drivetrain_motor_type:
-    type: Enum
+    type: Enum[int]
   has_vision:
     type: bool
   weight:
