@@ -292,7 +292,7 @@ counts:
     type: int
   position_zero_starts:
     tim_fields:
-      obj_tim.: 'ZERO'
+      obj_tim.start_position: 'ZERO'
     type: int
   position_one_starts:
     tim_fields:
