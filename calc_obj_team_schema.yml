@@ -282,7 +282,7 @@ standard_deviations:
     tim_fields: [obj_tim.tele_cube_low]
     type: float
   tele_sd_cube_total:
-    time_fields: [obj_tim.tele_total_cubes]
+    tim_fields: [obj_tim.tele_total_cubes]
     type: float
 
 # Counts of occurrences in consolidated TIMs
