@@ -475,9 +475,9 @@ extrema:
     type: int
     tim_fields: [obj_tim.tele_cone_high]
   lfm_tele_max_cone_mid:
-      extrema_type: max
-      type: int
-      tim_fields: [obj_tim.tele_cone_mid]
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_cone_mid]
   lfm_tele_max_cone_low:
     extrema_type: max
     type: int
@@ -511,6 +511,7 @@ extrema:
 modes:
   mode_preloaded_gamepiece:
     tim_fields: [obj_tim.preloaded_gamepiece]
+    ignore: null
     type: List
   mode_start_position:
     tim_fields: [obj_tim.start_position]
@@ -522,19 +523,19 @@ modes:
     type: List
   mode_auto_charge_level:
     tim_fields: [obj_tim.auto_charge_level]
-    ignore: 'None'
+    ignore: 'NONE'
     type: List
   lfm_mode_auto_charge_level:
     tim_fields: [obj_tim.auto_charge_level]
-    ignore: 'None'
+    ignore: 'NONE'
     type: List
   mode_tele_charge_level:
     tim_fields: [obj_tim.tele_charge_level]
-    ignore: 'None'
+    ignore: 'NONE'
     type: List
-  lfm_tele_auto_charge_level:
+  lfm_mode_tele_charge_level:
     tim_fields: [obj_tim.tele_charge_level]
-    ignore: 'None'
+    ignore: 'NONE'
     type: List
 
 success_rates:
