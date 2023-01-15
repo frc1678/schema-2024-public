@@ -6,12 +6,10 @@
 # 'drivetrain': 1,
 # 'drivetrain_motor_type': 1,
 # 'drivetrain_motors': 86,
-# 'has_ground_intake': True,
-# 'can_eject_terminal': False,
 # 'has_vision': True,
-# 'can_intake_terminal': False,
-# 'can_under_low_rung': False,
-# 'can_climb': True}
+# 'weight': 45,
+# 'length': 34.4657,
+# 'width': 29.0483}
 #
 
 
