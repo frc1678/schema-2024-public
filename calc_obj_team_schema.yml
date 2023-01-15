@@ -193,7 +193,7 @@ averages:
   lfm_tele_avg_cone_low:
     tim_fields: [obj_tim.tele_cone_low]
     type: float
-  lmf_tele_avg_cube_high:
+  lfm_tele_avg_cube_high:
     tim_fields: [obj_tim.tele_cube_high]
     type: float
   lfm_tele_avg_cube_mid:
