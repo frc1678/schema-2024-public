@@ -62,24 +62,24 @@
 # 'tele_sd_cube_low': 0.3233,
 # 'tele_sd_cube_total': 4.2336
 # 'auto_charge_attempts': 6,
-# 'auto_dock': 2,
-# 'auto_engage': 4,
+# 'auto_dock_successes': 2,
+# 'auto_engage_successes': 4,
 # 'tele_charge_attempts': 10,
-# 'tele_dock': 5,
-# 'tele_engage': 7,
-# 'tele_park': 2,
+# 'tele_dock_successes': 5,
+# 'tele_engage_successes': 7,
+# 'tele_park_successes': 2,
 # 'matches_incap': 3,
 # 'position_zero_starts': 0,
 # 'position_one_starts': 3,
 # 'position_two_starts': 9,
 # 'position_three_starts': 1,
 # 'lfm_auto_charge_attempts': 8,
-# 'lfm_auto_dock': 4,
-# 'lfm_auto_engage': 3,
+# 'lfm_auto_dock_successes': 4,
+# 'lfm_auto_engage_successes': 3,
 # 'lfm_tele_charge_attempts': 10,
-# 'lfm_tele_dock': 0,
-# 'lfm_tele_engage': 9,
-# 'lfm_tele_park': 1,
+# 'lfm_tele_dock_successes': 0,
+# 'lfm_tele_engage_successes': 9,
+# 'lfm_tele_park_successes': 1,
 # 'lfm_matches_incap': 4,
 # 'lfm_position_zero_starts': 3,
 # 'lfm_position_one_starts': 2,
@@ -97,7 +97,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -292,11 +292,11 @@ counts:
       not:
         obj_tim.auto_charge_attempt: 0
     type: int
-  auto_dock:
+  auto_dock_successes:
     tim_fields:
       obj_tim.auto_charge_level: 'DOCK'
     type: int
-  auto_engage:
+  auto_engage_successes:
     tim_fields:
       obj_tim.auto_charge_level: 'ENGAGE'
     type: int
@@ -305,15 +305,15 @@ counts:
       not:
         obj_tim.tele_charge_attempt: 0
     type: int
-  tele_dock:
+  tele_dock_successes:
     tim_fields:
       obj_tim.tele_charge_level: 'DOCK'
     type: int
-  tele_engage:
+  tele_engage_successes:
     tim_fields:
       obj_tim.tele_charge_level: 'ENGAGE'
     type: int
-  tele_park:
+  tele_park_successes:
     tim_fields:
       obj_tim.tele_charge_level: 'PARK'
     type: int
@@ -347,11 +347,11 @@ counts:
       not:
         obj_tim.auto_charge_attempt: 0
     type: int
-  lfm_auto_dock:
+  lfm_auto_dock_successes:
     tim_fields:
       obj_tim.auto_charge_level: 'DOCK'
     type: int
-  lfm_auto_engage:
+  lfm_auto_engage_successes:
     tim_fields:
       obj_tim.auto_charge_level: 'ENGAGE'
     type: int
@@ -360,15 +360,15 @@ counts:
       not:
         obj_tim.tele_charge_attempt: 0
     type: int
-  lfm_tele_dock:
+  lfm_tele_dock_successes:
     tim_fields:
       obj_tim.tele_charge_level: 'DOCK'
     type: int
-  lfm_tele_engage:
+  lfm_tele_engage_successes:
     tim_fields:
       obj_tim.tele_charge_level: 'ENGAGE'
     type: int
-  lfm_tele_park:
+  lfm_tele_park_successes:
     tim_fields:
       obj_tim.tele_charge_level: 'PARK'
     type: int
@@ -540,21 +540,38 @@ modes:
 
 success_rates:
   charge_percent_success:
-    team_dock_successes: [auto_dock, tele_dock]
-    team_engage_successes: [auto_engage, tele_engage]
+    team_successes: [auto_dock_successes, tele_dock_successes, auto_engage_successes, tele_engage_successes]
     team_attempts: [auto_charge_attempts, tele_charge_attempts]
-    team_park_successes: [tele_park]
     type: float
   lfm_charge_percent_success:
-    team_dock_successes: [lfm_auto_dock, lfm_tele_dock]
-    team_engage_successes: [lfm_auto_engage, lfm_tele_engage]
+    team_successes: [lfm_auto_dock_successes, lfm_tele_dock_successes, lfm_auto_engage_successes, lfm_tele_engage_successes]
     team_attempts: [lfm_auto_charge_attempts, lfm_tele_charge_attempts]
-    team_park_successes: [lfm_tele_park]
     type: float
+  auto_charge_percent_success:
+    team_successes: [auto_engage_successes, auto_dock_successes]
+    team_attempts: [auto_charge_attempts]
+    type: float
+  lfm_auto_charge_percent_success:
+    team_successes: [lfm_auto_engage_successes, lfm_auto_dock_successes]
+    team_attempts: [lfm_auto_charge_attempts]
+    type: float
+  tele_charge_percent_success:
+    team_successes: [tele_engage_successes, tele_dock_successes]
+    team_attempts: [tele_charge_attempts]
+    type: float
+  lfm_tele_charge_percent_success:
+    team_successes: [lfm_tele_engage_successes, lfm_tele_dock_successes]
+    team_attempts: [lfm_tele_charge_attempts]
+    type: float
+  
 
 # Calculates average points for given fields
 average_points:
-  avg_charge_points:
-    point_fields: [auto_dock, auto_engage, tele_dock, tele_engage, tele_park]
-    point_values: [8, 12, 6, 10, 2]
+  avg_tele_charge_points:
+    point_fields: [tele_dock_successes, tele_engage_successes]
+    point_values: [6, 10]
+    type: float
+  avg_auto_charge_points:
+    point_fields: [auto_dock_successes, auto_engage_successes]
+    point_values: [8, 12]
     type: float
