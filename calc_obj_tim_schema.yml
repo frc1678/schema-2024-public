@@ -53,58 +53,72 @@ timeline_counts:
     type: int
     action_type: score_cube_low
     time: [135, 153]
+    in_teleop: false
   auto_cube_mid:
     type: int
     action_type: score_cube_mid
     time: [135, 153]
+    in_teleop: false
   auto_cube_high:
     type: int
     action_type: score_cube_high
     time: [135, 153]
+    in_teleop: false
   auto_cone_low:
     type: int
     action_type: score_cone_low
     time: [135, 153]
+    in_teleop: false
   auto_cone_mid:
     type: int
     action_type: score_cone_mid
     time: [135, 153]
+    in_teleop: false
   auto_cone_high:
     type: int
     action_type: score_cone_high
     time: [135, 153]
+    in_teleop: false
   auto_charge_attempt:
     type: int
     action_type: charge_attempt
     time: [135, 153]
+    in_teleop: false
   tele_cube_low:
     type: int
     action_type: score_cube_low
     time: [0, 135]
+    in_teleop: true
   tele_cube_mid:
     type: int
     action_type: score_cube_mid
     time: [0, 135]
+    in_teleop: true
   tele_cube_high:
     type: int
     action_type: score_cube_high
     time: [0, 135]
+    in_teleop: true
   tele_cone_low:
     type: int
     action_type: score_cone_low
     time: [0, 135]
+    in_teleop: true
   tele_cone_mid:
     type: int
     action_type: score_cone_mid
     time: [0, 135]
+    in_teleop: true
   tele_cone_high:
     type: int
     action_type: score_cone_high
     time: [0, 135]
+    in_teleop: true
   tele_charge_attempt:
     type: int
     action_type: charge_attempt
     time: [0, 135]
+    in_teleop: true
   intakes_ground:
     type: int
     action_type: intake_ground
