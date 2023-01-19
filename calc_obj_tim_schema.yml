@@ -127,9 +127,9 @@ timeline_counts:
     type: int
     action_type: intake_station
     time: [0, 153]
-  intakes_low_node:
+  intakes_low_row:
     type: int
-    action_type: intake_low_node
+    action_type: intake_low_row
     time: [0, 153]
 
 # Calculations made by adding up other counts
