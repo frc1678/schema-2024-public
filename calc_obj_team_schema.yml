@@ -97,7 +97,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 7
+  version: 8
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -381,10 +381,7 @@ counts:
     type: int
 
 # Objective counts collected by Super Scouts
-super_counts:
-  matches_played_defense:
-    type: int
-    tim_fields: [subj_tim.played_defense]
+# Nothing here
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
