@@ -232,6 +232,8 @@ averages:
   lfm_avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
+  tele_avg_gamepiece_low:
+    tim_fields: [obj_tim.tele_total_gamepiece_low]
 
 # Standard deviations of fields in consolidated TIMs
 # Used for predictions

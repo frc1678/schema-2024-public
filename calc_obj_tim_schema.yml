@@ -158,6 +158,9 @@ aggregates:
   total_charge_attempts:
     type: int
     counts: [tele_charge_attempt, auto_charge_attempt]
+  tele_total_gamepiece_low:
+    type: int
+    counts: [tele_cube_low, tele_cone_low]
 
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
