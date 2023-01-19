@@ -5,14 +5,15 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
 # Second item is server-side data type
-# Third item (if it exists) is the type within the list
+# Third item (if it exists) is the type within the list, if a dict it requires specific implementation in decompressor
+# Fourth item (if it exists) is the length of each item in a none-dict list, if not provided _list_data_separator is used as a separator
 # Names starting with "_" do not correspond to a compressed variable, they are used to aid in (de)compression
-
+_list_data_separator: "&"
 # Data that is shared between the objective and subjective QRs. 
 generic_data:
   _separator: '$' # Separates key:value pairs
@@ -52,12 +53,13 @@ subjective_aim:
   _start_character: '*' # First character in QR used to identify QR type
   _separator: '$' # Separates each key:value pair
   _team_separator: '#' # Separates each team's section
+  _alliance_data_separator: '^' # Seperates team data from data about the entire alliance
   team_number: [A, str] # The team number
   quickness_score: [B, int] # A ranking value between 1 and 3
   field_awareness_score: [C, int] # A ranking value between 1 and 3
   played_defense: [D, bool] # True if robot played defense at least once in the match, else False
   intake_cone_orientation: [E, bool] # True if robot picked up a non-upright cone during the match, else False
-  auto_pieces_start_position: [F, str] # A list of length four for each auto starting position, 0 for cone, 1 for cube, 2 for none
+  auto_pieces_start_position: [F, list, str, 1] # A list of length four for each auto starting position, 0 for cone, 1 for cube, 2 for none
 
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
