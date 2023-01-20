@@ -19,8 +19,6 @@ schema_file:
 data:
   team_number:
     type: str
-  scored_coop:
-    type: bool
 
 # Calculations that will be averaged to make up averaged_calculations
 component_calculations:

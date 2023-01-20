@@ -381,7 +381,10 @@ counts:
     type: int
 
 # Objective counts collected by Super Scouts
-# Nothing here
+super_counts:
+  matches_scored_coop:
+    type: int
+    tim_fields: [subj_tim.scored_coop]
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
