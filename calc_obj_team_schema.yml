@@ -97,7 +97,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 8
+  version: 9
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -156,6 +156,9 @@ averages:
     type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap]
+    type: float
+  avg_gamepieces:
+    tim_fields: [obj_tim.tele_total_gamepieces]
     type: float
   avg_intakes_ground:
     tim_fields: [obj_tim.intakes_ground]
@@ -232,6 +235,9 @@ averages:
   lfm_avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
+  lfm_avg_gamepieces:
+    tim_fields: [obj_tim.tele_total_gamepieces]
+    type: float
   tele_avg_gamepiece_low:
     tim_fields: [obj_tim.tele_total_gamepiece_low]
 
@@ -285,6 +291,9 @@ standard_deviations:
     type: float
   tele_sd_cube_total:
     tim_fields: [obj_tim.tele_total_cubes]
+    type: float
+  sd_gamepieces:
+    tim_fields: [obj_tim.tele_total_gamepieces]
     type: float
 
 # Counts of occurrences in consolidated TIMs
@@ -344,6 +353,28 @@ counts:
       not:
         obj_tim.incap: 0
     type: int
+  matches_played:
+    type: int
+  lfm_position_zero_starts:
+    tim_fields:
+      obj_tim.start_position: 'ZERO'
+    type: int
+  lfm_position_one_starts:
+    tim_fields:
+      obj_tim.start_position: 'ONE'
+    type: int
+  lfm_position_two_starts:
+    tim_fields:
+      obj_tim.start_position: 'TWO'
+    type: int
+  lfm_position_three_starts:
+    tim_fields:
+      obj_tim.start_position: 'THREE'
+    type: int
+  lfm_position_four_starts:
+    tim_fields:
+      obj_tim.start_position: 'FOUR'
+    type: int
   lfm_auto_charge_attempts:
     tim_fields:
       not:
@@ -400,6 +431,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_cone_low]
+  auto_max_cones:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_cones]
   auto_max_cube_high:
     extrema_type: max
     type: int
@@ -412,6 +447,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_cube_low]
+  auto_max_cubes:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_cubes]
   tele_max_cone_high:
     extrema_type: max
     type: int
@@ -424,6 +463,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_cone_low]
+  tele_max_cones:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_cones]
   tele_max_cube_high:
     extrema_type: max
     type: int
@@ -436,6 +479,14 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_cube_low]
+  tele_max_cubes:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_cubes]
+  max_gamepieces:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_total_gamepieces]
+    type: int
   max_incap:
     extrema_type: max
     tim_fields: [obj_tim.incap]
@@ -460,6 +511,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_cone_low]
+  lfm_auto_max_cones:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_cones]
   lfm_auto_max_cube_high:
     extrema_type: max
     type: int
@@ -472,6 +527,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_cube_low]
+  lfm_auto_max_cubes:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_cubes]
   lfm_tele_max_cone_high:
     extrema_type: max
     type: int
@@ -484,6 +543,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_cone_low]
+  lfm_tele_max_cones:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_cones]
   lfm_tele_max_cube_high:
     extrema_type: max
     type: int
@@ -496,6 +559,14 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_cube_low]
+  lfm_tele_max_cubes:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_cubes]
+  lfm_max_gamepieces:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_total_gamepieces]
+    type: int
   lfm_max_incap:
     extrema_type: max
     tim_fields: [obj_tim.incap]
@@ -508,6 +579,7 @@ extrema:
     extrema_type: max
     tim_fields: [obj_tim.tele_charge_level]
     type: str
+  
 
 # Most common values
 modes:

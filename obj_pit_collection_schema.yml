@@ -17,7 +17,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 # Stores data type/structure
 schema:
@@ -30,6 +30,8 @@ schema:
   drivetrain_motor_type:
     type: Enum[int]
   has_vision:
+    type: bool
+  has_communication_device:
     type: bool
   weight:
     type: int
