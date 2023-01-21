@@ -432,6 +432,9 @@ super_counts:
   matches_scored_coop:
     type: int
     tim_fields: [subj_tim.scored_coop]
+  matches_played_defense:
+    type: int
+    tim_fields: [subj_tim.played_defense]
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
