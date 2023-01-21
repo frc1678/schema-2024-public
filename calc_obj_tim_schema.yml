@@ -36,7 +36,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 8
+  version: 9
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -141,7 +141,7 @@ aggregates:
   total_charge_attempts:
     type: int
     counts: [tele_charge_attempt, auto_charge_attempt]
-  tele_total_gamepiece_low:
+  tele_total_gamepieces_low:
     type: int
     counts: [tele_cube_low, tele_cone_low]
 

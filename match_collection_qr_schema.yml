@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 9
+  version: 10
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -33,7 +33,7 @@ objective_tim:
   _separator: '$' # Separates key:value pairs
   team_number: [Z, str] # The team number
   scout_id: ['Y', int] # Used to determine which tablets have not submitted ('Y' in quotes because it's a keyword on its own)
-  start_position: [X, str] # str representing where a robot starts in auto ('one', 'two', 'three', or 'four')
+  start_position: [X, int] # str representing where a robot starts in auto (1, 2, 3, or 4)
   timeline: [W, list, dict] # List of dictionaries
   auto_charge_level: [V, str] # str representing where a robot finishes in auto to ('none', 'docked', 'engaged')
   tele_charge_level: [U, str] # str representing where a robot finished in the endgame ('none', 'park', 'docked', 'engaged')

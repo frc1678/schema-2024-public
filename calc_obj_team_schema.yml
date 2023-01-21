@@ -97,7 +97,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 10
+  version: 11
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -130,6 +130,9 @@ averages:
   auto_avg_cube_total:
     tim_fields: [obj_tim.auto_total_cubes]
     type: float
+  auto_avg_gamepieces:
+    tim_fields: [obj_tim.auto_total_gamepieces]
+    type: float
   tele_avg_cone_high:
     tim_fields: [obj_tim.tele_cone_high]
     type: float
@@ -154,11 +157,14 @@ averages:
   tele_avg_cube_total:
     tim_fields: [obj_tim.tele_total_cubes]
     type: float
+  tele_avg_gamepieces:
+    tim_fields: [obj_tim.tele_total_gamepieces]
+    type: float
+  tele_avg_gamepieces_low:
+    tim_fields: [obj_tim.tele_total_gamepieces_low]
+    type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap]
-    type: float
-  avg_gamepieces:
-    tim_fields: [obj_tim.tele_total_gamepieces]
     type: float
   avg_intakes_ground:
     tim_fields: [obj_tim.intakes_ground]
@@ -169,11 +175,8 @@ averages:
   avg_intakes_low_row:
     tim_fields: [obj_tim.intakes_low_row]
     type: float
-  total_intakes:
+  avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
-    type: float
-  tele_avg_gamepiece_low:
-    tim_fields: [obj_tim.tele_total_gamepiece_low]
     type: float
   lfm_auto_avg_cone_high:
     tim_fields: [obj_tim.auto_cone_high]
@@ -199,6 +202,9 @@ averages:
   lfm_auto_avg_cube_total:
     tim_fields: [obj_tim.auto_total_cubes]
     type: float
+  lfm_auto_avg_gamepieces:
+    tim_fields: [obj_tim.auto_total_gamepieces]
+    type: float
   lfm_tele_avg_cone_high:
     tim_fields: [obj_tim.tele_cone_high]
     type: float
@@ -223,6 +229,9 @@ averages:
   lfm_tele_avg_cube_total:
     tim_fields: [obj_tim.tele_total_cubes]
     type: float
+  lfm_tele_avg_gamepieces:
+    tim_fields: [obj_tim.tele_total_gamepieces]
+    type: float
   lfm_avg_intakes_ground:
     tim_fields: [obj_tim.intakes_ground]
     type: float
@@ -232,17 +241,14 @@ averages:
   lfm_avg_intakes_low_row:
     tim_fields: [obj_tim.intakes_low_row]
     type: float
-  lfm_total_intakes:
+  lfm_avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
   lfm_avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
-  lfm_avg_gamepieces:
-    tim_fields: [obj_tim.tele_total_gamepieces]
-    type: float
-  lfm_tele_avg_gamepiece_low:
-    tim_fields: [obj_tim.tele_total_gamepiece_low]
+  lfm_tele_avg_gamepieces_low:
+    tim_fields: [obj_tim.tele_total_gamepieces_low]
     type: float
 
 # Standard deviations of fields in consolidated TIMs
@@ -272,6 +278,9 @@ standard_deviations:
   auto_sd_cube_total:
     tim_fields: [obj_tim.auto_total_cubes]
     type: float
+  auto_sd_gamepieces:
+    tim_fields: [obj_tim.auto_total_gamepieces]
+    type: float
   tele_sd_cone_high:
     tim_fields: [obj_tim.tele_cone_high]
     type: float
@@ -296,7 +305,7 @@ standard_deviations:
   tele_sd_cube_total:
     tim_fields: [obj_tim.tele_total_cubes]
     type: float
-  sd_gamepieces:
+  tele_sd_gamepieces:
     tim_fields: [obj_tim.tele_total_gamepieces]
     type: float
 
@@ -458,6 +467,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_cubes]
+  auto_max_gamepieces:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_gamepieces]
   tele_max_cone_high:
     extrema_type: max
     type: int
@@ -490,7 +503,7 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_cubes]
-  max_gamepieces:
+  tele_max_gamepieces:
     extrema_type: max
     tim_fields: [obj_tim.tele_total_gamepieces]
     type: int
@@ -538,6 +551,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_cubes]
+  lfm_auto_max_gamepieces:
+    extremea_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_gamepieces]
   lfm_tele_max_cone_high:
     extrema_type: max
     type: int
@@ -570,22 +587,22 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_cubes]
-  lfm_max_gamepieces:
+  lfm_tele_max_gamepieces:
     extrema_type: max
-    tim_fields: [obj_tim.tele_total_gamepieces]
     type: int
+    tim_fields: [obj_tim.tele_total_gamepieces]
   lfm_max_incap:
     extrema_type: max
-    tim_fields: [obj_tim.incap]
     type: int
+    tim_fields: [obj_tim.incap]
   lfm_max_auto_charge_level:
      extrema_type: max
-     tim_fields: [obj_tim.auto_charge_level]
      type: str
+     tim_fields: [obj_tim.auto_charge_level]
   lfm_max_tele_charge_level:
     extrema_type: max
-    tim_fields: [obj_tim.tele_charge_level]
     type: str
+    tim_fields: [obj_tim.tele_charge_level]
   
 
 # Most common values
