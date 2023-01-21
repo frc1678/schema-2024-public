@@ -354,6 +354,9 @@ counts:
         obj_tim.incap: 0
     type: int
   matches_played:
+    tim_fields:
+      not:
+        match_number: 0
     type: int
   lfm_position_zero_starts:
     tim_fields:
