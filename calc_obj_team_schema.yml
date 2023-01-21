@@ -552,7 +552,7 @@ extrema:
     type: int
     tim_fields: [obj_tim.auto_total_cubes]
   lfm_auto_max_gamepieces:
-    extremea_type: max
+    extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_gamepieces]
   lfm_tele_max_cone_high:
