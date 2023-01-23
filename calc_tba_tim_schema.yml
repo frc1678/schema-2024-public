@@ -2,9 +2,11 @@
 #
 # Example:
 #
-# {'auto_line': False,
-# 'match_number': 34,
-# 'team_number': '88'}
+# {
+#     "match_number": 8,
+#     "team_number": "574",
+#     "auto_line": true
+# }
 #
 
 

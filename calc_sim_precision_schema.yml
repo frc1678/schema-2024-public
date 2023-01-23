@@ -2,11 +2,13 @@
 #
 # Example:
 #
-# {'scout_name': 'Vand',
-#  'match_number': 4,
-#  'team_number': '1678',
-#  'alliance_color_is_red': True
-#  'sim_precision': 73.1566}
+# {
+#     "scout_name": "Joe",
+#     "match_number": 8,
+#     "team_number": "1928",
+#     "alliance_color_is_red": true,
+#     "sim_precision": 6.5321
+# }
 #
 
 

@@ -2,12 +2,14 @@
 #
 # Example:
 #
-# {'current_avg_rps': 50.0054,
-# 'current_rank': 31,
-# 'current_rps': 18,
-# 'predicted_rank': 39,
-# 'predicted_rps': 65.1,
-# 'team_number': '254'}
+# {
+#     "team_number": "93",
+#     "current_rank": 2,
+#     "current_rps": 7,
+#     "current_avg_rps": 6.698,
+#     "predicted_rps": 6.8874,
+#     "predicted_rank": 4
+# }
 #
 
 

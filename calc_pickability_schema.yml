@@ -2,9 +2,13 @@
 #
 # Example:
 #
-# {'first_pickability': 79.2763,
-# 'second_pickability': 89.7082,
-# 'team_number': '28'}
+# {
+#     "team_number": "87",
+#     "first_pickability": 2.377,
+#     "second_pickability": 1.9611,
+#     "test_first_pickability": 2.1693,
+#     "test_second_pickability": 3.2341
+# }
 #
 
 

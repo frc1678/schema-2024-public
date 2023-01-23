@@ -2,10 +2,15 @@
 #
 # Example:
 #
-# {'driver_ability': 29.5912,
-# 'driver_field_awareness': 42.6533,
-# 'driver_quickness': 85.6003,
-# 'team_number': '57'}
+# {
+#     "team_number": "928",
+#     "driver_field_awareness": 4.3209,
+#     "driver_quickness": 2.2696,
+#     "driver_ability": 2.4505,
+#     "test_driver_ability": 6.1951,
+#     "unadjusted_field_awareness": 1.4148,
+#     "unadjusted_quickness": 3.2245
+# }
 #
 
 

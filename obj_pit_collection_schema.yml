@@ -2,14 +2,17 @@
 #
 # Example:
 #
-# {'team_number': '98',
-# 'drivetrain': 1,
-# 'drivetrain_motor_type': 1,
-# 'drivetrain_motors': 86,
-# 'has_vision': True,
-# 'weight': 45,
-# 'length': 34.4657,
-# 'width': 29.0483}
+# {
+#     "team_number": "3448",
+#     "drivetrain": 2,
+#     "drivetrain_motors": 4,
+#     "drivetrain_motor_type": 3,
+#     "has_vision": false,
+#     "has_communication_device": true,
+#     "weight": 5,
+#     "length": 3.9524,
+#     "width": 3.2931
+# }
 #
 
 

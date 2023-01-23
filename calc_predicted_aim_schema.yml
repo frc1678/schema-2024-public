@@ -2,20 +2,23 @@
 #
 # Example:
 #
-# {'alliance_color_is_red': True,
-# 'match_number': 74,
-# 'has_actual_data': True,
-# 'actual_score': 30,
-# 'actual_rp1': 1.0,
-# 'actual_rp2': 0.0,
-# 'has_final_scores': False,
-# 'final_predicted_score': 0.0,
-# 'final_predicted_rp1': 0.0,
-# 'final_predicted_rp2': 0.0,
-# 'predicted_rp1': 41.7888,
-# 'predicted_rp2': 62.5841,
-# 'predicted_score': 24.3065,
-# 'win_chance': 0.6}
+# {
+#     "match_number": 3,
+#     "alliance_color_is_red": false,
+#     "has_actual_data": false,
+#     "actual_score": 1,
+#     "actual_rp1": 3.0843,
+#     "actual_rp2": 0.3198,
+#     "won_match": false,
+#     "has_final_scores": true,
+#     "final_predicted_score": 4.7994,
+#     "final_predicted_rp1": 2.8541,
+#     "final_predicted_rp2": 0.6841,
+#     "predicted_score": 0.742,
+#     "predicted_rp1": 1.7715,
+#     "predicted_rp2": 2.0491,
+#     "win_chance": 1.9816
+# }
 #
 
 

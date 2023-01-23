@@ -2,7 +2,10 @@
 #
 # Example:
 #
-# {'scout_name': 'Vand', 'scout_precision': 73.1566}
+# {
+#     "scout_name": "Bob",
+#     "scout_precision": 2.2737
+# }
 #
 
 
