@@ -434,23 +434,23 @@ counts:
     type: int
   position_zero_starts:
     tim_fields:
-      obj_tim.start_position: 0
+      obj_tim.start_position: "0"
     type: int
   position_one_starts:
     tim_fields:
-      obj_tim.start_position: 1
+      obj_tim.start_position: "1"
     type: int
   position_two_starts:
     tim_fields:
-      obj_tim.start_position: 2
+      obj_tim.start_position: "2"
     type: int
   position_three_starts:
     tim_fields:
-      obj_tim.start_position: 3
+      obj_tim.start_position: "3"
     type: int
   position_four_starts:
     tim_fields:
-      obj_tim.start_position: 4
+      obj_tim.start_position: "4"
     type: int
   matches_incap:
     tim_fields:
@@ -464,23 +464,23 @@ counts:
     type: int
   lfm_position_zero_starts:
     tim_fields:
-      obj_tim.start_position: 0
+      obj_tim.start_position: "0"
     type: int
   lfm_position_one_starts:
     tim_fields:
-      obj_tim.start_position: 1
+      obj_tim.start_position: "1"
     type: int
   lfm_position_two_starts:
     tim_fields:
-      obj_tim.start_position: 2
+      obj_tim.start_position: "2"
     type: int
   lfm_position_three_starts:
     tim_fields:
-      obj_tim.start_position: 3
+      obj_tim.start_position: "3"
     type: int
   lfm_position_four_starts:
     tim_fields:
-      obj_tim.start_position: 4
+      obj_tim.start_position: "4"
     type: int
   lfm_auto_charge_attempts:
     tim_fields:
