@@ -188,7 +188,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 11
+  version: 12
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -760,10 +760,30 @@ success_rates:
 # Calculates average points for given fields
 average_points:
   avg_tele_charge_points:
-    point_fields: [tele_dock_successes, tele_engage_successes]
-    point_values: [6, 10]
+    tele_dock_successes: 6
+    tele_engage_successes: 10
     type: float
   avg_auto_charge_points:
-    point_fields: [auto_dock_successes, auto_engage_successes]
-    point_values: [8, 12]
+    auto_dock_successes: 8
+    auto_engage_successes: 12
     type: float
+
+# Calculates a sum of fields multiplied by point values
+sum_points:
+  avg_total_points:
+    auto_avg_cone_low : 3
+    tele_avg_cone_low : 2
+    auto_avg_cone_mid : 4
+    tele_avg_cone_mid : 3
+    auto_avg_cone_high : 6
+    tele_avg_cone_high : 5
+    auto_avg_cube_low : 3
+    tele_avg_cube_low : 2
+    auto_avg_cube_mid : 4
+    tele_avg_cube_mid : 3
+    auto_avg_cube_high : 6
+    tele_avg_cube_high : 5
+    auto_charge_percent_success: avg_auto_charge_points
+    tele_charge_percent_success: avg_tele_charge_points
+    type: float
+    
