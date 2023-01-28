@@ -756,6 +756,14 @@ success_rates:
     team_attempts: [lfm_tele_charge_attempts]
     type: float
   
+# Calculates all the medians
+medians:
+  median_incap:
+    tim_fields: [obj_tim.incap]
+    type: int  
+  lfm_median_incap:
+    tim_fields: [obj_tim.incap]
+    type: int
 
 # Calculates average points for given fields
 average_points:
