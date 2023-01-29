@@ -272,6 +272,9 @@ averages:
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
+  avg_failed_scores:
+    tim_fields: [obj_tim.failed_scores]
+    type: float
   lfm_auto_avg_cone_high:
     tim_fields: [obj_tim.auto_cone_high]
     type: float
@@ -343,6 +346,9 @@ averages:
     type: float
   lfm_tele_avg_gamepieces_low:
     tim_fields: [obj_tim.tele_total_gamepieces_low]
+    type: float
+  lfm_avg_failed_scores:
+    tim_fields: [obj_tim.failed_scores]
     type: float
   lfm_auto_avg_gamepieces_low:
     tim_fields: [obj_tim.auto_total_gamepieces_low]
@@ -759,6 +765,38 @@ success_rates:
     type: float
   lfm_tele_charge_percent_success:
     team_successes: [lfm_tele_engage_successes, lfm_tele_dock_successes]
+    team_attempts: [lfm_tele_charge_attempts]
+    type: float
+  auto_dock_percent_success:
+    team_successes: [auto_dock_successes]
+    team_attempts: [auto_charge_attempts]
+    type: float
+  lfm_auto_dock_percent_success:
+    team_successes: [lfm_auto_dock_successes]
+    team_attempts: [lfm_auto_charge_attempts]
+    type: float
+  auto_engage_percent_success:
+    team_successes: [auto_engage_successes]
+    team_attempts: [auto_charge_attempts]
+    type: float
+  lfm_auto_engage_percent_success:
+    team_successes: [lfm_auto_engage_successes]
+    team_attempts: [lfm_auto_charge_attempts]
+    type: float
+  tele_dock_percent_success:
+    team_successes: [tele_dock_successes]
+    team_attempts: [tele_charge_attempts]
+    type: float
+  lfm_tele_dock_percent_success:
+    team_successes: [lfm_tele_dock_successes]
+    team_attempts: [lfm_tele_charge_attempts]
+    type: float
+  tele_engage_percent_success:
+    team_successes: [tele_engage_successes]
+    team_attempts: [tele_charge_attempts]
+    type: float
+  lfm_tele_engage_percent_success:
+    team_successes: [lfm_tele_engage_successes]
     team_attempts: [lfm_tele_charge_attempts]
     type: float
   
