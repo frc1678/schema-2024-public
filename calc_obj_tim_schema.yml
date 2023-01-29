@@ -45,7 +45,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 9
+  version: 10
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -135,6 +135,9 @@ aggregates:
   auto_total_gamepieces:
     type: int
     counts: [auto_total_cubes, auto_total_cones]
+  auto_total_gamepieces_low:
+    type: int
+    counts: [auto_cube_low, auto_cone_low]
   tele_total_cubes:
     type: int
     counts: [tele_cube_low, tele_cube_mid, tele_cube_high]
