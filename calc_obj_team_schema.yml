@@ -179,8 +179,8 @@
 #     "lfm_auto_charge_percent_success": 5.1218,
 #     "tele_charge_percent_success": 4.7745,
 #     "lfm_tele_charge_percent_success": 1.5471,
-#     "avg_tele_charge_points": 6.8296,
-#     "avg_auto_charge_points": 1.5561
+#     "tele_avg_charge_points": 6.8296,
+#     "auto_avg_charge_points": 1.5561
 # }
 #
 
@@ -188,7 +188,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 13
+  version: 14
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -811,11 +811,11 @@ medians:
 
 # Calculates average points for given fields
 average_points:
-  avg_tele_charge_points:
+  tele_avg_charge_points:
     tele_dock_successes: 6
     tele_engage_successes: 10
     type: float
-  avg_auto_charge_points:
+  auto_avg_charge_points:
     auto_dock_successes: 8
     auto_engage_successes: 12
     type: float
@@ -835,7 +835,7 @@ sum_points:
     tele_avg_cube_mid : 3
     auto_avg_cube_high : 6
     tele_avg_cube_high : 5
-    auto_charge_percent_success: avg_auto_charge_points
-    tele_charge_percent_success: avg_tele_charge_points
+    auto_charge_percent_success: auto_avg_charge_points
+    tele_charge_percent_success: tele_avg_charge_points
     type: float
     
