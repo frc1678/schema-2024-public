@@ -199,5 +199,5 @@ enums:
     THREE: "3"
     FOUR: "4" 
   preloaded_gamepiece:
-    CUBE: B
-    CONE: "N"
+    CUBE: U
+    CONE: O
