@@ -53,3 +53,7 @@ unadjusted_calculations:
   unadjusted_quickness:
     type: float
     requires: [subj_tim.quickness_score]
+  auto_pieces_start_position:
+    type: List
+    requires: [subj_tim.auto_pieces_start_position]
+    ignore: [2]
