@@ -63,11 +63,11 @@ predicted_values:
   predicted_score:
     type: float
     requires: [obj_team, tba_team]
-  # Cargo RP
+  # Charge RP
   predicted_rp1:
     type: float
     requires: [obj_team, tba_team]
-  # Hangar RP
+  # Link RP
   predicted_rp2:
     type: float
     requires: [obj_team]
