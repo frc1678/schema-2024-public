@@ -168,11 +168,11 @@ timeline_cycle_time:
     start_action: start_incap
     end_action: end_incap
     minimum_time: 8
-  avg_cycle_time:
+  median_cycle_time:
     type: int
     start_action: score
     end_action: score
-    minimum_time: 8
+    minimum_time: 1
 
 
 # Robot actions which are one out of a dict of possible actions
