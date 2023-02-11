@@ -825,7 +825,7 @@ average_points:
     type: float
 
 # Calculates a sum of fields multiplied by point values
-sum_points:
+sums:
   avg_total_points:
     auto_avg_cone_low : 3
     tele_avg_cone_low : 2
@@ -842,4 +842,6 @@ sum_points:
     auto_charge_percent_success: auto_avg_charge_points
     tele_charge_percent_success: tele_avg_charge_points
     type: float
+  total_incap:
+    type: int
     
