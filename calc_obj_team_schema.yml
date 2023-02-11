@@ -808,9 +808,19 @@ success_rates:
 medians:
   median_incap:
     tim_fields: [obj_tim.incap]
+    ignore: "NONE"
     type: int  
   lfm_median_incap:
     tim_fields: [obj_tim.incap]
+    ignore: "NONE"
+    type: int
+  median_zero_incap: 
+    tim_fields: [obj_tim.incap]
+    ignore: 0
+    type: int
+  lfm_median_zero_incap:
+    tim_fields: [obj_tim.incap]
+    ignore: 0
     type: int
 
 # Calculates average points for given fields
