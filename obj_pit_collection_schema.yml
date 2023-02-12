@@ -9,7 +9,7 @@
 #     "drivetrain_motor_type": 3,
 #     "has_vision": false,
 #     "has_communication_device": true,
-#     "weight": 5,
+#     "weight": 3.9524,
 #     "length": 3.9524,
 #     "width": 3.2931
 # }
@@ -20,7 +20,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 # Stores data type/structure
 schema:
@@ -37,7 +37,7 @@ schema:
   has_communication_device:
     type: bool
   weight:
-    type: int
+    type: float
   length:
     type: float
   width:
