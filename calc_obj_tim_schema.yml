@@ -45,7 +45,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 12
+  version: 13
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -123,6 +123,12 @@ timeline_counts:
   intakes_low_row:
     type: int
     action_type: intake_low_row
+  intakes_mid_row:
+    type: int
+    action_type: intake_mid_row
+  intakes_high_row:
+    type: int
+    action_type: intake_high_row
   failed_scores:
     type: int
     action_type: failed_score

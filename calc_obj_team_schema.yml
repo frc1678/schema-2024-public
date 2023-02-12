@@ -25,6 +25,8 @@
 #     "avg_intakes_ground": 2.0553,
 #     "avg_intakes_station": 1.6816,
 #     "avg_intakes_low_row": 4.5391,
+#     "avg_intakes_mid_row": 4.5391,
+#     "avg_intakes_high_row": 4.5391,
 #     "total_intakes": 6.1126,
 #     "lfm_auto_avg_cone_high": 0.4212,
 #     "lfm_auto_avg_cone_mid": 2.6782,
@@ -45,6 +47,8 @@
 #     "lfm_avg_intakes_ground": 6.4241,
 #     "lfm_avg_intakes_station": 1.8711,
 #     "lfm_avg_intakes_low_row": 3.3521,
+#     "lfm_avg_intakes_mid_row": 3.3521,
+#     "lfm_avg_intakes_high_row": 3.3521,
 #     "lfm_total_intakes": 6.5972,
 #     "lfm_avg_incap_time": 2.6824,
 #     "lfm_avg_gamepieces": 4.0866,
@@ -188,7 +192,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 14
+  version: 15
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -269,6 +273,12 @@ averages:
   avg_intakes_low_row:
     tim_fields: [obj_tim.intakes_low_row]
     type: float
+  avg_intakes_mid_row:
+    tim_fields: [obj_tim.intakes_mid_row]
+    type: float
+  avg_intakes_high_row:
+    tim_fields: [obj_tim.intakes_high_row]
+    type: float
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
@@ -337,6 +347,12 @@ averages:
     type: float
   lfm_avg_intakes_low_row:
     tim_fields: [obj_tim.intakes_low_row]
+    type: float
+  lfm_avg_intakes_mid_row:
+    tim_fields: [obj_tim.intakes_mid_row]
+    type: float
+  lfm_avg_intakes_high_row:
+    tim_fields: [obj_tim.intakes_high_row]
     type: float
   lfm_avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
@@ -806,22 +822,14 @@ success_rates:
   
 # Calculates all the medians
 medians:
-  median_incap:
-    tim_fields: [obj_tim.incap]
-    ignore: "NONE"
-    type: int  
-  lfm_median_incap:
-    tim_fields: [obj_tim.incap]
-    ignore: "NONE"
-    type: int
-  median_zero_incap: 
+  median_nonzero_incap: 
     tim_fields: [obj_tim.incap]
     ignore: 0
-    type: int
-  lfm_median_zero_incap:
+    type: float
+  lfm_median_nonzero_incap:
     tim_fields: [obj_tim.incap]
     ignore: 0
-    type: int
+    type: float
 
 # Calculates average points for given fields
 average_points:
