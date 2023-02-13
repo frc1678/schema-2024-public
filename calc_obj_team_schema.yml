@@ -735,11 +735,11 @@ modes:
     type: List
   mode_start_position:
     tim_fields: [obj_tim.start_position]
-    ignore: 'ZERO'
+    ignore: '0'
     type: List
   lfm_mode_start_position:
     tim_fields: [obj_tim.start_position]
-    ignore: 'ZERO'
+    ignore: '0'
     type: List
   mode_auto_charge_level:
     tim_fields: [obj_tim.auto_charge_level]
