@@ -1,7 +1,10 @@
+#!/usr/bin/env python3
+
 import yaml, random, json
+from sys import argv
 
 # Open schema file and load with yaml
-with open(input("Schema file to create example for: "), "r") as yml:
+with open(argv[1], "r") as yml:
     schema = yaml.safe_load(yml)
 
 example_data = {}
@@ -18,7 +21,7 @@ for category in schema.items():
                 example_data[field] = fields[field]  # Runs if datapoint has no "type" field
 
 
-# Replaces all datatypes ('int', 'str' etc.) with random values
+# Replaces all datatypes ('int', 'str' etc.) with values
 # int and float are randomly generated
 # List and str prompt the user for an example value(s)
 # Enum randomly chooses from the available types in the enum
