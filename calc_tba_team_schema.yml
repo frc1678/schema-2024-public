@@ -6,7 +6,7 @@
 #     "team_number": "183",
 #     "team_name": "robot robotics",
 #     "foul_cc": 2.3304,
-#     "auto_line_successes": 6
+#     "mobility_successes": 6
 # }
 #
 
@@ -15,7 +15,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 data:
   team_number:
@@ -31,7 +31,7 @@ calculations:
 
 # Calcs based on counting team in match bools
 counts:
-  auto_line_successes:
+  mobility_successes:
     type: int
     tim_fields:
-      tba_tim.auto_line: true
+      tba_tim.mobility: true

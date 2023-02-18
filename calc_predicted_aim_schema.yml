@@ -10,7 +10,6 @@
 #     "actual_rp1": 3.0843,
 #     "actual_rp2": 0.3198,
 #     "won_match": false,
-#     "has_final_scores": true,
 #     "final_predicted_score": 4.7994,
 #     "final_predicted_rp1": 2.8541,
 #     "final_predicted_rp2": 0.6841,
@@ -26,7 +25,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 9
+  version: 1
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -39,13 +38,13 @@ data:
     type: bool
   actual_score:
     type: int
+  # Charge RP
   actual_rp1:
     type: float
+  # Link RP
   actual_rp2:
     type: float
   won_match:
-    type: bool
-  has_final_scores:
     type: bool
   # Predicted values at time of the actual match
   final_predicted_score:
