@@ -17,7 +17,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Not used for calcs
 data:
@@ -34,7 +34,8 @@ data:
 calculations:
   predicted_rps:
     type: float
-    requires: [predicted_aim.predicted_score, predicted_aim.predicted_rp1, predicted_aim.predicted_rp2]
+    requires: [predicted_aim.predicted_score, predicted_aim.predicted_rp1, predicted_aim.predicted_rp2, predicted_aim.actual_score, predicted_aim.actual_rp1, predicted_aim.actual_rp2, predicted_aim.has_actual_data]
   predicted_rank:
     type: int
     requires: [predicted_team.predicted_rps]
+
