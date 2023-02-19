@@ -185,30 +185,14 @@ timeline_cycle_time:
 # Dict items should be ordered, values are shortened string from qr
 categorical_actions:
   auto_charge_level:
-    type: Enum[str]
+    list: ["N", D, E]
+    type: str
   tele_charge_level:
-    type: Enum[str]
+    list: ["N", P, D, E]
+    type: str
   start_position:
-    type: Enum[str]
+    list: ["0", "1", "2", "3", "4"]
+    type: str
   preloaded_gamepiece:
-    type: Enum[str]
-
-enums:
-  auto_charge_level:
-    NONE: "N"
-    DOCK: D
-    ENGAGE: E
-  tele_charge_level:
-    NONE: "N"
-    PARK: P
-    DOCK: D
-    ENGAGE: E
-  start_position:
-    "0": "0"
-    "1": "1"
-    "2": "2"
-    "3": "3"
-    "4" : "4" 
-  preloaded_gamepiece:
-    CUBE: U
-    CONE: O
+    list: ["U", "O"]
+    type: str
