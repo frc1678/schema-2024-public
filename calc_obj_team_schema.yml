@@ -437,11 +437,11 @@ counts:
     type: int
   auto_dock_successes:
     tim_fields:
-      obj_tim.auto_charge_level: 'DOCK'
+      obj_tim.auto_charge_level: 'D'
     type: int
   auto_engage_successes:
     tim_fields:
-      obj_tim.auto_charge_level: 'ENGAGE'
+      obj_tim.auto_charge_level: 'E'
     type: int
   tele_charge_attempts:
     tim_fields:
@@ -450,15 +450,15 @@ counts:
     type: int
   tele_dock_successes:
     tim_fields:
-      obj_tim.tele_charge_level: 'DOCK'
+      obj_tim.tele_charge_level: 'D'
     type: int
   tele_engage_successes:
     tim_fields:
-      obj_tim.tele_charge_level: 'ENGAGE'
+      obj_tim.tele_charge_level: 'E'
     type: int
   tele_park_successes:
     tim_fields:
-      obj_tim.tele_charge_level: 'PARK'
+      obj_tim.tele_charge_level: 'P'
     type: int
   position_zero_starts:
     tim_fields:
@@ -517,11 +517,11 @@ counts:
     type: int
   lfm_auto_dock_successes:
     tim_fields:
-      obj_tim.auto_charge_level: 'DOCK'
+      obj_tim.auto_charge_level: 'D'
     type: int
   lfm_auto_engage_successes:
     tim_fields:
-      obj_tim.auto_charge_level: 'ENGAGE'
+      obj_tim.auto_charge_level: 'E'
     type: int
   lfm_tele_charge_attempts:
     tim_fields:
@@ -530,15 +530,15 @@ counts:
     type: int
   lfm_tele_dock_successes:
     tim_fields:
-      obj_tim.tele_charge_level: 'DOCK'
+      obj_tim.tele_charge_level: 'D'
     type: int
   lfm_tele_engage_successes:
     tim_fields:
-      obj_tim.tele_charge_level: 'ENGAGE'
+      obj_tim.tele_charge_level: 'E'
     type: int
   lfm_tele_park_successes:
     tim_fields:
-      obj_tim.tele_charge_level: 'PARK'
+      obj_tim.tele_charge_level: 'P'
     type: int
   lfm_matches_incap:
     tim_fields:
@@ -743,19 +743,19 @@ modes:
     type: List
   mode_auto_charge_level:
     tim_fields: [obj_tim.auto_charge_level]
-    ignore: 'NONE'
+    ignore: 'N'
     type: List
   lfm_mode_auto_charge_level:
     tim_fields: [obj_tim.auto_charge_level]
-    ignore: 'NONE'
+    ignore: 'N'
     type: List
   mode_tele_charge_level:
     tim_fields: [obj_tim.tele_charge_level]
-    ignore: 'NONE'
+    ignore: 'N'
     type: List
   lfm_mode_tele_charge_level:
     tim_fields: [obj_tim.tele_charge_level]
-    ignore: 'NONE'
+    ignore: 'N'
     type: List
 
 success_rates:
