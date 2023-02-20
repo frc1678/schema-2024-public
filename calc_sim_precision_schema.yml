@@ -16,7 +16,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # TODO: Add collection information to data fields once schema is implemented
 # Non-calculated data
@@ -46,3 +46,7 @@ calculations:
       unconsolidated_totals.tele_cone_high: 5
       unconsolidated_totals.tele_cone_mid: 3
       unconsolidated_totals.tele_cone_low: 2
+    intakes:
+      - unconsolidated_totals.intakes_high_row
+      - unconsolidated_totals.intakes_mid_row
+      - unconsolidated_totals.intakes_low_row
