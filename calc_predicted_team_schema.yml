@@ -33,7 +33,7 @@ data:
 # Special types, won't be part of the main calc loops
 calculations:
   predicted_rps:
-    type: float
+    type: int
     requires: [predicted_aim.predicted_score, predicted_aim.predicted_rp1, predicted_aim.predicted_rp2, predicted_aim.actual_score, predicted_aim.actual_rp1, predicted_aim.actual_rp2, predicted_aim.has_actual_data]
   predicted_rank:
     type: int
