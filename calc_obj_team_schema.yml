@@ -190,7 +190,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 16
+  version: 17
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -783,11 +783,11 @@ success_rates:
     type: float
   charge_percent_success:
     team_successes: [auto_dock_successes, tele_dock_successes]
-    team_attempts: [auto_charge_attempts, tele_charge_attempts]
+    team_attempts: [auto_charge_attempts, tele_charge_attempts, -tele_park_successes]
     type: float
   lfm_charge_percent_success:
     team_successes: [lfm_auto_dock_successes, lfm_tele_dock_successes]
-    team_attempts: [lfm_auto_charge_attempts, lfm_tele_charge_attempts]
+    team_attempts: [lfm_auto_charge_attempts, lfm_tele_charge_attempts, -lfm_tele_park_successes]
     type: float
   auto_dock_percent_success:
     team_successes: [auto_dock_successes]
@@ -807,21 +807,41 @@ success_rates:
     type: float
   tele_dock_percent_success:
     team_successes: [tele_dock_successes]
-    team_attempts: [tele_charge_attempts]
+    team_attempts: [tele_charge_attempts, -tele_park_successes]
     type: float
   lfm_tele_dock_percent_success:
     team_successes: [lfm_tele_dock_successes]
-    team_attempts: [lfm_tele_charge_attempts]
+    team_attempts: [lfm_tele_charge_attempts, -lfm_tele_park_successes]
     type: float
   tele_engage_percent_success:
     team_successes: [tele_engage_successes]
-    team_attempts: [tele_charge_attempts]
+    team_attempts: [tele_charge_attempts, -tele_park_successes]
     type: float
   lfm_tele_engage_percent_success:
     team_successes: [lfm_tele_engage_successes]
-    team_attempts: [lfm_tele_charge_attempts]
+    team_attempts: [lfm_tele_charge_attempts, -lfm_tele_park_successes]
     type: float
-  
+  tele_park_percent_success:
+    team_successes: [tele_park_successes]
+    team_attempts: [matches_played, -tele_dock_successes]
+    type: float
+  lfm_tele_park_percent_success:
+    team_successes: [lfm_tele_park_successes]
+    team_attempts: [4, -lfm_tele_dock_successes]
+    type: float
+  tele_dock_only_percent_success:
+    team_successes: [tele_dock_only_successes]
+    team_attempts: [tele_charge_attempts, -tele_park_successes]
+  lfm_tele_dock_only_percent_success:
+    team_successes: [lfm_tele_dock_only_successes]
+    team_attempts: [lfm_tele_charge_attempts, -lfm_tele_park_successes]
+  auto_dock_only_percent_success:
+    team_successes: [auto_dock_only_successes]
+    team_attempts: [auto_charge_attempts]
+  lfm_auto_dock_only_percent_success:
+    team_successes: [lfm_auto_dock_only_successes]
+    team_attempts: [lfm_auto_charge_attempts]
+
 # Calculates all the medians
 medians:
   median_nonzero_incap: 
