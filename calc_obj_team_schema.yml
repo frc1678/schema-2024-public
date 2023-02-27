@@ -847,22 +847,30 @@ average_points:
 
 # Calculates a sum of fields multiplied by point values
 sums:
-  avg_total_points:
+  auto_avg_total_points:
     auto_avg_cone_low : 3
-    tele_avg_cone_low : 2
     auto_avg_cone_mid : 4
-    tele_avg_cone_mid : 3
     auto_avg_cone_high : 6
-    tele_avg_cone_high : 5
     auto_avg_cube_low : 3
-    tele_avg_cube_low : 2
     auto_avg_cube_mid : 4
-    tele_avg_cube_mid : 3
     auto_avg_cube_high : 6
-    tele_avg_cube_high : 5
     auto_dock_percent_success: auto_avg_charge_points
+    type: float
+  tele_avg_total_points:
+    avg_intakes_low_row: -2
+    avg_intakes_mid_row: -3
+    avg_intakes_high_row: -5
+    tele_avg_cone_low : 2
+    tele_avg_cone_mid : 3
+    tele_avg_cone_high : 5
+    tele_avg_cube_low : 2
+    tele_avg_cube_mid : 3
+    tele_avg_cube_high : 5
     tele_dock_percent_success: tele_avg_charge_points
+    type: float
+  avg_total_points:
+    auto_avg_total_points: 1
+    tele_avg_total_points: 1
     type: float
   total_incap:
     type: int
-    
