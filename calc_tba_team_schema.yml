@@ -28,6 +28,9 @@ calculations:
   # Foul calculated contribution
   foul_cc:
     type: float
+  # Link calculated contribution
+  link_cc:
+    type: float
 
 # Calcs based on counting team in match bools
 counts:
