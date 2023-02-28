@@ -832,15 +832,19 @@ success_rates:
   tele_dock_only_percent_success:
     team_successes: [tele_dock_only_successes]
     team_attempts: [tele_charge_attempts, -tele_park_successes]
+    type: float
   lfm_tele_dock_only_percent_success:
     team_successes: [lfm_tele_dock_only_successes]
     team_attempts: [lfm_tele_charge_attempts, -lfm_tele_park_successes]
+    type: float
   auto_dock_only_percent_success:
     team_successes: [auto_dock_only_successes]
     team_attempts: [auto_charge_attempts]
+    type: float
   lfm_auto_dock_only_percent_success:
     team_successes: [lfm_auto_dock_only_successes]
     team_attempts: [lfm_auto_charge_attempts]
+    type: float
 
 # Calculates all the medians
 medians:
