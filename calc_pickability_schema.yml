@@ -16,7 +16,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 data:
   team_number:
@@ -71,7 +71,9 @@ calculations:
     obj_team.avg_intakes_station: 1
     obj_team.auto_avg_charge_points: 1
     obj_team.tele_avg_charge_points: 1
+max_calculations:
   overall_second_pickability:
     type: float
-    pickability.offensive_second_pickability: 0.5 # Both of these values should be (weight/2) instead of just (weight)
-    pickability.defensive_second_pickability: 0.5 # Right now they both have a weight of 1
+    fields:
+      - offensive_second_pickability
+      - defensive_second_pickability 
