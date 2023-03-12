@@ -16,7 +16,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 data:
   team_number:
@@ -39,7 +39,6 @@ calculations:
     obj_team.auto_avg_cube_high: 6
     obj_team.tele_avg_charge_points: 1
     obj_team.auto_avg_charge_points: 1
-    subj_team.driver_ability: 5
   offensive_second_pickability:
     type: float
     obj_team.tele_avg_cone_low: 2
@@ -56,19 +55,15 @@ calculations:
     obj_team.auto_avg_cube_high: 6
     obj_team.tele_avg_charge_points: 1
     obj_team.auto_avg_charge_points: 1
-    subj_team.driver_ability: 5
   defensive_second_pickability:
     type: float
-    subj_team.driver_ability: 10
+    subj_team.driver_ability: 3
     obj_team.auto_avg_cone_low: 3
     obj_team.auto_avg_cone_mid: 4
     obj_team.auto_avg_cone_high: 6
     obj_team.auto_avg_cube_low: 3
     obj_team.auto_avg_cube_mid: 4
     obj_team.auto_avg_cube_high: 6
-    obj_team.tele_avg_gamepieces_low: 2
-    obj_team.avg_intakes_ground: 1
-    obj_team.avg_intakes_station: 1
     obj_team.auto_avg_charge_points: 1
     obj_team.tele_avg_charge_points: 1
 max_calculations:
