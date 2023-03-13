@@ -19,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 8
+  version: 9
 
 collections:
   # Each key is a collection within a competition database
@@ -102,6 +102,11 @@ collections:
     schema: 'calc_scout_precision_schema.yml'
     indexes:
     - fields: ['scout_name']
+      unique: True
+  auto_paths:
+    schema: null
+    indexes:
+    - fields: ['match_number', 'team_number']
       unique: True
   picklist:
     schema: null
