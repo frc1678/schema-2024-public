@@ -190,7 +190,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 17
+  version: 18
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -398,6 +398,9 @@ standard_deviations:
   auto_sd_gamepieces:
     tim_fields: [obj_tim.auto_total_gamepieces]
     type: float
+  lfm_auto_sd_gamepieces:
+    tim_fields: [obj_tim.auto_total_gamepieces]
+    type: float
   tele_sd_cone_high:
     tim_fields: [obj_tim.tele_cone_high]
     type: float
@@ -423,6 +426,9 @@ standard_deviations:
     tim_fields: [obj_tim.tele_total_cubes]
     type: float
   tele_sd_gamepieces:
+    tim_fields: [obj_tim.tele_total_gamepieces]
+    type: float
+  lfm_tele_sd_gamepieces:
     tim_fields: [obj_tim.tele_total_gamepieces]
     type: float
 
@@ -569,7 +575,13 @@ super_counts:
   matches_scored_coop:
     type: int
     tim_fields: [subj_tim.scored_coop]
+  lfm_matches_scored_coop:
+    type: int
+    tim_fields: [subj_tim.scored_coop]
   matches_played_defense:
+    type: int
+    tim_fields: [subj_tim.played_defense]
+  lfm_matches_played_defense:
     type: int
     tim_fields: [subj_tim.played_defense]
 
@@ -864,9 +876,18 @@ average_points:
     tele_engage_successes: 10
     tele_park_successes: 2
     type: float
+  lfm_tele_avg_charge_points:
+    lfm_tele_dock_only_successes: 6
+    lfm_tele_engage_successes: 10
+    lfm_tele_park_successes: 2
+    type: float
   auto_avg_charge_points:
     auto_dock_only_successes: 8
     auto_engage_successes: 12
+    type: float
+  lfm_auto_avg_charge_points:
+    lfm_auto_dock_only_successes: 8
+    lfm_auto_engage_successes: 12
     type: float
 
 # Calculates a sum of fields multiplied by point values
@@ -897,4 +918,6 @@ sums:
     tele_avg_total_points: 1
     type: float
   total_incap:
+    type: int
+  lfm_total_incap:
     type: int
