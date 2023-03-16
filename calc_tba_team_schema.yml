@@ -38,3 +38,7 @@ counts:
     type: int
     tim_fields:
       tba_tim.mobility: true
+  lfm_mobility_successes:
+    type: int
+    tim_fields:
+      tba_tim.mobility: true
