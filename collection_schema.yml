@@ -83,6 +83,11 @@ collections:
     indexes:
       - fields: ['match_number', 'alliance_color_is_red']
         unique: True
+  predicted_alliances:
+    schema: null
+    indexes:
+      - fields: ['alliance_num']
+        unique: True
   predicted_team:
     schema: 'calc_predicted_team_schema.yml'
     indexes:
