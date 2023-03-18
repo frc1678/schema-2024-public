@@ -98,7 +98,7 @@
 #     "lfm_tele_engage_successes": 3,
 #     "lfm_tele_park_successes": 4,
 #     "lfm_matches_incap": 6,
-#     "matches_scored_coop": 1,
+#     "matches_tippy": 1,
 #     "auto_max_cone_high": 9,
 #     "auto_max_cone_mid": 1,
 #     "auto_max_cone_low": 7,
@@ -572,12 +572,12 @@ counts:
 
 # Objective counts collected by Super Scouts
 super_counts:
-  matches_scored_coop:
+  matches_tippy:
     type: int
-    tim_fields: [subj_tim.scored_coop]
-  lfm_matches_scored_coop:
+    tim_fields: [subj_tim.was_tippy]
+  lfm_matches_tippy:
     type: int
-    tim_fields: [subj_tim.scored_coop]
+    tim_fields: [subj_tim.was_tippy]
   matches_played_defense:
     type: int
     tim_fields: [subj_tim.played_defense]
@@ -789,10 +789,6 @@ modes:
     type: List
 
 success_rates:
-  percent_matches_scored_coop:
-    team_successes: [matches_scored_coop]
-    team_attempts: [matches_played]
-    type: float
   charge_percent_success:
     team_successes: [auto_dock_successes, tele_dock_successes]
     team_attempts: [auto_charge_attempts, tele_charge_attempts, -tele_park_successes]
