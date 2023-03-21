@@ -16,7 +16,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 data:
   team_number:
@@ -25,50 +25,10 @@ data:
 calculations:
   first_pickability:
     type: float
-    obj_team.tele_avg_cone_low: 2
-    obj_team.auto_avg_cone_low: 3
-    obj_team.tele_avg_cone_mid: 3
-    obj_team.auto_avg_cone_mid: 4
-    obj_team.tele_avg_cone_high: 5
-    obj_team.auto_avg_cone_high: 6
-    obj_team.tele_avg_cube_low: 2
-    obj_team.auto_avg_cube_low: 3
-    obj_team.tele_avg_cube_mid: 3
-    obj_team.auto_avg_cube_mid: 4
-    obj_team.tele_avg_cube_high: 5
-    obj_team.auto_avg_cube_high: 6
-    obj_team.tele_avg_charge_points: 1
-    obj_team.auto_avg_charge_points: 1
-  offensive_second_pickability:
+    obj_team.avg_total_points: 1
+  second_pickability:
     type: float
-    obj_team.tele_avg_cone_low: 2
-    obj_team.auto_avg_cone_low: 3
-    obj_team.tele_avg_cone_mid: 3
-    obj_team.auto_avg_cone_mid: 4
-    obj_team.tele_avg_cone_high: 5
-    obj_team.auto_avg_cone_high: 6
-    obj_team.tele_avg_cube_low: 2
-    obj_team.auto_avg_cube_low: 3
-    obj_team.tele_avg_cube_mid: 3
-    obj_team.auto_avg_cube_mid: 4
-    obj_team.tele_avg_cube_high: 5
-    obj_team.auto_avg_cube_high: 6
-    obj_team.tele_avg_charge_points: 1
-    obj_team.auto_avg_charge_points: 1
-  defensive_second_pickability:
-    type: float
-    subj_team.driver_ability: 3
-    obj_team.auto_avg_cone_low: 3
-    obj_team.auto_avg_cone_mid: 4
-    obj_team.auto_avg_cone_high: 6
-    obj_team.auto_avg_cube_low: 3
-    obj_team.auto_avg_cube_mid: 4
-    obj_team.auto_avg_cube_high: 6
-    obj_team.auto_avg_charge_points: 1
-    obj_team.tele_avg_charge_points: 1
-max_calculations:
-  overall_second_pickability:
-    type: float
-    fields:
-      - offensive_second_pickability
-      - defensive_second_pickability 
+    tba_team.foul_cc: -0.138214
+    obj_team.auto_avg_gamepieces: 2.297627
+    obj_team.avg_total_intakes: [obj_team.avg_total_intakes, 0.3860387]
+    obj_team.tele_engage_successes: 2.862817

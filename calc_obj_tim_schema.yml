@@ -45,7 +45,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 13
+  version: 14
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -158,7 +158,7 @@ aggregates:
     counts: [tele_total_cubes, tele_total_cones]
   total_intakes:
     type: int
-    counts: [intakes_low_row, intakes_station, intakes_ground]
+    counts: [intakes_station, intakes_ground]
   total_charge_attempts:
     type: int
     counts: [tele_charge_attempt, auto_charge_attempt]

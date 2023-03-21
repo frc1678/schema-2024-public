@@ -190,7 +190,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 18
+  version: 19
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -870,12 +870,10 @@ average_points:
   tele_avg_charge_points:
     tele_dock_only_successes: 6
     tele_engage_successes: 10
-    tele_park_successes: 2
     type: float
   lfm_tele_avg_charge_points:
     lfm_tele_dock_only_successes: 6
     lfm_tele_engage_successes: 10
-    lfm_tele_park_successes: 2
     type: float
   auto_avg_charge_points:
     auto_dock_only_successes: 8
