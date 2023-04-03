@@ -16,7 +16,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 data:
   team_number:
@@ -27,6 +27,14 @@ calculations:
     type: float
     obj_team.avg_total_points: 1
   second_pickability:
+    type: float
+    tba_team.foul_cc: -0.3941864
+    obj_team.auto_avg_gamepieces: 4.876535
+    obj_team.tele_engage_successes: 1.698176
+    obj_team.tele_engage_percent_success: 13.35659
+    obj_team.tele_avg_gamepieces: [obj_team.tele_avg_gamepieces, 0.4935332]
+  # These are the old weights (not seen in viewer, but kept for comparison)
+  test_second_pickability:
     type: float
     tba_team.foul_cc: -0.138214
     obj_team.auto_avg_gamepieces: 2.297627
