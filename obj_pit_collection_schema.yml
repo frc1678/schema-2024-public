@@ -20,7 +20,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Stores data type/structure
 schema:
@@ -35,6 +35,10 @@ schema:
   has_vision:
     type: bool
   has_communication_device:
+    type: bool
+  is_forkable:
+    type: bool
+  has_ground_intake:
     type: bool
   weight:
     type: float
