@@ -134,7 +134,7 @@ timeline_counts:
     action_type: intake_high_row
   failed_scores:
     type: int
-    action_type: failed_score
+    action_type: score_fail
 
 # Calculations made by adding up other counts
 aggregates:
