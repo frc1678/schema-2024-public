@@ -117,9 +117,12 @@ timeline_counts:
   intakes_ground:
     type: int
     action_type: intake_ground
-  intakes_station:
+  intakes_double:
     type: int
-    action_type: intake_station
+    action_type: intake_double
+  intakes_single:
+    type: int
+    action_type: intake_single
   intakes_low_row:
     type: int
     action_type: intake_low_row

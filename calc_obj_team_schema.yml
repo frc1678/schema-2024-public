@@ -23,7 +23,8 @@
 #     "avg_incap_time": 3.3054,
 #     "avg_gamepieces": 3.1765,
 #     "avg_intakes_ground": 2.0553,
-#     "avg_intakes_station": 1.6816,
+#     "avg_intakes_double": 1.6816,
+#     "avg_intakes_single": 9.2346,
 #     "avg_intakes_low_row": 4.5391,
 #     "avg_intakes_mid_row": 4.5391,
 #     "avg_intakes_high_row": 4.5391,
@@ -45,7 +46,8 @@
 #     "lfm_tele_avg_cube_low": 1.6895,
 #     "lfm_tele_avg_cube_total": 4.9494,
 #     "lfm_avg_intakes_ground": 6.4241,
-#     "lfm_avg_intakes_station": 1.8711,
+#     "lfm_avg_intakes_double": 1.8711,
+#     "lfm_avg_intakes_single": 2.6824,
 #     "lfm_avg_intakes_low_row": 3.3521,
 #     "lfm_avg_intakes_mid_row": 3.3521,
 #     "lfm_avg_intakes_high_row": 3.3521,
@@ -265,8 +267,11 @@ averages:
   avg_intakes_ground:
     tim_fields: [obj_tim.intakes_ground]
     type: float
-  avg_intakes_station:
-    tim_fields: [obj_tim.intakes_station]
+  avg_intakes_double:
+    tim_fields: [obj_tim.intakes_double]
+    type: float
+  avg_intakes_single:
+    tim_fields: [obj_tim.intakes_single]
     type: float
   avg_intakes_low_row:
     tim_fields: [obj_tim.intakes_low_row]
@@ -340,8 +345,11 @@ averages:
   lfm_avg_intakes_ground:
     tim_fields: [obj_tim.intakes_ground]
     type: float
-  lfm_avg_intakes_station:
-    tim_fields: [obj_tim.intakes_station]
+  lfm_avg_intakes_double:
+    tim_fields: [obj_tim.intakes_double]
+    type: float
+  lfm_avg_intakes_single:
+    tim_fields: [obj_tim.intakes_single]
     type: float
   lfm_avg_intakes_low_row:
     tim_fields: [obj_tim.intakes_low_row]
