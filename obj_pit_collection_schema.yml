@@ -52,12 +52,14 @@ schema:
 enums:
   # Drivetrain type
   drivetrain:
+    no_data: -1
     tank: 0
     mecanum: 1
     swerve: 2
     other: 3
   # Type of the motors on the drivetrain, independent of drivetrain type
   drivetrain_motor_type:
+    no_data: -1
     minicim: 0
     cim: 1
     neo: 2
