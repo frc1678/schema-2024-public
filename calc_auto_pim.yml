@@ -1,0 +1,142 @@
+# Used for calculating auto path-in-match data in server
+
+# Contains information about this schema file
+schema_file:
+  # Version of schema file
+  # Incremented every merged schema change
+  version: 1
+
+# Data that doesn't fit into other categorical calculations
+data:
+  team_number:
+    type: str
+  match_number:
+    type: int
+
+# Data pulled directly from other collections
+tim_fields:
+  obj_tim.start_position:
+    type: str
+  obj_tim.preloaded_gamepiece:
+    type: str
+  obj_tim.auto_charge_level:
+    type: str
+  tba_tim.mobility:
+    type: bool
+  subj_tim.auto_pieces_start_position:
+    type: List
+
+# Data calculated from the timeline
+--timeline_fields:
+  intake_piece:
+    valid_actions: ["auto_intake_one", "auto_intake_two", "auto_intake_three", "auto_intake_four"]
+    calculation: {
+      calc: dict,
+      dict: {
+        calc: value,
+        value: {0: "cone", 1: "cube", 2: "none"}
+      },
+      key: {
+        calc: list,
+        list: auto_pieces_start_position,
+        index: {
+          calc: dict,
+          dict: {
+            calc: value,
+            value: {"auto_intake_one": 0, "auto_intake_two": 1, "auto_intake_three": 2, "auto_intake_four": 3},
+          },
+          key: action
+        },
+      }
+    }
+    max_count: 4
+  intake_position:
+    valid_actions: ["auto_intake_one", "auto_intake_two", "auto_intake_three", "auto_intake_four"]
+    calculation: {
+      calc: dict,
+      dict: {
+        calc: value,
+        value: {"auto_intake_one": "one", "auto_intake_two": "two", "auto_intake_three": "three", "auto_intake_four": "four"},
+      },
+      key: action
+    }
+    max_count: 4
+
+  score_piece:
+    valid_actions: ["score_cone_high", "score_cube_high", "score_cone_mid", "score_cube_mid", "score_cone_low", "score_cube_low", "failed_score"]
+    calculation: {
+      calc: dict,
+      key: action,
+      dict: {
+        calc: value,
+        value: {
+          score_cone_high: cone,
+          score_cube_high: cube,
+          score_cone_mid: cone,
+          score_cube_mid: cube,
+          score_cone_low: cone,
+          score_cube_low: cube,
+          failed_score: fail,
+        }
+      }
+    }
+    max_count: 5
+  score_position:
+    valid_actions: ["score_cone_high", "score_cube_high", "score_cone_mid", "score_cube_mid", "score_cone_low", "score_cube_low", "failed_score"]
+    calculation: {
+      calc: dict,
+      key: action,
+      dict: {
+        calc: value,
+        value: {
+          score_cone_high: high,
+          score_cube_high: high,
+          score_cone_mid: mid,
+          score_cube_mid: mid,
+          score_cone_low: low,
+          score_cube_low: low,
+          failed_score: fail,
+        }
+      }
+    }
+    max_count: 5
+
+# Update this for schema typing, it has no effect on auto_pim, but database.py needs it
+# There should be a field for each possible timeline field, up to max_count
+timeline_fields_typing:
+  intake_piece_1:
+    type: str
+  intake_piece_2:
+    type: str
+  intake_piece_3:
+    type: str
+  intake_piece_4:
+    type: str
+  intake_position_1:
+    type: str
+  intake_position_2:
+    type: str
+  intake_position_3:
+    type: str
+  intake_position_4:
+    type: str
+  score_piece_1:
+    type: str
+  score_piece_2:
+    type: str
+  score_piece_3:
+    type: str
+  score_piece_4:
+    type: str
+  score_piece_5:
+    type: str
+  score_position_1:
+    type: str
+  score_position_2:
+    type: str
+  score_position_3:
+    type: str
+  score_position_4:
+    type: str
+  score_position_5:
+    type: str
