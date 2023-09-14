@@ -1,5 +1,4 @@
-# Used for Match Collection QR compression by Match Collection App and QR decompression by Server
-# QR is encoded in an Alphanumeric QR
+# Used for generating QRs in src/generate_test_qrs.py
 
 # Contains information about this schema file
 schema_file:
@@ -7,12 +6,23 @@ schema_file:
   # Incremented every merged schema change
   version: 1
 
-# Each decompressed variable name corresponds to a length 2 or 3 list
-# First item is the compressed variable name
-# Second item is server-side data type
-# Third item (if it exists) is the type within the list, if a dict it requires specific implementation in decompressor
-# Fourth item (if it exists) is the length of each item in a none-dict list, if not provided _list_data_separator is used as a separator
-# Names starting with "_" do not correspond to a compressed variable, they are used to aid in (de)compression
+# Contains all of the variables in the schema/match_collection_qr_schema.yml file
+# Each variable has attributes that determine how it is randomly generated
+
+# gen: if True, this variable can be randomly generated, such as amount of pieces scored.
+#      if False, variable has to be manually added to the QR, such as match numbers
+
+# symbol: the compressed name of the variable. See schema/match_collection_qr_schema.yml for more information.
+
+# type: the data type of the variable, such as int, str, or bool.
+
+# is_random: if True, the variable is randomly generated between a min and max value.
+#            if False, the variable is generated based on team skill level.
+
+# values: the list of possible values the variable can be.
+#         if the type is an int, the list will contain the min and max value
+#          if the type is a str, the list will contain a list of all possible values.
+
 _list_data_separator: "&"
 # Data that is shared between the objective and subjective QRs. 
 generic_data:
@@ -20,37 +30,37 @@ generic_data:
   _section_separator: '%' # Separates generic from objective/subjective data
   # Must remain constant between versions
   schema_version:
-    gen: false
+    gen: False
     symbol: A
     type: int
   serial_number:
-    gen: true
+    gen: True
     symbol: B
     type: str
     is_random: True
     values: [9AQAY1EV7J, 9AMAY1E54G, 9AMAY1E53P, HA0XWWML, HA0Y2FCY, HA0YXPF5, HA0XY35Q, HA0Y2K4C, HA0Y2BZ9, HA0XWPG6, HA0XYKU0, HA0Y2GH1, HA0Y2M4U, HA0Y2ACJ, HA0Y25C9, HA0Y2K5K, HA0XXY4P, HA0Y2SS9, HA0YW82H, HA0YWB4A, HA0XUZA9, HA0XU4B5, HA0Y25CV, HA0XVCLV, HA0Y1FT5, HA0YXP3C, HA0YWEJ4, HA0XVPPG, HA0Y2R6Z, HA0XWR3T, HA0XYBRG, HA0XYAK2, HA0XWU1Z, HA0XCRB2, HA0XC9A4, HA0XCUFX]
   match_number:
-    gen: false
+    gen: False
     symbol: C
     type: int
   timestamp:
-    gen: true
+    gen: True
     symbol: D
     type: int
-    is_random: true
+    is_random: True
     values: [0000000000, 9999999999]
   match_collection_version_number:
-    gen: false
+    gen: False
     symbol: E
     type: str
   scout_name:
-    gen: true
+    gen: True
     symbol: F
     type: str
-    is_random: true
-    values: ["Bob", "Mike", "Bryan", "Cyan", "Rohaan", "John", "Thrasymachus", "Bobina", "Andy", "Ann", "Michael"]
+    is_random: True
+    values: ["Bob", "Mike", "Bryan", "Cyan", "Rohaan", "John", "Tom", "Bobina", "Andy", "Ann", "Michael", "Annemarie", "Noah", "Susan", "Chris", "Christopher"]
   alliance_color_is_red:
-    gen: false
+    gen: False
     symbol: G
     type: bool
 
@@ -60,20 +70,43 @@ objective_tim:
   _start_character: '+' # First character in QR used to identify QR type
   _separator: '$' # Separates key:value pairs
   team_number:
+    gen: False
     symbol: Z
     type: str
   # Used to determine which tablets have not submitted ('Y' in quotes because it's a keyword on its own)
   scout_id:
+    gen: True
     symbol: "Y"
     type: int
-    is_random: true
+    is_random: True
     values: [1, 30]
   # str representing where a robot starts in auto (1, 2, 3, or 4)
-  start_position: [X, str]
-  timeline: [W, list, dict] # List of dictionaries
-  auto_charge_level: [V, str] # str representing where a robot finishes in auto to ('none', 'docked', 'engaged')
-  tele_charge_level: [U, str] # str representing where a robot finished in the endgame ('none', 'park', 'docked', 'engaged')
-  preloaded_gamepiece: [T, str] # str representing the preloaded game piece of a robot ('NONE', 'CONE', 'CUBE')
+  start_position:
+    gen: True
+    symbol: X
+    type: str
+    is_random: True
+    values: ["1", "2", "3", "4"]
+  auto_charge_level: # str representing where a robot finishes in auto to ('NONE', 'DOCKED', 'ENGAGED')
+    gen: True
+    symbol: V
+    type: str
+    is_random: False
+    values: ["NONE", "DOCKED", "ENGAGED"]
+  tele_charge_level: # str representing where a robot finished in the endgame ('NONE', 'PARK', 'DOCKED', 'ENGAGED')
+    gen: True
+    symbol: U
+    type: str
+    is_random: False
+    values: ["NONE", "PARK", "DOCKED", "ENGAGED"]
+  preloaded_gamepiece: # str representing the preloaded game piece of a robot ('NONE', 'CONE', 'CUBE')
+    gen: True
+    symbol: T
+    type: str
+    is_random: True
+    values: ["NONE", "CONE", "CUBE"]
+
+# TODO: CREATE TIMELINE SCHEMA
 
 # Timeline is part of objective match collection QR
 # Data for an action in the timeline
