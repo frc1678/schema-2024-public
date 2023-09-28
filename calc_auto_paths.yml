@@ -69,34 +69,34 @@ path_max:
     datapoint: score_position_1,
     order: [null, fail, low, mid, high],
     reset: score_1_max_successes,
-    type: str
+    type: --
   }
   score_position_2_max: {
     datapoint: score_position_2,
     order: [null, fail, low, mid, high],
     reset: score_2_max_successes,
-    type: str
+    type: --
   }
   score_position_3_max: {
     datapoint: score_position_3,
     order: [null, fail, low, mid, high],
     reset: score_3_max_successes,
-    type: str
+    type: --
   }
   score_piece_1_max: {
     datapoint: score_piece_1,
     order: [null, fail, cube, cone],
-    type: str
+    type: --
   }
   score_piece_2_max: {
     datapoint: score_piece_2,
     order: [null, fail, cube, cone],
-    type: str
+    type: --
   }
   score_piece_3_max: {
     datapoint: score_piece_3,
     order: [null, fail, cube, cone],
-    type: str
+    type: --
   }
 # 1 is added each time all the datapoints are in the possible list of values, - before a value indicates it is a datapoint
 path_increment:
