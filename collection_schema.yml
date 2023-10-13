@@ -108,7 +108,7 @@ collections:
     indexes:
     - fields: ['scout_name']
       unique: True
-  auto_pims:
+  auto_pim:
     schema: 'calc_auto_pim.yml'
     indexes:
     - fields: ['team_number', 'match_number']
