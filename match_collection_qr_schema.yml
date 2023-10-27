@@ -19,13 +19,11 @@ generic_data:
   _separator: '$' # Separates key:value pairs
   _section_separator: '%' # Separates generic from objective/subjective data
   schema_version: [A, int] # Must remain constant between versions
-  serial_number: [B, str]
-  match_number: [C, int]
-  timestamp: [D, int]
-  match_collection_version_number: [E, str]
-  scout_name: [F, str]
-  alliance_color_is_red: [G, bool]
-
+  match_number: [B, int]
+  timestamp: [C, int]
+  match_collection_version_number: [D, str]
+  scout_name: [E, str]
+  alliance_color_is_red: [F, bool]
 
 # Data specific to objective match collection QR
 objective_tim:
