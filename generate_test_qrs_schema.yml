@@ -16,8 +16,8 @@ schema_file:
 
 # type: the data type of the variable, such as int, str, or bool.
 
-# is_random: if True, the variable is randomly generated between a min and max value.
-#            if False, the variable is generated based on team skill level.
+# is_random: if True the variable does not depend on team skill level, and the variable is randomly generated between a min and max value.
+#            if False, the variable is generated based on team skill level, and the list of values is ordered from least skill to most skill.
 
 # values: the list of possible values the variable can be.
 #         if the type is an int, the list will contain the min and max value
@@ -87,6 +87,10 @@ objective_tim:
     type: str
     is_random: True
     values: ["1", "2", "3", "4"]
+  timeline:
+    gen: False
+    symbol: W
+    type: list[dict]
   auto_charge_level: # str representing where a robot finishes in auto to ('NONE', 'DOCKED', 'ENGAGED')
     gen: True
     symbol: V
