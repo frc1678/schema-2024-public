@@ -33,35 +33,29 @@ generic_data:
     gen: False
     symbol: A
     type: int
-  serial_number:
-    gen: True
-    symbol: B
-    type: str
-    is_random: True
-    values: [9AQAY1EV7J, 9AMAY1E54G, 9AMAY1E53P, HA0XWWML, HA0Y2FCY, HA0YXPF5, HA0XY35Q, HA0Y2K4C, HA0Y2BZ9, HA0XWPG6, HA0XYKU0, HA0Y2GH1, HA0Y2M4U, HA0Y2ACJ, HA0Y25C9, HA0Y2K5K, HA0XXY4P, HA0Y2SS9, HA0YW82H, HA0YWB4A, HA0XUZA9, HA0XU4B5, HA0Y25CV, HA0XVCLV, HA0Y1FT5, HA0YXP3C, HA0YWEJ4, HA0XVPPG, HA0Y2R6Z, HA0XWR3T, HA0XYBRG, HA0XYAK2, HA0XWU1Z, HA0XCRB2, HA0XC9A4, HA0XCUFX]
   match_number:
     gen: False
-    symbol: C
+    symbol: B
     type: int
   timestamp:
     gen: True
-    symbol: D
+    symbol: C
     type: int
     is_random: True
     values: [0000000000, 9999999999]
   match_collection_version_number:
     gen: False
-    symbol: E
+    symbol: D
     type: str
   scout_name:
     gen: True
-    symbol: F
+    symbol: E
     type: str
     is_random: True
     values: ["Bob", "Mike", "Bryan", "Cyan", "Rohaan", "John", "Tom", "Bobina", "Andy", "Ann", "Michael", "Annemarie", "Noah", "Susan", "Chris", "Christopher"]
   alliance_color_is_red:
     gen: False
-    symbol: G
+    symbol: F
     type: bool
 
 
