@@ -129,5 +129,5 @@ collections:
   stand_strategist:
     schema: 'calc_stand_strategist.yml'
     indexes:
-    - fields: ['team_number', 'match_number']
-      unique: True
+      - fields: ['team_number', 'match_number']
+        unique: True
