@@ -27,11 +27,11 @@ schema:
   team_number:
     type: str
   drivetrain:
-    type: Enum[int]
+    type: Enum[str]
   drivetrain_motors:
     type: int
   drivetrain_motor_type:
-    type: Enum[int]
+    type: Enum[str]
   has_vision:
     type: bool
   has_communication_device:
