@@ -16,7 +16,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 data:
   team_number:
@@ -40,3 +40,19 @@ calculations:
     obj_team.auto_avg_gamepieces: 2.297627
     obj_team.avg_total_intakes: [obj_team.avg_total_intakes, 0.3860387]
     obj_team.tele_engage_successes: 2.862817
+  lfm_first_pickability:
+    type: float
+    obj_team.lfm_avg_total_points: 1
+  lfm_second_pickability:
+    type: float
+    tba_team.foul_cc: -0.3941864
+    obj_team.lfm_auto_avg_gamepieces: 4.876535
+    obj_team.lfm_tele_engage_successes: 1.698176
+    obj_team.lfm_tele_engage_percent_success: 13.35659
+    obj_team.lfm_tele_avg_gamepieces: [obj_team.lfm_tele_avg_gamepieces, 0.4935332]
+  lfm_test_second_pickability:
+    type: float
+    tba_team.foul_cc: -0.138214
+    obj_team.lfm_auto_avg_gamepieces: 2.297627
+    obj_team.lfm_avg_total_intakes: [obj_team.lfm_avg_total_intakes, 0.3860387]
+    obj_team.lfm_tele_engage_successes: 2.862817
