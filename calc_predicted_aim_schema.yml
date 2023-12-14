@@ -25,12 +25,14 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Stores fields that will be added to database but do not require calculations
 data:
   match_number:
     type: int
+  team_numbers: 
+    type: list 
   alliance_color_is_red:
     type: bool
   # Whether or not actual TBA data has been pulled to replace the predicted data
