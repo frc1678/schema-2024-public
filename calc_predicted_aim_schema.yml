@@ -4,6 +4,7 @@
 #
 # {
 #     "match_number": 3,
+#     "team_numbers": ["1678", "254", "1323"]
 #     "alliance_color_is_red": false,
 #     "has_actual_data": false,
 #     "actual_score": 1,
@@ -32,7 +33,7 @@ data:
   match_number:
     type: int
   team_numbers: 
-    type: list 
+    type: List 
   alliance_color_is_red:
     type: bool
   # Whether or not actual TBA data has been pulled to replace the predicted data
