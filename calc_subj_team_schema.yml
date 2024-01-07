@@ -18,7 +18,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 1
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -53,7 +53,3 @@ unadjusted_calculations:
   unadjusted_quickness:
     type: float
     requires: [subj_tim.quickness_score]
-  auto_pieces_start_position:
-    type: List
-    requires: [subj_tim.auto_pieces_start_position]
-    ignore: [2]
