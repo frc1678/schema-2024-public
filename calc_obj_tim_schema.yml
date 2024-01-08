@@ -45,7 +45,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 14
+  version: 1
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -58,116 +58,82 @@ data:
 
 # Calculations built around counting timeline actions with certain key:value pairs
 timeline_counts:
-  auto_cube_low:
+  auto_speaker:
     type: int
-    action_type: score_cube_low
+    action_type: score_speaker
     in_teleop: false
-  auto_cube_mid:
+  auto_amp:
     type: int
-    action_type: score_cube_mid
+    action_type: score_amp
     in_teleop: false
-  auto_cube_high:
+  tele_intakes_amp:
     type: int
-    action_type: score_cube_high
-    in_teleop: false
-  auto_cone_low:
-    type: int
-    action_type: score_cone_low
-    in_teleop: false
-  auto_cone_mid:
-    type: int
-    action_type: score_cone_mid
-    in_teleop: false
-  auto_cone_high:
-    type: int
-    action_type: score_cone_high
-    in_teleop: false
-  auto_charge_attempt:
-    type: int
-    action_type: charge_attempt
-    in_teleop: false
-  tele_cube_low:
-    type: int
-    action_type: score_cube_low
+    action_type: intake_amp
     in_teleop: true
-  tele_cube_mid:
+  tele_intakes_poach:
     type: int
-    action_type: score_cube_mid
+    action_type: intake_poach
     in_teleop: true
-  tele_cube_high:
+  tele_intakes_center:
     type: int
-    action_type: score_cube_high
+    action_type: intake_center
     in_teleop: true
-  tele_cone_low:
+  tele_intakes_far:
     type: int
-    action_type: score_cone_low
+    action_type: intake_far
     in_teleop: true
-  tele_cone_mid:
+  tele_speaker:
     type: int
-    action_type: score_cone_mid
+    action_type: score_speaker
     in_teleop: true
-  tele_cone_high:
+  tele_speaker_amped:
     type: int
-    action_type: score_cone_high
+    action_type: score_speaker_amped
     in_teleop: true
-  tele_charge_attempt:
+  tele_shoot_other:
     type: int
-    action_type: charge_attempt
+    action_type: shoot_other
     in_teleop: true
-  intakes_ground:
-    type: int
-    action_type: intake_ground
-  intakes_double:
-    type: int
-    action_type: intake_double
-  intakes_single:
-    type: int
-    action_type: intake_single
-  intakes_low_row:
-    type: int
-    action_type: intake_low_row
-  intakes_mid_row:
-    type: int
-    action_type: intake_mid_row
-  intakes_high_row:
-    type: int
-    action_type: intake_high_row
-  failed_scores:
+  failed_score:
     type: int
     action_type: score_fail
+  trap:
+    type: int
+    action_type: score_trap
+    in_teleop: true
+  tele_amp:
+    type: int
+    action_type: score_amp
+    in_teleop: true
+
+
+  
+
+
+
 
 # Calculations made by adding up other counts
 aggregates:
-  auto_total_cubes:
+  auto_total_intakes: 
     type: int
-    counts: [auto_cube_low, auto_cube_mid, auto_cube_high]
-  auto_total_cones:
+    counts: [auto_intake_spike_1, auto_intake_spike_2, auto_intake_spike_3, auto_intake_center_1, auto_intake_center_2, auto_intake_center_3, auto_intake_center_4, auto_intake_center_5]
+  auto_total_pieces: 
     type: int
-    counts: [auto_cone_low, auto_cone_mid, auto_cone_high]
-  auto_total_gamepieces:
+    counts: [auto_amp, auto_speaker]
+  tele_total_intakes: 
     type: int
-    counts: [auto_total_cubes, auto_total_cones]
-  auto_total_gamepieces_low:
+    counts: [tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
+  tele_total_pieces: 
     type: int
-    counts: [auto_cube_low, auto_cone_low]
-  tele_total_cubes:
+    counts: [tele_amp, tele_speaker, tele_speaker_amped]
+  total_intakes: 
     type: int
-    counts: [tele_cube_low, tele_cube_mid, tele_cube_high]
-  tele_total_cones:
+    counts: [auto_intake_spike_1, auto_intake_spike_2, auto_intake_spike_3, auto_intake_center_1, auto_intake_center_2, auto_intake_center_3, auto_intake_center_4, auto_intake_center_5, tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
+  total_pieces: 
     type: int
-    counts: [tele_cone_low, tele_cone_mid, tele_cone_high]
-  tele_total_gamepieces:
-    type: int
-    counts: [tele_total_cubes, tele_total_cones]
-  total_intakes:
-    type: int
-    counts: [intakes_station, intakes_ground]
-  total_charge_attempts:
-    type: int
-    counts: [tele_charge_attempt, auto_charge_attempt]
-  tele_total_gamepieces_low:
-    type: int
-    counts: [tele_cube_low, tele_cone_low]
+    counts: [auto_amp, auto_speaker, tele_amp, tele_speaker, tele_speaker_amped]
+  
+
 
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
@@ -187,15 +153,11 @@ timeline_cycle_time:
 # Robot actions which are one out of a dict of possible actions
 # Dict items should be ordered, values are shortened string from qr
 categorical_actions:
-  auto_charge_level:
-    list: ["N", D, E]
-    type: str
-  tele_charge_level:
-    list: ["N", P, D, E]
-    type: str
+  stage_level:
+    list: ["N", F, P, O]
+    type: int
   start_position:
-    list: ["0", "1", "2", "3", "4"]
+    list: ["0", "1", "2", "3"]
     type: str
   preloaded_gamepiece:
-    list: ["U", "O"]
-    type: str
+    type: bool
