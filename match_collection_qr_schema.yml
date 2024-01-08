@@ -82,4 +82,5 @@ action_type:
   shoot_other: AR
   score_fail: AS
   amplified: AT
+  to_teleop: AU
 
