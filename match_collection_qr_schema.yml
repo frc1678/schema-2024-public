@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 16
+  version: 1
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -33,9 +33,8 @@ objective_tim:
   scout_id: ['Y', int] # Used to determine which tablets have not submitted ('Y' in quotes because it's a keyword on its own)
   start_position: [X, str] # str representing where a robot starts in auto (1, 2, 3, or 4)
   timeline: [W, list, dict] # List of dictionaries
-  auto_charge_level: [V, str] # str representing where a robot finishes in auto to ('none', 'docked', 'engaged')
-  tele_charge_level: [U, str] # str representing where a robot finished in the endgame ('none', 'park', 'docked', 'engaged')
-  preloaded_gamepiece: [T, str] # str representing the preloaded game piece of a robot ('NONE', 'CONE', 'CUBE')
+  stage_level: [V, str] # str representing where a robot finishes in tele ('onstage', 'parked', 'none')
+  has_preload: [U, bool] # str representing if a robot has a preloaded note
 
 # Timeline is part of objective match collection QR
 # Data for an action in the timeline
@@ -63,25 +62,24 @@ subjective_aim:
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
 action_type:
-  score_cone_high: AA
-  score_cone_mid: AB
-  score_cone_low: AC
-  score_cube_high: AD
-  score_cube_mid: AE
-  score_cube_low: AF
-  intake_ground: AG
-  intake_double: AH
-  intake_low_row: AI
-  intake_mid_row: AJ
-  intake_high_row: AK
-  start_incap: AL
-  end_incap: AM
-  charge_attempt: AN
-  to_teleop: AO
-  auto_intake_one: AP
-  auto_intake_two: AQ
-  auto_intake_three: AR
-  auto_intake_four: AS
-  score_fail: AT
-  intake_single: AU
-  supercharge: AV
+  score_speaker: AA
+  score_amp: AB
+  score_trap: AC
+  start_incap: AD
+  end_incap: AE
+  auto_intake_spike_1: AF
+  auto_intake_spike_2: AG
+  auto_intake_spike_3: AH
+  auto_intake_center_1: AI
+  auto_intake_center_2: AJ
+  auto_intake_center_3: AK
+  auto_intake_center_4: AL
+  auto_intake_center_5: AM
+  intake_amp: AN
+  intake_poach: AO
+  intake_center: AP
+  intake_far: AQ
+  shoot_other: AR
+  score_fail: AS
+  amplified: AT
+
