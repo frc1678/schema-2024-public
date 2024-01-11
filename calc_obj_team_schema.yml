@@ -261,92 +261,59 @@ averages:
   avg_trap:
     tim_fields: [obj_tim.trap]
     type: float
-  lfm_auto_avg_cone_high:
-    tim_fields: [obj_tim.auto_cone_high]
+  lfm_auto_avg_speaker:
+    tim_fields: [obj_tim.auto_speaker]
     type: float
-  lfm_auto_avg_cone_mid:
-    tim_fields: [obj_tim.auto_cone_mid]
+  lfm_auto_avg_amp:
+    tim_fields: [obj_tim.auto_amp]
     type: float
-  lfm_auto_avg_cone_low:
-    tim_fields: [obj_tim.auto_cone_low]
+  lfm_auto_avg_total_intakes:
+    tim_fields: [obj_tim.autos_total_intakes]
     type: float
-  lfm_auto_avg_cone_total:
-    tim_fields: [obj_tim.auto_total_cones]
+  lfm_auto_avg_total_pieces:
+    tim_fields: [obj_tim.autos_total_pieces]
     type: float
-  lfm_auto_avg_cube_high:
-    tim_fields: [obj_tim.auto_cube_high]
+  lfm_tele_avg_speaker:
+    tim_fields: [obj_tim.tele_speaker]
     type: float
-  lfm_auto_avg_cube_mid:
-    tim_fields: [obj_tim.auto_cube_mid]
+  lfm_tele_avg_amp:
+    tim_fields: [obj_tim.tele_amp]
     type: float
-  lfm_auto_avg_cube_low:
-    tim_fields: [obj_tim.auto_cube_low]
+  lfm_avg_trap:
+    tim_fields: [obj_tim.trap]
     type: float
-  lfm_auto_avg_cube_total:
-    tim_fields: [obj_tim.auto_total_cubes]
+  lfm_tele_avg_intakes_poach:
+    tim_fields: [obj_tim.intakes_poach]
     type: float
-  lfm_auto_avg_gamepieces:
-    tim_fields: [obj_tim.auto_total_gamepieces]
+  lfm_tele_avg_intakes_center:
+    tim_fields: [obj_tim.intakes_center]
     type: float
-  lfm_tele_avg_cone_high:
-    tim_fields: [obj_tim.tele_cone_high]
+  lfm_tele_avg_intakes_far:
+    tim_fields: [obj_tim.intakes_far]
     type: float
-  lfm_tele_avg_cone_mid:
-    tim_fields: [obj_tim.tele_cone_mid]
-    type: float
-  lfm_tele_avg_cone_low:
-    tim_fields: [obj_tim.tele_cone_low]
-    type: float
-  lfm_tele_avg_cone_total:
-    tim_fields: [obj_tim.tele_total_cones]
-    type: float
-  lfm_tele_avg_cube_high:
-    tim_fields: [obj_tim.tele_cube_high]
-    type: float
-  lfm_tele_avg_cube_mid:
-    tim_fields: [obj_tim.tele_cube_mid]
-    type: float
-  lfm_tele_avg_cube_low:
-    tim_fields: [obj_tim.tele_cube_low]
-    type: float
-  lfm_tele_avg_cube_total:
-    tim_fields: [obj_tim.tele_total_cubes]
-    type: float
-  lfm_tele_avg_gamepieces:
-    tim_fields: [obj_tim.tele_total_gamepieces]
-    type: float
-  lfm_avg_intakes_ground:
-    tim_fields: [obj_tim.intakes_ground]
-    type: float
-  lfm_avg_intakes_double:
-    tim_fields: [obj_tim.intakes_double]
-    type: float
-  lfm_avg_intakes_single:
-    tim_fields: [obj_tim.intakes_single]
-    type: float
-  lfm_avg_intakes_low_row:
-    tim_fields: [obj_tim.intakes_low_row]
-    type: float
-  lfm_avg_intakes_mid_row:
-    tim_fields: [obj_tim.intakes_mid_row]
-    type: float
-  lfm_avg_intakes_high_row:
-    tim_fields: [obj_tim.intakes_high_row]
-    type: float
-  lfm_avg_total_intakes:
-    tim_fields: [obj_tim.total_intakes]
+  lfm_tele_avg_intakes_amp:
+    tim_fields: [obj_tim.intakes_amp]
     type: float
   lfm_avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
-  lfm_tele_avg_gamepieces_low:
-    tim_fields: [obj_tim.tele_total_gamepieces_low]
+  lfm_tele_avg_shoot_other:
+    tim_fields: [obj_tim.tele_shoot_other]
     type: float
   lfm_avg_failed_scores:
-    tim_fields: [obj_tim.failed_scores]
+    tim_fields: [obj_tim.failed_score]
     type: float
-  lfm_auto_avg_gamepieces_low:
-    tim_fields: [obj_tim.auto_total_gamepieces_low]
+  lfm_tele_avg_total_intakes:
+    tim_fields: [obj_tim.tele_total_intakes]
+    type: float
+  lfm_tele_avg_total_pieces:
+    tim_fields: [obj_tim.tele_total_pieces]
+    type: float
+  lfm_avg_total_intakes:
+    tim_fields: [obj_tim.total_intakes]
+    type: float
+  lfm_avg_total_pieces:
+    tim_fields: [obj_tim.total_pieces]
     type: float
   lfm_tele_avg_speaker_amped:
     tim_fields: [obj_tim.tele_speaker_amped]
@@ -544,175 +511,118 @@ super_counts:
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
-  auto_max_cone_high:
+  auto_max_speaker:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cone_high]
-  auto_max_cone_mid:
+    tim_fields: [obj_tim.auto_speaker]
+  auto_max_amp:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cone_mid]
-  auto_max_cone_low:
+    tim_fields: [obj_tim.auto_amp]
+  auto_max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cone_low]
-  auto_max_cones:
+    tim_fields: [obj_tim.auto_total_intakes]
+  auto_max_total_pieces:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_total_cones]
-  auto_max_cube_high:
+    tim_fields: [obj_tim.auto_total_pieces]
+  tele_max_speaker:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cube_high]
-  auto_max_cube_mid:
+    tim_fields: [obj_tim.tele_speaker]
+  tele_max_amp:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cube_mid]
-  auto_max_cube_low:
+    tim_fields: [obj_tim.tele_amp]
+  tele_max_shoot_other:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cube_low]
-  auto_max_cubes:
+    tim_fields: [obj_tim.tele_shoot_other]
+  tele_max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_total_cubes]
-  auto_max_gamepieces:
+    tim_fields: [obj_tim.tele_max_total_intakes]
+  tele_max_total_pieces:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_total_gamepieces]
-  tele_max_cone_high:
+    tim_fields: [obj_tim.tele_total_pieces]
+  max_trap:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cone_high]
-  tele_max_cone_mid:
+    tim_fields: [obj_tim.trap]
+  max_incap_time:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cone_mid]
-  tele_max_cone_low:
+    tim_fields: [obj_tim.incap_time]
+  max_failed_scores:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cone_low]
-  tele_max_cones:
+    tim_fields: [obj_tim.failed_score]
+  max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_total_cones]
-  tele_max_cube_high:
+    tim_fields: [obj_tim.total_intakes]
+  max_total_pieces:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cube_high]
-  tele_max_cube_mid:
+    tim_fields: [obj_tim.total_pieces]
+  lfm_auto_max_speaker:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cube_mid]
-  tele_max_cube_low:
+    tim_fields: [obj_tim.auto_speaker]
+  lfm_auto_max_amp:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cube_low]
-  tele_max_cubes:
+    tim_fields: [obj_tim.auto_amp]
+  lfm_auto_max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_total_cubes]
-  tele_max_gamepieces:
-    extrema_type: max
-    tim_fields: [obj_tim.tele_total_gamepieces]
-    type: int
-  max_incap:
-    extrema_type: max
-    tim_fields: [obj_tim.incap]
-    type: int
-  max_auto_charge_level:
-    extrema_type: max
-    tim_fields: [obj_tim.auto_charge_level]
-    type: str
-  max_tele_charge_level:
-    extrema_type: max
-    tim_fields: [obj_tim.tele_charge_level]
-    type: str
-  lfm_auto_max_cone_high:
+    tim_fields: [obj_tim.auto_total_intakes]
+  lfm_auto_max_total_pieces:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cone_high]
-  lfm_auto_max_cone_mid:
+    tim_fields: [obj_tim.auto_total_pieces]
+  lfm_tele_max_speaker:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cone_mid]
-  lfm_auto_max_cone_low:
+    tim_fields: [obj_tim.tele_speaker]
+  lfm_tele_max_amp:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cone_low]
-  lfm_auto_max_cones:
+    tim_fields: [obj_tim.tele_amp]
+  lfm_tele_max_shoot_other:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_total_cones]
-  lfm_auto_max_cube_high:
+    tim_fields: [obj_tim.tele_shoot_other]
+  lfm_tele_max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cube_high]
-  lfm_auto_max_cube_mid:
+    tim_fields: [obj_tim.tele_max_total_intakes]
+  lfm_tele_max_total_pieces:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cube_mid]
-  lfm_auto_max_cube_low:
+    tim_fields: [obj_tim.tele_total_pieces]
+  lfm_max_trap:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_cube_low]
-  lfm_auto_max_cubes:
+    tim_fields: [obj_tim.trap]
+  lfm_max_incap_time:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_total_cubes]
-  lfm_auto_max_gamepieces:
+    tim_fields: [obj_tim.incap_time]
+  lfm_max_failed_scores:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_total_gamepieces]
-  lfm_tele_max_cone_high:
+    tim_fields: [obj_tim.failed_score]
+  lfm_max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cone_high]
-  lfm_tele_max_cone_mid:
+    tim_fields: [obj_tim.total_intakes]
+  lfm_max_total_pieces:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_cone_mid]
-  lfm_tele_max_cone_low:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.tele_cone_low]
-  lfm_tele_max_cones:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.tele_total_cones]
-  lfm_tele_max_cube_high:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.tele_cube_high]
-  lfm_tele_max_cube_mid:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.tele_cube_mid]
-  lfm_tele_max_cube_low:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.tele_cube_low]
-  lfm_tele_max_cubes:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.tele_total_cubes]
-  lfm_tele_max_gamepieces:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.tele_total_gamepieces]
-  lfm_max_incap:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.incap]
-  lfm_max_auto_charge_level:
-     extrema_type: max
-     type: str
-     tim_fields: [obj_tim.auto_charge_level]
-  lfm_max_tele_charge_level:
-    extrema_type: max
-    type: str
-    tim_fields: [obj_tim.tele_charge_level]
-  
+    tim_fields: [obj_tim.total_pieces]
 
 # Most common values
 modes:
