@@ -5,13 +5,11 @@
 # {
 #     "team_number": "3448",
 #     "drivetrain": 2,
-#     "drivetrain_motors": 4,
-#     "drivetrain_motor_type": 3,
-#     "has_vision": false,
-#     "has_communication_device": true,
-#     "weight": 3.9524,
-#     "length": 3.9524,
-#     "width": 3.2931
+#     "has_auto_vision": true,
+#     "has_vision_assisted_shot": false,
+#     "has_ground_intake": true,
+#     "has_hp_indicator": true,
+#     "can_climb": false,
 # }
 #
 
@@ -20,7 +18,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 7
+  version: 1
 
 # Stores data type/structure
 schema:
@@ -28,24 +26,16 @@ schema:
     type: str
   drivetrain:
     type: Enum[str]
-  drivetrain_motors:
-    type: int
-  drivetrain_motor_type:
-    type: Enum[str]
-  has_vision:
+  has_auto_vision:
     type: bool
-  has_communication_device:
-    type: bool
-  is_forkable:
+  has_vision_assisted_shot:
     type: bool
   has_ground_intake:
     type: bool
-  weight:
-    type: float
-  length:
-    type: float
-  width:
-    type: float
+  has_hp_indicator:
+    type: bool
+  can_climb:
+    type: bool
 
 
 # Stores Enum data
@@ -57,10 +47,3 @@ enums:
     mecanum: 1
     swerve: 2
     other: 3
-  # Type of the motors on the drivetrain, independent of drivetrain type
-  drivetrain_motor_type:
-    no_data: -1
-    minicim: 0
-    cim: 1
-    neo: 2
-    falcon: 3
