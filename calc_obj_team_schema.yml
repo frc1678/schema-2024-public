@@ -173,11 +173,11 @@
 #         "N",
 #         "E"
 #     ],
-#     "lfm_mode_tele_charge_level": [
-#         "E",
+#     "lfm_mode_stage_level": [
 #         "N",
+#         "F",
 #         "P",
-#         "P"
+#         "O"
 #     ],
 #     "charge_percent_success": 5.1098,
 #     "lfm_charge_percent_success": 0.8438,
@@ -192,7 +192,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 19
+  version: 1
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -201,92 +201,65 @@ data:
 
 # Averages of fields in consolidated TIMs
 averages:
-  auto_avg_cone_high:
-    tim_fields: [obj_tim.auto_cone_high]
+  auto_avg_amp:
+    tim_fields: [obj_tim.auto_amp]
     type: float
-  auto_avg_cone_mid:
-    tim_fields: [obj_tim.auto_cone_mid]
+  auto_avg_speaker:
+    tim_fields: [obj_tim.auto_speaker]
     type: float
-  auto_avg_cone_low:
-    tim_fields: [obj_tim.auto_cone_low]
+  auto_avg_total_intakes:
+    tim_fields: [obj_tim.auto_total_intakes]
     type: float
-  auto_avg_cone_total:
-    tim_fields: [obj_tim.auto_total_cones]
+  auto_avg_total_pieces:
+    tim_fields: [obj_tim.auto_total_pieces]
     type: float
-  auto_avg_cube_high:
-    tim_fields: [obj_tim.auto_cube_high]
+  tele_avg_amp:
+    tim_fields: [obj_tim.tele_amp]
     type: float
-  auto_avg_cube_mid:
-    tim_fields: [obj_tim.auto_cube_mid]
+  tele_avg_speaker:
+    tim_fields: [obj_tim.tele_speaker]
     type: float
-  auto_avg_cube_low:
-    tim_fields: [obj_tim.auto_cube_low]
+  tele_avg_speaker_amped:
+    tim_fields: [obj_tim.tele_speaker_amped]
     type: float
-  auto_avg_cube_total:
-    tim_fields: [obj_tim.auto_total_cubes]
+  tele_avg_intakes_amp:
+    tim_fields: [obj_tim.tele_intakes_amp]
     type: float
-  auto_avg_gamepieces:
-    tim_fields: [obj_tim.auto_total_gamepieces]
+  tele_avg_intakes_center:
+    tim_fields: [obj_tim.tele_intakes_center]
     type: float
-  tele_avg_cone_high:
-    tim_fields: [obj_tim.tele_cone_high]
+  tele_avg_intakes_far:
+    tim_fields: [obj_tim.tele_intakes_far]
     type: float
-  tele_avg_cone_mid:
-    tim_fields: [obj_tim.tele_cone_mid]
+  tele_avg_intakes_poach:
+    tim_fields: [obj_tim.tele_intakes_poach]
     type: float
-  tele_avg_cone_low:
-    tim_fields: [obj_tim.tele_cone_low]
+  tele_avg_shoot_other:
+    tim_fields: [obj_tim.tele_shoot_other]
     type: float
-  tele_avg_cone_total:
-    tim_fields: [obj_tim.tele_total_cones]
+  tele_avg_total_intakes:
+    tim_fields: [obj_tim.tele_total_intakes]
     type: float
-  tele_avg_cube_high:
-    tim_fields: [obj_tim.tele_cube_high]
+  tele_avg_total_pieces:
+    tim_fields: [obj_tim.tele_total_pieces]
     type: float
-  tele_avg_cube_mid:
-    tim_fields: [obj_tim.tele_cube_mid]
+  avg_driver_ability:
+    tim_fields: [subj_tim.driver_ability]
     type: float
-  tele_avg_cube_low:
-    tim_fields: [obj_tim.tele_cube_low]
-    type: float
-  tele_avg_cube_total:
-    tim_fields: [obj_tim.tele_total_cubes]
-    type: float
-  tele_avg_gamepieces:
-    tim_fields: [obj_tim.tele_total_gamepieces]
-    type: float
-  tele_avg_gamepieces_low:
-    tim_fields: [obj_tim.tele_total_gamepieces_low]
-    type: float
-  auto_avg_gamepieces_low:
-    tim_fields: [obj_tim.auto_total_gamepieces_low]
+  avg_failed_score:
+    tim_fields: [obj_tim.failed_score]
     type: float
   avg_incap_time:
-    tim_fields: [obj_tim.incap]
-    type: float
-  avg_intakes_ground:
-    tim_fields: [obj_tim.intakes_ground]
-    type: float
-  avg_intakes_double:
-    tim_fields: [obj_tim.intakes_double]
-    type: float
-  avg_intakes_single:
-    tim_fields: [obj_tim.intakes_single]
-    type: float
-  avg_intakes_low_row:
-    tim_fields: [obj_tim.intakes_low_row]
-    type: float
-  avg_intakes_mid_row:
-    tim_fields: [obj_tim.intakes_mid_row]
-    type: float
-  avg_intakes_high_row:
-    tim_fields: [obj_tim.intakes_high_row]
+    tim_fields: [obj_tim.incap_time]
     type: float
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
-  avg_failed_scores:
-    tim_fields: [obj_tim.failed_scores]
+  avg_total_pieces:
+    tim_fields: [obj_tim.total_pieces]
+    type: float
+  avg_trap:
+    tim_fields: [obj_tim.trap]
     type: float
   lfm_auto_avg_cone_high:
     tim_fields: [obj_tim.auto_cone_high]
@@ -375,207 +348,177 @@ averages:
   lfm_auto_avg_gamepieces_low:
     tim_fields: [obj_tim.auto_total_gamepieces_low]
     type: float
+  lfm_tele_avg_speaker_amped:
+    tim_fields: [obj_tim.tele_speaker_amped]
+    type: float
 
 # Standard deviations of fields in consolidated TIMs
 # Used for predictions
 standard_deviations:
-  auto_sd_cone_high:
-    tim_fields: [obj_tim.auto_cone_high]
+  auto_sd_amp:
+    tim_fields: [obj_tim.auto_amp]
     type: float
-  auto_sd_cone_mid:
-    tim_fields: [obj_tim.auto_cone_mid]
+  auto_sd_speaker:
+    tim_fields: [obj_tim.auto_speaker]
     type: float
-  auto_sd_cone_low:
-    tim_fields: [obj_tim.auto_cone_low]
+  auto_sd_total_intakes:
+    tim_fields: [obj_tim.auto_total_intakes]
     type: float
-  auto_sd_cone_total:
-    tim_fields: [obj_tim.auto_total_cones]
+  auto_sd_total_pieces:
+    tim_fields: [obj_tim.auto_total_pieces]
     type: float
-  auto_sd_cube_high:
-    tim_fields: [obj_tim.auto_cube_high]
+  tele_sd_amp:
+    tim_fields: [obj_tim.tele_amp]
     type: float
-  auto_sd_cube_mid:
-    tim_fields: [obj_tim.auto_cube_mid]
+  tele_sd_speaker:
+    tim_fields: [obj_tim.tele_speaker]
     type: float
-  auto_sd_cube_low:
-    tim_fields: [obj_tim.auto_cube_low]
+  tele_sd_speaker_amped:
+    tim_fields: [obj_tim.tele_speaker_amped]
     type: float
-  auto_sd_cube_total:
-    tim_fields: [obj_tim.auto_total_cubes]
+  tele_sd_intakes_amp:
+    tim_fields: [obj_tim.tele_intakes_amp]
     type: float
-  auto_sd_gamepieces:
-    tim_fields: [obj_tim.auto_total_gamepieces]
+  tele_sd_intakes_center:
+    tim_fields: [obj_tim.tele_intakes_center]
     type: float
-  lfm_auto_sd_gamepieces:
-    tim_fields: [obj_tim.auto_total_gamepieces]
+  tele_sd_intakes_far:
+    tim_fields: [obj_tim.tele_intakes_far]
     type: float
-  tele_sd_cone_high:
-    tim_fields: [obj_tim.tele_cone_high]
+  tele_sd_intakes_poach:
+    tim_fields: [obj_tim.tele_intakes_poach]
     type: float
-  tele_sd_cone_mid:
-    tim_fields: [obj_tim.tele_cone_mid]
+  tele_sd_shoot_other:
+    tim_fields: [obj_tim.tele_shoot_other]
     type: float
-  tele_sd_cone_low:
-    tim_fields: [obj_tim.tele_cone_low]
+  tele_sd_total_intakes:
+    tim_fields: [obj_tim.tele_total_intakes]
     type: float
-  tele_sd_cone_total:
-    tim_fields: [obj_tim.tele_total_cones]
+  tele_sd_total_pieces:
+    tim_fields: [obj_tim.tele_total_pieces]
     type: float
-  tele_sd_cube_high:
-    tim_fields: [obj_tim.tele_cube_high]
+  sd_failed_score:
+    tim_fields: [obj_tim.failed_score]
     type: float
-  tele_sd_cube_mid:
-    tim_fields: [obj_tim.tele_cube_mid]
+  sd_incap_time:
+    tim_fields: [obj_tim.incap_time]
     type: float
-  tele_sd_cube_low:
-    tim_fields: [obj_tim.tele_cube_low]
+  sd_total_intakes:
+    tim_fields: [obj_tim.total_intakes]
     type: float
-  tele_sd_cube_total:
-    tim_fields: [obj_tim.tele_total_cubes]
+  sd_total_pieces:
+    tim_fields: [obj_tim.total_pieces]
     type: float
-  tele_sd_gamepieces:
-    tim_fields: [obj_tim.tele_total_gamepieces]
+  sd_trap:
+    tim_fields: [obj_tim.trap]
     type: float
-  lfm_tele_sd_gamepieces:
-    tim_fields: [obj_tim.tele_total_gamepieces]
+  lfm_auto_sd_total_pieces:
+    tim_fields: [obj_tim.auto_total_pieces]
+    type: float
+  lfm_tele_sd_total_pieces:
+    tim_fields: [obj_tim.tele_total_pieces]
     type: float
 
 # Counts of occurrences in consolidated TIMs
 counts:
-  auto_charge_attempts:
+  endgame_attempts:
     tim_fields:
       not:
-        obj_tim.auto_charge_attempt: 0
+        obj_tim.stage_level: 'N'
     type: int
-  auto_dock_successes:
+  onstage_attempts:
     tim_fields:
-      - obj_tim.auto_charge_level: 'D'
-      - obj_tim.auto_charge_level: 'E'
+      - obj_tim.stage_level: 'O'
+      - obj_tim.stage_level: 'F'
     type: int
-  auto_dock_only_successes:
+  onstage_successes:
     tim_fields:
-      obj_tim.auto_charge_level: 'D'
+      obj_tim.stage_level: 'O'
     type: int
-  auto_engage_successes:
+  parks:
     tim_fields:
-      obj_tim.auto_charge_level: 'E'
+      obj_tim.stage_level: 'P'
     type: int
-  tele_charge_attempts:
+  stage_fails:
     tim_fields:
-      not:
-        obj_tim.tele_charge_attempt: 0
-    type: int
-  tele_dock_successes:
-    tim_fields:
-      - obj_tim.tele_charge_level: "D"
-      - obj_tim.tele_charge_level: "E"
-    type: int
-  tele_dock_only_successes:
-    tim_fields:
-      obj_tim.tele_charge_level: 'D'
-    type: int
-  tele_engage_successes:
-    tim_fields:
-      obj_tim.tele_charge_level: 'E'
-    type: int
-  tele_park_successes:
-    tim_fields:
-      obj_tim.tele_charge_level: 'P'
+      obj_tim.stage_level: 'F'
     type: int
   position_zero_starts:
     tim_fields:
-      obj_tim.start_position: "0"
+      obj_tim.start_position: '0'
     type: int
   position_one_starts:
     tim_fields:
-      obj_tim.start_position: "1"
+      obj_tim.start_position: '1'
     type: int
   position_two_starts:
     tim_fields:
-      obj_tim.start_position: "2"
+      obj_tim.start_position: '2'
     type: int
   position_three_starts:
     tim_fields:
-      obj_tim.start_position: "3"
+      obj_tim.start_position: '3'
     type: int
-  position_four_starts:
+  preloaded_starts:
     tim_fields:
-      obj_tim.start_position: "4"
+      obj_tim.has_preload: True
     type: int
   matches_incap:
     tim_fields:
       not:
-        obj_tim.incap: 0
+        obj_tim.incap_time: 0
     type: int
   matches_played:
     tim_fields:
       not:
         match_number: 0
     type: int
+  lfm_endgame_attempts:
+    tim_fields:
+      not:
+        obj_tim.stage_level: 'N'
+    type: int
+  lfm_onstage_attempts:
+    tim_fields:
+      - obj_tim.stage_level: 'O'
+      - obj_tim.stage_level: 'F'
+    type: int
+  lfm_onstage_successes:
+    tim_fields:
+      obj_tim.stage_level: 'O'
+    type: int
+  lfm_parks:
+    tim_fields:
+      obj_tim.stage_level: 'P'
+    type: int
+  lfm_stage_fails:
+    tim_fields:
+      obj_tim.stage_level: 'F'
+    type: int
   lfm_position_zero_starts:
     tim_fields:
-      obj_tim.start_position: "0"
+      obj_tim.start_position: '0'
     type: int
   lfm_position_one_starts:
     tim_fields:
-      obj_tim.start_position: "1"
+      obj_tim.start_position: '1'
     type: int
   lfm_position_two_starts:
     tim_fields:
-      obj_tim.start_position: "2"
+      obj_tim.start_position: '2'
     type: int
   lfm_position_three_starts:
     tim_fields:
-      obj_tim.start_position: "3"
+      obj_tim.start_position: '3'
     type: int
-  lfm_position_four_starts:
+  lfm_preloaded_starts:
     tim_fields:
-      obj_tim.start_position: "4"
-    type: int
-  lfm_auto_charge_attempts:
-    tim_fields:
-      not:
-        obj_tim.auto_charge_attempt: 0
-    type: int
-  lfm_auto_dock_successes:
-    tim_fields:
-      - obj_tim.auto_charge_level: 'D'
-      - obj_tim.auto_charge_level: 'E'
-    type: int
-  lfm_auto_dock_only_successes:
-    tim_fields:
-      obj_tim.auto_charge_level: 'D'
-    type: int
-  lfm_auto_engage_successes:
-    tim_fields:
-      obj_tim.auto_charge_level: 'E'
-    type: int
-  lfm_tele_charge_attempts:
-    tim_fields:
-      not:
-        obj_tim.tele_charge_attempt: 0
-    type: int
-  lfm_tele_dock_successes:
-    tim_fields:
-      - obj_tim.tele_charge_level: 'D'
-      - obj_tim.tele_charge_level: 'E'
-    type: int
-  lfm_tele_dock_only_successes:
-    tim_fields:
-      obj_tim.tele_charge_level: 'D'
-    type: int
-  lfm_tele_engage_successes:
-    tim_fields:
-      obj_tim.tele_charge_level: 'E'
-    type: int
-  lfm_tele_park_successes:
-    tim_fields:
-      obj_tim.tele_charge_level: 'P'
+      obj_tim.has_preload: True
     type: int
   lfm_matches_incap:
     tim_fields:
       not:
-        obj_tim.incap: 0
+        obj_tim.incap_time: 0
     type: int
 
 # Objective counts collected by Super Scouts
@@ -586,6 +529,12 @@ super_counts:
   lfm_matches_tippy:
     type: int
     tim_fields: [subj_tim.was_tippy]
+  matches_climb_after:
+    type: int
+    tim_fields: [subj_tim.climb_after]
+  lfm_matches_climb_after:
+    type: int
+    tim_fields: [subj_tim.climb_after]
   matches_played_defense:
     type: int
     tim_fields: [subj_tim.played_defense]
@@ -767,10 +716,6 @@ extrema:
 
 # Most common values
 modes:
-  mode_preloaded_gamepiece:
-    tim_fields: [obj_tim.preloaded_gamepiece]
-    ignore: null
-    type: List
   mode_start_position:
     tim_fields: [obj_tim.start_position]
     ignore: '0'
@@ -779,145 +724,64 @@ modes:
     tim_fields: [obj_tim.start_position]
     ignore: '0'
     type: List
-  mode_auto_charge_level:
-    tim_fields: [obj_tim.auto_charge_level]
+  mode_stage_level:
+    tim_fields: [obj_tim.stage_level]
     ignore: 'N'
     type: List
-  lfm_mode_auto_charge_level:
-    tim_fields: [obj_tim.auto_charge_level]
-    ignore: 'N'
-    type: List
-  mode_tele_charge_level:
-    tim_fields: [obj_tim.tele_charge_level]
-    ignore: 'N'
-    type: List
-  lfm_mode_tele_charge_level:
-    tim_fields: [obj_tim.tele_charge_level]
+  lfm_mode_stage_level:
+    tim_fields: [obj_tim.stage_level]
     ignore: 'N'
     type: List
 
 success_rates:
-  charge_percent_success:
-    team_successes: [auto_dock_successes, tele_dock_successes]
-    team_attempts: [auto_charge_attempts, tele_charge_attempts, -tele_park_successes]
+  onstage_percent_success:
+    team_successes: [onstage_successes]
+    team_attempts: [onstage_attempts]
     type: float
-  lfm_charge_percent_success:
-    team_successes: [lfm_auto_dock_successes, lfm_tele_dock_successes]
-    team_attempts: [lfm_auto_charge_attempts, lfm_tele_charge_attempts, -lfm_tele_park_successes]
+  lfm_onstage_percent_success:
+    team_successes: [lfm_onstage_successes]
+    team_attempts: [lfm_onstage_attempts]
     type: float
-  auto_dock_percent_success:
-    team_successes: [auto_dock_successes]
-    team_attempts: [auto_charge_attempts]
+  onstage_percent:
+    team_successes: [onstage_successes]
+    team_attempts: [endgame_attempts]
     type: float
-  lfm_auto_dock_percent_success:
-    team_successes: [lfm_auto_dock_successes]
-    team_attempts: [lfm_auto_charge_attempts]
-    type: float
-  auto_engage_percent_success:
-    team_successes: [auto_engage_successes]
-    team_attempts: [auto_charge_attempts]
-    type: float
-  lfm_auto_engage_percent_success:
-    team_successes: [lfm_auto_engage_successes]
-    team_attempts: [lfm_auto_charge_attempts]
-    type: float
-  tele_dock_percent_success:
-    team_successes: [tele_dock_successes]
-    team_attempts: [tele_charge_attempts, -tele_park_successes]
-    type: float
-  lfm_tele_dock_percent_success:
-    team_successes: [lfm_tele_dock_successes]
-    team_attempts: [lfm_tele_charge_attempts, -lfm_tele_park_successes]
-    type: float
-  tele_engage_percent_success:
-    team_successes: [tele_engage_successes]
-    team_attempts: [tele_charge_attempts, -tele_park_successes]
-    type: float
-  lfm_tele_engage_percent_success:
-    team_successes: [lfm_tele_engage_successes]
-    team_attempts: [lfm_tele_charge_attempts, -lfm_tele_park_successes]
-    type: float
-  tele_park_percent_success:
-    team_successes: [tele_park_successes]
-    team_attempts: [matches_played, -tele_dock_successes]
-    type: float
-  lfm_tele_park_percent_success:
-    team_successes: [lfm_tele_park_successes]
-    team_attempts: [4, -lfm_tele_dock_successes]
-    type: float
-  tele_dock_only_percent_success:
-    team_successes: [tele_dock_only_successes]
-    team_attempts: [tele_charge_attempts, -tele_park_successes]
-    type: float
-  lfm_tele_dock_only_percent_success:
-    team_successes: [lfm_tele_dock_only_successes]
-    team_attempts: [lfm_tele_charge_attempts, -lfm_tele_park_successes]
-    type: float
-  auto_dock_only_percent_success:
-    team_successes: [auto_dock_only_successes]
-    team_attempts: [auto_charge_attempts]
-    type: float
-  lfm_auto_dock_only_percent_success:
-    team_successes: [lfm_auto_dock_only_successes]
-    team_attempts: [lfm_auto_charge_attempts]
+  park_percent:
+    team_successes: [parks]
+    team_attempts: [endgame_attempts]
     type: float
 
 # Calculates all the medians
 medians:
-  median_nonzero_incap: 
-    tim_fields: [obj_tim.incap]
+  median_nonzero_incap_time: 
+    tim_fields: [obj_tim.incap_time]
     ignore: 0
     type: float
-  lfm_median_nonzero_incap:
-    tim_fields: [obj_tim.incap]
+  lfm_median_nonzero_incap_time:
+    tim_fields: [obj_tim.incap_time]
     ignore: 0
-    type: float
-
-# Calculates average points for given fields
-average_points:
-  tele_avg_charge_points:
-    tele_dock_only_successes: 6
-    tele_engage_successes: 10
-    type: float
-  lfm_tele_avg_charge_points:
-    lfm_tele_dock_only_successes: 6
-    lfm_tele_engage_successes: 10
-    type: float
-  auto_avg_charge_points:
-    auto_dock_only_successes: 8
-    auto_engage_successes: 12
-    type: float
-  lfm_auto_avg_charge_points:
-    lfm_auto_dock_only_successes: 8
-    lfm_auto_engage_successes: 12
     type: float
 
 # Calculates a sum of fields multiplied by point values
 sums:
   auto_avg_total_points:
-    auto_avg_cone_low : 3
-    auto_avg_cone_mid : 4
-    auto_avg_cone_high : 6
-    auto_avg_cube_low : 3
-    auto_avg_cube_mid : 4
-    auto_avg_cube_high : 6
-    auto_dock_percent_success: auto_avg_charge_points
+    auto_avg_amp : 2
+    auto_avg_speaker : 5
     type: float
   tele_avg_total_points:
-    avg_intakes_low_row: -2
-    avg_intakes_mid_row: -3
-    avg_intakes_high_row: -5
-    tele_avg_cone_low : 2
-    tele_avg_cone_mid : 3
-    tele_avg_cone_high : 5
-    tele_avg_cube_low : 2
-    tele_avg_cube_mid : 3
-    tele_avg_cube_high : 5
-    tele_dock_percent_success: tele_avg_charge_points
+    tele_avg_amp: 1
+    tele_avg_speaker: 2
+    tele_avg_speaker_amped: 5
+    type: float
+  avg_endgame_points:
+    onstage_percent: 3
+    park_percent: 1
+    avg_trap: 5
     type: float
   avg_total_points:
     auto_avg_total_points: 1
     tele_avg_total_points: 1
+    avg_endgame_points: 1
     type: float
   total_incap:
     type: int
