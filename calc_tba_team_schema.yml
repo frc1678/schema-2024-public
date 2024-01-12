@@ -6,7 +6,7 @@
 #     "team_number": "183",
 #     "team_name": "robot robotics",
 #     "foul_cc": 2.3304,
-#     "mobility_successes": 6
+#     "leave_successes": 6
 # }
 #
 
@@ -15,7 +15,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 1
 
 data:
   team_number:
@@ -28,17 +28,14 @@ calculations:
   # Foul calculated contribution
   foul_cc:
     type: float
-  # Link calculated contribution
-  link_cc:
-    type: float
 
 # Calcs based on counting team in match bools
 counts:
-  mobility_successes:
+  leave_successes:
     type: int
     tim_fields:
-      tba_tim.mobility: true
-  lfm_mobility_successes:
+      tba_tim.leave: true
+  lfm_leave_successes:
     type: int
     tim_fields:
-      tba_tim.mobility: true
+      tba_tim.leave: true

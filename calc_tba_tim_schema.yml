@@ -5,7 +5,7 @@
 # {
 #     "match_number": 8,
 #     "team_number": "574",
-#     "mobility": true
+#     "leave": true
 # }
 #
 
@@ -25,6 +25,6 @@ data:
 # Calculations built around pulling data from TBA.
 # key is the name in our local MongoDB database, value is a dict of TBA key to TBA value
 tba:
-  mobility:
+  leave:
     type: bool
-    mobilityRobot: 'Yes'
+    leaveRobot: 'Yes'
