@@ -11,158 +11,25 @@ data:
   team_number:
     type: str
 
-# Data that could be possibly empty (ex: no subjective data) and that should be replaced with data from previous paths
-# Data in pim: Datapoint to be replaced with in auto paths
---possible_null:
-  intake_piece_1: intake_piece_1
-  intake_piece_2: intake_piece_2
-
 --path_groups:
   # Values used to group paths toghether, these must be exactly the same across paths
-  exact:
+  exact_match:
     - intake_position_1
     - intake_position_2
-    - mobility
-    - preloaded_gamepiece
-  # Values used to group paths toghether, paths are equal if all datapoint values are in the same list
-  unexact:
-    auto_charge_level: {
-      options: [[F, D, E], ["N"]],
-      path_datapoint: auto_charge_level_max
-    }
-    score_position_1: {
-      options: [[fail, low, null], [fail, mid, null], [fail, high, null]],
-      path_datapoint: score_position_1_max
-    }
-    score_position_2: {
-      options: [[fail, low, null], [fail, mid, null], [fail, high, null]],
-      path_datapoint: score_position_2_max
-    }
-    score_position_3: {
-      options: [[fail, low, null], [fail, mid, null], [fail, high, null]],
-      path_datapoint: score_position_3_max
-    }
-    score_piece_1: {
-      options: [[fail, cube, null], [fail, cone, null]],
-      path_datapoint: score_piece_1_max
-    }
-    score_piece_2: {
-      options: [[fail, cube, null], [fail, cone, null]],
-      path_datapoint: score_piece_2_max
-    }
-    score_piece_3: {
-      options: [[fail, cube, null], [fail, cone, null]],
-      path_datapoint: score_piece_3_max
-    }
+    - intake_position_3
+    - score_1
+    - score_2
+    - score_3
+    - leave
+    - has_preload
 
-# Data that is calculated for each path,
-# Each datapoint is set to the new max each time the datapoint is higher in the list,
-# a 'reset' value indicates it should set that datapoint to 0 when a new max is set
-# Max is calculated before incremented values
-path_max:
-  auto_charge_level_max: {
-    datapoint: auto_charge_level,
-    order: ["N", F, D, E],
-    type: str
-  }
-  score_position_1_max: {
-    datapoint: score_position_1,
-    order: [null, fail, low, mid, high],
-    reset: score_1_max_successes,
-    type: --
-  }
-  score_position_2_max: {
-    datapoint: score_position_2,
-    order: [null, fail, low, mid, high],
-    reset: score_2_max_successes,
-    type: --
-  }
-  score_position_3_max: {
-    datapoint: score_position_3,
-    order: [null, fail, low, mid, high],
-    reset: score_3_max_successes,
-    type: --
-  }
-  score_piece_1_max: {
-    datapoint: score_piece_1,
-    order: [null, fail, cube, cone],
-    type: --
-  }
-  score_piece_2_max: {
-    datapoint: score_piece_2,
-    order: [null, fail, cube, cone],
-    type: --
-  }
-  score_piece_3_max: {
-    datapoint: score_piece_3,
-    order: [null, fail, cube, cone],
-    type: --
-  }
-# 1 is added each time all the datapoints are in the possible list of values, - before a value indicates it is a datapoint
+# 1 is added each time all the datapoints are in the possible list of values
 path_increment:
-  auto_charge_successes: {
-    conditions: {
-      auto_charge_level: [[E]],
-    },
-    type: int
-  }
-  score_1_max_successes: {
-    conditions: {
-      score_position_1: [[low, mid, high], [-score_position_1_max]],
-    },
-    type: int
-  }
-  score_1_successes: {
-    conditions: {
-      score_position_1: [[low, mid, high]],
-    },
-    type: int
-  }
-  score_2_max_successes: {
-    conditions: {
-      score_position_2: [[low, mid, high], [-score_position_2_max]],
-    },
-    type: int
-  }
-  score_2_successes: {
-    conditions: {
-      score_position_2: [[low, mid, high]],
-    },
-    type: int
-  }
-  score_3_max_successes: {
-    conditions: {
-      score_position_3: [[low, mid, high], [-score_position_3_max]],
-    },
-    type: int
-  }
-  score_3_successes: {
-    conditions: {
-      score_position_3: [[low, mid, high]],
-    },
-    type: int
-  }
+  score_1_successes:
+    score_1: [speaker, amp]
 
-# Calculate compatabilities depending on start position per team
-# A path has the possibility to be compatible if it matches 'possible'
-# A success is added to possible compatablities if all 'success' are true, else a fail
---compatability:
-  middle_compatability: {
-    possible: {
-      start_position: [2]
-    },
-    success: {
-      mobility: [true],
-      auto_charge_level: [D, E]
-    }
-  }
-  cable_bump_compatability: {
-    possible: {
-      start_position: [3]
-    },
-    success: {
-      mobility: [true],
-      score_piece_1: [cone, cube],
-      score_piece_2: [cone, cube],
-    }
-  }
+  score_2_successes: 
+    score_2: [speaker, amp]
+    
+  score_3_successes:
+    score_3: [speaker, amp]
