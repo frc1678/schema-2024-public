@@ -94,9 +94,15 @@ timeline_counts:
     type: int
     action_type: shoot_other
     in_teleop: true
-  failed_score:
+  failed_score_speaker:
     type: int
-    action_type: score_fail
+    action_type: score_fail_speaker
+  failed_score_amp:
+    type: int
+    action_type: score_fail_amp
+  failed_score_trap:
+    type: int
+    action_type: score_fail_trap
   trap:
     type: int
     action_type: score_trap
