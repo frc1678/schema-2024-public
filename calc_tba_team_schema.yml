@@ -3,10 +3,11 @@
 # Example:
 #
 # {
-#     "team_number": "183",
-#     "team_name": "robot robotics",
-#     "foul_cc": 2.3304,
-#     "leave_successes": 6
+#   "team_number": "9760",
+#   "team_name": "DreamcRushers",
+#   "foul_cc": 0.2452,#
+#   "leave_successes": 6,
+#   "lfm_leave_successes": 5
 # }
 #
 

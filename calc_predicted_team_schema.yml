@@ -3,12 +3,12 @@
 # Example:
 #
 # {
-#     "team_number": "93",
-#     "current_rank": 2,
-#     "current_rps": 7,
-#     "current_avg_rps": 6.698,
-#     "predicted_rps": 6.8874,
-#     "predicted_rank": 4
+#    "team_number": "5600",
+#    "current_rank": 5,
+#    "current_rps": 6,
+#    "current_avg_rps": 6.5076,
+#    "predicted_rps": 1.1638,
+#    "predicted_rank": 1
 # }
 #
 

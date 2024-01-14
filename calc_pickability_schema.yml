@@ -3,11 +3,13 @@
 # Example:
 #
 # {
-#     "team_number": "87",
-#     "first_pickability": 2.3223,
-#     "offensive_second_pickability": 3.3821,
-#     "defensive_second_pickability": 1.1121,
-#     "overall_second_pickability": 6.7102
+#    "team_number": "4504",
+#    "first_pickability": 2.2538,
+#    "second_pickability": 2.2121,
+#    "test_second_pickability": 0.7681,
+#    "lfm_first_pickability": 3.1662,
+#    "lfm_second_pickability": 1.9512,
+#    "lfm_test_second_pickability": 2.5791
 # }
 #
 
