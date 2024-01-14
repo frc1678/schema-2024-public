@@ -274,10 +274,10 @@ averages:
     tim_fields: [obj_tim.auto_amp]
     type: float
   lfm_auto_avg_total_intakes:
-    tim_fields: [obj_tim.autos_total_intakes]
+    tim_fields: [obj_tim.auto_total_intakes]
     type: float
   lfm_auto_avg_total_pieces:
-    tim_fields: [obj_tim.autos_total_pieces]
+    tim_fields: [obj_tim.auto_total_pieces]
     type: float
   lfm_tele_avg_speaker:
     tim_fields: [obj_tim.tele_speaker]
@@ -289,19 +289,19 @@ averages:
     tim_fields: [obj_tim.trap]
     type: float
   lfm_tele_avg_intakes_poach:
-    tim_fields: [obj_tim.intakes_poach]
+    tim_fields: [obj_tim.tele_intakes_poach]
     type: float
   lfm_tele_avg_intakes_center:
-    tim_fields: [obj_tim.intakes_center]
+    tim_fields: [obj_tim.tele_intakes_center]
     type: float
   lfm_tele_avg_intakes_far:
-    tim_fields: [obj_tim.intakes_far]
+    tim_fields: [obj_tim.tele_intakes_far]
     type: float
   lfm_tele_avg_intakes_amp:
-    tim_fields: [obj_tim.intakes_amp]
+    tim_fields: [obj_tim.tele_intakes_amp]
     type: float
   lfm_avg_incap_time:
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     type: float
   lfm_tele_avg_shoot_other:
     tim_fields: [obj_tim.tele_shoot_other]
@@ -319,7 +319,7 @@ averages:
     tim_fields: [obj_tim.total_intakes]
     type: float
   lfm_avg_incap_time:
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     type: float
   lfm_avg_failed_score_amp:
     tim_fields: [obj_tim.failed_score_amp]
@@ -335,6 +335,9 @@ averages:
     type: float
   lfm_tele_avg_speaker_amped:
     tim_fields: [obj_tim.tele_speaker_amped]
+    type: float
+  lfm_avg_driver_ability:
+    tim_fields: [subj_tim.driver_ability]
     type: float
 
 # Standard deviations of fields in consolidated TIMs
@@ -555,6 +558,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_speaker]
+  tele_max_speaker_amped:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_speaker_amped]
   tele_max_amp:
     extrema_type: max
     type: int
@@ -566,7 +573,7 @@ extrema:
   tele_max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_max_total_intakes]
+    tim_fields: [obj_tim.tele_total_intakes]
   tele_max_total_pieces:
     extrema_type: max
     type: int
@@ -611,6 +618,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_speaker]
+  lfm_tele_max_speaker_amped:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_speaker_amped]
   lfm_tele_max_amp:
     extrema_type: max
     type: int
@@ -622,7 +633,7 @@ extrema:
   lfm_tele_max_total_intakes:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_max_total_intakes]
+    tim_fields: [obj_tim.tele_total_intakes]
   lfm_tele_max_total_pieces:
     extrema_type: max
     type: int
@@ -709,7 +720,7 @@ sums:
     type: float
   avg_endgame_points:
     onstage_percent: 3
-    park_percent: 1
+    park_percent: 2
     avg_trap: 5
     type: float
   avg_total_points:
