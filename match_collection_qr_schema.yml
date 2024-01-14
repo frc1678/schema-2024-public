@@ -78,8 +78,7 @@ action_type:
   intake_center: AP
   intake_far: AQ
   shoot_other: AR
-  score_fail_amp: AS
-  amplified: AT
+  score_fail: AS
+  score_speaker_amped: AT
   to_teleop: AU
-  score_fail_speaker: BD
-  score_fail_trap: BE
+  to_endgame: BD
