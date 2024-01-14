@@ -160,7 +160,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -226,6 +226,9 @@ averages:
   avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
     type: float
+  avg_dropped_pieces: 
+    tim_fields: [obj_tim.dropped_pieces]
+    type: float
   avg_trap:
     tim_fields: [obj_tim.trap]
     type: float
@@ -288,6 +291,9 @@ averages:
     type: float
   lfm_avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
+    type: float
+  lfm_avg_dropped_pieces:
+    tim_fields: [obj_tim.dropped_pieces]
     type: float
   lfm_tele_avg_speaker_amped:
     tim_fields: [obj_tim.tele_speaker_amped]
@@ -353,6 +359,9 @@ standard_deviations:
   sd_total_pieces:
     tim_fields: [obj_tim.total_pieces]
     type: float
+  sd_dropped_pieces: 
+    tim_fields: [obj_tim.dropped_pieces]
+    type: float
   sd_trap:
     tim_fields: [obj_tim.trap]
     type: float
@@ -361,6 +370,12 @@ standard_deviations:
     type: float
   lfm_tele_sd_total_pieces:
     tim_fields: [obj_tim.tele_total_pieces]
+    type: float
+  lfm_tele_sd_shoot_other: 
+    tim_fields: [obj_tim.tele_shoot_other]
+    type: float
+  lfm_sd_dropped_pieces: 
+    tim_fields: [obj_tim.dropped_pieces]
     type: float
 
 # Counts of occurrences in consolidated TIMs
@@ -548,6 +563,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.total_pieces]
+  max_dropped_pieces: 
+    extrema_type: max
+    type: int 
+    tim_fields: [obj_tim.dropped_pieces]
   lfm_auto_max_speaker:
     extrema_type: max
     type: int
@@ -608,6 +627,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.total_pieces]
+  lfm_max_dropped_pieces: 
+    extrema_type: max 
+    type: int 
+    tim_fields: [obj_tim.dropped_pieces]
 
 # Most common values
 modes:

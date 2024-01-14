@@ -45,7 +45,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -92,7 +92,7 @@ timeline_counts:
     in_teleop: true
   tele_shoot_other:
     type: int
-    action_type: shoot_other
+    action_type: ferry
     in_teleop: true
   failed_score:
     type: int
@@ -137,9 +137,10 @@ timeline_counts:
     type: int
     action_type: auto_intake_center_5
     in_teleop: false
-
-  
-
+  dropped_pieces: 
+    type: int
+    action_type: drop
+    in_teleop: true
 
 
 

@@ -5,7 +5,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Each decompressed variable name corresponds to a length 2 or 3 list
 # First item is the compressed variable name
@@ -82,3 +82,7 @@ action_type:
   score_speaker_amped: AT
   to_teleop: AU
   to_endgame: BD
+  score_fail_speaker: BE
+  score_fail_trap: BF
+  ferry: BG
+  drop: BH
