@@ -24,7 +24,8 @@ generic_data:
   match_collection_version_number: [D, str]
   scout_name: [E, str]
   alliance_color_is_red: [F, bool]
-
+  
+  
 # Data specific to objective match collection QR
 objective_tim:
   _start_character: '+' # First character in QR used to identify QR type
@@ -38,6 +39,7 @@ objective_tim:
   chain_source: [T, str] # str representing if a robot is onstage on the source chain, failed to get on chain, or didn't attempt
   chain_blind: [S, str] # str representing if a robot is onstage on the blind(farthest from alliance) chain, failed to get on chain, or didn't attempt
   park: [R, bool] # bool representing if a robot parked
+  trap: [Q, str]
 
 # Timeline is part of objective match collection QR
 # Data for an action in the timeline
@@ -60,32 +62,29 @@ subjective_aim:
   was_tippy: [D, bool] # True if robot was tippy during match, else False
   climb_after: [E, bool] # True if robot climbed after, else False
   played_defense: [F, bool] # True if robot played defense at least once in the match, else False
+  defense_timestamp: [G, int] # Always padded to 3 characters
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
 action_type:
   score_speaker: AA
   score_amp: AB
-  score_trap: AC
-  start_incap: AD
-  end_incap: AE
-  auto_intake_spike_1: AF
-  auto_intake_spike_2: AG
-  auto_intake_spike_3: AH
-  auto_intake_center_1: AI
-  auto_intake_center_2: AJ
-  auto_intake_center_3: AK
-  auto_intake_center_4: AL
-  auto_intake_center_5: AM
-  intake_amp: AN
-  intake_poach: AO
-  intake_center: AP
-  intake_far: AQ
-  shoot_other: AR
-  score_fail: AS
-  score_speaker_amped: AT
+  start_incap: AC
+  end_incap: AD
+  auto_intake_spike_1: AE
+  auto_intake_spike_2: AF
+  auto_intake_spike_3: AG
+  auto_intake_center_1: AH
+  auto_intake_center_2: AI
+  auto_intake_center_3: AJ
+  auto_intake_center_4: AK
+  auto_intake_center_5: AL
+  intake_amp: AM
+  intake_poach: AN
+  intake_center: AO
+  intake_far: AP
+  score_amplify: AQ
+  drop: AR
+  ferry: AS
+  fail: AT
   to_teleop: AU
-  to_endgame: BD
-  score_fail_speaker: BE
-  score_fail_trap: BF
-  ferry: BG
-  drop: BH
+  to_endgame: AV
