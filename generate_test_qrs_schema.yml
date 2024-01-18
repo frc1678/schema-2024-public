@@ -92,10 +92,10 @@ objective_tim:
     is_random: True
     values: ["ONSTAGE", "PARKED", "NONE"]
   has_preload: # str representing if a robot has a preloaded note
-    gen: False
+    gen: True
     symbol: U
     type: bool
-    is_random: False
+    is_random: True
 
 
 # TODO: CREATE TIMELINE SCHEMA
@@ -110,18 +110,45 @@ timeline:
   action_type: [2, "Enum[str]", 1] # Encoded in alphabet base 26. Always length 2, e.g. 'AJ' for the 10th action
 
 # Data specific to subjective match collection QR
+# For subjective boolean values that are skill dependant, specify the high skill version in the values section
 subjective_aim:
   _start_character: '*' # First character in QR used to identify QR type
   _separator: '$' # Separates each key:value pair
   _team_separator: '#' # Separates each team's section
   _alliance_data_separator: '^' # Separates team data from data about the entire alliance
-  team_number: [A, str] # The team number
-  quickness_score: [B, int] # A ranking value between 1 and 3
-  field_awareness_score: [C, int] # A ranking value between 1 and 3
-  was_tippy: [D, bool] # True if robot was tippy during match, else False
-  auto_pieces_start_position: [E, list, int, 1] # A list of length four for each auto starting position, 0 for cone, 1 for cube, 2 for none
-  played_defense: [F, bool] # True if robot played defense at least once in the match, else False
-  defense_timestamp: [G, int] # Always padded to 3 characters
+  team_number: # The team number
+    gen: False
+    symbol: A
+    type: str
+  quickness_score: # A ranking value between 1 and 3
+    gen: True
+    is_random: False
+    symbol: B
+    type: int
+    values: [1, 2, 3]
+  field_awareness_score: # A ranking value between 1 and 3
+    gen: True
+    is_random: False
+    symbol: C
+    type: int
+    values: [1, 2, 3]
+  was_tippy: # True if robot was tippy during match, else False
+    gen: True
+    is_random: False
+    symbol: D
+    type: bool
+    values: False
+  climb_after: # True if robot climbed after, else False
+    gen: True
+    is_random: False
+    symbol: E
+    type: bool
+    values: True
+  played_defense: # True if robot played defense at least once in the match, else False
+    gen: True
+    is_random: True
+    symbol: F
+    type: bool
 
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
@@ -144,6 +171,8 @@ action_type:
   intake_center: AP
   intake_far: AQ
   shoot_other: AR
-  score_fail: AS
+  score_fail_amp: AS
   amplified: AT
   to_teleop: AU
+  score_fail_speaker: BD
+  score_fail_trap: BE
