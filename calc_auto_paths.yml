@@ -32,18 +32,24 @@ data:
 path_increment:
   score_1_successes:
     score_1: [speaker, amp]
+    type: int
 
   score_2_successes: 
     score_2: [speaker, amp]
+    type: int
     
   score_3_successes:
     score_3: [speaker, amp]
+    type: int
   
   score_4_successes:
     score_4: [speaker, amp]
+    type: int
   
   score_5_successes:
     score_5: [speaker, amp]
+    type: int
   
   score_6_successes:
     score_6: [speaker, amp]
+    type: int
