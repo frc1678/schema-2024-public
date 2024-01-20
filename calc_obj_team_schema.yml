@@ -206,9 +206,6 @@ averages:
   tele_avg_total_pieces:
     tim_fields: [obj_tim.tele_total_pieces]
     type: float
-  avg_driver_ability:
-    tim_fields: [subj_tim.driver_ability]
-    type: float
   avg_failed_score:
     tim_fields: [obj_tim.failed_score]
     type: float
@@ -298,9 +295,6 @@ averages:
     type: float
   lfm_tele_avg_speaker_amped:
     tim_fields: [obj_tim.tele_speaker_amped]
-    type: float
-  lfm_avg_driver_ability:
-    tim_fields: [subj_tim.driver_ability]
     type: float
 
 # Standard deviations of fields in consolidated TIMs
