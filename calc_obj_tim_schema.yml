@@ -242,6 +242,9 @@ categorical_actions:
   start_position:
     list: ["0", "1", "2", "3"]
     type: str
+  trap:
+    list: ["N", F, S]
+    type: str
   has_preload:
     list: [True, False]
     type: bool

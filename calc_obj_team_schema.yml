@@ -392,6 +392,15 @@ counts:
     tim_fields:
       obj_tim.stage_level: 'O'
     type: int
+  trap_attempts:
+    tim_fields:
+      - obj_tim.trap: 'S'
+      - obj_tim.trap: 'F'
+    type: int
+  trap_successes:
+    tim_fields:
+      obj_tim.trap: 'S'
+    type: int
   parks:
     tim_fields:
       obj_tim.stage_level: 'P'
@@ -440,9 +449,19 @@ counts:
       - obj_tim.stage_level: 'O'
       - obj_tim.stage_level: 'F'
     type: int
-  lfm_onstage_successes:
+  lfm_trap_successes:
     tim_fields:
-      obj_tim.stage_level: 'O'
+      obj_tim.trap: 'S'
+    type: int
+  lfm_onstage_attempts:
+    tim_fields:
+      - obj_tim.stage_level: 'S'
+      - obj_tim.stage_level: 'F'
+    type: int
+  lfm_trap_attempts:
+    tim_fields:
+      - obj_tim.stage_level: 'F'
+      - obj_tim.stage_level: 'S'
     type: int
   lfm_parks:
     tim_fields:
@@ -662,12 +681,24 @@ success_rates:
     team_successes: [onstage_successes]
     team_attempts: [onstage_attempts]
     type: float
+  trap_percent_success:
+    team_successes: [trap_successes]
+    team_attempts: [trap_attempts]
+    type: float
   lfm_onstage_percent_success:
     team_successes: [lfm_onstage_successes]
     team_attempts: [lfm_onstage_attempts]
     type: float
+  lfm_trap_percent_success:
+    team_successes: [lfm_trap_successes]
+    team_attempts: [lfm_trap_attempts]
+    type: float
   onstage_percent:
     team_successes: [onstage_successes]
+    team_attempts: [endgame_attempts]
+    type: float
+  trap_percent:
+    team_successes: [trap_successes]
     team_attempts: [endgame_attempts]
     type: float
   park_percent:
