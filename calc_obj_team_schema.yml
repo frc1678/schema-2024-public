@@ -23,14 +23,12 @@
 #    "avg_incap_time": 0.8858,
 #    "avg_total_intakes": 1.7679,
 #    "avg_total_pieces": 4.1947,
-#    "avg_trap": 2.3875,
 #    "lfm_auto_avg_speaker": 2.1985,
 #    "lfm_auto_avg_amp": 2.0293,
 #    "lfm_auto_avg_total_intakes": 4.426,
 #    "lfm_auto_avg_total_pieces": 5.7537,
 #    "lfm_tele_avg_speaker": 4.367,
 #    "lfm_tele_avg_amp": 4.6392,
-#    "lfm_avg_trap": 3.2449,
 #    "lfm_tele_avg_intakes_poach": 1.369,
 #    "lfm_tele_avg_intakes_center": 2.999,
 #    "lfm_tele_avg_intakes_far": 4.3648,
@@ -61,7 +59,6 @@
 #    "sd_incap_time": 3.532,
 #    "sd_total_intakes": 4.8668,
 #    "sd_total_pieces": 5.2559,
-#    "sd_trap": 3.0925,
 #    "lfm_auto_sd_total_pieces": 3.9951,
 #    "lfm_tele_sd_total_pieces": 6.9248,
 #    "endgame_attempts": 8,
@@ -102,7 +99,6 @@
 #    "tele_max_shoot_other": 1,
 #    "tele_max_total_intakes": 3,
 #    "tele_max_total_pieces": 5,
-#    "max_trap": 8,
 #    "max_incap_time": 9,
 #    "max_failed_scores": 3,
 #    "max_total_intakes": 6,
@@ -116,7 +112,6 @@
 #    "lfm_tele_max_shoot_other": 3,
 #    "lfm_tele_max_total_intakes": 3,
 #    "lfm_tele_max_total_pieces": 7,
-#    "lfm_max_trap": 9,
 #    "lfm_max_incap_time": 3,
 #    "lfm_max_failed_scores": 4,
 #    "lfm_max_total_intakes": 4,
@@ -235,9 +230,6 @@ averages:
   avg_dropped_pieces: 
     tim_fields: [obj_tim.dropped_pieces]
     type: float
-  avg_trap:
-    tim_fields: [obj_tim.trap]
-    type: float
   lfm_auto_avg_speaker:
     tim_fields: [obj_tim.auto_speaker]
     type: float
@@ -255,9 +247,6 @@ averages:
     type: float
   lfm_tele_avg_amp:
     tim_fields: [obj_tim.tele_amp]
-    type: float
-  lfm_avg_trap:
-    tim_fields: [obj_tim.trap]
     type: float
   lfm_tele_avg_intakes_poach:
     tim_fields: [obj_tim.tele_intakes_poach]
@@ -379,9 +368,6 @@ standard_deviations:
     type: float
   sd_dropped_pieces: 
     tim_fields: [obj_tim.dropped_pieces]
-    type: float
-  sd_trap:
-    tim_fields: [obj_tim.trap]
     type: float
   lfm_auto_sd_total_pieces:
     tim_fields: [obj_tim.auto_total_pieces]
@@ -561,10 +547,6 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_pieces]
-  max_trap:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.trap]
   max_incap_time:
     extrema_type: max
     type: int
@@ -633,10 +615,6 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_pieces]
-  lfm_max_trap:
-    extrema_type: max
-    type: int
-    tim_fields: [obj_tim.trap]
   lfm_max_incap_time:
     extrema_type: max
     type: int
