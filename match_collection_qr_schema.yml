@@ -62,7 +62,6 @@ subjective_aim:
   was_tippy: [D, bool] # True if robot was tippy during match, else False
   climb_after: [E, bool] # True if robot climbed after, else False
   played_defense: [F, bool] # True if robot played defense at least once in the match, else False
-  defense_timestamp: [G, int] # Always padded to 3 characters
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
 action_type:
