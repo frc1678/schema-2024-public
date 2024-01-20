@@ -218,8 +218,8 @@ averages:
   avg_failed_score_speaker:
     tim_fields: [obj_tim.failed_score_speaker]
     type: float
-  avg_incap_time:
-    tim_fields: [obj_tim.incap_time]
+  avg_incap:
+    tim_fields: [obj_tim.incap]
     type: float
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
@@ -260,8 +260,8 @@ averages:
   lfm_tele_avg_intakes_amp:
     tim_fields: [obj_tim.tele_intakes_amp]
     type: float
-  lfm_avg_incap_time:
-    tim_fields: [obj_tim.incap_time]
+  lfm_avg_incap:
+    tim_fields: [obj_tim.incap]
     type: float
   lfm_tele_avg_shoot_other:
     tim_fields: [obj_tim.tele_shoot_other]
@@ -278,8 +278,8 @@ averages:
   lfm_avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
-  lfm_avg_incap_time:
-    tim_fields: [obj_tim.incap_time]
+  lfm_avg_incap:
+    tim_fields: [obj_tim.incap]
     type: float
   lfm_avg_failed_score:
     tim_fields: [obj_tim.failed_score]
@@ -357,8 +357,8 @@ standard_deviations:
   sd_failed_score_speaker:
     tim_fields: [obj_tim.failed_score_speaker]
     type: float
-  sd_incap_time:
-    tim_fields: [obj_tim.incap_time]
+  sd_incap:
+    tim_fields: [obj_tim.incap]
     type: float
   sd_total_intakes:
     tim_fields: [obj_tim.total_intakes]
@@ -429,7 +429,7 @@ counts:
   matches_incap:
     tim_fields:
       not:
-        obj_tim.incap_time: 0
+        obj_tim.incap: 0
     type: int
   matches_played:
     tim_fields:
@@ -481,7 +481,7 @@ counts:
   lfm_matches_incap:
     tim_fields:
       not:
-        obj_tim.incap_time: 0
+        obj_tim.incap: 0
     type: int
 
 # Objective counts collected by Super Scouts
@@ -550,7 +550,7 @@ extrema:
   max_incap_time:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.incap_time]
+    tim_fields: [obj_tim.incap]
   max_failed_scores:
     extrema_type: max
     type: int
@@ -618,7 +618,7 @@ extrema:
   lfm_max_incap_time:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.incap_time]
+    tim_fields: [obj_tim.incap]
   lfm_max_failed_scores:
     extrema_type: max
     type: int
@@ -683,12 +683,12 @@ success_rates:
 
 # Calculates all the medians
 medians:
-  median_nonzero_incap_time: 
-    tim_fields: [obj_tim.incap_time]
+  median_nonzero_incap: 
+    tim_fields: [obj_tim.incap]
     ignore: 0
     type: float
-  lfm_median_nonzero_incap_time:
-    tim_fields: [obj_tim.incap_time]
+  lfm_median_nonzero_incap:
+    tim_fields: [obj_tim.incap]
     ignore: 0
     type: float
 
