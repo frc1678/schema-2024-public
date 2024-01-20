@@ -223,9 +223,6 @@ averages:
   avg_failed_score_speaker:
     tim_fields: [obj_tim.failed_score_speaker]
     type: float
-  avg_failed_score_trap:
-    tim_fields: [obj_tim.failed_score_trap]
-    type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap_time]
     type: float
@@ -304,9 +301,6 @@ averages:
   lfm_avg_failed_score_speaker:
     tim_fields: [obj_tim.failed_score_speaker]
     type: float
-  lfm_avg_failed_score_trap:
-    tim_fields: [obj_tim.failed_score_trap]
-    type: float
   lfm_avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
     type: float
@@ -373,9 +367,6 @@ standard_deviations:
     type: float
   sd_failed_score_speaker:
     tim_fields: [obj_tim.failed_score_speaker]
-    type: float
-  sd_failed_score_trap:
-    tim_fields: [obj_tim.failed_score_trap]
     type: float
   sd_incap_time:
     tim_fields: [obj_tim.incap_time]
@@ -590,10 +581,6 @@ extrema:
     tim_fields: [obj_tim.failed_score_speaker]
     type: int
     extrema_type: max
-  max_failed_score_trap:
-    tim_fields: [obj_tim.failed_score_trap]
-    type: int
-    extrema_type: max
   max_total_intakes:
     extrema_type: max
     type: int
@@ -664,10 +651,6 @@ extrema:
     extrema_type: max
   lfm_max_failed_score_speaker:
     tim_fields: [obj_tim.failed_score_speaker]
-    type: int
-    extrema_type: max
-  lfm_max_failed_score_trap:
-    tim_fields: [obj_tim.failed_score_trap]
     type: int
     extrema_type: max
   lfm_max_total_intakes:

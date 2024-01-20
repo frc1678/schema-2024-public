@@ -96,6 +96,22 @@ timeline_counts:
   failed_score:
     type: int
     action_type: score_fail
+  tele_failed_score_amp:
+    type: int
+    action_type: score_fail_amp
+    in_teleop: true
+  tele_failed_score_speaker:
+    type: int
+    action_type: score_fail_speaker
+    in_teleop: true
+  auto_failed_score_amp:
+    type: int
+    action_type: score_fail_amp
+    in_teleop: false
+  auto_failed_score_speaker:
+    type: int
+    action_type: score_fail_speaker
+    in_teleop: false
   tele_amp:
     type: int
     action_type: score_amp
