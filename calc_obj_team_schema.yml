@@ -209,15 +209,21 @@ averages:
   avg_failed_score:
     tim_fields: [obj_tim.failed_score]
     type: float
-  avg_failed_score_amp:
-    tim_fields: [obj_tim.failed_score_amp]
-    type: float
-  avg_failed_score_speaker:
-    tim_fields: [obj_tim.failed_score_speaker]
-    type: float
+  tele_failed_score_amp:
+    type: int
+    tim_fields: [obj_tim.tele_failed_score_amp]
+  tele_failed_score_speaker:
+    type: int
+    tim_fields: [obj_tim.tele_failed_score_speaker]
+  auto_failed_score_amp:
+    type: int
+    tim_fields: [obj_tim.auto_failed_score_amp]
+  auto_failed_score_speaker:
+    type: int
+    tim_fields: [obj_tim.auto_failed_score_speaker]
   avg_incap:
     tim_fields: [obj_tim.incap]
-    type: float
+    type: float 
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
