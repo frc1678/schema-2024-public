@@ -384,19 +384,18 @@ standard_deviations:
 
 # Counts of occurrences in consolidated TIMs
 counts:
-  endgame_attempts:
-    tim_fields:
-      not:
-        obj_tim.stage_level: 'N'
-    type: int
   onstage_attempts:
     tim_fields:
-      - obj_tim.stage_level: 'O'
-      - obj_tim.stage_level: 'F'
+      not:
+        - obj_tim.chain_amp: 'N'
+        - obj_tim.chain_blind: 'N'
+        - obj_tim.chain_source: 'N'
     type: int
   onstage_successes:
     tim_fields:
-      obj_tim.stage_level: 'O'
+      - obj_tim.chain_amp: 'S'
+      - obj_tim.chain_blind: 'S'
+      - obj_tim.chain_source: 'S'
     type: int
   trap_attempts:
     tim_fields:
@@ -413,7 +412,9 @@ counts:
     type: int
   stage_fails:
     tim_fields:
-      obj_tim.stage_level: 'F'
+      - obj_tim.chain_amp: 'F'
+      - obj_tim.chain_blind: 'F'
+      - obj_tim.chain_source: 'F'
     type: int
   position_zero_starts:
     tim_fields:
@@ -445,29 +446,26 @@ counts:
       not:
         match_number: 0
     type: int
-  lfm_endgame_attempts:
-    tim_fields:
-      not:
-        obj_tim.stage_level: 'N'
-    type: int
   lfm_onstage_attempts:
     tim_fields:
-      - obj_tim.stage_level: 'O'
-      - obj_tim.stage_level: 'F'
+      not:
+        - obj_tim.chain_amp: 'N'
+        - obj_tim.chain_blind: 'N'
+        - obj_tim.chain_source: 'N'
     type: int
+  lfm_onstage_successes:
+    tim_fields:
+      - obj_tim.chain_amp: 'S'
+      - obj_tim.chain_blind: 'S'
+      - obj_tim.chain_source: 'S'
   lfm_trap_successes:
     tim_fields:
       obj_tim.trap: 'S'
     type: int
-  lfm_onstage_attempts:
-    tim_fields:
-      - obj_tim.stage_level: 'S'
-      - obj_tim.stage_level: 'F'
-    type: int
   lfm_trap_attempts:
     tim_fields:
-      - obj_tim.stage_level: 'F'
-      - obj_tim.stage_level: 'S'
+      - obj_tim.trap: 'F'
+      - obj_tim.trap: 'S'
     type: int
   lfm_parks:
     tim_fields:
@@ -475,8 +473,9 @@ counts:
     type: int
   lfm_stage_fails:
     tim_fields:
-      obj_tim.stage_level: 'F'
-    type: int
+      - obj_tim.chain_amp: 'F'
+      - obj_tim.chain_blind: 'F'
+      - obj_tim.chain_source: 'F'
   lfm_position_zero_starts:
     tim_fields:
       obj_tim.start_position: '0'
@@ -699,18 +698,6 @@ success_rates:
     team_successes: [lfm_trap_successes]
     team_attempts: [lfm_trap_attempts]
     type: float
-  onstage_percent:
-    team_successes: [onstage_successes]
-    team_attempts: [endgame_attempts]
-    type: float
-  trap_percent:
-    team_successes: [trap_successes]
-    team_attempts: [endgame_attempts]
-    type: float
-  park_percent:
-    team_successes: [parks]
-    team_attempts: [endgame_attempts]
-    type: float
 
 # Calculates all the medians
 medians:
@@ -735,9 +722,8 @@ sums:
     tele_avg_speaker_amped: 5
     type: float
   avg_endgame_points:
-    onstage_percent: 3
-    park_percent: 2
-    avg_trap: 5
+    onstage_percent_success: 3
+    trap_percent_success: 5
     type: float
   avg_total_points:
     auto_avg_total_points: 1
