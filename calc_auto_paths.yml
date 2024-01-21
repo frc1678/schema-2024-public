@@ -19,12 +19,18 @@ data:
     - intake_position_3
     - intake_position_4
     - intake_position_5
+    - intake_position_6
+    - intake_position_7
+    - intake_position_8
     - score_1
     - score_2
     - score_3
     - score_4
     - score_5
     - score_6
+    - score_7
+    - score_8
+    - score_9
     - leave
     - has_preload
 
@@ -52,4 +58,16 @@ path_increment:
   
   score_6_successes:
     score_6: [speaker, amp]
+    type: int
+
+  score_7_successes:
+    score_7: [speaker, amp]
+    type: int
+  
+  score_8_successes:
+    score_8: [speaker, amp]
+    type: int
+  
+  score_9_successes:
+    score_9: [speaker, amp]
     type: int
