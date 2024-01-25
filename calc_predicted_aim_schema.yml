@@ -28,6 +28,50 @@ schema_file:
   # Incremented every merged schema change
   version: 2
 
+# Fields used to calculate ensemble RP
+ensemble_rp:
+  onstage_rate: 
+    counts: [onstage_successes, [onstage_attempts]]
+    type: float
+  park_rate: 
+    counts: [park_successes, [park_attempts]]
+    type: float
+  climb_after_rate: 
+    counts: [matches_climb_after, [onstage_attempts]] ###### <---- needs fix, we currently don't have a climb_after_attempts variable
+    type: float
+  trap_rate: 
+    counts: [trap_successes, [trap_successes, trap_fails]]
+    type: float
+
+# Fields used to calculate win chance
+win_chance:
+  required_vars:
+    auto_avg_amp:
+      sd: auto_sd_amp
+      value: 2
+      type: float
+    auto_avg_speaker:
+      sd: auto_sd_speaker
+      value: 5
+      type: float
+    tele_avg_amp:
+      sd: tele_sd_amp
+      value: 1
+      type: float
+    tele_avg_speaker:
+      sd: tele_sd_speaker
+      value: 2
+      type: float
+    tele_avg_speaker_amped:
+      sd: tele_sd_speaker_amped
+      value: 5
+      type: float
+    avg_endgame_points:
+      sd: None
+      value: None
+      type: float
+
+
 # Stores fields that will be added to database but do not require calculations
 data:
   match_number:
@@ -55,7 +99,7 @@ data:
     requires: [obj_team, tba_team]
   final_predicted_rp1:
     type: float
-    requires: [obj_team, tba_team]
+    requires: [obj_team]
   final_predicted_rp2:
     type: float
     requires: [obj_team]
@@ -65,16 +109,13 @@ predicted_values:
   predicted_score:
     type: float
     requires: [obj_team, tba_team]
-  # Charge RP
+  # TODO: find RPs when TBA updates
   predicted_rp1:
     type: float
-    requires: [obj_team, tba_team]
-  # Link RP
+    requires: [obj_team]
   predicted_rp2:
     type: float
     requires: [obj_team]
-
-predicted_probabilities:
   win_chance:
     type: float
-    requires: predicted_score
+    requires: [obj_team]
