@@ -384,12 +384,39 @@ standard_deviations:
 
 # Counts of occurrences in consolidated TIMs
 counts:
+  chain_amp_attempts:
+    tim_fields:
+      not: 
+        obj_tim.chain_amp: 'N'
+    type: int
+  chain_blind_attempts:
+    tim_fields:
+      not: 
+        obj_tim.chain_blind: 'N'
+    type: int
+  chain_source_attempts:
+    tim_fields:
+      not: 
+        obj_tim.chain_source: 'N'
+    type: int
   onstage_attempts:
     tim_fields:
       not:
         - obj_tim.chain_amp: 'N'
         - obj_tim.chain_blind: 'N'
         - obj_tim.chain_source: 'N'
+    type: int
+  chain_amp_successes:
+    tim_fields:
+      obj_tim.chain_amp: 'S'
+    type: int
+  chain_blind_successes:
+    tim_fields:
+      obj_tim.chain_blind: 'S'
+    type: int
+  chain_source_successes:
+    tim_fields:
+      obj_tim.chain_source: 'S'
     type: int
   onstage_successes:
     tim_fields:
@@ -446,6 +473,21 @@ counts:
       not:
         match_number: 0
     type: int
+  lfm_chain_amp_attempts:
+    tim_fields:
+      not: 
+        obj_tim.chain_amp: 'N'
+    type: int
+  lfm_chain_blind_attempts:
+    tim_fields:
+      not: 
+        obj_tim.chain_blind: 'N'
+    type: int
+  lfm_chain_source_attempts:
+    tim_fields:
+      not: 
+        obj_tim.chain_source: 'N'
+    type: int
   lfm_onstage_attempts:
     tim_fields:
       not:
@@ -458,6 +500,18 @@ counts:
       - obj_tim.chain_amp: 'S'
       - obj_tim.chain_blind: 'S'
       - obj_tim.chain_source: 'S'
+  lfm_chain_amp_successes:
+    tim_fields:
+      obj_tim.chain_amp: 'S'
+    type: int
+  lfm_chain_blind_successes:
+    tim_fields:
+      obj_tim.chain_blind: 'S'
+    type: int
+  lfm_chain_source_successes:
+    tim_fields:
+      obj_tim.chain_source: 'S'
+    type: int
   lfm_trap_successes:
     tim_fields:
       obj_tim.trap: 'S'
@@ -686,6 +740,18 @@ success_rates:
     team_successes: [onstage_successes]
     team_attempts: [onstage_attempts]
     type: float
+  chain_amp_percent_success:
+    team_successes: [chain_amp_successes]
+    team_attempts: [chain_amp_attempts]
+    type: float
+  chain_blind_percent_success:
+    team_successes: [chain_blind_successes]
+    team_attempts: [chain_blind_attempts]
+    type: float
+  chain_source_percent_success:
+    team_successes: [chain_source_successes]
+    team_attempts: [chain_source_attempts]
+    type: float
   trap_percent_success:
     team_successes: [trap_successes]
     team_attempts: [trap_attempts]
@@ -693,6 +759,18 @@ success_rates:
   lfm_onstage_percent_success:
     team_successes: [lfm_onstage_successes]
     team_attempts: [lfm_onstage_attempts]
+    type: float
+  lfm_chain_amp_percent_success:
+    team_successes: [chain_amp_successes]
+    team_attempts: [chain_amp_attempts]
+    type: float
+  lfm_chain_blind_percent_success:
+    team_successes: [chain_blind_successes]
+    team_attempts: [chain_blind_attempts]
+    type: float
+  lfm_chain_source_percent_success:
+    team_successes: [chain_source_successes]
+    team_attempts: [chain_source_attempts]
     type: float
   lfm_trap_percent_success:
     team_successes: [lfm_trap_successes]
