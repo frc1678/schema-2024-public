@@ -70,7 +70,7 @@ objective_tim:
   # Used to determine which tablets have not submitted ('Y' in quotes because it's a keyword on its own)
   scout_id:
     gen: True
-    symbol: "Y"
+    symbol: 'Y'
     type: int
     is_random: True
     values: [1, 30]
@@ -80,22 +80,45 @@ objective_tim:
     symbol: X
     type: str
     is_random: True
-    values: ["1", "2", "3", "4"]
+    values: ["0", "1", "2", "3"]
   timeline:
     gen: False
     symbol: W
     type: list[dict]
-  stage_level: # str representing where a robot finishes in tele ('onstage', 'parked', 'none')
+  has_preload: # bool representing if a robot has a preloaded note
     gen: True
     symbol: V
-    type: str
-    is_random: True
-    values: ["ONSTAGE", "PARKED", "NONE"]
-  has_preload: # str representing if a robot has a preloaded note
-    gen: True
-    symbol: U
     type: bool
     is_random: True
+  chain_amp:
+    gen: True
+    symbol: U
+    type: str
+    is_random: True
+    values: ["ONSTAGE", "FAILED", "NONE"]
+  chain_source:
+    gen: True
+    symbol: T
+    type: str
+    is_random: True
+    values: ["ONSTAGE", "FAILED", "NONE"]
+  chain_blind:
+    gen: True
+    symbol: S
+    type: str
+    is_random: True
+    values: ["ONSTAGE", "FAILED", "NONE"]
+  park:
+    gen: True
+    symbol: R
+    type: bool
+    is_random: True
+  trap:
+    gen: True
+    symbol: Q
+    type: str
+    is_random: True
+    values: ["SCORED", "FAILED", "NONE"]
 
 
 # TODO: CREATE TIMELINE SCHEMA
@@ -149,30 +172,30 @@ subjective_aim:
     is_random: True
     symbol: F
     type: bool
+    values: True
 
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
 action_type:
   score_speaker: AA
   score_amp: AB
-  score_trap: AC
-  start_incap: AD
-  end_incap: AE
-  auto_intake_spike_1: AF
-  auto_intake_spike_2: AG
-  auto_intake_spike_3: AH
-  auto_intake_center_1: AI
-  auto_intake_center_2: AJ
-  auto_intake_center_3: AK
-  auto_intake_center_4: AL
-  auto_intake_center_5: AM
-  intake_amp: AN
-  intake_poach: AO
-  intake_center: AP
-  intake_far: AQ
-  shoot_other: AR
-  score_fail_amp: AS
-  amplified: AT
+  start_incap: AC
+  end_incap: AD
+  auto_intake_spike_1: AE
+  auto_intake_spike_2: AF
+  auto_intake_spike_3: AG
+  auto_intake_center_1: AH
+  auto_intake_center_2: AI
+  auto_intake_center_3: AJ
+  auto_intake_center_4: AK
+  auto_intake_center_5: AL
+  intake_amp: AM
+  intake_poach: AN
+  intake_center: AO
+  intake_far: AP
+  score_amplify: AQ
+  drop: AR
+  ferry: AS
+  fail: AT
   to_teleop: AU
-  score_fail_speaker: BD
-  score_fail_trap: BE
+  to_endgame: AV
