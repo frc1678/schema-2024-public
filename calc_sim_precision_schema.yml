@@ -42,20 +42,20 @@ calculations:
   auto_speaker_precision:
     type: float
     requires: 
-      unconsolidated.auto_speaker: 5
+      unconsolidated_totals.auto_speaker: 5
   auto_amp_precision:
     type: float
     requires:
-      unconsolidated.auto_amp: 2
+      unconsolidated_totals.auto_amp: 2
   tele_speaker_amped_precision:
     type: float
     requires:
-      unconsolidated.tele_speaker_amped: 5
+      unconsolidated_totals.tele_speaker_amped: 5
   tele_speaker_precision:
     type: float
     requires:
-      unconsolidated.tele_speaker: 2
+      unconsolidated_totals.tele_speaker: 2
   tele_amp_precision:
     type: float
     requires:
-      unconsolidated.tele_amp: 1
+      unconsolidated_totals.tele_amp: 1
