@@ -126,6 +126,14 @@ collections:
   viewer_data:
     schema: null
     indexes: null
-  stand_strategist:
-    schema: null
-    indexes: null
+  ss_team:
+    schema: 'calc_ss_team.yml'
+    indexes:
+      - fields: ['team_number']
+        unique: True
+  ss_tim:
+    schema: 'calc_ss_tim.yml' 
+    indexes:
+      - fields: ['team_number', 'match_number']
+        unique: True
+
