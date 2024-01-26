@@ -556,6 +556,14 @@ counts:
         obj_tim.incap: 0
     type: int
 
+# Counts collected from Objective and Subjective Scouts 
+special_counts: 
+  climb_after_successes: 
+    tim_fields: 
+      - subj_tim.climb_after: True 
+      - obj_tim.stage_level: 'O'
+    type: int
+
 # Objective counts collected by Super Scouts
 super_counts:
   matches_tippy:
@@ -736,6 +744,10 @@ modes:
     type: List
 
 success_rates:
+  climb_after_percent_success: 
+    team_successes: [climb_after_successes]
+    team_attempts: [matches_climb_after]
+    type: float
   onstage_percent_success:
     team_successes: [onstage_successes]
     team_attempts: [onstage_attempts]
