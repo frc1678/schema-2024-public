@@ -237,19 +237,19 @@ timeline_cycle_time:
 # Dict items should be ordered, values are shortened string from qr
 categorical_actions:
   chain_amp:
-    list: ["N", "F", "S"]
+    list: ["N", "F", "O"]
     type: str
   chain_blind:
-    list: ["N", "F", "S"]
+    list: ["N", "F", "O"]
     type: str
   chain_source:
-    list: ["N", "F", "S"]
+    list: ["N", "F", "O"]
     type: str
   start_position:
     list: ["0", "1", "2", "3"]
     type: str
   trap:
-    list: ["N", F, S]
+    list: ["N", "F", "S"]
     type: str
   has_preload:
     list: [True, False]

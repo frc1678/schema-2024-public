@@ -408,21 +408,21 @@ counts:
     type: int
   chain_amp_successes:
     tim_fields:
-      obj_tim.chain_amp: 'S'
+      obj_tim.chain_amp: 'O'
     type: int
   chain_blind_successes:
     tim_fields:
-      obj_tim.chain_blind: 'S'
+      obj_tim.chain_blind: 'O'
     type: int
   chain_source_successes:
     tim_fields:
-      obj_tim.chain_source: 'S'
+      obj_tim.chain_source: 'O'
     type: int
   onstage_successes:
     tim_fields:
-      - obj_tim.chain_amp: 'S'
-      - obj_tim.chain_blind: 'S'
-      - obj_tim.chain_source: 'S'
+      - obj_tim.chain_amp: 'O'
+      - obj_tim.chain_blind: 'O'
+      - obj_tim.chain_source: 'O'
     type: int
   trap_attempts:
     tim_fields:
@@ -497,20 +497,20 @@ counts:
     type: int
   lfm_onstage_successes:
     tim_fields:
-      - obj_tim.chain_amp: 'S'
-      - obj_tim.chain_blind: 'S'
-      - obj_tim.chain_source: 'S'
+      - obj_tim.chain_amp: 'O'
+      - obj_tim.chain_blind: 'O'
+      - obj_tim.chain_source: 'O'
   lfm_chain_amp_successes:
     tim_fields:
-      obj_tim.chain_amp: 'S'
+      obj_tim.chain_amp: 'O'
     type: int
   lfm_chain_blind_successes:
     tim_fields:
-      obj_tim.chain_blind: 'S'
+      obj_tim.chain_blind: 'O'
     type: int
   lfm_chain_source_successes:
     tim_fields:
-      obj_tim.chain_source: 'S'
+      obj_tim.chain_source: 'O'
     type: int
   lfm_trap_successes:
     tim_fields:
