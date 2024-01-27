@@ -246,7 +246,7 @@ categorical_actions:
     list: ["N", "F", "O"]
     type: str
   start_position:
-    list: ["0", "1", "2", "3"]
+    list: ["0", "1", "2", "3", "4"]
     type: str
   trap:
     list: ["N", "F", "S"]

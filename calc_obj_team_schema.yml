@@ -459,6 +459,10 @@ counts:
     tim_fields:
       obj_tim.start_position: '3'
     type: int
+  position_four_starts:
+    tim_fields:
+      obj_tim.start_position: '4'
+    type: int
   preloaded_starts:
     tim_fields:
       obj_tim.has_preload: True
@@ -545,6 +549,10 @@ counts:
   lfm_position_three_starts:
     tim_fields:
       obj_tim.start_position: '3'
+    type: int
+  lfm_position_four_starts:
+    tim_fields:
+      obj_tim.start_position: '4'
     type: int
   lfm_preloaded_starts:
     tim_fields:
