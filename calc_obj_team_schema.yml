@@ -435,7 +435,7 @@ counts:
     type: int
   parks:
     tim_fields:
-      obj_tim.stage_level: 'P'
+      obj_tim.park: True
     type: int
   stage_fails:
     tim_fields:
@@ -527,7 +527,7 @@ counts:
     type: int
   lfm_parks:
     tim_fields:
-      obj_tim.stage_level: 'P'
+      obj_tim.park: True
     type: int
   lfm_stage_fails:
     tim_fields:
@@ -776,6 +776,10 @@ success_rates:
     team_successes: [trap_successes]
     team_attempts: [trap_attempts]
     type: float
+  park_percent:
+    team_successes: [parks]
+    team_attempts: [matches_played]
+    type: float
   lfm_onstage_percent_success:
     team_successes: [lfm_onstage_successes]
     team_attempts: [lfm_onstage_attempts]
@@ -795,6 +799,10 @@ success_rates:
   lfm_trap_percent_success:
     team_successes: [lfm_trap_successes]
     team_attempts: [lfm_trap_attempts]
+    type: float
+  lfm_park_percent:
+    team_successes: [parks]
+    team_attempts: [matches_played]
     type: float
 
 # Calculates all the medians
@@ -822,6 +830,7 @@ sums:
   avg_endgame_points:
     onstage_percent_success: 3
     trap_percent_success: 5
+    park_percent: 1
     type: float
   avg_total_points:
     auto_avg_total_points: 1

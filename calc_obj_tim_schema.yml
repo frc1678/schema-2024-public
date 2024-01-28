@@ -254,3 +254,6 @@ categorical_actions:
   has_preload:
     list: [True, False]
     type: bool
+  park:
+    list: [True, False]
+    type: bool
