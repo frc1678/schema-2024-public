@@ -504,6 +504,7 @@ counts:
       - obj_tim.chain_amp: 'O'
       - obj_tim.chain_blind: 'O'
       - obj_tim.chain_source: 'O'
+    type: int
   lfm_chain_amp_successes:
     tim_fields:
       obj_tim.chain_amp: 'O'
@@ -534,6 +535,7 @@ counts:
       - obj_tim.chain_amp: 'F'
       - obj_tim.chain_blind: 'F'
       - obj_tim.chain_source: 'F'
+    type: int
   lfm_position_zero_starts:
     tim_fields:
       obj_tim.start_position: '0'

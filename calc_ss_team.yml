@@ -9,6 +9,9 @@ data:
     type: str
 
 schema: 
-  auto_strategies: str 
-  strengths: str
-  weaknesses: str
+  auto_strategies: 
+    type: str 
+  strengths: 
+    type: str
+  weaknesses: 
+    type: str
