@@ -11,5 +11,7 @@ data:
     type: int
 
 schema: 
-  played_defense: bool 
-  defense_rating: int
+  played_defense:
+    type: bool
+  defense_rating:
+    type: int
