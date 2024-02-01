@@ -45,31 +45,30 @@ ensemble_rp:
 
 # Fields used to calculate win chance
 win_chance:
-  required_vars:
-    auto_avg_amp:
-      sd: auto_sd_amp
-      value: 2
-      type: float
-    auto_avg_speaker:
-      sd: auto_sd_speaker
-      value: 5
-      type: float
-    tele_avg_amp:
-      sd: tele_sd_amp
-      value: 1
-      type: float
-    tele_avg_speaker:
-      sd: tele_sd_speaker
-      value: 2
-      type: float
-    tele_avg_speaker_amped:
-      sd: tele_sd_speaker_amped
-      value: 5
-      type: float
-    avg_endgame_points:
-      sd: None
-      value: None
-      type: float
+  auto_avg_amp:
+    sd: auto_sd_amp
+    value: 2
+    type: float
+  auto_avg_speaker:
+    sd: auto_sd_speaker
+    value: 5
+    type: float
+  tele_avg_amp:
+    sd: tele_sd_amp
+    value: 1
+    type: float
+  tele_avg_speaker:
+    sd: tele_sd_speaker
+    value: 2
+    type: float
+  tele_avg_speaker_amped:
+    sd: tele_sd_speaker_amped
+    value: 5
+    type: float
+  avg_endgame_points:
+    sd: None
+    value: None
+    type: float
 
 
 # Stores fields that will be added to database but do not require calculations
