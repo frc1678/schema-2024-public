@@ -85,30 +85,31 @@ timeline_counts:
     type: int
     action_type: score_speaker
     in_teleop: true
-  tele_speaker_amped:
+  tele_amplified:
     type: int
-    action_type: score_speaker_amped
+    action_type: score_amplify
     in_teleop: true
-  tele_shoot_other:
+  tele_ferry:
     type: int
     action_type: ferry
     in_teleop: true
-  failed_score:
-    type: int
-    action_type: score_fail
-  tele_failed_score_amp:
+  tele_failed_amp:
     type: int
     action_type: score_fail_amp
     in_teleop: true
-  tele_failed_score_speaker:
+  tele_failed_speaker:
     type: int
     action_type: score_fail_speaker
     in_teleop: true
-  auto_failed_score_amp:
+  tele_failed_amplified:
+    type: int
+    action_type: score_fail_amplify
+    in_teleop: true
+  auto_failed_amp:
     type: int
     action_type: score_fail_amp
     in_teleop: false
-  auto_failed_score_speaker:
+  auto_failed_speaker:
     type: int
     action_type: score_fail_speaker
     in_teleop: false
@@ -148,7 +149,7 @@ timeline_counts:
     type: int
     action_type: auto_intake_center_5
     in_teleop: false
-  dropped_pieces: 
+  tele_drop: 
     type: int
     action_type: drop
     in_teleop: true
@@ -163,20 +164,36 @@ aggregates:
   auto_total_pieces: 
     type: int
     counts: [auto_amp, auto_speaker]
+  auto_total_failed_pieces:
+    type: int
+    counts: [auto_failed_speaker, auto_failed_amp]
   tele_total_intakes: 
     type: int
     counts: [tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
   tele_total_pieces: 
     type: int
     counts: [tele_amp, tele_speaker, tele_speaker_amped]
+  tele_total_failed_pieces:
+    type: int
+    counts: [tele_failed_speaker, tele_failed_amp]
   total_intakes: 
     type: int
     counts: [auto_intake_spike_1, auto_intake_spike_2, auto_intake_spike_3, auto_intake_center_1, auto_intake_center_2, auto_intake_center_3, auto_intake_center_4, auto_intake_center_5, tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
   total_pieces: 
     type: int
     counts: [auto_amp, auto_speaker, tele_amp, tele_speaker, tele_speaker_amped]
-  
 
+
+#point_calculations:
+#  auto_total_points:
+#    type: int
+#  tele_total_points:
+#    type: int
+#  endgame_total_points:
+#    type: int
+#  total_points:
+#    type: int
+#  (ADD THESE LATER)
 
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
@@ -236,13 +253,13 @@ timeline_cycle_time:
 # Robot actions which are one out of a dict of possible actions
 # Dict items should be ordered, values are shortened string from qr
 categorical_actions:
-  chain_amp:
+  stage_level_amp:
     list: ["N", "F", "O"]
     type: str
-  chain_blind:
+  stage_level_blind:
     list: ["N", "F", "O"]
     type: str
-  chain_source:
+  stage_level_source:
     list: ["N", "F", "O"]
     type: str
   start_position:
@@ -254,6 +271,6 @@ categorical_actions:
   has_preload:
     list: [True, False]
     type: bool
-  park:
+  parked:
     list: [True, False]
     type: bool
