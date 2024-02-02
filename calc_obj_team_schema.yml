@@ -575,6 +575,13 @@ special_counts:
       - obj_tim.chain_blind: 'O'
       - obj_tim.chain_source: 'O'
     type: int
+  lfm_climb_after_successes: 
+    tim_fields: 
+      - subj_tim.climb_after: True 
+      - obj_tim.chain_amp: 'O'
+      - obj_tim.chain_blind: 'O'
+      - obj_tim.chain_source: 'O'
+    type: int
 
 # Objective counts collected by Super Scouts
 super_counts:
