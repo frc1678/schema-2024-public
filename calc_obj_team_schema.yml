@@ -571,7 +571,9 @@ special_counts:
   climb_after_successes: 
     tim_fields: 
       - subj_tim.climb_after: True 
-      - obj_tim.stage_level: 'O'
+      - obj_tim.chain_amp: 'O'
+      - obj_tim.chain_blind: 'O'
+      - obj_tim.chain_source: 'O'
     type: int
 
 # Objective counts collected by Super Scouts
@@ -785,6 +787,10 @@ success_rates:
   lfm_onstage_percent_success:
     team_successes: [lfm_onstage_successes]
     team_attempts: [lfm_onstage_attempts]
+    type: float
+  lfm_climb_after_percent_success: 
+    team_successes: [lfm_climb_after_successes]
+    team_attempts: [lfm_matches_climb_after]
     type: float
   lfm_chain_amp_percent_success:
     team_successes: [chain_amp_successes]
