@@ -3,159 +3,284 @@
 # Example:
 #
 # {
-#     "team_number": "5683",
-#    "auto_avg_amp": 2.1114,
-#    "auto_avg_speaker": 1.3233,
-#    "auto_avg_total_intakes": 2.926,
-#    "auto_avg_total_pieces": 5.6445,
-#    "tele_avg_amp": 2.9809,
-#    "tele_avg_speaker": 3.9741,
-#    "tele_avg_speaker_amped": 6.3262,
-#    "tele_avg_intakes_amp": 5.2139,
-#    "tele_avg_intakes_center": 5.3315,
-#    "tele_avg_intakes_far": 4.3327,
-#    "tele_avg_intakes_poach": 4.7194,
-#    "tele_avg_shoot_other": 0.3274,
-#    "tele_avg_total_intakes": 3.587,
-#    "tele_avg_total_pieces": 2.0606,
-#    "avg_driver_ability": 6.1973,
-#    "avg_failed_score": 5.8277,
-#    "avg_incap_time": 0.8858,
-#    "avg_total_intakes": 1.7679,
-#    "avg_total_pieces": 4.1947,
-#    "lfm_auto_avg_speaker": 2.1985,
-#    "lfm_auto_avg_amp": 2.0293,
-#    "lfm_auto_avg_total_intakes": 4.426,
-#    "lfm_auto_avg_total_pieces": 5.7537,
-#    "lfm_tele_avg_speaker": 4.367,
-#    "lfm_tele_avg_amp": 4.6392,
-#    "lfm_tele_avg_intakes_poach": 1.369,
-#    "lfm_tele_avg_intakes_center": 2.999,
-#    "lfm_tele_avg_intakes_far": 4.3648,
-#    "lfm_tele_avg_intakes_amp": 3.5951,
-#    "lfm_avg_incap_time": 0.6634,
-#    "lfm_tele_avg_shoot_other": 0.0162,
-#    "lfm_avg_failed_scores": 4.4105,
-#    "lfm_tele_avg_total_intakes": 6.1701,
-#    "lfm_tele_avg_total_pieces": 2.946,
-#    "lfm_avg_total_intakes": 3.4715,
-#    "lfm_avg_total_pieces": 5.4621,
-#    "lfm_tele_avg_speaker_amped": 0.3771,
-#    "auto_sd_amp": 2.3652,
-#    "auto_sd_speaker": 2.0062,
-#    "auto_sd_total_intakes": 2.3103,
-#    "auto_sd_total_pieces": 1.9576,
-#    "tele_sd_amp": 6.9008,
-#    "tele_sd_speaker": 3.0217,
-#    "tele_sd_speaker_amped": 5.4839,
-#    "tele_sd_intakes_amp": 2.7427,
-#    "tele_sd_intakes_center": 4.8698,
-#    "tele_sd_intakes_far": 1.9999,
-#    "tele_sd_intakes_poach": 1.2625,
-#    "tele_sd_shoot_other": 6.5984,
-#    "tele_sd_total_intakes": 6.9338,
-#    "tele_sd_total_pieces": 0.2558,
-#    "sd_failed_score": 5.0361,
-#    "sd_incap_time": 3.532,
-#    "sd_total_intakes": 4.8668,
-#    "sd_total_pieces": 5.2559,
-#    "lfm_auto_sd_total_pieces": 3.9951,
-#    "lfm_tele_sd_total_pieces": 6.9248,
-#    "endgame_attempts": 8,
-#    "onstage_attempts": 1,
-#    "onstage_successes": 4,
-#    "parks": 1,
-#    "stage_fails": 2,
-#    "position_zero_starts": 4,
-#    "position_one_starts": 4,
-#    "position_two_starts": 6,
-#    "position_three_starts": 9,
-#    "preloaded_starts": 1,
-#    "matches_incap": 8,
-#    "matches_played": 7,
-#    "lfm_endgame_attempts": 2,
-#    "lfm_onstage_attempts": 8,
-#    "lfm_onstage_successes": 4,
-#    "lfm_parks": 4,
-#    "lfm_stage_fails": 2,
-#    "lfm_position_zero_starts": 4,
-#    "lfm_position_one_starts": 9,
-#    "lfm_position_two_starts": 1,
-#    "lfm_position_three_starts": 2,
-#    "lfm_preloaded_starts": 4,
-#    "lfm_matches_incap": 2,
-#    "matches_tippy": 3,
-#    "lfm_matches_tippy": 7,
-#    "matches_climb_after": 6,
-#    "lfm_matches_climb_after": 2,
-#    "matches_played_defense": 7,
-#    "lfm_matches_played_defense": 7,
-#    "auto_max_speaker": 7,
-#    "auto_max_amp": 4,
-#    "auto_max_total_intakes": 7,
-#    "auto_max_total_pieces": 8,
-#    "tele_max_speaker": 4,
-#    "tele_max_amp": 2,
-#    "tele_max_shoot_other": 1,
-#    "tele_max_total_intakes": 3,
-#    "tele_max_total_pieces": 5,
-#    "max_incap_time": 9,
-#    "max_failed_scores": 3,
-#    "max_total_intakes": 6,
-#    "max_total_pieces": 7,
-#    "lfm_auto_max_speaker": 1,
-#    "lfm_auto_max_amp": 2,
-#    "lfm_auto_max_total_intakes": 1,
-#    "lfm_auto_max_total_pieces": 7,
-#    "lfm_tele_max_speaker": 8,
-#    "lfm_tele_max_amp": 5,
-#    "lfm_tele_max_shoot_other": 3,
-#    "lfm_tele_max_total_intakes": 3,
-#    "lfm_tele_max_total_pieces": 7,
-#    "lfm_max_incap_time": 3,
-#    "lfm_max_failed_scores": 4,
-#    "lfm_max_total_intakes": 4,
-#    "lfm_max_total_pieces": 2,
-#    "mode_start_position": [
-#        1,
-#        3
-#    ],
-#    "lfm_mode_start_position": [
-#        2,
-#        3,
-#        1,
-#        1
-#    ],
-#    "mode_stage_level": [
-#        "N",
-#        "P",
-#        "O"
-#    ],
-#    "lfm_mode_stage_level": [
-#        "P",
-#        "F",
-#        "N"
-#    ],
-#    "onstage_percent_success": 2.5257,
-#    "lfm_onstage_percent_success": 3.9476,
-#    "onstage_percent": 0.1089,
-#    "park_percent": 5.2275,
-#    "median_nonzero_incap_time": 5.8237,
-#    "lfm_median_nonzero_incap_time": 2.2466,
-#    "auto_avg_total_points": 6.5624,
-#    "tele_avg_total_points": 5.2619,
-#    "avg_endgame_points": 5.7022,
-#    "avg_total_points": 1.7028,
-#    "total_incap": 9,
-#    "lfm_total_incap": 2
+#     "team_number": "4665",
+#     "auto_avg_amp": 36.5271,
+#     "auto_avg_speaker": 7.6323,
+#     "auto_avg_total_intakes": 72.9692,
+#     "auto_avg_total_pieces": 73.5319,
+#     "auto_avg_failed_speaker": 17.6452,
+#     "auto_avg_failed_amp": 77.1664,
+#     "tele_avg_amp": 44.6738,
+#     "tele_avg_speaker": 34.5845,
+#     "tele_avg_amplified": 76.6183,
+#     "tele_avg_intake_amp": 17.8006,
+#     "tele_avg_intake_center": 82.4641,
+#     "tele_avg_intake_far": 26.4797,
+#     "tele_avg_intake_poach": 35.8536,
+#     "tele_avg_ferry": 44.2393,
+#     "tele_avg_total_intakes": 66.3945,
+#     "tele_avg_total_pieces": 38.5661,
+#     "tele_avg_total_failed_pieces": 25.8451,
+#     "tele_avg_failed_amplified": 63.0462,
+#     "tele_avg_failed_amp": 83.4782,
+#     "tele_avg_failed_speaker": 35.6877,
+#     "avg_incap_time": 36.6085,
+#     "avg_total_intakes": 51.9199,
+#     "avg_total_pieces": 26.4874,
+#     "tele_avg_drop": 89.0391,
+#     "lfm_auto_avg_speaker": 71.0158,
+#     "lfm_auto_avg_failed_speaker": 30.7113,
+#     "lfm_auto_avg_amp": 69.4422,
+#     "lfm_auto_avg_failed_amp": 25.8134,
+#     "lfm_auto_avg_total_intakes": 89.5301,
+#     "lfm_auto_avg_total_pieces": 87.8041,
+#     "lfm_auto_avg_total_failed_pieces": 64.3632,
+#     "lfm_auto_avg_total_points": 15.5311,
+#     "lfm_tele_avg_speaker": 12.692,
+#     "lfm_tele_avg_failed_speaker": 75.9084,
+#     "lfm_tele_avg_failed_amp": 50.5667,
+#     "lfm_tele_avg_failed_amplified": 90.9452,
+#     "lfm_tele_avg_amp": 30.5539,
+#     "lfm_tele_avg_intake_center": 39.8955,
+#     "lfm_tele_avg_intake_far": 97.7299,
+#     "lfm_tele_avg_intake_amp": 66.0505,
+#     "lfm_tele_avg_intake_poach": 60.9397,
+#     "lfm_avg_incap_time": 41.1942,
+#     "lfm_tele_avg_ferry": 35.0701,
+#     "lfm_tele_avg_drop": 71.1242,
+#     "lfm_tele_avg_total_intakes": 88.1321,
+#     "lfm_tele_avg_total_pieces": 56.421,
+#     "lfm_tele_avg_total_failed_pieces": 78.4918,
+#     "lfm_avg_total_intakes": 9.2678,
+#     "lfm_avg_failed_amp": 48.1478,
+#     "lfm_avg_failed_speaker": 0.197,
+#     "lfm_avg_total_pieces": 82.24,
+#     "lfm_avg_trap": 95.4166,
+#     "lfm_tele_avg_amplified": 73.5557,
+#     "lfm_avg_total_points": 53.8958,
+#     "lfm_endgame_avg_total_points": 95.3679,
+#     "lfm_tele_avg_total_points": 88.2432,
+#     "auto_sd_amp": 6.7684,
+#     "auto_sd_failed_amp": 40.2743,
+#     "auto_sd_speaker": 27.8925,
+#     "auto_sd_total_intakes": 66.1347,
+#     "auto_sd_total_pieces": 76.9773,
+#     "auto_sd_total_failed_pieces": 90.703,
+#     "auto_sd_total_points": 89.5934,
+#     "tele_sd_amp": 3.3095,
+#     "tele_sd_speaker": 16.5254,
+#     "tele_sd_amplified": 88.2787,
+#     "tele_sd_intakes_amp": 42.3693,
+#     "tele_sd_intake_center": 40.034,
+#     "tele_sd_intake_far": 74.155,
+#     "tele_sd_intake_poach": 72.6552,
+#     "tele_sd_ferry": 97.076,
+#     "tele_sd_total_intakes": 59.0082,
+#     "tele_sd_intake_amp": 4.3555,
+#     "tele_sd_total_pieces": 7.7938,
+#     "tele_sd_total_failed_pieces": 0.8029,
+#     "tele_sd_failed_amp": 35.7835,
+#     "tele_sd_failed_amplified": 81.7733,
+#     "tele_sd_drop": 80.5208,
+#     "tele_sd_total_points": 45.6527,
+#     "sd_incap_time": 75.1801,
+#     "endgame_sd_total_points": 21.4305,
+#     "sd_total_points": 60.922,
+#     "lfm_auto_sd_total_pieces": 61.4263,
+#     "lfm_auto_sd_total_intakes": 56.7544,
+#     "lfm_tele_sd_total_failed_pieces": 15.4936,
+#     "lfm_auto_sd_total_failed_pieces": 29.6332,
+#     "lfm_auto_sd_amp": 17.024,
+#     "lfm_auto_sd_failed_amp": 86.3842,
+#     "lfm_auto_sd_speaker": 5.9993,
+#     "lfm_auto_sd_failed_speaker": 36.2917,
+#     "lfm_tele_sd_speaker": 86.6339,
+#     "lfm_tele_sd_failed_speaker": 72.1002,
+#     "lfm_tele_sd_ferry": 79.3271,
+#     "lfm_tele_sd_drop": 11.3999,
+#     "lfm_tele_sd_intake_amp": 65.0147,
+#     "lfm_tele_sd_intake_poach": 37.6633,
+#     "lfm_tele_sd_intake_center": 84.1968,
+#     "lfm_tele_sd_amp": 2.5088,
+#     "lfm_tele_sd_amplified": 7.7385,
+#     "lfm_tele_sd_failed_amplified": 27.5759,
+#     "lfm_tele_sd_failed_amp": 80.3039,
+#     "lfm_sd_total_points": 45.4553,
+#     "lfm_endgame_sd_total_points": 38.3956,
+#     "lfm_tele_sd_total_intakes": 11.4173,
+#     "lfm_tele_sd_total_points": 87.1996,
+#     "lfm_auto_sd_total_points": 64.5376,
+#     "lfm_sd_incap_time": 35.8519,
+#     "stage_attempts_amp": 43,
+#     "stage_attempts_blind": 25,
+#     "stage_attempts_source": 93,
+#     "stage_attempts_all": 2,
+#     "stage_successes_amp": 28,
+#     "stage_successes_blind": 73,
+#     "stage_successes_source": 100,
+#     "stage_successes_all": 68,
+#     "trap_attempts": 35,
+#     "trap_successes": 46,
+#     "parks": 29,
+#     "stage_fails_all": 11,
+#     "stage_fails_amp": 88,
+#     "stage_fails_source": 44,
+#     "stage_fails_blind": 58,
+#     "position_zero_starts": 57,
+#     "position_one_starts": 62,
+#     "position_two_starts": 10,
+#     "position_three_starts": 47,
+#     "position_four_starts": 34,
+#     "preloaded_starts": 8,
+#     "matches_incap": 51,
+#     "matches_played": 19,
+#     "lfm_stage_attempts_amp": 91,
+#     "lfm_stage_attempts_blind": 58,
+#     "lfm_stage_attempts_source": 66,
+#     "lfm_stage_attempts_all": 93,
+#     "lfm_stage_successes_all": 23,
+#     "lfm_stage_successes_amp": 74,
+#     "lfm_stage_successes_blind": 17,
+#     "lfm_stage_successes_source": 30,
+#     "lfm_trap_successes": 58,
+#     "lfm_trap_attempts": 34,
+#     "trap_fails": 2,
+#     "lfm_trap_fails": 17,
+#     "lfm_parks": 24,
+#     "lfm_stage_fails_amp": 61,
+#     "lfm_stage_fails_source": 3,
+#     "lfm_stage_fails_blind": 79,
+#     "lfm_stage_fails_all": 34,
+#     "lfm_position_zero_starts": 14,
+#     "lfm_position_one_starts": 94,
+#     "lfm_position_two_starts": 67,
+#     "lfm_position_three_starts": 7,
+#     "lfm_position_four_starts": 14,
+#     "lfm_preloaded_starts": 87,
+#     "lfm_matches_incap": 31,
+#     "climb_after_successes": 15,
+#     "matches_tippy": 96,
+#     "lfm_matches_tippy": 45,
+#     "matches_climb_after": 96,
+#     "lfm_matches_climb_after": 99,
+#     "matches_played_defense": 72,
+#     "lfm_matches_played_defense": 71,
+#     "auto_max_speaker": 40,
+#     "auto_max_amp": 88,
+#     "auto_max_failed_speaker": 30,
+#     "auto_max_failed_amp": 69,
+#     "auto_max_total_intakes": 61,
+#     "auto_max_total_pieces": 11,
+#     "auto_max_total_failed_pieces": 86,
+#     "tele_max_speaker": 25,
+#     "tele_max_amplified": 0,
+#     "tele_max_amp": 55,
+#     "tele_max_ferry": 13,
+#     "tele_max_total_intakes": 11,
+#     "tele_max_total_pieces": 2,
+#     "tele_max_total_failed_pieces": 45,
+#     "tele_max_failed_amp": 80,
+#     "tele_max_failed_amplified": 49,
+#     "tele_max_intake_amp": 27,
+#     "tele_max_intake_poach": 10,
+#     "tele_max_intake_center": 44,
+#     "tele_max_intake_far": 16,
+#     "max_incap_time": 63,
+#     "max_failed_scores": 19,
+#     "max_failed_amp": 29,
+#     "max_failed_speaker": 63,
+#     "max_total_intakes": 5,
+#     "max_total_pieces": 37,
+#     "tele_max_drop": 56,
+#     "endgame_max_total_points": 9,
+#     "max_total_points": 84,
+#     "tele_max_total_points": 37,
+#     "lfm_auto_max_speaker": 43,
+#     "lfm_auto_max_failed_speaker": 19,
+#     "lfm_auto_max_amp": 84,
+#     "lfm_auto_max_failed_amp": 62,
+#     "lfm_auto_max_total_intakes": 0,
+#     "lfm_auto_max_total_pieces": 42,
+#     "lfm_tele_max_speaker": 71,
+#     "lfm_tele_max_failed_speaker": 69,
+#     "lfm_tele_max_failed_amp": 39,
+#     "lfm_tele_max_failed_amplified": 42,
+#     "lfm_tele_max_amplified": 87,
+#     "lfm_tele_max_amp": 11,
+#     "lfm_tele_max_intake_amp": 82,
+#     "lfm_tele_max_intake_center": 51,
+#     "lfm_tele_max_intake_poach": 74,
+#     "lfm_tele_max_intake_far": 11,
+#     "lfm_tele_max_ferry": 94,
+#     "lfm_tele_max_drop": 27,
+#     "lfm_tele_max_total_intakes": 37,
+#     "lfm_tele_max_total_pieces": 91,
+#     "lfm_tele_max_total_points": 90,
+#     "lfm_auto_max_total_failed_pieces": 19,
+#     "lfm_max_incap_time": 84,
+#     "lfm_max_failed_scores": 20,
+#     "lfm_max_failed_amp": 70,
+#     "lfm_max_failed_speaker": 77,
+#     "lfm_max_total_intakes": 49,
+#     "lfm_max_total_pieces": 91,
+#     "lfm_max_total_points": 39,
+#     "lfm_auto_max_total_points": 92,
+#     "lfm_endgame_max_total_points": 80,
+#     "mode_start_position": ["2", "4", "0"],
+#     "lfm_mode_start_position": ["1", "3", "4"],
+#     "mode_stage_level_all": None,
+#     "mode_stage_level_amp": None,
+#     "mode_stage_level_source": None,
+#     "mode_stage_level_blind": None,
+#     "lfm_mode_stage_level_amp": None,
+#     "lfm_mode_stage_level_source": None,
+#     "lfm_mode_stage_level_blind": None,
+#     "lfm_mode_stage_level_all": None,
+#     "mode_trap_state": None,
+#     "lfm_mode_trap_state": None,
+#     "auto_amp_percent_success": 59.5222,
+#     "tele_amp_percent_success": 25.5966,
+#     "total_amp_percent_success": 66.5686,
+#     "auto_speaker_percent_success": 63.8714,
+#     "tele_speaker_percent_success": 57.6564,
+#     "total_speaker_percent_success": 92.2205,
+#     "climb_after_percent_success": 62.0565,
+#     "stage_percent_success_all": 40.2858,
+#     "stage_percent_success_amp": 27.2911,
+#     "stage_percent_success_blind": 11.6628,
+#     "stage_percent_success_source": 26.2836,
+#     "trap_percent_success": 4.3575,
+#     "park_percent": 62.5689,
+#     "lfm_stage_percent_success_all": 43.3975,
+#     "lfm_climb_after_percent_success": 96.5477,
+#     "lfm_stage_percent_success_blind": 97.0174,
+#     "lfm_stage_percent_success_source": 86.1686,
+#     "lfm_trap_percent_success": 24.7563,
+#     "lfm_park_percent": 56.5613,
+#     "lfm_auto_amp_percent_success": 67.2366,
+#     "lfm_tele_amp_percent_success": 50.7673,
+#     "lfm_total_amp_percent_success": 27.2435,
+#     "lfm_auto_speaker_percent_success": 24.0819,
+#     "lfm_tele_speaker_percent_success": 52.776,
+#     "lfm_total_speaker_percent_success": 38.2207,
+#     "median_nonzero_incap_time": 7.2819,
+#     "lfm_median_nonzero_incap_time": 6.022,
+#     "auto_avg_total_points": 48.4478,
+#     "tele_avg_total_points": 32.7799,
+#     "endgame_avg_total_points": 88.0013,
+#     "avg_total_points": 95.2805,
+#     "total_incap_time": 5,
+#     "lfm_total_incap_time": 72,
 # }
-#
 
+
+
+# doozer
 # Contains information about this schema file
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -176,29 +301,35 @@ averages:
   auto_avg_total_pieces:
     tim_fields: [obj_tim.auto_total_pieces]
     type: float
+  auto_avg_failed_speaker:
+    tim_fields: [obj_tim.auto_failed_speaker]
+    type: float
+  auto_avg_failed_amp:
+    tim_fields: [obj_tim.auto_failed_amp]
+    type: float
   tele_avg_amp:
     tim_fields: [obj_tim.tele_amp]
     type: float
   tele_avg_speaker:
     tim_fields: [obj_tim.tele_speaker]
     type: float
-  tele_avg_speaker_amped:
-    tim_fields: [obj_tim.tele_speaker_amped]
+  tele_avg_amplified:
+    tim_fields: [obj_tim.tele_amplified]
     type: float
-  tele_avg_intakes_amp:
+  tele_avg_intake_amp:
     tim_fields: [obj_tim.tele_intakes_amp]
     type: float
-  tele_avg_intakes_center:
+  tele_avg_intake_center:
     tim_fields: [obj_tim.tele_intakes_center]
     type: float
-  tele_avg_intakes_far:
+  tele_avg_intake_far:
     tim_fields: [obj_tim.tele_intakes_far]
     type: float
-  tele_avg_intakes_poach:
+  tele_avg_intake_poach:
     tim_fields: [obj_tim.tele_intakes_poach]
     type: float
-  tele_avg_shoot_other:
-    tim_fields: [obj_tim.tele_shoot_other]
+  tele_avg_ferry:
+    tim_fields: [obj_tim.tele_ferry]
     type: float
   tele_avg_total_intakes:
     tim_fields: [obj_tim.tele_total_intakes]
@@ -206,22 +337,19 @@ averages:
   tele_avg_total_pieces:
     tim_fields: [obj_tim.tele_total_pieces]
     type: float
-  avg_failed_score:
-    tim_fields: [obj_tim.failed_score]
+  tele_avg_total_failed_pieces:
+    tim_fields: [obj_tim.tele_total_failed_pieces]
     type: float
-  tele_failed_score_amp:
-    type: int
-    tim_fields: [obj_tim.tele_failed_score_amp]
-  tele_failed_score_speaker:
-    type: int
-    tim_fields: [obj_tim.tele_failed_score_speaker]
-  auto_failed_score_amp:
-    type: int
-    tim_fields: [obj_tim.auto_failed_score_amp]
-  auto_failed_score_speaker:
-    type: int
-    tim_fields: [obj_tim.auto_failed_score_speaker]
-  avg_incap:
+  tele_avg_failed_amplified:
+    tim_fields: [obj_tim.tele_failed_amplified]
+    type: float
+  tele_avg_failed_amp:
+    tim_fields: [obj_tim.tele_failed_amp]
+    type: float 
+  tele_avg_failed_speaker:
+    tim_fields: [obj_tim.tele_failed_speaker]
+    type: float
+  avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float 
   avg_total_intakes:
@@ -230,14 +358,20 @@ averages:
   avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
     type: float
-  avg_dropped_pieces: 
-    tim_fields: [obj_tim.dropped_pieces]
+  tele_avg_drop: 
+    tim_fields: [obj_tim.tele_drop]
     type: float
   lfm_auto_avg_speaker:
     tim_fields: [obj_tim.auto_speaker]
     type: float
+  lfm_auto_avg_failed_speaker: 
+    tim_fields: [obj_tim.auto_failed_speaker]
+    type: float
   lfm_auto_avg_amp:
     tim_fields: [obj_tim.auto_amp]
+    type: float
+  lfm_auto_avg_failed_amp: 
+    tim_fields: [obj_tim.auto_failed_amp]
     type: float
   lfm_auto_avg_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
@@ -245,32 +379,47 @@ averages:
   lfm_auto_avg_total_pieces:
     tim_fields: [obj_tim.auto_total_pieces]
     type: float
+  lfm_auto_avg_total_failed_pieces: 
+    tim_fields: [obj_tim.auto_total_failed_pieces]
+    type: float
+  lfm_auto_avg_total_points:
+    tim_fields: [obj_tim.auto_total_points]
+    type: float
   lfm_tele_avg_speaker:
     tim_fields: [obj_tim.tele_speaker]
+    type: float
+  lfm_tele_avg_failed_speaker: 
+    tim_fields: [obj_tim.tele_failed_speaker]
+    type: float
+  lfm_tele_avg_failed_amp:
+    tim_fields: [obj_tims.tele_failed_amp]
+    type: float
+  lfm_tele_avg_failed_amplified:
+    tim_fields: [obj_tims.tele_failed_amplified]
     type: float
   lfm_tele_avg_amp:
     tim_fields: [obj_tim.tele_amp]
     type: float
-  lfm_tele_avg_intakes_poach:
-    tim_fields: [obj_tim.tele_intakes_poach]
-    type: float
-  lfm_tele_avg_intakes_center:
+  lfm_tele_avg_intake_center:
     tim_fields: [obj_tim.tele_intakes_center]
     type: float
-  lfm_tele_avg_intakes_far:
+  lfm_tele_avg_intake_far:
     tim_fields: [obj_tim.tele_intakes_far]
     type: float
-  lfm_tele_avg_intakes_amp:
+  lfm_tele_avg_intake_amp:
     tim_fields: [obj_tim.tele_intakes_amp]
     type: float
-  lfm_avg_incap:
+  lfm_tele_avg_intake_poach:
+    tim_fields: [obj_tim.tele_intakes_poach]
+    type: float
+  lfm_avg_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
-  lfm_tele_avg_shoot_other:
-    tim_fields: [obj_tim.tele_shoot_other]
+  lfm_tele_avg_ferry:
+    tim_fields: [obj_tim.tele_ferry]
     type: float
-  lfm_avg_failed_scores:
-    tim_fields: [obj_tim.failed_score]
+  lfm_tele_avg_drop:
+    tim_fields: [obj_tim.tele_drop]
     type: float
   lfm_tele_avg_total_intakes:
     tim_fields: [obj_tim.tele_total_intakes]
@@ -278,29 +427,35 @@ averages:
   lfm_tele_avg_total_pieces:
     tim_fields: [obj_tim.tele_total_pieces]
     type: float
+  lfm_tele_avg_total_failed_pieces: 
+    tim_fields: [obj_tim.tele_total_failed_pieces]
+    type: float
   lfm_avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
-  lfm_avg_incap:
-    tim_fields: [obj_tim.incap]
+  lfm_avg_failed_amp:
+    tim_fields: [obj_tim.failed_amp]
     type: float
-  lfm_avg_failed_score:
-    tim_fields: [obj_tim.failed_score]
-    type: float
-  lfm_avg_failed_score_amp:
-    tim_fields: [obj_tim.failed_score_amp]
-    type: float
-  lfm_avg_failed_score_speaker:
-    tim_fields: [obj_tim.failed_score_speaker]
+  lfm_avg_failed_speaker:
+    tim_fields: [obj_tim.failed_speaker]
     type: float
   lfm_avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
     type: float
-  lfm_avg_dropped_pieces:
-    tim_fields: [obj_tim.dropped_pieces]
+  lfm_avg_trap:
+    tim_fields: [obj_tim.tele_trap]
     type: float
-  lfm_tele_avg_speaker_amped:
-    tim_fields: [obj_tim.tele_speaker_amped]
+  lfm_tele_avg_amplified:
+    tim_fields: [obj_tim.tele_amplified]
+    type: float
+  lfm_avg_total_points:
+    tim_fields: [obj_tim.total_points]
+    type: float
+  lfm_endgame_avg_total_points:
+    tim_fields: [obj_tim.endgame_total_points]
+    type: float
+  lfm_tele_avg_total_points:
+    tim_fields: [obj_tim.tele_total_points]
     type: float
 
 # Standard deviations of fields in consolidated TIMs
@@ -308,6 +463,9 @@ averages:
 standard_deviations:
   auto_sd_amp:
     tim_fields: [obj_tim.auto_amp]
+    type: float
+  auto_sd_failed_amp:
+    tim_fields: [obj_tim.auto_failed_amp]
     type: float
   auto_sd_speaker:
     tim_fields: [obj_tim.auto_speaker]
@@ -318,111 +476,195 @@ standard_deviations:
   auto_sd_total_pieces:
     tim_fields: [obj_tim.auto_total_pieces]
     type: float
+  auto_sd_total_failed_pieces:
+    tim_fields: [obj_tim.auto_total_failed_pieces]
+    type: float
+  auto_sd_total_points: 
+    tim_fields: [obj_tim.auto_total_points]
+    type: float
   tele_sd_amp:
     tim_fields: [obj_tim.tele_amp]
     type: float
   tele_sd_speaker:
     tim_fields: [obj_tim.tele_speaker]
     type: float
-  tele_sd_speaker_amped:
-    tim_fields: [obj_tim.tele_speaker_amped]
+  tele_sd_amplified:
+    tim_fields: [obj_tim.tele_amplified]
     type: float
   tele_sd_intakes_amp:
     tim_fields: [obj_tim.tele_intakes_amp]
     type: float
-  tele_sd_intakes_center:
+  tele_sd_intake_center:
     tim_fields: [obj_tim.tele_intakes_center]
     type: float
-  tele_sd_intakes_far:
+  tele_sd_intake_far: 
     tim_fields: [obj_tim.tele_intakes_far]
     type: float
-  tele_sd_intakes_poach:
+  tele_sd_intake_poach:
     tim_fields: [obj_tim.tele_intakes_poach]
     type: float
-  tele_sd_shoot_other:
-    tim_fields: [obj_tim.tele_shoot_other]
+  tele_sd_ferry:
+    tim_fields: [obj_tim.tele_ferry]
     type: float
   tele_sd_total_intakes:
     tim_fields: [obj_tim.tele_total_intakes]
     type: float
+  tele_sd_intake_amp:
+    tim_fields: [obj_tim.tele_intake_amp]
+    type: float
   tele_sd_total_pieces:
     tim_fields: [obj_tim.tele_total_pieces]
     type: float
-  sd_failed_score:
-    tim_fields: [obj_tim.failed_score]
+  tele_sd_total_failed_pieces:
+    tim_fields: [obj_tim.tele_total_failed_pieces]
+    type: float 
+  tele_sd_failed_amp:
+    tim_fields: [obj_tim.tele_failed_amp]
     type: float
-  sd_failed_score_amp:
-    tim_fields: [obj_tim.failed_score_amp]
+  tele_sd_failed_amplified:
+    tim_fields: [obj_tim.tele_failed_amplified]
     type: float
-  sd_failed_score_speaker:
-    tim_fields: [obj_tim.failed_score_speaker]
+  tele_sd_drop: 
+    tim_fields: [obj_tim.tele_drop]
     type: float
-  sd_incap:
+  tele_sd_total_points:
+    tim_fields: [obj_tim.tele_total_points]
+    type: float
+  sd_incap_time:
     tim_fields: [obj_tim.incap]
     type: float
-  sd_total_intakes:
-    tim_fields: [obj_tim.total_intakes]
+  tele_sd_drop: 
+    tim_fields: [obj_tim.tele_drop]
     type: float
-  sd_total_pieces:
-    tim_fields: [obj_tim.total_pieces]
+  endgame_sd_total_points:
+    tim_fields: [obj_tim.endgame_total_points]
     type: float
-  sd_dropped_pieces: 
-    tim_fields: [obj_tim.dropped_pieces]
+  sd_total_points:
+    tim_fields: [obj_tim.total_points]
     type: float
   lfm_auto_sd_total_pieces:
     tim_fields: [obj_tim.auto_total_pieces]
     type: float
-  lfm_tele_sd_total_pieces:
-    tim_fields: [obj_tim.tele_total_pieces]
+  lfm_auto_sd_total_intakes: 
+    tim_fields: [obj_tim.auto_total_intakes]
     type: float
-  lfm_tele_sd_shoot_other: 
-    tim_fields: [obj_tim.tele_shoot_other]
+  lfm_tele_sd_total_failed_pieces:
+    tim_fields: [obj_tim.tele_total_failed_pieces]
     type: float
-  lfm_sd_dropped_pieces: 
-    tim_fields: [obj_tim.dropped_pieces]
+  lfm_tele_sd_total_failed_pieces:
+    tim_fields: [obj_tim.tele_total_failed_pieces]
+    type: float
+  lfm_auto_sd_total_failed_pieces:
+    tim_fields: [obj_tim.auto_total_failed_pieces]
+    type: float
+  lfm_auto_sd_amp: 
+    tim_fields: [obj_tim.auto_amp]
+    type: float
+  lfm_auto_sd_failed_amp: 
+    tim_fields: [obj_tim.auto_failed_amp]
+    type: float
+  lfm_auto_sd_speaker: 
+    tim_fields: [obj_tim.auto_speaker]
+    type: float
+  lfm_auto_sd_failed_speaker: 
+    tim_fields: [obj_tim.auto_failed_speaker]
+    type: float
+  lfm_tele_sd_speaker: 
+    tim_fields: [obj_tim.tele_speaker]
+    type: float
+  lfm_tele_sd_failed_speaker: 
+    tim_fields: [obj_tim.tele_failed_speaker]
+    type: float
+  lfm_tele_sd_ferry: 
+    tim_fields: [obj_tim.tele_ferry]
+    type: float
+  lfm_tele_sd_drop: 
+    tim_fields: [obj_tim.tele_drop]
+    type: float
+  lfm_tele_sd_intake_amp:
+    tim_fields: [obj_tim.tele_intakes_amp]
+    type: float
+  lfm_tele_sd_intake_poach:
+    tim_fields: [obj_tim.tele_intakes_poach]
+    type: float
+  lfm_tele_sd_intake_center:
+    tim_fields: [obj_tim.tele_intakes_center]
+    type: float
+  lfm_tele_sd_amp: 
+    tim_fields: [obj_tim.tele_amp]
+    type: float
+  lfm_tele_sd_amplified:
+    tim_fields: [obj_tim.tele_amplified]
+    type: float
+  lfm_tele_sd_failed_amplified: 
+    tim_fields: [obj_tim.tele_failed_amplified]
+    type: float
+  lfm_tele_sd_failed_amp:
+    tim_fields: [obj_tim.tele_failed_amp]
+    type: float
+  lfm_tele_sd_drop: 
+    tim_fields: [obj_tim.tele_drop]
+    type: float
+  lfm_sd_total_points:
+    tim_fields: [obj_tim.total_points]
+    type: float
+  lfm_endgame_sd_total_points:
+    tim_fields: [obj_tim.endgame_total_points]
+    type: float
+  lfm_tele_sd_total_intakes:
+    tim_fields: [obj_tim.tele_total_intakes]
+    type: float
+  lfm_tele_sd_total_points:
+    tim_fields: [obj_tim.tele_total_points]
+    type: float
+  lfm_auto_sd_total_points:
+    tim_fields: [obj_tim.auto_total_points]
+    type: float
+  lfm_sd_incap_time:
+    tim_fields: [obj_tim.incap]
     type: float
 
 # Counts of occurrences in consolidated TIMs
 counts:
-  chain_amp_attempts:
+  stage_attempts_amp:
     tim_fields:
       not: 
-        obj_tim.chain_amp: 'N'
+        obj_tim.stage_level_amp: 'N'
     type: int
-  chain_blind_attempts:
+  stage_attempts_blind:
     tim_fields:
       not: 
-        obj_tim.chain_blind: 'N'
+        obj_tim.stage_level_blind: 'N'
     type: int
-  chain_source_attempts:
+  stage_attempts_source:
     tim_fields:
       not: 
-        obj_tim.chain_source: 'N'
+        obj_tim.stage_level_source: 'N'
     type: int
-  onstage_attempts:
+  stage_attempts_all:
     tim_fields:
       not:
-        - obj_tim.chain_amp: 'N'
-        - obj_tim.chain_blind: 'N'
-        - obj_tim.chain_source: 'N'
+        - obj_tim.stage_level_amp: 'N'
+        - obj_tim.stage_level_blind: 'N'
+        - obj_tim.stage_level_source: 'N'
     type: int
-  chain_amp_successes:
+  stage_successes_amp:
     tim_fields:
-      obj_tim.chain_amp: 'O'
+      obj_tim.stage_level_amp: 'O'
     type: int
-  chain_blind_successes:
+  stage_successes_blind:
     tim_fields:
-      obj_tim.chain_blind: 'O'
+      obj_tim.stage_level_blind: 'O'
     type: int
-  chain_source_successes:
+  stage_successes_source:
     tim_fields:
-      obj_tim.chain_source: 'O'
+      obj_tim.stage_level_source: 'O'
     type: int
-  onstage_successes:
+  stage_successes_all:
     tim_fields:
-      - obj_tim.chain_amp: 'O'
-      - obj_tim.chain_blind: 'O'
-      - obj_tim.chain_source: 'O'
+      - obj_tim.stage_level_amp: 'O'
+      - obj_tim.stage_level_blind: 'O'
+      - obj_tim.stage_level_source: 'O'
     type: int
   trap_attempts:
     tim_fields:
@@ -437,11 +679,23 @@ counts:
     tim_fields:
       obj_tim.park: True
     type: int
-  stage_fails:
+  stage_fails_all:
     tim_fields:
-      - obj_tim.chain_amp: 'F'
-      - obj_tim.chain_blind: 'F'
-      - obj_tim.chain_source: 'F'
+      - obj_tim.stage_level_amp: 'F'
+      - obj_tim.stage_level_blind: 'F'
+      - obj_tim.stage_level_source: 'F'
+    type: int
+  stage_fails_amp:
+    tim_fields:
+      - obj_tim.stage_level_amp: 'F'
+    type: int
+  stage_fails_source:
+    tim_fields:
+      - obj_tim.stage_level_source: 'F'
+    type: int
+  stage_fails_blind:
+    tim_fields:
+      - obj_tim.stage_level_blind: 'F'
     type: int
   position_zero_starts:
     tim_fields:
@@ -477,45 +731,45 @@ counts:
       not:
         match_number: 0
     type: int
-  lfm_chain_amp_attempts:
+  lfm_stage_attempts_amp:
     tim_fields:
       not: 
-        obj_tim.chain_amp: 'N'
+        obj_tim.stage_level_amp: 'N'
     type: int
-  lfm_chain_blind_attempts:
+  lfm_stage_attempts_blind:
     tim_fields:
       not: 
-        obj_tim.chain_blind: 'N'
+        obj_tim.stage_level_blind: 'N'
     type: int
-  lfm_chain_source_attempts:
+  lfm_stage_attempts_source:
     tim_fields:
       not: 
-        obj_tim.chain_source: 'N'
+        obj_tim.stage_level_source: 'N'
     type: int
-  lfm_onstage_attempts:
+  lfm_stage_attempts_all:
     tim_fields:
       not:
-        - obj_tim.chain_amp: 'N'
-        - obj_tim.chain_blind: 'N'
-        - obj_tim.chain_source: 'N'
+        - obj_tim.stage_level_amp: 'N'
+        - obj_tim.stage_level_blind: 'N'
+        - obj_tim.stage_level_source: 'N'
     type: int
-  lfm_onstage_successes:
+  lfm_stage_successes_all:
     tim_fields:
-      - obj_tim.chain_amp: 'O'
-      - obj_tim.chain_blind: 'O'
-      - obj_tim.chain_source: 'O'
+      - obj_tim.stage_level_amp: 'O'
+      - obj_tim.stage_level_blind: 'O'
+      - obj_tim.stage_level_source: 'O'
     type: int
-  lfm_chain_amp_successes:
+  lfm_stage_successes_amp:
     tim_fields:
-      obj_tim.chain_amp: 'O'
+      obj_tim.stage_level_amp: 'O'
     type: int
-  lfm_chain_blind_successes:
+  lfm_stage_successes_blind:
     tim_fields:
-      obj_tim.chain_blind: 'O'
+      obj_tim.stage_level_blind: 'O'
     type: int
-  lfm_chain_source_successes:
+  lfm_stage_successes_source:
     tim_fields:
-      obj_tim.chain_source: 'O'
+      obj_tim.stage_level_source: 'O'
     type: int
   lfm_trap_successes:
     tim_fields:
@@ -526,15 +780,35 @@ counts:
       - obj_tim.trap: 'F'
       - obj_tim.trap: 'S'
     type: int
+  trap_fails:
+    tim_fields:
+      - obj_tim.trap: 'F'
+    type: int
+  lfm_trap_fails:
+    tim_fields:
+      - obj_tim.trap: 'F'
+    type: int
   lfm_parks:
     tim_fields:
       obj_tim.park: True
     type: int
-  lfm_stage_fails:
+  lfm_stage_fails_amp:
     tim_fields:
-      - obj_tim.chain_amp: 'F'
-      - obj_tim.chain_blind: 'F'
-      - obj_tim.chain_source: 'F'
+      - obj_tim.stage_level_amp: 'F'
+    type: int
+  lfm_stage_fails_source:
+    tim_fields:
+      - obj_tim.stage_level_source: 'F'
+    type: int
+  lfm_stage_fails_blind:
+    tim_fields:
+      - obj_tim.stage_level_blind: 'F'
+    type: int
+  lfm_stage_fails_all:
+    tim_fields:
+      - obj_tim.stage_level_amp: 'F'
+      - obj_tim.stage_level_blind: 'F'
+      - obj_tim.stage_level_source: 'F'
     type: int
   lfm_position_zero_starts:
     tim_fields:
@@ -571,16 +845,7 @@ special_counts:
   climb_after_successes: 
     tim_fields: 
       - subj_tim.climb_after: True 
-      - obj_tim.chain_amp: 'O'
-      - obj_tim.chain_blind: 'O'
-      - obj_tim.chain_source: 'O'
-    type: int
-  lfm_climb_after_successes: 
-    tim_fields: 
-      - subj_tim.climb_after: True 
-      - obj_tim.chain_amp: 'O'
-      - obj_tim.chain_blind: 'O'
-      - obj_tim.chain_source: 'O'
+      - obj_tim.stage_level: 'O'
     type: int
 
 # Objective counts collected by Super Scouts
@@ -614,6 +879,14 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_amp]
+  auto_max_failed_speaker:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_failed_speaker]
+  auto_max_failed_amp:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_failed_amp]
   auto_max_total_intakes:
     extrema_type: max
     type: int
@@ -622,22 +895,26 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_pieces]
+  auto_max_total_failed_pieces:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_failed_pieces]
   tele_max_speaker:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_speaker]
-  tele_max_speaker_amped:
+  tele_max_amplified:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_speaker_amped]
+    tim_fields: [obj_tim.tele_amplified]
   tele_max_amp:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_amp]
-  tele_max_shoot_other:
+  tele_max_ferry:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_shoot_other]
+    tim_fields: [obj_tim.tele_ferry]
   tele_max_total_intakes:
     extrema_type: max
     type: int
@@ -646,6 +923,34 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_pieces]
+  tele_max_total_failed_pieces:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_failed_pieces]
+  tele_max_failed_amp:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_pieces]
+  tele_max_failed_amplified:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_failed_amplified]
+  tele_max_intake_amp:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_intakes_amp]
+  tele_max_intake_poach:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_intakes_poach]
+    type: int
+  tele_max_intake_center:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_intakes_center]
+    type: int
+  tele_max_intake_far:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_intakes_far]
+    type: int
   max_incap_time:
     extrema_type: max
     type: int
@@ -654,12 +959,12 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.failed_score]
-  max_failed_score_amp:
-    tim_fields: [obj_tim.failed_score_amp]
+  max_failed_amp:
+    tim_fields: [obj_tim.failed_amp]
     type: int
     extrema_type: max
-  max_failed_score_speaker:
-    tim_fields: [obj_tim.failed_score_speaker]
+  max_failed_speaker:
+    tim_fields: [obj_tim.failed_speaker]
     type: int
     extrema_type: max
   max_total_intakes:
@@ -670,18 +975,38 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.total_pieces]
-  max_dropped_pieces: 
+  tele_max_drop: 
     extrema_type: max
     type: int 
-    tim_fields: [obj_tim.dropped_pieces]
+    tim_fields: [obj_tim.tele_drop]
+  endgame_max_total_points:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.endgame_total_points]
+  max_total_points:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.total_points]
+  tele_max_total_points:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_points]
   lfm_auto_max_speaker:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_speaker]
+  lfm_auto_max_failed_speaker: 
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_failed_speaker]
   lfm_auto_max_amp:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_amp]
+  lfm_auto_max_failed_amp: 
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_failed_amp]
   lfm_auto_max_total_intakes:
     extrema_type: max
     type: int
@@ -694,18 +1019,50 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_speaker]
-  lfm_tele_max_speaker_amped:
+  lfm_tele_max_failed_speaker: 
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_speaker_amped]
+    tim_fields: [obj_tim.tele_failed_speaker]
+  lfm_tele_max_failed_amp:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_failed_amp]
+  lfm_tele_max_failed_amplified:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_failed_amplified]
+  lfm_tele_max_amplified:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_amplified]
   lfm_tele_max_amp:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_amp]
-  lfm_tele_max_shoot_other:
+  lfm_tele_max_intake_amp:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_shoot_other]
+    tim_fields: [obj_tim.tele_intakes_amp]
+  lfm_tele_max_intake_center:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_intakes_center]
+  lfm_tele_max_intake_poach:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_intakes_poach]
+  lfm_tele_max_intake_far:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_intakes_far]  
+  lfm_tele_max_ferry:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_ferry]
+  lfm_tele_max_drop:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_drop]
   lfm_tele_max_total_intakes:
     extrema_type: max
     type: int
@@ -714,6 +1071,14 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_pieces]
+  lfm_tele_max_total_points:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_total_points]
+  lfm_auto_max_total_failed_pieces: 
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_failed_pieces]
   lfm_max_incap_time:
     extrema_type: max
     type: int
@@ -722,12 +1087,12 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.failed_score]
-  lfm_max_failed_score_amp:
-    tim_fields: [obj_tim.failed_score_amp]
+  lfm_max_failed_amp:
+    tim_fields: [obj_tim.failed_amp]
     type: int
     extrema_type: max
-  lfm_max_failed_score_speaker:
-    tim_fields: [obj_tim.failed_score_speaker]
+  lfm_max_failed_speaker:
+    tim_fields: [obj_tim.failed_speaker]
     type: int
     extrema_type: max
   lfm_max_total_intakes:
@@ -738,10 +1103,22 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.total_pieces]
-  lfm_max_dropped_pieces: 
+  lfm_tele_max_drop: 
     extrema_type: max 
     type: int 
-    tim_fields: [obj_tim.dropped_pieces]
+    tim_fields: [obj_tim.tele_drop]
+  lfm_max_total_points:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.total_points]
+  lfm_auto_max_total_points: 
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_total_points]
+  lfm_endgame_max_total_points:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.endgame_total_points]
 
 # Most common values
 modes:
@@ -753,35 +1130,91 @@ modes:
     tim_fields: [obj_tim.start_position]
     ignore: '0'
     type: List
-  mode_stage_level:
-    tim_fields: [obj_tim.stage_level]
+  mode_stage_level_all:
+    tim_fields: [obj_tim.stage_level_amp, obj_tim.stage_level_source, obj_tim.stage_level_blind]
     ignore: 'N'
     type: List
-  lfm_mode_stage_level:
-    tim_fields: [obj_tim.stage_level]
+  mode_stage_level_amp:
+    tim_fields: [obj_tim.stage_level_amp]
+    ignore: 'N'
+    type: List
+  mode_stage_level_source:
+    tim_fields: [obj_tim.stage_level_source]
+    ignore: 'N'
+    type: List
+  mode_stage_level_blind:
+    tim_fields: [obj_tim.stage_level_blind]
+    ignore: 'N'
+    type: List
+  lfm_mode_stage_level_amp:
+    tim_fields: [obj_tim.stage_level_amp]
+    ignore: 'N'
+    type: List
+  lfm_mode_stage_level_source:
+    tim_fields: [obj_tim.stage_level_source]
+    ignore: 'N'
+    type: List
+  lfm_mode_stage_level_blind:
+    tim_fields: [obj_tim.stage_level_blind]
+    ignore: 'N'
+    type: List
+  lfm_mode_stage_level_all:
+    tim_fields: [obj_tim.stage_level_blind, obj_tim.stage_level_source, obj_tim.stage_level_amp]
+    ignore: 'N'
+    type: List
+  mode_trap_state:
+    tim_fields: [obj_tim.trap]
+    ignore: 'N'
+    type: List
+  lfm_mode_trap_state:
+    tim_fields: [obj_tim.trap]
     ignore: 'N'
     type: List
 
 success_rates:
+  auto_amp_percent_success:
+    team_successes: [auto_avg_amp]
+    team_attempts: [auto_avg_amp, auto_avg_failed_amp]
+    type: float
+  tele_amp_percent_success:
+    team_successes: [tele_avg_amp]
+    team_attempts: [tele_avg_amp, tele_avg_failed_amp]
+    type: float
+  total_amp_percent_success:
+    team_successes: [auto_avg_amp, tele_avg_amp]
+    team_attempts: [auto_avg_amp, auto_avg_failed_amp, tele_avg_amp, tele_avg_failed_amp]
+    type: float
+  auto_speaker_percent_success:
+    team_successes: [auto_avg_speaker]
+    team_attempts: [auto_avg_speaker, auto_avg_failed_speaker]
+    type: float
+  tele_speaker_percent_success:
+    team_successes: [tele_avg_speaker, tele_avg_amplified]
+    team_attempts: [tele_avg_speaker, tele_avg_failed_speaker, tele_avg_amplified, tele_avg_failed_amplified]
+    type: float
+  total_speaker_percent_success:
+    team_successes: [auto_avg_speaker, tele_avg_speaker, tele_avg_amplified]
+    team_attempts: [auto_avg_speaker, auto_avg_failed_speaker, tele_avg_speaker, tele_avg_failed_speaker, tele_avg_amplified, tele_avg_failed_amplified]
+    type: float
   climb_after_percent_success: 
     team_successes: [climb_after_successes]
     team_attempts: [matches_climb_after]
     type: float
-  onstage_percent_success:
-    team_successes: [onstage_successes]
-    team_attempts: [onstage_attempts]
+  stage_percent_success_all:
+    team_successes: [stage_successes_all]
+    team_attempts: [stage_attempts_all]
     type: float
-  chain_amp_percent_success:
-    team_successes: [chain_amp_successes]
-    team_attempts: [chain_amp_attempts]
+  stage_percent_success_amp:
+    team_successes: [stage_successes_amp]
+    team_attempts: [stage_attempts_amp]
     type: float
-  chain_blind_percent_success:
-    team_successes: [chain_blind_successes]
-    team_attempts: [chain_blind_attempts]
+  stage_percent_success_blind:
+    team_successes: [stage_successes_blind]
+    team_attempts: [stage_attempts_blind]
     type: float
-  chain_source_percent_success:
-    team_successes: [chain_source_successes]
-    team_attempts: [chain_source_attempts]
+  stage_percent_success_source:
+    team_successes: [stage_successes_source]
+    team_attempts: [stage_attempts_source]
     type: float
   trap_percent_success:
     team_successes: [trap_successes]
@@ -791,25 +1224,24 @@ success_rates:
     team_successes: [parks]
     team_attempts: [matches_played]
     type: float
-  lfm_onstage_percent_success:
-    team_successes: [lfm_onstage_successes]
-    team_attempts: [lfm_onstage_attempts]
+  lfm_stage_percent_success_all:
+    team_successes: [stage_successes_all]
+    team_attempts: [stage_attempts_all]
     type: float
+  lfm_stage_percent_success_amp:
+    team_successes: [stage_successes_amp]
+    team_attempts: [stage_attempts_amp]
   lfm_climb_after_percent_success: 
     team_successes: [lfm_climb_after_successes]
     team_attempts: [lfm_matches_climb_after]
     type: float
-  lfm_chain_amp_percent_success:
-    team_successes: [chain_amp_successes]
-    team_attempts: [chain_amp_attempts]
+  lfm_stage_percent_success_blind:
+    team_successes: [stage_successes_blind]
+    team_attempts: [stage_attempts_blind]
     type: float
-  lfm_chain_blind_percent_success:
-    team_successes: [chain_blind_successes]
-    team_attempts: [chain_blind_attempts]
-    type: float
-  lfm_chain_source_percent_success:
-    team_successes: [chain_source_successes]
-    team_attempts: [chain_source_attempts]
+  lfm_stage_percent_success_source:
+    team_successes: [stage_successes_source]
+    team_attempts: [stage_attempts_source]
     type: float
   lfm_trap_percent_success:
     team_successes: [lfm_trap_successes]
@@ -819,14 +1251,38 @@ success_rates:
     team_successes: [parks]
     team_attempts: [matches_played]
     type: float
+  lfm_auto_amp_percent_success:
+    team_successes: [auto_avg_amp]
+    team_attempts: [auto_avg_amp, auto_avg_failed_amp]
+    type: float
+  lfm_tele_amp_percent_success:
+    team_successes: [tele_avg_amp]
+    team_attempts: [tele_avg_amp, tele_avg_failed_amp]
+    type: float
+  lfm_total_amp_percent_success:
+    team_successes: [auto_avg_amp, tele_avg_amp]
+    team_attempts: [auto_avg_amp, auto_avg_failed_amp, tele_avg_amp, tele_avg_failed_amp]
+    type: float
+  lfm_auto_speaker_percent_success:
+    team_successes: [auto_avg_speaker]
+    team_attempts: [auto_avg_speaker, auto_avg_failed_speaker]
+    type: float
+  lfm_tele_speaker_percent_success:
+    team_successes: [tele_avg_speaker, tele_avg_amplified]
+    team_attempts: [tele_avg_speaker, tele_avg_failed_speaker, tele_avg_amplified, tele_avg_failed_amplified]
+    type: float
+  lfm_total_speaker_percent_success:
+    team_successes: [auto_avg_speaker, tele_avg_speaker, tele_avg_amplified]
+    team_attempts: [auto_avg_speaker, auto_avg_failed_speaker, tele_avg_speaker, tele_avg_failed_speaker, tele_avg_amplified, tele_avg_failed_amplified]
+    type: float
 
 # Calculates all the medians
 medians:
-  median_nonzero_incap: 
+  median_nonzero_incap_time: 
     tim_fields: [obj_tim.incap]
     ignore: 0
     type: float
-  lfm_median_nonzero_incap:
+  lfm_median_nonzero_incap_time:
     tim_fields: [obj_tim.incap]
     ignore: 0
     type: float
@@ -840,10 +1296,10 @@ sums:
   tele_avg_total_points:
     tele_avg_amp: 1
     tele_avg_speaker: 2
-    tele_avg_speaker_amped: 5
+    tele_avg_amplified: 5
     type: float
-  avg_endgame_points:
-    onstage_percent_success: 3
+  endgame_avg_total_points:
+    stage_percent_success_all: 3
     trap_percent_success: 5
     park_percent: 1
     type: float
@@ -852,7 +1308,7 @@ sums:
     tele_avg_total_points: 1
     avg_endgame_points: 1
     type: float
-  total_incap:
+  total_incap_time:
     type: int
-  lfm_total_incap:
+  lfm_total_incap_time:
     type: int

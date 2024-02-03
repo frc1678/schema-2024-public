@@ -9,7 +9,8 @@
 #    "has_vision_assisted_shot": false,
 #    "has_ground_intake": false,
 #    "has_hp_indicator": true,
-#    "can_climb": false
+#    "can_climb": false,
+#    "has_rev_swerve_module": true
 #  }
 #
 
@@ -18,7 +19,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # Stores data type/structure
 schema:
@@ -35,6 +36,8 @@ schema:
   has_hp_indicator:
     type: bool
   can_climb:
+    type: bool
+  has_rev_swerve_module: 
     type: bool
 
 
