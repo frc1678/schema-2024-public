@@ -216,7 +216,7 @@ timeline_cycle_time:
   cycle_time_from_amp_to_speaker:
     type: int
     start_action: intake_amp
-    end_action: score_speaker
+    end_action: [score_speaker, score_amplify]
     minimum_time: 1
   cycle_time_from_poach_to_amp:
     type: int
@@ -226,7 +226,7 @@ timeline_cycle_time:
   cycle_time_from_poach_to_speaker:
     type: int
     start_action: intake_poach
-    end_action: score_speaker
+    end_action: [score_speaker, score_amplify]
     minimum_time: 1
   cycle_time_from_center_to_amp:
     type: int
@@ -236,7 +236,7 @@ timeline_cycle_time:
   cycle_time_from_center_to_speaker:
     type: int
     start_action: intake_center
-    end_action: score_speaker
+    end_action: [score_speaker, score_amplify]
     minimum_time: 1
   cycle_time_from_far_to_amp:
     type: int
@@ -246,7 +246,7 @@ timeline_cycle_time:
   cycle_time_from_far_to_speaker:
     type: int
     start_action: intake_far
-    end_action: score_speaker
+    end_action: [score_speaker, score_amplify]
     minimum_time: 1
 
 
