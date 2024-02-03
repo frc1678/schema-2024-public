@@ -1231,6 +1231,7 @@ success_rates:
   lfm_stage_percent_success_amp:
     team_successes: [stage_successes_amp]
     team_attempts: [stage_attempts_amp]
+    type: float
   lfm_climb_after_percent_success: 
     team_successes: [lfm_climb_after_successes]
     team_attempts: [lfm_matches_climb_after]
