@@ -274,3 +274,8 @@ categorical_actions:
   parked:
     list: [True, False]
     type: bool
+
+fail_actions:
+  score_speaker: "score_fail_speaker"
+  score_amp: "score_fail_amp"
+  score_amplify: "score_fail_amplify"
