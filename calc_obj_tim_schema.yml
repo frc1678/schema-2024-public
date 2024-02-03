@@ -276,6 +276,12 @@ categorical_actions:
     type: bool
 
 fail_actions:
-  score_speaker: "score_fail_speaker"
-  score_amp: "score_fail_amp"
-  score_amplify: "score_fail_amplify"
+  score_speaker:
+    name: score_fail_speaker
+    type: str
+  score_amp:
+    name: score_fail_amp
+    type: str
+  score_amplify:
+    name: score_fail_amplify
+    type: str
