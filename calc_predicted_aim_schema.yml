@@ -28,8 +28,8 @@ schema_file:
   # Incremented every merged schema change
   version: 2
 
-# Fields used to calculate ensemble RP
-ensemble_rp:
+# Fields used to calculate ensemble RP and endgame score
+endgame_fields:
   onstage_rate: 
     counts: [onstage_successes, [onstage_attempts]]
     type: float
