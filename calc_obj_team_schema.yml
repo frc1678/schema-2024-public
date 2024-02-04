@@ -111,21 +111,21 @@
 #     "lfm_tele_sd_total_points": 87.1996,
 #     "lfm_auto_sd_total_points": 64.5376,
 #     "lfm_sd_incap_time": 35.8519,
-#     "stage_attempts_amp": 43,
-#     "stage_attempts_blind": 25,
-#     "stage_attempts_source": 93,
+#     "stage_attempts_left": 43,
+#     "stage_attempts_center": 25,
+#     "stage_attempts_right": 93,
 #     "stage_attempts_all": 2,
-#     "stage_successes_amp": 28,
-#     "stage_successes_blind": 73,
-#     "stage_successes_source": 100,
+#     "stage_successes_left": 28,
+#     "stage_successes_center": 73,
+#     "stage_successes_right": 100,
 #     "stage_successes_all": 68,
 #     "trap_attempts": 35,
 #     "trap_successes": 46,
 #     "parks": 29,
 #     "stage_fails_all": 11,
-#     "stage_fails_amp": 88,
-#     "stage_fails_source": 44,
-#     "stage_fails_blind": 58,
+#     "stage_fails_left": 88,
+#     "stage_fails_right": 44,
+#     "stage_fails_center": 58,
 #     "position_zero_starts": 57,
 #     "position_one_starts": 62,
 #     "position_two_starts": 10,
@@ -134,22 +134,22 @@
 #     "preloaded_starts": 8,
 #     "matches_incap": 51,
 #     "matches_played": 19,
-#     "lfm_stage_attempts_amp": 91,
-#     "lfm_stage_attempts_blind": 58,
-#     "lfm_stage_attempts_source": 66,
+#     "lfm_stage_attempts_left": 91,
+#     "lfm_stage_attempts_center": 58,
+#     "lfm_stage_attempts_right": 66,
 #     "lfm_stage_attempts_all": 93,
 #     "lfm_stage_successes_all": 23,
-#     "lfm_stage_successes_amp": 74,
-#     "lfm_stage_successes_blind": 17,
-#     "lfm_stage_successes_source": 30,
+#     "lfm_stage_successes_left": 74,
+#     "lfm_stage_successes_center": 17,
+#     "lfm_stage_successes_right": 30,
 #     "lfm_trap_successes": 58,
 #     "lfm_trap_attempts": 34,
 #     "trap_fails": 2,
 #     "lfm_trap_fails": 17,
 #     "lfm_parks": 24,
-#     "lfm_stage_fails_amp": 61,
-#     "lfm_stage_fails_source": 3,
-#     "lfm_stage_fails_blind": 79,
+#     "lfm_stage_fails_left": 61,
+#     "lfm_stage_fails_right": 3,
+#     "lfm_stage_fails_center": 79,
 #     "lfm_stage_fails_all": 34,
 #     "lfm_position_zero_starts": 14,
 #     "lfm_position_one_starts": 94,
@@ -229,12 +229,12 @@
 #     "mode_start_position": ["2", "4", "0"],
 #     "lfm_mode_start_position": ["1", "3", "4"],
 #     "mode_stage_level_all": None,
-#     "mode_stage_level_amp": None,
-#     "mode_stage_level_source": None,
-#     "mode_stage_level_blind": None,
-#     "lfm_mode_stage_level_amp": None,
-#     "lfm_mode_stage_level_source": None,
-#     "lfm_mode_stage_level_blind": None,
+#     "mode_stage_level_left": None,
+#     "mode_stage_level_right": None,
+#     "mode_stage_level_center": None,
+#     "lfm_mode_stage_level_left": None,
+#     "lfm_mode_stage_level_right": None,
+#     "lfm_mode_stage_level_center": None,
 #     "lfm_mode_stage_level_all": None,
 #     "mode_trap_state": None,
 #     "lfm_mode_trap_state": None,
@@ -246,15 +246,15 @@
 #     "total_speaker_percent_success": 92.2205,
 #     "climb_after_percent_success": 62.0565,
 #     "stage_percent_success_all": 40.2858,
-#     "stage_percent_success_amp": 27.2911,
-#     "stage_percent_success_blind": 11.6628,
-#     "stage_percent_success_source": 26.2836,
+#     "stage_percent_success_left": 27.2911,
+#     "stage_percent_success_center": 11.6628,
+#     "stage_percent_success_right": 26.2836,
 #     "trap_percent_success": 4.3575,
 #     "park_percent": 62.5689,
 #     "lfm_stage_percent_success_all": 43.3975,
 #     "lfm_climb_after_percent_success": 96.5477,
-#     "lfm_stage_percent_success_blind": 97.0174,
-#     "lfm_stage_percent_success_source": 86.1686,
+#     "lfm_stage_percent_success_center": 97.0174,
+#     "lfm_stage_percent_success_right": 86.1686,
 #     "lfm_trap_percent_success": 24.7563,
 #     "lfm_park_percent": 56.5613,
 #     "lfm_auto_amp_percent_success": 67.2366,
@@ -626,45 +626,45 @@ standard_deviations:
 
 # Counts of occurrences in consolidated TIMs
 counts:
-  stage_attempts_amp:
+  stage_attempts_left:
     tim_fields:
       not: 
-        obj_tim.stage_level_amp: 'N'
+        obj_tim.stage_level_left: 'N'
     type: int
-  stage_attempts_blind:
+  stage_attempts_center:
     tim_fields:
       not: 
-        obj_tim.stage_level_blind: 'N'
+        obj_tim.stage_level_center: 'N'
     type: int
-  stage_attempts_source:
+  stage_attempts_right:
     tim_fields:
       not: 
-        obj_tim.stage_level_source: 'N'
+        obj_tim.stage_level_right: 'N'
     type: int
   stage_attempts_all:
     tim_fields:
       not:
-        - obj_tim.stage_level_amp: 'N'
-        - obj_tim.stage_level_blind: 'N'
-        - obj_tim.stage_level_source: 'N'
+        - obj_tim.stage_level_left: 'N'
+        - obj_tim.stage_level_center: 'N'
+        - obj_tim.stage_level_right: 'N'
     type: int
-  stage_successes_amp:
+  stage_successes_left:
     tim_fields:
-      obj_tim.stage_level_amp: 'O'
+      obj_tim.stage_level_left: 'O'
     type: int
-  stage_successes_blind:
+  stage_successes_center:
     tim_fields:
-      obj_tim.stage_level_blind: 'O'
+      obj_tim.stage_level_center: 'O'
     type: int
-  stage_successes_source:
+  stage_successes_right:
     tim_fields:
-      obj_tim.stage_level_source: 'O'
+      obj_tim.stage_level_right: 'O'
     type: int
   stage_successes_all:
     tim_fields:
-      - obj_tim.stage_level_amp: 'O'
-      - obj_tim.stage_level_blind: 'O'
-      - obj_tim.stage_level_source: 'O'
+      - obj_tim.stage_level_left: 'O'
+      - obj_tim.stage_level_center: 'O'
+      - obj_tim.stage_level_right: 'O'
     type: int
   trap_attempts:
     tim_fields:
@@ -681,21 +681,21 @@ counts:
     type: int
   stage_fails_all:
     tim_fields:
-      - obj_tim.stage_level_amp: 'F'
-      - obj_tim.stage_level_blind: 'F'
-      - obj_tim.stage_level_source: 'F'
+      - obj_tim.stage_level_left: 'F'
+      - obj_tim.stage_level_center: 'F'
+      - obj_tim.stage_level_right: 'F'
     type: int
-  stage_fails_amp:
+  stage_fails_left:
     tim_fields:
-      - obj_tim.stage_level_amp: 'F'
+      - obj_tim.stage_level_left: 'F'
     type: int
-  stage_fails_source:
+  stage_fails_right:
     tim_fields:
-      - obj_tim.stage_level_source: 'F'
+      - obj_tim.stage_level_right: 'F'
     type: int
-  stage_fails_blind:
+  stage_fails_center:
     tim_fields:
-      - obj_tim.stage_level_blind: 'F'
+      - obj_tim.stage_level_center: 'F'
     type: int
   position_zero_starts:
     tim_fields:
@@ -731,45 +731,45 @@ counts:
       not:
         match_number: 0
     type: int
-  lfm_stage_attempts_amp:
+  lfm_stage_attempts_left:
     tim_fields:
       not: 
-        obj_tim.stage_level_amp: 'N'
+        obj_tim.stage_level_left: 'N'
     type: int
-  lfm_stage_attempts_blind:
+  lfm_stage_attempts_center:
     tim_fields:
       not: 
-        obj_tim.stage_level_blind: 'N'
+        obj_tim.stage_level_center: 'N'
     type: int
-  lfm_stage_attempts_source:
+  lfm_stage_attempts_right:
     tim_fields:
       not: 
-        obj_tim.stage_level_source: 'N'
+        obj_tim.stage_level_right: 'N'
     type: int
   lfm_stage_attempts_all:
     tim_fields:
       not:
-        - obj_tim.stage_level_amp: 'N'
-        - obj_tim.stage_level_blind: 'N'
-        - obj_tim.stage_level_source: 'N'
+        - obj_tim.stage_level_left: 'N'
+        - obj_tim.stage_level_center: 'N'
+        - obj_tim.stage_level_right: 'N'
     type: int
   lfm_stage_successes_all:
     tim_fields:
-      - obj_tim.stage_level_amp: 'O'
-      - obj_tim.stage_level_blind: 'O'
-      - obj_tim.stage_level_source: 'O'
+      - obj_tim.stage_level_left: 'O'
+      - obj_tim.stage_level_center: 'O'
+      - obj_tim.stage_level_right: 'O'
     type: int
-  lfm_stage_successes_amp:
+  lfm_stage_successes_left:
     tim_fields:
-      obj_tim.stage_level_amp: 'O'
+      obj_tim.stage_level_left: 'O'
     type: int
-  lfm_stage_successes_blind:
+  lfm_stage_successes_center:
     tim_fields:
-      obj_tim.stage_level_blind: 'O'
+      obj_tim.stage_level_center: 'O'
     type: int
-  lfm_stage_successes_source:
+  lfm_stage_successes_right:
     tim_fields:
-      obj_tim.stage_level_source: 'O'
+      obj_tim.stage_level_right: 'O'
     type: int
   lfm_trap_successes:
     tim_fields:
@@ -792,23 +792,23 @@ counts:
     tim_fields:
       obj_tim.park: True
     type: int
-  lfm_stage_fails_amp:
+  lfm_stage_fails_left:
     tim_fields:
-      - obj_tim.stage_level_amp: 'F'
+      - obj_tim.stage_level_left: 'F'
     type: int
-  lfm_stage_fails_source:
+  lfm_stage_fails_right:
     tim_fields:
-      - obj_tim.stage_level_source: 'F'
+      - obj_tim.stage_level_right: 'F'
     type: int
-  lfm_stage_fails_blind:
+  lfm_stage_fails_center:
     tim_fields:
-      - obj_tim.stage_level_blind: 'F'
+      - obj_tim.stage_level_center: 'F'
     type: int
   lfm_stage_fails_all:
     tim_fields:
-      - obj_tim.stage_level_amp: 'F'
-      - obj_tim.stage_level_blind: 'F'
-      - obj_tim.stage_level_source: 'F'
+      - obj_tim.stage_level_left: 'F'
+      - obj_tim.stage_level_center: 'F'
+      - obj_tim.stage_level_right: 'F'
     type: int
   lfm_position_zero_starts:
     tim_fields:
@@ -1131,35 +1131,35 @@ modes:
     ignore: '0'
     type: List
   mode_stage_level_all:
-    tim_fields: [obj_tim.stage_level_amp, obj_tim.stage_level_source, obj_tim.stage_level_blind]
+    tim_fields: [obj_tim.stage_level_left, obj_tim.stage_level_right, obj_tim.stage_level_center]
     ignore: 'N'
     type: List
-  mode_stage_level_amp:
-    tim_fields: [obj_tim.stage_level_amp]
+  mode_stage_level_left:
+    tim_fields: [obj_tim.stage_level_left]
     ignore: 'N'
     type: List
-  mode_stage_level_source:
-    tim_fields: [obj_tim.stage_level_source]
+  mode_stage_level_right:
+    tim_fields: [obj_tim.stage_level_right]
     ignore: 'N'
     type: List
-  mode_stage_level_blind:
-    tim_fields: [obj_tim.stage_level_blind]
+  mode_stage_level_center:
+    tim_fields: [obj_tim.stage_level_center]
     ignore: 'N'
     type: List
-  lfm_mode_stage_level_amp:
-    tim_fields: [obj_tim.stage_level_amp]
+  lfm_mode_stage_level_left:
+    tim_fields: [obj_tim.stage_level_left]
     ignore: 'N'
     type: List
-  lfm_mode_stage_level_source:
-    tim_fields: [obj_tim.stage_level_source]
+  lfm_mode_stage_level_right:
+    tim_fields: [obj_tim.stage_level_right]
     ignore: 'N'
     type: List
-  lfm_mode_stage_level_blind:
-    tim_fields: [obj_tim.stage_level_blind]
+  lfm_mode_stage_level_center:
+    tim_fields: [obj_tim.stage_level_center]
     ignore: 'N'
     type: List
   lfm_mode_stage_level_all:
-    tim_fields: [obj_tim.stage_level_blind, obj_tim.stage_level_source, obj_tim.stage_level_amp]
+    tim_fields: [obj_tim.stage_level_center, obj_tim.stage_level_right, obj_tim.stage_level_left]
     ignore: 'N'
     type: List
   mode_trap_state:
@@ -1204,17 +1204,17 @@ success_rates:
     team_successes: [stage_successes_all]
     team_attempts: [stage_attempts_all]
     type: float
-  stage_percent_success_amp:
-    team_successes: [stage_successes_amp]
-    team_attempts: [stage_attempts_amp]
+  stage_percent_success_left:
+    team_successes: [stage_successes_left]
+    team_attempts: [stage_attempts_left]
     type: float
-  stage_percent_success_blind:
-    team_successes: [stage_successes_blind]
-    team_attempts: [stage_attempts_blind]
+  stage_percent_success_center:
+    team_successes: [stage_successes_center]
+    team_attempts: [stage_attempts_center]
     type: float
-  stage_percent_success_source:
-    team_successes: [stage_successes_source]
-    team_attempts: [stage_attempts_source]
+  stage_percent_success_right:
+    team_successes: [stage_successes_right]
+    team_attempts: [stage_attempts_right]
     type: float
   trap_percent_success:
     team_successes: [trap_successes]
@@ -1228,21 +1228,21 @@ success_rates:
     team_successes: [stage_successes_all]
     team_attempts: [stage_attempts_all]
     type: float
-  lfm_stage_percent_success_amp:
-    team_successes: [stage_successes_amp]
-    team_attempts: [stage_attempts_amp]
+  lfm_stage_percent_success_left:
+    team_successes: [stage_successes_left]
+    team_attempts: [stage_attempts_left]
     type: float
   lfm_climb_after_percent_success: 
     team_successes: [lfm_climb_after_successes]
     team_attempts: [lfm_matches_climb_after]
     type: float
-  lfm_stage_percent_success_blind:
-    team_successes: [stage_successes_blind]
-    team_attempts: [stage_attempts_blind]
+  lfm_stage_percent_success_center:
+    team_successes: [stage_successes_center]
+    team_attempts: [stage_attempts_center]
     type: float
-  lfm_stage_percent_success_source:
-    team_successes: [stage_successes_source]
-    team_attempts: [stage_attempts_source]
+  lfm_stage_percent_success_right:
+    team_successes: [stage_successes_right]
+    team_attempts: [stage_attempts_right]
     type: float
   lfm_trap_percent_success:
     team_successes: [lfm_trap_successes]

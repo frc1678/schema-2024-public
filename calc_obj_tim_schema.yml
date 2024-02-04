@@ -48,9 +48,9 @@
 #     "cycle_time_from_center_to_speaker": 5,
 #     "cycle_time_from_far_to_amp": 2,
 #     "cycle_time_from_far_to_speaker": 2,
-#     "stage_level_amp": "N",
-#     "stage_level_blind": "O",
-#     "stage_level_source": "N",
+#     "stage_level_left": "N",
+#     "stage_level_center": "O",
+#     "stage_level_right": "N",
 #     "start_position": "2",
 #     "trap": "S",
 #     "has_preload": false,
@@ -279,14 +279,14 @@ timeline_cycle_time:
 # Robot actions which are one out of a dict of possible actions
 # Dict items should be ordered, values are shortened string from qr
 categorical_actions:
-  stage_level_amp:
+  stage_level_left:
     list: ["N", "F", "O"]
     type: str
-  stage_level_blind:
+  stage_level_center:
     list: ["N", "F", "O"]
     type: str
-  stage_level_source:
-    list: ["N", "F", "O"]
+  stage_level_right:
+    list: ["N", "F", "O"] 
     type: str
   start_position:
     list: ["0", "1", "2", "3", "4"]
