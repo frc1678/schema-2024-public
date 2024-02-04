@@ -3,21 +3,35 @@
 # Example:
 #
 # {
-#    "match_number": 7,
-#    "team_numbers": [1678, 760, 1649],
-#    "alliance_color_is_red": true,
-#    "has_actual_data": true,
-#    "actual_score": 8,
-#    "actual_rp1": 0.0053,
-#    "actual_rp2": 1.1624,
-#    "won_match": false,
-#    "final_predicted_score": 6.0236,
-#    "final_predicted_rp1": 4.967,
-#    "final_predicted_rp2": 4.692,
-#    "predicted_score": 1.1766,
-#    "predicted_rp1": 2.187,
-#    "predicted_rp2": 4.1169,
-#    "win_chance": 0.8035
+#     "onstage_rate": 1.8325,
+#     "park_rate": 1.4386,
+#     "climb_after_rate": 3.5054,
+#     "trap_rate": 3.4995,
+#     "auto_avg_amp": 1.3753,
+#     "auto_avg_speaker": 2.7873,
+#     "tele_avg_amp": 4.7773,
+#     "tele_avg_speaker": 2.2563,
+#     "tele_avg_speaker_amped": 4.8865,
+#     "avg_endgame_points": 3.5777,
+#     "match_number": 2,
+#     "team_numbers": [
+#         1678,
+#         760,
+#         1649
+#     ],
+#     "alliance_color_is_red": true,
+#     "has_actual_data": false,
+#     "actual_score": 5,
+#     "actual_rp1": 1.6114,
+#     "actual_rp2": 4.2127,
+#     "won_match": true,
+#     "final_predicted_score": 5.8395,
+#     "final_predicted_rp1": 4.6616,
+#     "final_predicted_rp2": 3.0808,
+#     "predicted_score": 5.4925,
+#     "predicted_rp1": 6.6938,
+#     "predicted_rp2": 1.1856,
+#     "win_chance": 4.1202
 # }
 #
 

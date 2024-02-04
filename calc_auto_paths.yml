@@ -1,4 +1,42 @@
 # Used for calculating auto paths data in server
+#
+# Example: 
+# 
+# {
+#     "team_number": "55",
+#     "exact_match": [
+#         "intake_position_1",
+#         "intake_position_2",
+#         "intake_position_3",
+#         "intake_position_4",
+#         "intake_position_5",
+#         "intake_position_6",
+#         "intake_position_7",
+#         "intake_position_8",
+#         "score_1",
+#         "score_2",
+#         "score_3",
+#         "score_4",
+#         "score_5",
+#         "score_6",
+#         "score_7",
+#         "score_8",
+#         "score_9",
+#         "leave",
+#         "has_preload"
+#     ],
+#     "score_1_successes": 1,
+#     "score_2_successes": 3,
+#     "score_3_successes": 2,
+#     "score_4_successes": 1,
+#     "score_5_successes": 3,
+#     "score_6_successes": 4,
+#     "score_7_successes": 9,
+#     "score_8_successes": 1,
+#     "score_9_successes": 9
+# }
+# 
+
 
 # Contains information about this schema file
 schema_file:

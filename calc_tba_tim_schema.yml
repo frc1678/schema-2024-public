@@ -3,9 +3,9 @@
 # Example:
 #
 # {
-#   "match_number": 8,
-#   "team_number": "1580",
-#   "leave": true
+#     "match_number": 8,
+#     "team_number": "1580",
+#     "leave": false
 # }
 #
 

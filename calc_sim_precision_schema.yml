@@ -4,10 +4,15 @@
 #
 # {
 #     "scout_name": "Bob",
-#     "match_number": 7,
+#     "match_number": 5,
 #     "team_number": "1040",
 #     "alliance_color_is_red": true,
-#     "sim_precision": 0.5455
+#     "sim_precision": 5.7567,
+#     "auto_speaker_precision": 5.8753,
+#     "auto_amp_precision": 5.7164,
+#     "tele_speaker_amped_precision": 3.9882,
+#     "tele_speaker_precision": 6.8448,
+#     "tele_amp_precision": 0.8378
 # }
 #
 

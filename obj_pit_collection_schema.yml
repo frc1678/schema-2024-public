@@ -3,15 +3,15 @@
 # Example:
 #
 # {
-#    "team_number": "512",
-#    "drivetrain": 1,
-#   "has_auto_vision": false,
-#    "has_vision_assisted_shot": false,
-#    "has_ground_intake": false,
-#    "has_hp_indicator": true,
-#    "can_climb": false,
-#    "has_rev_swerve_module": true
-#  }
+#     "team_number": "512",
+#     "drivetrain": -1,
+#     "has_auto_vision": true,
+#     "has_vision_assisted_shot": false,
+#     "has_ground_intake": true,
+#     "has_hp_indicator": false,
+#     "can_climb": false,
+#     "has_rev_swerve_module": true
+# }
 #
 
 
