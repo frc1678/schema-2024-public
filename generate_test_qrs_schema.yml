@@ -4,7 +4,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 # Contains all of the variables in the schema/match_collection_qr_schema.yml file
 # Each variable has attributes that determine how it is randomly generated
@@ -90,25 +90,25 @@ objective_tim:
     symbol: V
     type: bool
     is_random: True
-  chain_amp:
+  stage_level_amp:
     gen: True
     symbol: U
     type: str
     is_random: True
-    values: ["ONSTAGE", "FAILED", "NONE"]
-  chain_source:
+    values: ["O", "F", "N"]
+  stage_level_source:
     gen: True
     symbol: T
     type: str
     is_random: True
-    values: ["ONSTAGE", "FAILED", "NONE"]
-  chain_blind:
+    values: ["O", "F", "N"]
+  stage_level_blind:
     gen: True
     symbol: S
     type: str
     is_random: True
-    values: ["ONSTAGE", "FAILED", "NONE"]
-  park:
+    values: ["O", "F", "N"]
+  parked:
     gen: True
     symbol: R
     type: bool
@@ -118,7 +118,7 @@ objective_tim:
     symbol: Q
     type: str
     is_random: True
-    values: ["SCORED", "FAILED", "NONE"]
+    values: ["S", "F", "N"]
 
 
 # TODO: CREATE TIMELINE SCHEMA
