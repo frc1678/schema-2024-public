@@ -205,17 +205,21 @@ aggregates:
     type: int
     counts: [auto_amp, auto_speaker, tele_amp, tele_speaker, tele_amplified]
 
-
-#point_calculations:
-#  auto_total_points:
-#    type: int
-#  tele_total_points:
-#    type: int
-#  endgame_total_points:
-#    type: int
-#  total_points:
-#    type: int
-#  (ADD THESE LATER)
+#Stores scoring actions and their point values
+#total_points does not include endgame for now
+point_calculations:
+  auto_total_points:
+   type: int
+   counts: {auto_amp: 2, auto_speaker: 5}
+  tele_total_points:
+    type: int
+    counts: {tele_amp: 1, tele_speaker: 2, tele_amplified: 5}
+  endgame_total_points:
+    type: int
+    counts: {}
+  total_points:
+    type: int
+    counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_speaker: 2, tele_amplified: 5}
 
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
