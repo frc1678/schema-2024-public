@@ -35,9 +35,9 @@ objective_tim:
   start_position: [X, str] # str representing where a robot starts in auto (1, 2, 3, or 4)
   timeline: [W, list, dict] # List of dictionaries
   has_preload: [V, bool] # bool representing if a robot has a preloaded note
-  stage_level_amp: [U, str] # str representing if a robot is onstage on the amp chain, failed to get on chain, or didn't attempt(the specific chain)
-  stage_level_source: [T, str] # str representing if a robot is onstage on the source chain, failed to get on chain, or didn't attempt
-  stage_level_blind: [S, str] # str representing if a robot is onstage on the blind(farthest from alliance) chain, failed to get on chain, or didn't attempt
+  stage_level_left: [U, str] # str representing if a robot is onstage on the amp chain, failed to get on chain, or didn't attempt(the specific chain)
+  stage_level_right: [T, str] # str representing if a robot is onstage on the source chain, failed to get on chain, or didn't attempt
+  stage_level_center: [S, str] # str representing if a robot is onstage on the blind(farthest from alliance) chain, failed to get on chain, or didn't attempt
   parked: [R, bool] # bool representing if a robot parked
   trap: [Q, str]
 
