@@ -510,7 +510,7 @@ standard_deviations:
     tim_fields: [obj_tim.tele_total_intakes]
     type: float
   tele_sd_intake_amp:
-    tim_fields: [obj_tim.tele_intake_amp]
+    tim_fields: [obj_tim.tele_intakes_amp]
     type: float
   tele_sd_total_pieces:
     tim_fields: [obj_tim.tele_total_pieces]
