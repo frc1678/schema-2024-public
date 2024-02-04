@@ -443,7 +443,7 @@ averages:
     tim_fields: [obj_tim.total_pieces]
     type: float
   lfm_avg_trap:
-    tim_fields: [obj_tim.tele_trap]
+    tim_fields: [obj_tim.trap]
     type: float
   lfm_tele_avg_amplified:
     tim_fields: [obj_tim.tele_amplified]
