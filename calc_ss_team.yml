@@ -25,3 +25,5 @@ schema:
     type: str
   weaknesses: 
     type: str
+  can_drive_under_stage: 
+    type: bool 
