@@ -52,7 +52,7 @@ generic_data:
     symbol: E
     type: str
     is_random: True
-    values: ["Bob", "Mike", "Bryan", "Cyan", "Rohaan", "John", "Tom", "Bobina", "Andy", "Ann", "Michael", "Annemarie", "Noah", "Susan", "Chris", "Christopher"]
+    values: ["BOB", "MIKE", "BRYAN", "CYAN", "ROHAAN", "JOHN", "TOM", "BOBINA", "ANDY", "ANN", "MICHAEL", "ANNEMARIE", "NOAH", "SUSAN", "CHRIS", "CHRISTOPHER", "JIM", "JIMOTHY"]
   alliance_color_is_red:
     gen: False
     symbol: F
