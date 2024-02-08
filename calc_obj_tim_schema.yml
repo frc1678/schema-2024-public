@@ -76,6 +76,10 @@ data:
     type: str
   match_number:
     type: int
+  alliance_color_is_red:
+    type: bool
+  harmonized:
+    type: bool
 
 # Calculations built around counting timeline actions with certain key:value pairs
 timeline_counts:
