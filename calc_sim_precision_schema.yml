@@ -21,7 +21,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 # TODO: Add collection information to data fields once schema is implemented
 # Non-calculated data
@@ -44,23 +44,29 @@ calculations:
       unconsolidated_totals.tele_speaker_amped: 5
       unconsolidated_totals.tele_speaker: 2
       unconsolidated_totals.tele_amp: 1
+    tba_datapoints: [teleopTotalNotePoints, autoTotalNotePoints]
   auto_speaker_precision:
     type: float
     requires: 
       unconsolidated_totals.auto_speaker: 5
+    tba_datapoints: [autoSpeakerNotePoints]
   auto_amp_precision:
     type: float
     requires:
       unconsolidated_totals.auto_amp: 2
+    tba_datapoints: [autoAmpNotePoints]
   tele_speaker_amped_precision:
     type: float
     requires:
       unconsolidated_totals.tele_speaker_amped: 5
+    tba_datapoints: [teleopSpeakerAmplifiedNotePoints]
   tele_speaker_precision:
     type: float
     requires:
       unconsolidated_totals.tele_speaker: 2
+    tba_datapoints: [teleopSpeakerNotePoints]
   tele_amp_precision:
     type: float
     requires:
       unconsolidated_totals.tele_amp: 1
+    tba_datapoints: [teleopAmpNotePoints]
