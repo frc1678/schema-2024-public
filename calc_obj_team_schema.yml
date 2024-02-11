@@ -61,6 +61,7 @@
 #     "auto_sd_amp": 1.8715,
 #     "auto_sd_failed_amp": 1.0434,
 #     "auto_sd_speaker": 0.3354,
+#     "auto_sd_failed_speaker": 0.5124,
 #     "auto_sd_total_intakes": 5.215,
 #     "auto_sd_total_pieces": 2.0893,
 #     "auto_sd_total_failed_pieces": 1.727,
@@ -78,6 +79,7 @@
 #     "tele_sd_total_failed_pieces": 1.9344,
 #     "tele_sd_failed_amp": 0.772,
 #     "tele_sd_failed_amplified": 4.4415,
+#     "tele_sd_failed_speaker": 1.5043
 #     "tele_sd_drop": 2.1706,
 #     "tele_sd_total_points": 6.8519,
 #     "sd_incap_time": 0.9989,
@@ -118,7 +120,7 @@
 #     "stage_successes_all": 4,
 #     "trap_attempts": 7,
 #     "trap_successes": 4,
-#     "parked": 7,
+#     "parks": 7,
 #     "stage_fails_all": 8,
 #     "stage_fails_amp": 3,
 #     "stage_fails_source": 2,
@@ -143,7 +145,7 @@
 #     "lfm_trap_attempts": 9,
 #     "trap_fails": 6,
 #     "lfm_trap_fails": 1,
-#     "lfm_parked": 5,
+#     "lfm_parks": 5,
 #     "lfm_stage_fails_amp": 1,
 #     "lfm_stage_fails_source": 6,
 #     "lfm_stage_fails_blind": 1,
@@ -269,14 +271,14 @@
 #     "stage_percent_success_blind": 6.8585,
 #     "stage_percent_success_source": 2.9129,
 #     "trap_percent_success": 4.4962,
-#     "parked_percent": 1.6671,
+#     "parks_percent": 1.6671,
 #     "lfm_stage_percent_success_all": 1.469,
 #     "lfm_stage_percent_success_amp": 1.9778,
 #     "lfm_climb_after_percent_success": 4.4006,
 #     "lfm_stage_percent_success_blind": 3.7328,
 #     "lfm_stage_percent_success_source": 5.4996,
 #     "lfm_trap_percent_success": 0.5366,
-#     "lfm_parked_percent": 1.3398,
+#     "lfm_parks_percent": 1.3398,
 #     "lfm_auto_amp_percent_success": 4.2702,
 #     "lfm_tele_amp_percent_success": 2.0515,
 #     "lfm_total_amp_percent_success": 3.906,
@@ -490,6 +492,9 @@ standard_deviations:
   auto_sd_speaker:
     tim_fields: [obj_tim.auto_speaker]
     type: float
+  auto_sd_failed_speaker:
+    tim_fields: [obj_tim.auto_failed_speaker]
+    type: float
   auto_sd_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
     type: float
@@ -541,6 +546,9 @@ standard_deviations:
   tele_sd_failed_amplified:
     tim_fields: [obj_tim.tele_failed_amplified]
     type: float
+  tele_sd_failed_speaker:
+    tim_fields: [obj_tim.tele_failed_speaker, obj_tim.tele_failed_amplified]
+    type: float
   tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
     type: float
@@ -590,7 +598,7 @@ standard_deviations:
     tim_fields: [obj_tim.tele_speaker]
     type: float
   lfm_tele_sd_failed_speaker: 
-    tim_fields: [obj_tim.tele_failed_speaker]
+    tim_fields: [obj_tim.tele_failed_speaker, obj_tim.tele_failed_amplified]
     type: float
   lfm_tele_sd_ferry: 
     tim_fields: [obj_tim.tele_ferry]
@@ -692,7 +700,7 @@ counts:
     tim_fields:
       obj_tim.trap: 'S'
     type: int
-  parked:
+  parks:
     tim_fields:
       obj_tim.parked: True
     type: int
@@ -805,7 +813,7 @@ counts:
     tim_fields:
       - obj_tim.trap: 'F'
     type: int
-  lfm_parked:
+  lfm_parks:
     tim_fields:
       obj_tim.parked: True
     type: int
@@ -1231,8 +1239,8 @@ success_rates:
     team_successes: [trap_successes]
     team_attempts: [trap_attempts]
     type: float
-  parked_percent:
-    team_successes: [parked]
+  parks_percent:
+    team_successes: [parks]
     team_attempts: [matches_played]
     type: float
   lfm_stage_percent_success_all:
@@ -1259,8 +1267,8 @@ success_rates:
     team_successes: [lfm_trap_successes]
     team_attempts: [lfm_trap_attempts]
     type: float
-  lfm_parked_percent:
-    team_successes: [parked]
+  lfm_parks_percent:
+    team_successes: [parks]
     team_attempts: [matches_played]
     type: float
   lfm_auto_amp_percent_success:
@@ -1313,7 +1321,7 @@ sums:
   endgame_avg_total_points:
     stage_percent_success_all: 3
     trap_percent_success: 5
-    parked_percent: 1
+    parks_percent: 1
     type: float
   avg_total_points:
     auto_avg_total_points: 1
