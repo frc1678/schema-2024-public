@@ -52,6 +52,7 @@ data:
 --path_groups:
   # Values used to group paths toghether, these must be exactly the same across paths
   exact_match:
+    - start_position
     - intake_position_1
     - intake_position_2
     - intake_position_3
