@@ -27,7 +27,7 @@ data:
 tba:
   leave:
     type: bool
-    leaveRobot: 'Yes'
+    autoLineRobot: 'Yes'
   spotlight:
     type: bool
     spotlitRobot: 'Yes'
