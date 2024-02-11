@@ -45,16 +45,16 @@ schema_file:
 # Fields used to calculate ensemble RP and endgame score
 endgame_fields:
   onstage_rate: 
-    counts: [onstage_successes, [onstage_attempts]]
+    var: stage_percent_success_all
     type: float
-  park_rate: 
-    counts: [park_successes, [park_attempts]]
+  park_rate:
+    var: parked_percent
     type: float
   climb_after_rate: 
-    counts: [matches_climb_after, [onstage_attempts]] ###### <---- needs fix, we currently don't have a climb_after_attempts variable
+    var: climb_after_percent_success
     type: float
   trap_rate: 
-    counts: [trap_successes, [trap_successes, trap_fails]]
+    var: trap_percent_success
     type: float
 
 # Fields used to calculate win chance
@@ -75,11 +75,11 @@ win_chance:
     sd: tele_sd_speaker
     value: 2
     type: float
-  tele_avg_speaker_amped:
-    sd: tele_sd_speaker_amped
+  tele_avg_amplified:
+    sd: tele_sd_amplified
     value: 5
     type: float
-  avg_endgame_points:
+  endgame_avg_total_points:
     sd: None
     value: None
     type: float
