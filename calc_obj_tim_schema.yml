@@ -38,7 +38,7 @@
 #     "tele_total_failed_pieces": 8,
 #     "total_intakes": 6,
 #     "total_pieces": 6,
-#     "incap": 5,
+#     "incap_time": 5,
 #     "median_cycle_time": 3,
 #     "cycle_time_from_amp_to_amp": 5,
 #     "cycle_time_from_amp_to_speaker": 3,
@@ -234,10 +234,10 @@ point_calculations:
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
 timeline_cycle_time:
-  incap:
+  incap_time:
     type: int
-    start_action: start_incap
-    end_action: end_incap
+    start_action: start_incap_time
+    end_action: end_incap_time
     minimum_time: 8
   median_cycle_time:
     type: int

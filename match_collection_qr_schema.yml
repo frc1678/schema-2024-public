@@ -67,8 +67,8 @@ subjective_aim:
 action_type:
   score_speaker: AA
   score_amp: AB
-  start_incap: AC
-  end_incap: AD
+  start_incap_time: AC
+  end_incap_time: AD
   auto_intake_spike_1: AE
   auto_intake_spike_2: AF
   auto_intake_spike_3: AG

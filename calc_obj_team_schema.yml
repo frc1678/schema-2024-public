@@ -131,7 +131,7 @@
 #     "position_three_starts": 3,
 #     "position_four_starts": 2,
 #     "preloaded_starts": 2,
-#     "matches_incap": 5,
+#     "matches_incap_time": 5,
 #     "matches_played": 4,
 #     "lfm_stage_attempts_amp": 2,
 #     "lfm_stage_attempts_blind": 7,
@@ -156,7 +156,7 @@
 #     "lfm_position_three_starts": 9,
 #     "lfm_position_four_starts": 3,
 #     "lfm_preloaded_starts": 6,
-#     "lfm_matches_incap": 6,
+#     "lfm_matches_incap_time": 6,
 #     "climb_after_successes": 7,
 #     "lfm_climb_after_successes": 2,
 #     "matches_tippy": 3,
@@ -375,7 +375,7 @@ averages:
     tim_fields: [obj_tim.tele_failed_speaker]
     type: float
   avg_incap_time:
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     type: float 
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
@@ -438,7 +438,7 @@ averages:
     tim_fields: [obj_tim.tele_intakes_poach]
     type: float
   lfm_avg_incap_time:
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     type: float
   lfm_tele_avg_ferry:
     tim_fields: [obj_tim.tele_ferry]
@@ -556,7 +556,7 @@ standard_deviations:
     tim_fields: [obj_tim.tele_total_points]
     type: float
   sd_incap_time:
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     type: float
   tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
@@ -646,7 +646,7 @@ standard_deviations:
     tim_fields: [obj_tim.auto_total_points]
     type: float
   lfm_sd_incap_time:
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     type: float
 
 # Counts of occurrences in consolidated TIMs
@@ -746,10 +746,10 @@ counts:
     tim_fields:
       obj_tim.has_preload: True
     type: int
-  matches_incap:
+  matches_incap_time:
     tim_fields:
       not:
-        obj_tim.incap: 0
+        obj_tim.incap_time: 0
     type: int
   matches_played:
     tim_fields:
@@ -859,10 +859,10 @@ counts:
     tim_fields:
       obj_tim.has_preload: True
     type: int
-  lfm_matches_incap:
+  lfm_matches_incap_time:
     tim_fields:
       not:
-        obj_tim.incap: 0
+        obj_tim.incap_time: 0
     type: int
 
 # Counts collected from Objective and Subjective Scouts 
@@ -989,7 +989,7 @@ extrema:
   max_incap_time:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
   max_total_intakes:
     extrema_type: max
     type: int
@@ -1113,7 +1113,7 @@ extrema:
   lfm_max_incap_time:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
   lfm_max_total_intakes:
     extrema_type: max
     type: int
@@ -1299,11 +1299,11 @@ success_rates:
 # Calculates all the medians
 medians:
   median_nonzero_incap_time: 
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     ignore: 0
     type: float
   lfm_median_nonzero_incap_time:
-    tim_fields: [obj_tim.incap]
+    tim_fields: [obj_tim.incap_time]
     ignore: 0
     type: float
 
