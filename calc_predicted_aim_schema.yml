@@ -42,6 +42,16 @@ schema_file:
   # Incremented every merged schema change
   version: 2
 
+tele_fields:
+  tele_avg_amp:
+    type: float
+  tele_avg_speaker:
+    type: float
+  tele_avg_amplified:
+    type: float
+  avg_cycle_time:
+    type: float
+
 # Fields used to calculate ensemble RP and endgame score
 endgame_fields:
   onstage_rate: 
