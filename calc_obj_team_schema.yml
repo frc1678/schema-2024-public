@@ -479,6 +479,54 @@ averages:
   lfm_tele_avg_total_points:
     tim_fields: [obj_tim.tele_total_points]
     type: float
+  avg_cycle_time_from_amp_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_amp_to_amp]
+    type: float
+  avg_cycle_time_from_amp_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_amp_to_speaker]
+    type: float
+  avg_cycle_time_from_poach_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_poach_to_amp]
+    type: float
+  avg_cycle_time_from_poach_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_poach_to_speaker]
+    type: float
+  avg_cycle_time_from_center_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_center_to_amp]
+    type: float
+  avg_cycle_time_from_center_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_center_to_speaker]
+    type: float
+  avg_cycle_time_from_far_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_far_to_amp]
+    type: float
+  avg_cycle_time_from_far_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_far_to_speaker]
+    type: float
+  lfm_avg_cycle_time_from_amp_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_amp_to_amp]
+    type: float
+  lfm_avg_cycle_time_from_amp_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_amp_to_speaker]
+    type: float
+  lfm_avg_cycle_time_from_poach_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_poach_to_amp]
+    type: float
+  lfm_avg_cycle_time_from_poach_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_poach_to_speaker]
+    type: float
+  lfm_avg_cycle_time_from_center_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_center_to_amp]
+    type: float
+  lfm_avg_cycle_time_from_center_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_center_to_speaker]
+    type: float
+  lfm_avg_cycle_time_from_far_to_amp:
+    tim_fields: [obj_tim.cycle_time_from_far_to_amp]
+    type: float
+  lfm_avg_cycle_time_from_far_to_speaker:
+    tim_fields: [obj_tim.cycle_time_from_far_to_speaker]
+    type: float
 
 # Standard deviations of fields in consolidated TIMs
 # Used for predictions
@@ -1332,3 +1380,61 @@ sums:
     type: int
   lfm_total_incap_time:
     type: int
+
+# Calculates cycle time from place to place
+cycle_multiplier:
+  avg_cycle_time_from_amp_to_amp:
+    multiplier: 1
+    type: int
+  avg_cycle_time_from_amp_to_speaker:
+    multiplier: 1
+    type: int
+  avg_cycle_time_from_poach_to_amp:
+    multiplier: 1
+    type: int
+  avg_cycle_time_from_poach_to_speaker:
+    multiplier: 1
+    type: int
+  avg_cycle_time_from_center_to_amp:
+    multiplier: 1
+    type: int
+  avg_cycle_time_from_center_to_speaker:
+    multiplier: 1
+    type: int
+  avg_cycle_time_from_far_to_amp:
+    multiplier: 1
+    type: int
+  avg_cycle_time_from_far_to_speaker:
+    multiplier: 2
+    type: int
+  lfm_avg_cycle_time_from_amp_to_amp:
+    multiplier: 1
+    type: int
+  lfm_avg_cycle_time_from_amp_to_speaker:
+    multiplier: 1
+    type: int
+  lfm_avg_cycle_time_from_poach_to_amp:
+    multiplier: 1
+    type: int
+  lfm_avg_cycle_time_from_poach_to_speaker:
+    multiplier: 1
+    type: int
+  lfm_avg_cycle_time_from_center_to_amp:
+    multiplier: 1
+    type: int
+  lfm_avg_cycle_time_from_center_to_speaker:
+    multiplier: 1
+    type: int
+  lfm_avg_cycle_time_from_far_to_amp:
+    multiplier: 1
+    type: int
+  lfm_avg_cycle_time_from_far_to_speaker:
+    multiplier: 2
+    type: int
+
+#The expected cycle time after the multiplier.
+expected_cycle:
+  avg_cycle_time:
+    type: float
+  lfm_avg_cycle_time:
+    type: float
