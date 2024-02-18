@@ -939,6 +939,12 @@ super_counts:
   lfm_matches_climb_after:
     type: int
     tim_fields: [subj_tim.climb_after]
+  matches_did_ferry:
+    type: bool
+    tim_fields: [subj_tim.did_ferry]
+  lfm_matches_did_ferry:
+    type: bool
+    tim_fields: [subj_tim.did_ferry]
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
