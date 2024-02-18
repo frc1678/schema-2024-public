@@ -479,53 +479,53 @@ averages:
   lfm_tele_avg_total_points:
     tim_fields: [obj_tim.tele_total_points]
     type: float
-  avg_cycle_time_from_amp_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_amp_to_amp]
+  avg_time_from_amp_to_amp:
+    tim_fields: [obj_tim.time_from_amp_to_amp]
     type: float
-  avg_cycle_time_from_amp_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_amp_to_speaker]
+  avg_time_from_amp_to_speaker:
+    tim_fields: [obj_tim.time_from_amp_to_speaker]
     type: float
-  avg_cycle_time_from_poach_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_poach_to_amp]
+  avg_time_from_poach_to_amp:
+    tim_fields: [obj_tim.time_from_poach_to_amp]
     type: float
-  avg_cycle_time_from_poach_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_poach_to_speaker]
+  avg_time_from_poach_to_speaker:
+    tim_fields: [obj_tim.time_from_poach_to_speaker]
     type: float
-  avg_cycle_time_from_center_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_center_to_amp]
+  avg_time_from_center_to_amp:
+    tim_fields: [obj_tim.time_from_center_to_amp]
     type: float
-  avg_cycle_time_from_center_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_center_to_speaker]
+  avg_time_from_center_to_speaker:
+    tim_fields: [obj_tim.time_from_center_to_speaker]
     type: float
-  avg_cycle_time_from_far_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_far_to_amp]
+  avg_time_from_far_to_amp:
+    tim_fields: [obj_tim.time_from_far_to_amp]
     type: float
-  avg_cycle_time_from_far_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_far_to_speaker]
+  avg_time_from_far_to_speaker:
+    tim_fields: [obj_tim.time_from_far_to_speaker]
     type: float
-  lfm_avg_cycle_time_from_amp_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_amp_to_amp]
+  lfm_avg_time_from_amp_to_amp:
+    tim_fields: [obj_tim.time_from_amp_to_amp]
     type: float
-  lfm_avg_cycle_time_from_amp_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_amp_to_speaker]
+  lfm_avg_time_from_amp_to_speaker:
+    tim_fields: [obj_tim.time_from_amp_to_speaker]
     type: float
-  lfm_avg_cycle_time_from_poach_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_poach_to_amp]
+  lfm_avg_time_from_poach_to_amp:
+    tim_fields: [obj_tim.time_from_poach_to_amp]
     type: float
-  lfm_avg_cycle_time_from_poach_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_poach_to_speaker]
+  lfm_avg_time_from_poach_to_speaker:
+    tim_fields: [obj_tim.time_from_poach_to_speaker]
     type: float
-  lfm_avg_cycle_time_from_center_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_center_to_amp]
+  lfm_avg_time_from_center_to_amp:
+    tim_fields: [obj_tim.time_from_center_to_amp]
     type: float
-  lfm_avg_cycle_time_from_center_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_center_to_speaker]
+  lfm_avg_time_from_center_to_speaker:
+    tim_fields: [obj_tim.time_from_center_to_speaker]
     type: float
-  lfm_avg_cycle_time_from_far_to_amp:
-    tim_fields: [obj_tim.cycle_time_from_far_to_amp]
+  lfm_avg_time_from_far_to_amp:
+    tim_fields: [obj_tim.time_from_far_to_amp]
     type: float
-  lfm_avg_cycle_time_from_far_to_speaker:
-    tim_fields: [obj_tim.cycle_time_from_far_to_speaker]
+  lfm_avg_time_from_far_to_speaker:
+    tim_fields: [obj_tim.time_from_far_to_speaker]
     type: float
 
 # Standard deviations of fields in consolidated TIMs
