@@ -163,8 +163,6 @@
 #     "lfm_matches_tippy": 9,
 #     "matches_climb_after": 5,
 #     "lfm_matches_climb_after": 4,
-#     "matches_played_defense": 1,
-#     "lfm_matches_played_defense": 9,
 #     "auto_max_speaker": 9,
 #     "auto_max_amp": 6,
 #     "auto_max_failed_speaker": 2,
@@ -941,12 +939,6 @@ super_counts:
   lfm_matches_climb_after:
     type: int
     tim_fields: [subj_tim.climb_after]
-  matches_played_defense:
-    type: int
-    tim_fields: [subj_tim.played_defense]
-  lfm_matches_played_defense:
-    type: int
-    tim_fields: [subj_tim.played_defense]
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
