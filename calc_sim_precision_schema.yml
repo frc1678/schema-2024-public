@@ -10,7 +10,7 @@
 #     "sim_precision": 5.7567,
 #     "auto_speaker_precision": 5.8753,
 #     "auto_amp_precision": 5.7164,
-#     "tele_speaker_amped_precision": 3.9882,
+#     "tele_amplified_precision": 3.9882,
 #     "tele_speaker_precision": 6.8448,
 #     "tele_amp_precision": 0.8378
 # }
@@ -41,7 +41,7 @@ calculations:
     requires:
       unconsolidated_totals.auto_speaker: 5
       unconsolidated_totals.auto_amp: 2
-      unconsolidated_totals.tele_speaker_amped: 5
+      unconsolidated_totals.tele_amplified: 5
       unconsolidated_totals.tele_speaker: 2
       unconsolidated_totals.tele_amp: 1
     tba_datapoints: [teleopTotalNotePoints, autoTotalNotePoints]
@@ -55,11 +55,11 @@ calculations:
     requires:
       unconsolidated_totals.auto_amp: 2
     tba_datapoints: [autoAmpNotePoints]
-  tele_speaker_amped_precision:
+  tele_amplified_precision:
     type: float
     requires:
-      unconsolidated_totals.tele_speaker_amped: 5
-    tba_datapoints: [teleopSpeakerAmplifiedNotePoints]
+      unconsolidated_totals.tele_amplified: 5
+    tba_datapoints: [teleopSpeakerNoteAmplifiedPoints]
   tele_speaker_precision:
     type: float
     requires:

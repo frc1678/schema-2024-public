@@ -26,7 +26,7 @@ data:
   current_rank:
     type: int
   current_rps:
-    type: int
+    type: float
   current_avg_rps:
     type: float
 
