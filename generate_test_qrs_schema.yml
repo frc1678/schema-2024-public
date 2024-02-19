@@ -167,12 +167,6 @@ subjective_aim:
     symbol: E
     type: bool
     values: True
-  played_defense: # True if robot played defense at least once in the match, else False
-    gen: True
-    is_random: True
-    symbol: F
-    type: bool
-    values: True
 
 # Contains all the enums and their values
 # Action type is a alphabet base 26 string representation
