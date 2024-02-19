@@ -27,10 +27,16 @@ data:
 calculations:
   first_pickability:
     type: float
-    obj_team.avg_total_points: 1
+    tba_team_leave_successes: 2
+    obj_tim.auto_amp: 2
+    obj_tim.auto_speaker: 5
+    #speaker_full_field: 3.4 TO DO
+    #amp_full_field: 3.4 TO DO
+    obj_team.trap_successes: 5
+    obj_team.climb_after_successes: 3
   second_pickability:
     type: float
-    obj_team.avg_total_points: 1
+    #harmony: 2 TO DO
   # These are the old weights (not seen in viewer, but kept for comparison)
   test_second_pickability:
     type: float
