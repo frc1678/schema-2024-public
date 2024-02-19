@@ -4,16 +4,13 @@
 #
 # {
 #     "team_number": "512",
-#     "drivetrain": -1,
+#     "drivetrain": 2,
 #     "has_auto_vision": true,
 #     "has_vision_assisted_shot": false,
-#     "has_ground_intake": true,
 #     "has_hp_indicator": false,
 #     "can_climb": false,
-#     "has_rev_swerve_module": true
 # }
 #
-
 
 # Contains information about this schema file
 schema_file:
@@ -31,22 +28,17 @@ schema:
     type: bool
   has_vision_assisted_shot:
     type: bool
-  has_ground_intake:
-    type: bool
   has_hp_indicator:
     type: bool
   can_climb:
     type: bool
-  has_rev_swerve_module: 
-    type: bool
-
 
 # Stores Enum data
 enums:
   # Drivetrain type
   drivetrain:
-    no_data: -1
-    tank: 0
-    mecanum: 1
-    swerve: 2
-    other: 3
+    no_data: 0
+    tank: 1
+    mecanum: 2
+    swerve: 3
+    other: 4
