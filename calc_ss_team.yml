@@ -27,3 +27,7 @@ schema:
     type: str
   can_drive_under_stage: 
     type: bool 
+  intake_source_only:
+    type: bool
+  shoot_specific_area_only:
+    type: str

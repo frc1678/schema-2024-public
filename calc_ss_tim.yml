@@ -26,3 +26,9 @@ schema:
     type: bool
   defense_rating:
     type: int
+  notes:
+    type: str
+  broken_mechanism:
+    type: str
+  coopertition:
+    type: str
