@@ -378,6 +378,12 @@ averages:
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
+  avg_speaker_cycle_time:
+    tim_fields: [obj_tim.speaker_cycle_time]
+    type: float
+  avg_amp_cycle_time:
+    tim_fields: [obj_tim.amp_cycle_time]
+    type: float
   avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
     type: float
@@ -476,6 +482,12 @@ averages:
     type: float
   lfm_tele_avg_total_points:
     tim_fields: [obj_tim.tele_total_points]
+    type: float
+  lfm_avg_speaker_cycle_time:
+    tim_fields: [obj_tim.speaker_cycle_time]
+    type: float
+  lfm_avg_amp_cycle_time:
+    tim_fields: [obj_tim.amp_cycle_time]
     type: float
   avg_time_from_amp_to_amp:
     tim_fields: [obj_tim.time_from_amp_to_amp]
@@ -604,6 +616,12 @@ standard_deviations:
   sd_incap_time:
     tim_fields: [obj_tim.incap_time]
     type: float
+  sd_speaker_cycle_time:
+    tim_fields: [obj_tim.speaker_cycle_time]
+    type: float
+  sd_amp_cycle_time:
+    tim_fields: [obj_tim.amp_cycle_time]
+    type: float
   tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
     type: float
@@ -675,6 +693,12 @@ standard_deviations:
     type: float
   lfm_tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
+    type: float
+  lfm_sd_speaker_cycle_time:
+    tim_fields: [obj_tim.speaker_cycle_time]
+    type: float
+  lfm_sd_amp_cycle_time:
+    tim_fields: [obj_tim.amp_cycle_time]
     type: float
   lfm_sd_total_points:
     tim_fields: [obj_tim.total_points]
@@ -1036,6 +1060,14 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.incap_time]
+  max_speaker_cycle_time:
+    extrema_type: max
+    tim_fields: [obj_tim.speaker_cycle_time]
+    type: float
+  max_amp_cycle_time:
+    extrema_type: max
+    tim_fields: [obj_tim.amp_cycle_time]
+    type: float
   max_total_intakes:
     extrema_type: max
     type: int
@@ -1160,6 +1192,14 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.incap_time]
+  lfm_max_speaker_cycle_time:
+    extrema_type: max
+    tim_fields: [obj_tim.speaker_cycle_time]
+    type: float
+  lfm_max_amp_cycle_time:
+    extrema_type: max
+    tim_fields: [obj_tim.amp_cycle_time]
+    type: float
   lfm_max_total_intakes:
     extrema_type: max
     type: int
