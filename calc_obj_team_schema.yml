@@ -826,6 +826,10 @@ counts:
       not:
         match_number: 0
     type: int
+  matches_harmonized: 
+    tim_fields:  
+      obj_tim.harmonized: True 
+    type: int
   lfm_stage_attempts_left:
     tim_fields:
       not: 
@@ -933,6 +937,10 @@ counts:
     tim_fields:
       not:
         obj_tim.incap_time: 0
+    type: int
+  lfm_matches_harmonized: 
+    tim_fields: 
+      obj_tim.harmonized: True 
     type: int
 
 # Counts collected from Objective and Subjective Scouts 
