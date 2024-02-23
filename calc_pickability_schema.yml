@@ -27,7 +27,7 @@ data:
 calculations:
   first_pickability:
     type: float
-    tba_team_leave_successes: 2
+    tba_team.leave_successes: 2
     obj_tim.auto_amp: 2
     obj_tim.auto_speaker: 5
     #speaker_full_field: 3.4 TO DO
@@ -44,9 +44,17 @@ calculations:
   lfm_first_pickability:
     type: float
     obj_team.lfm_avg_total_points: 1
+    obj_tim.lfm_auto_speaker: 5
+    obj_tim.lfm_auto_amp: 2
+    obj_team.lfm_trap_successes: 5
+    obj_team.lfm_climb_after_successes: 3
   lfm_second_pickability:
     type: float
     obj_team.lfm_avg_total_points: 1
+    obj_tim.lfm_auto_speaker: 4
+    obj_tim.lfm_auto_amp: 2
+    obj_team.lfm_trap_successes: 2
+    obj_team.lfm_climb_after_successes: 2
   lfm_test_second_pickability:
     type: float
     obj_team.lfm_avg_total_points: 1
