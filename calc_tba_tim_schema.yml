@@ -30,4 +30,3 @@ tba:
     autoLineRobot: 'Yes'
   spotlight:
     type: bool
-    spotlitRobot: 'Yes'
