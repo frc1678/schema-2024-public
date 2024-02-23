@@ -40,6 +40,10 @@ counts:
     type: int
     tim_fields:
       tba_tim.leave: true
+  leave_success_rate:
+    type: float
+    tim_fields:
+      tba_tim.leave: true
   spotlight_successes:
     type: int
     tim_fields:
