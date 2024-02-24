@@ -23,7 +23,6 @@ schema_file:
 data:
   team_number:
     type: str
-
 calculations:
   first_pickability:
     type: float
@@ -36,7 +35,7 @@ calculations:
     obj_team.climb_after_successes: 3
   second_pickability:
     type: float
-    #harmony: 2 TO DO
+    matches_harmonized: 2
   # These are the old weights (not seen in viewer, but kept for comparison)
   test_second_pickability:
     type: float
@@ -55,6 +54,7 @@ calculations:
     obj_team.lfm_auto_avg_amp: 2
     obj_team.lfm_trap_successes: 2
     obj_team.lfm_climb_after_successes: 2
+    obj_team.lfm_matches_harmonized: 2
   lfm_test_second_pickability:
     type: float
     obj_team.lfm_avg_total_points: 1
