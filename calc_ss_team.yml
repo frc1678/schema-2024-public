@@ -31,3 +31,8 @@ schema:
     type: bool
   shoot_specific_area_only:
     type: str
+
+averages:
+  avg_defense_rating:
+    type: float
+    tim_fields: [ss_tim.defense_rating]
