@@ -14,7 +14,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1
+  version: 2
 
 data:
   match_number:
@@ -30,3 +30,10 @@ tba:
     autoLineRobot: 'Yes'
   spotlight:
     type: bool
+    spotlitRobot: 'Yes'
+  driver_station:
+    type: string
+  climbed_opposite:
+    type: bool
+    
+    
