@@ -49,7 +49,7 @@ tele_fields:
     type: float
   tele_avg_amplified:
     type: float
-  avg_cycle_time:
+  avg_expected_speaker_cycle_time:
     type: float
 
 # Fields used to calculate ensemble RP and endgame score
