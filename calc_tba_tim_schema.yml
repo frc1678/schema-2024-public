@@ -32,7 +32,7 @@ tba:
     type: bool
     spotlitRobot: 'Yes'
   driver_station:
-    type: string
+    type: str
   climbed_opposite:
     type: bool
     
