@@ -31,4 +31,4 @@ schema:
   notes:
     type: str
   broken_mechanism:
-    type: str
+    type: bool
