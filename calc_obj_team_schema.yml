@@ -189,8 +189,8 @@
 #     "lfm_matches_tippy": 1,
 #     "matches_climb_after": 3,
 #     "lfm_matches_climb_after": 8,
-#     "matches_did_ferry": true,
-#     "lfm_matches_did_ferry": false,
+#     "matches_did_ferry": 10,
+#     "lfm_matches_did_ferry": 9,
 #     "auto_max_speaker": 2,
 #     "auto_max_amp": 8,
 #     "auto_max_failed_speaker": 9,
@@ -1027,10 +1027,10 @@ super_counts:
     type: int
     tim_fields: [subj_tim.climb_after]
   matches_did_ferry:
-    type: bool
+    type: int
     tim_fields: [subj_tim.did_ferry]
   lfm_matches_did_ferry:
-    type: bool
+    type: int
     tim_fields: [subj_tim.did_ferry]
 
 # Maximum or minimum values in consolidated TIMs
