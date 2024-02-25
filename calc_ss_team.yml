@@ -17,6 +17,8 @@ schema_file:
 data:
   team_number:
     type: str
+  username:
+    type: str
 
 schema: 
   auto_strategies: 
