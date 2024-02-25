@@ -35,7 +35,7 @@ calculations:
     obj_team.climb_after_successes: 3
   second_pickability:
     type: float
-    matches_harmonized: 2
+    obj_team.climb_after_successes: 2
   # These are the old weights (not seen in viewer, but kept for comparison)
   test_second_pickability:
     type: float
@@ -51,7 +51,7 @@ calculations:
     obj_team.lfm_climb_after_successes: 3
   lfm_second_pickability:
     type: float
-    obj_team.lfm_matches_harmonized: 2
+    obj_team.lfm_climb_after_successes: 2
   lfm_test_second_pickability:
     type: float
     obj_team.lfm_avg_total_points: 1
