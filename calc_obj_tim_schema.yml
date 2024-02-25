@@ -297,12 +297,12 @@ timeline_cycle_time:
 
 
 calc_cycle_time:
-  speaker_cycle_time:
+  expected_speaker_cycle_time:
     type: float
-    score_actions: [score_speaker, score_amplify]
-  amp_cycle_time:
+    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify]
+  expected_amp_cycle_time:
     type: float
-    score_actions: [score_amp]
+    score_actions: [score_amp, score_fail_amp]
 
 
 # Robot actions which are one out of a dict of possible actions

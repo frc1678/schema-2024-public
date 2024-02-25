@@ -27,8 +27,8 @@
 #     "tele_avg_failed_speaker": 0.6719,
 #     "avg_incap_time": 6.5054,
 #     "avg_total_intakes": 6.9977,
-#     "avg_speaker_cycle_time": 1.13,
-#     "avg_amp_cycle_time": 4.5615,
+#     "avg_expected_speaker_cycle_time": 1.13,
+#     "avg_expected_amp_cycle_time": 4.5615,
 #     "avg_total_pieces": 3.8138,
 #     "tele_avg_drop": 2.5484,
 #     "lfm_auto_avg_speaker": 5.7552,
@@ -60,8 +60,8 @@
 #     "lfm_avg_total_points": 1.2334,
 #     "lfm_endgame_avg_total_points": 6.1849,
 #     "lfm_tele_avg_total_points": 2.6385,
-#     "lfm_avg_speaker_cycle_time": 3.0427,
-#     "lfm_avg_amp_cycle_time": 5.9187,
+#     "lfm_avg_expected_speaker_cycle_time": 3.0427,
+#     "lfm_avg_expected_amp_cycle_time": 5.9187,
 #     "avg_time_from_amp_to_amp": 3.4944,
 #     "avg_time_from_amp_to_speaker": 2.9498,
 #     "avg_time_from_poach_to_amp": 3.4212,
@@ -103,8 +103,8 @@
 #     "tele_sd_drop": 3.9865,
 #     "tele_sd_total_points": 3.2107,
 #     "sd_incap_time": 0.6102,
-#     "sd_speaker_cycle_time": 4.025,
-#     "sd_amp_cycle_time": 0.2285,
+#     "sd_expected_speaker_cycle_time": 4.025,
+#     "sd_expected_amp_cycle_time": 0.2285,
 #     "endgame_sd_total_points": 5.4955,
 #     "sd_total_points": 5.9228,
 #     "lfm_auto_sd_total_pieces": 4.2839,
@@ -126,8 +126,8 @@
 #     "lfm_tele_sd_amplified": 4.6099,
 #     "lfm_tele_sd_failed_amplified": 6.7951,
 #     "lfm_tele_sd_failed_amp": 3.1784,
-#     "lfm_sd_speaker_cycle_time": 5.5661,
-#     "lfm_sd_amp_cycle_time": 5.8368,
+#     "lfm_sd_expected_speaker_cycle_time": 5.5661,
+#     "lfm_sd_expected_amp_cycle_time": 5.8368,
 #     "lfm_sd_total_points": 3.2065,
 #     "lfm_endgame_sd_total_points": 2.7775,
 #     "lfm_tele_sd_total_intakes": 2.2927,
@@ -213,8 +213,8 @@
 #     "tele_max_intake_center": 7,
 #     "tele_max_intake_far": 8,
 #     "max_incap_time": 1,
-#     "max_speaker_cycle_time": 4.0399,
-#     "max_amp_cycle_time": 5.4717,
+#     "max_expected_speaker_cycle_time": 4.0399,
+#     "max_expected_amp_cycle_time": 5.4717,
 #     "max_total_intakes": 6,
 #     "max_total_pieces": 2,
 #     "tele_max_drop": 6,
@@ -246,8 +246,8 @@
 #     "lfm_tele_max_total_points": 4,
 #     "lfm_auto_max_total_failed_pieces": 4,
 #     "lfm_max_incap_time": 9,
-#     "lfm_max_speaker_cycle_time": 3.8807,
-#     "lfm_max_amp_cycle_time": 2.2939,
+#     "lfm_max_expected_speaker_cycle_time": 3.8807,
+#     "lfm_max_expected_amp_cycle_time": 2.2939,
 #     "lfm_max_total_intakes": 8,
 #     "lfm_max_total_pieces": 3,
 #     "lfm_max_total_points": 9,
@@ -409,11 +409,17 @@ averages:
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
-  avg_speaker_cycle_time:
-    tim_fields: [obj_tim.speaker_cycle_time]
+  avg_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
-  avg_amp_cycle_time:
-    tim_fields: [obj_tim.amp_cycle_time]
+  avg_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  avg_expected_speaker_cycles:
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    type: float
+  avg_expected_amp_cycles:
+    tim_fields: [obj_tim.expected_amp_cycles]
     type: float
   avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
@@ -514,11 +520,17 @@ averages:
   lfm_tele_avg_total_points:
     tim_fields: [obj_tim.tele_total_points]
     type: float
-  lfm_avg_speaker_cycle_time:
-    tim_fields: [obj_tim.speaker_cycle_time]
+  lfm_avg_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
-  lfm_avg_amp_cycle_time:
-    tim_fields: [obj_tim.amp_cycle_time]
+  lfm_avg_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  lfm_avg_expected_speaker_cycles:
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    type: float
+  lfm_avg_expected_amp_cycles:
+    tim_fields: [obj_tim.expected_amp_cycles]
     type: float
   avg_time_from_amp_to_amp:
     tim_fields: [obj_tim.time_from_amp_to_amp]
@@ -647,11 +659,17 @@ standard_deviations:
   sd_incap_time:
     tim_fields: [obj_tim.incap_time]
     type: float
-  sd_speaker_cycle_time:
-    tim_fields: [obj_tim.speaker_cycle_time]
+  sd_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
-  sd_amp_cycle_time:
-    tim_fields: [obj_tim.amp_cycle_time]
+  sd_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  sd_expected_speaker_cycles:
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    type: float
+  sd_expected_amp_cycles:
+    tim_fields: [obj_tim.expected_amp_cycles]
     type: float
   tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
@@ -725,11 +743,17 @@ standard_deviations:
   lfm_tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
     type: float
-  lfm_sd_speaker_cycle_time:
-    tim_fields: [obj_tim.speaker_cycle_time]
+  lfm_sd_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
-  lfm_sd_amp_cycle_time:
-    tim_fields: [obj_tim.amp_cycle_time]
+  lfm_sd_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  lfm_sd_expected_speaker_cycles:
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    type: float
+  lfm_sd_expected_amp_cycles:
+    tim_fields: [obj_tim.expected_amp_cycles]
     type: float
   lfm_sd_total_points:
     tim_fields: [obj_tim.total_points]
@@ -1099,13 +1123,21 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.incap_time]
-  max_speaker_cycle_time:
+  max_expected_speaker_cycle_time:
     extrema_type: max
-    tim_fields: [obj_tim.speaker_cycle_time]
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
-  max_amp_cycle_time:
+  max_expected_amp_cycle_time:
     extrema_type: max
-    tim_fields: [obj_tim.amp_cycle_time]
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  max_expected_speaker_cycles:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    type: float
+  max_expected_amp_cycles:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_amp_cycles]
     type: float
   max_total_intakes:
     extrema_type: max
@@ -1231,13 +1263,21 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.incap_time]
-  lfm_max_speaker_cycle_time:
+  lfm_max_expected_speaker_cycle_time:
     extrema_type: max
-    tim_fields: [obj_tim.speaker_cycle_time]
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
-  lfm_max_amp_cycle_time:
+  lfm_max_expected_amp_cycle_time:
     extrema_type: max
-    tim_fields: [obj_tim.amp_cycle_time]
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  lfm_max_expected_speaker_cycles:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    type: float
+  lfm_max_expected_amp_cycles:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_amp_cycles]
     type: float
   lfm_max_total_intakes:
     extrema_type: max

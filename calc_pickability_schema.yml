@@ -29,8 +29,8 @@ calculations:
     tba_team.leave_successes: 2
     obj_team.auto_avg_amp: 2
     obj_team.auto_avg_speaker: 5
-    #speaker_full_field: 3.4 TO DO
-    #amp_full_field: 3.4 TO DO
+    obj_team.avg_expected_speaker_cycles: 3.4
+    obj_team.avg_expected_amp_cycles: 3.4
     obj_team.trap_successes: 5
     obj_team.climb_after_successes: 3
   second_pickability:
@@ -45,15 +45,12 @@ calculations:
     obj_team.lfm_avg_total_points: 1
     obj_team.lfm_auto_avg_speaker: 5
     obj_team.lfm_auto_avg_amp: 2
+    obj_team.lfm_avg_expected_speaker_cycles: 3.4
+    obj_team.lfm_avg_expected_amp_cycles: 3.4
     obj_team.lfm_trap_successes: 5
     obj_team.lfm_climb_after_successes: 3
   lfm_second_pickability:
     type: float
-    obj_team.lfm_avg_total_points: 1
-    obj_team.lfm_auto_avg_speaker: 5
-    obj_team.lfm_auto_avg_amp: 2
-    obj_team.lfm_trap_successes: 2
-    obj_team.lfm_climb_after_successes: 2
     obj_team.lfm_matches_harmonized: 2
   lfm_test_second_pickability:
     type: float
