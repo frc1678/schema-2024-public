@@ -409,17 +409,32 @@ averages:
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
     type: float
+  avg_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
   avg_expected_speaker_cycle_time:
     tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
   avg_expected_amp_cycle_time:
     tim_fields: [obj_tim.expected_amp_cycle_time]
     type: float
+  avg_expected_cycles:
+    tim_fields: [obj_tim.expected_cycles]
+    type: float
   avg_expected_speaker_cycles:
     tim_fields: [obj_tim.expected_speaker_cycles]
     type: float
   avg_expected_amp_cycles:
     tim_fields: [obj_tim.expected_amp_cycles]
+    type: float
+  avg_expected_notes:
+    tim_fields: [obj_tim.expected_notes]
+    type: float
+  avg_expected_speaker_notes:
+    tim_fields: [obj_tim.expected_speaker_notes]
+    type: float
+  avg_expected_amp_notes:
+    tim_fields: [obj_tim.expected_amp_notes]
     type: float
   avg_total_pieces:
     tim_fields: [obj_tim.total_pieces]
@@ -520,17 +535,32 @@ averages:
   lfm_tele_avg_total_points:
     tim_fields: [obj_tim.tele_total_points]
     type: float
+  lfm_avg_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
   lfm_avg_expected_speaker_cycle_time:
     tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
   lfm_avg_expected_amp_cycle_time:
     tim_fields: [obj_tim.expected_amp_cycle_time]
     type: float
+  lfm_avg_expected_cycles:
+    tim_fields: [obj_tim.expected_cycles]
+    type: float
   lfm_avg_expected_speaker_cycles:
     tim_fields: [obj_tim.expected_speaker_cycles]
     type: float
   lfm_avg_expected_amp_cycles:
     tim_fields: [obj_tim.expected_amp_cycles]
+    type: float
+  lfm_avg_expected_notes:
+    tim_fields: [obj_tim.expected_notes]
+    type: float
+  lfm_avg_expected_speaker_notes:
+    tim_fields: [obj_tim.expected_speaker_notes]
+    type: float
+  lfm_avg_expected_amp_notes:
+    tim_fields: [obj_tim.expected_amp_notes]
     type: float
   avg_time_from_amp_to_amp:
     tim_fields: [obj_tim.time_from_amp_to_amp]
@@ -659,17 +689,32 @@ standard_deviations:
   sd_incap_time:
     tim_fields: [obj_tim.incap_time]
     type: float
+  sd_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
   sd_expected_speaker_cycle_time:
     tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
   sd_expected_amp_cycle_time:
     tim_fields: [obj_tim.expected_amp_cycle_time]
     type: float
+  sd_expected_cycles:
+    tim_fields: [obj_tim.expected_cycles]
+    type: float
   sd_expected_speaker_cycles:
     tim_fields: [obj_tim.expected_speaker_cycles]
     type: float
   sd_expected_amp_cycles:
     tim_fields: [obj_tim.expected_amp_cycles]
+    type: float
+  sd_expected_notes:
+    tim_fields: [obj_tim.expected_notes]
+    type: float
+  sd_expected_speaker_notes:
+    tim_fields: [obj_tim.expected_speaker_notes]
+    type: float
+  sd_expected_amp_notes:
+    tim_fields: [obj_tim.expected_amp_notes]
     type: float
   tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
@@ -743,17 +788,32 @@ standard_deviations:
   lfm_tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
     type: float
+  lfm_sd_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
   lfm_sd_expected_speaker_cycle_time:
     tim_fields: [obj_tim.expected_speaker_cycle_time]
     type: float
   lfm_sd_expected_amp_cycle_time:
     tim_fields: [obj_tim.expected_amp_cycle_time]
     type: float
+  lfm_sd_expected_cycles:
+    tim_fields: [obj_tim.expected_cycles]
+    type: float
   lfm_sd_expected_speaker_cycles:
     tim_fields: [obj_tim.expected_speaker_cycles]
     type: float
   lfm_sd_expected_amp_cycles:
     tim_fields: [obj_tim.expected_amp_cycles]
+    type: float
+  lfm_sd_expected_notes:
+    tim_fields: [obj_tim.expected_notes]
+    type: float
+  lfm_sd_expected_speaker_notes:
+    tim_fields: [obj_tim.expected_speaker_notes]
+    type: float
+  lfm_sd_expected_amp_notes:
+    tim_fields: [obj_tim.expected_amp_notes]
     type: float
   lfm_sd_total_points:
     tim_fields: [obj_tim.total_points]
@@ -1123,6 +1183,22 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.incap_time]
+  min_expected_cycle_time:
+    extrema_type: min
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
+  min_expected_speaker_cycle_time:
+    extrema_type: min
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
+    type: float
+  min_expected_amp_cycle_time:
+    extrema_type: min
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  max_expected_cycle_time:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
   max_expected_speaker_cycle_time:
     extrema_type: max
     tim_fields: [obj_tim.expected_speaker_cycle_time]
@@ -1135,9 +1211,25 @@ extrema:
     extrema_type: max
     tim_fields: [obj_tim.expected_speaker_cycles]
     type: float
+  max_expected_cycles:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_cycles]
+    type: float
   max_expected_amp_cycles:
     extrema_type: max
     tim_fields: [obj_tim.expected_amp_cycles]
+    type: float
+  max_expected_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_notes]
+    type: float
+  max_expected_speaker_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_speaker_notes]
+    type: float
+  max_expected_amp_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_amp_notes]
     type: float
   max_total_intakes:
     extrema_type: max
@@ -1263,6 +1355,22 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.incap_time]
+  lfm_min_expected_cycle_time:
+    extrema_type: min
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
+  lfm_min_expected_speaker_cycle_time:
+    extrema_type: min
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
+    type: float
+  lfm_min_expected_amp_cycle_time:
+    extrema_type: min
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
+  lfm_max_expected_cycle_time:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
   lfm_max_expected_speaker_cycle_time:
     extrema_type: max
     tim_fields: [obj_tim.expected_speaker_cycle_time]
@@ -1271,6 +1379,10 @@ extrema:
     extrema_type: max
     tim_fields: [obj_tim.expected_amp_cycle_time]
     type: float
+  lfm_max_expected_cycles:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_cycles]
+    type: float
   lfm_max_expected_speaker_cycles:
     extrema_type: max
     tim_fields: [obj_tim.expected_speaker_cycles]
@@ -1278,6 +1390,18 @@ extrema:
   lfm_max_expected_amp_cycles:
     extrema_type: max
     tim_fields: [obj_tim.expected_amp_cycles]
+    type: float
+  lfm_max_expected_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_notes]
+    type: float
+  lfm_max_expected_speaker_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_speaker_notes]
+    type: float
+  lfm_max_expected_amp_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.expected_amp_notes]
     type: float
   lfm_max_total_intakes:
     extrema_type: max
@@ -1469,6 +1593,78 @@ medians:
     type: float
   lfm_median_nonzero_incap_time:
     tim_fields: [obj_tim.incap_time]
+    ignore: 0
+    type: float
+  median_nonzero_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    ignore: 0
+    type: float
+  median_nonzero_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
+    ignore: 0
+    type: float
+  median_nonzero_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    ignore: 0
+    type: float
+  median_nonzero_expected_cycles:
+    tim_fields: [obj_tim.expected_cycles]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_cycles:
+    tim_fields: [obj_tim.expected_cycles]
+    ignore: 0
+    type: float
+  median_nonzero_expected_speaker_cycles:
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_speaker_cycles:
+    tim_fields: [obj_tim.expected_speaker_cycles]
+    ignore: 0
+    type: float
+  median_nonzero_expected_amp_cycles:
+    tim_fields: [obj_tim.expected_amp_cycles]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_amp_cycles:
+    tim_fields: [obj_tim.expected_amp_cycles]
+    ignore: 0
+    type: float
+  median_nonzero_expected_notes:
+    tim_fields: [obj_tim.expected_notes]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_notes:
+    tim_fields: [obj_tim.expected_notes]
+    ignore: 0
+    type: float
+  median_nonzero_expected_speaker_notes:
+    tim_fields: [obj_tim.expected_speaker_notes]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_speaker_notes:
+    tim_fields: [obj_tim.expected_speaker_notes]
+    ignore: 0
+    type: float
+  median_nonzero_expected_amp_notes:
+    tim_fields: [obj_tim.expected_amp_notes]
+    ignore: 0
+    type: float
+  lfm_median_nonzero_expected_amp_notes:
+    tim_fields: [obj_tim.expected_amp_notes]
     ignore: 0
     type: float
 
