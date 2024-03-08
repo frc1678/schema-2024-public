@@ -129,7 +129,7 @@ collections:
   ss_team:
     schema: 'calc_ss_team.yml'
     indexes:
-      - fields: ['team_number']
+      - fields: ['team_number', 'username']
         unique: True
   ss_tim:
     schema: 'calc_ss_tim.yml' 
