@@ -299,62 +299,76 @@ timeline_cycle_time:
 # The calc field differentiates cycles from cycle times ("time" for cycle time, "num" for cycles)
 # The ignore_shot_out_of_auto field makes sure that the cycle calcs ignore a teleop shot straight out of auto (no intake)
 calculate_expected_fields:
-  expected_cycle_time:
-    type: float
-    calc: time
-    ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
-    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp]
-  expected_speaker_cycle_time:
-    type: float
-    calc: time
-    ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
-    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify]
-  expected_amp_cycle_time:
-    type: float
-    calc: time
-    ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
-    score_actions: [score_amp, score_fail_amp]
-  expected_cycles:
-    type: float
-    calc: num
-    ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
-    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp]
-  expected_speaker_cycles:
-    type: float
-    calc: num
-    ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
-    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify]
-  expected_amp_cycles:
-    type: float
-    calc: num
-    ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
-    score_actions: [score_amp, score_fail_amp]
-  # Does not include fails
-  # Does not include ferry or dropped pieces
-  expected_notes:
-    type: float
-    calc: num
-    ignore_shot_out_of_auto: False
-    include_ferry_and_drop: False
-    score_actions: [score_speaker, score_amplify, score_amp]
-  expected_speaker_notes:
-    type: float
-    calc: num
-    ignore_shot_out_of_auto: False
-    include_ferry_and_drop: False
-    score_actions: [score_speaker, score_amplify]
-  expected_amp_notes:
-    type: float
-    calc: num
-    ignore_shot_out_of_auto: False
-    include_ferry_and_drop: False
-    score_actions: [score_amp]
+  calcs:
+    expected_cycle_time:
+      type: float
+      calc: time
+      ignore_shot_out_of_auto: True
+      include_ferry_and_drop: True
+      score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp]
+    expected_speaker_cycle_time:
+      type: float
+      calc: time
+      ignore_shot_out_of_auto: True
+      include_ferry_and_drop: True
+      score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify]
+    expected_amp_cycle_time:
+      type: float
+      calc: time
+      ignore_shot_out_of_auto: True
+      include_ferry_and_drop: True
+      score_actions: [score_amp, score_fail_amp]
+    expected_cycles:
+      type: float
+      calc: num
+      ignore_shot_out_of_auto: True
+      include_ferry_and_drop: True
+      score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp]
+    expected_speaker_cycles:
+      type: float
+      calc: num
+      ignore_shot_out_of_auto: True
+      include_ferry_and_drop: True
+      score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify]
+    expected_amp_cycles:
+      type: float
+      calc: num
+      ignore_shot_out_of_auto: True
+      include_ferry_and_drop: True
+      score_actions: [score_amp, score_fail_amp]
+    # Does not include fails
+    # Does not include ferry or dropped pieces
+    expected_notes:
+      type: float
+      calc: num
+      ignore_shot_out_of_auto: False
+      include_ferry_and_drop: False
+      score_actions: [score_speaker, score_amplify, score_amp]
+    expected_speaker_notes:
+      type: float
+      calc: num
+      ignore_shot_out_of_auto: False
+      include_ferry_and_drop: False
+      score_actions: [score_speaker, score_amplify]
+    expected_amp_notes:
+      type: float
+      calc: num
+      ignore_shot_out_of_auto: False
+      include_ferry_and_drop: False
+      score_actions: [score_amp]
+  intake_weights:
+    intake_far:
+      normal: 1
+      ferry_drop: 0.75
+    intake_center:
+      normal: 0.5
+      ferry_drop: 0.375
+    intake_poach:
+      normal: 0.33
+      ferry_drop: 0.2475
+    intake_amp:
+      normal: 0.25
+      ferry_drop: 0.1875
 
 
 # Robot actions which are one out of a dict of possible actions
