@@ -90,6 +90,8 @@ data:
     type: bool
   harmonized:
     type: bool
+  climbed:
+    type: bool
 
 # Calculations built around counting timeline actions with certain key:value pairs
 timeline_counts:

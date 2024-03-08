@@ -155,7 +155,7 @@
 #     "position_three_starts": 6,
 #     "position_four_starts": 6,
 #     "preloaded_starts": 7,
-#     "matches_incap_time": 2,
+#     "matches_incap": 2,
 #     "matches_played": 6,
 #     "matches_harmonized": 4,
 #     "lfm_stage_attempts_left": 1,
@@ -181,7 +181,7 @@
 #     "lfm_position_three_starts": 9,
 #     "lfm_position_four_starts": 6,
 #     "lfm_preloaded_starts": 8,
-#     "lfm_matches_incap_time": 9,
+#     "lfm_matches_incap": 9,
 #     "lfm_matches_harmonized": 6,
 #     "climb_after_successes": 7,
 #     "lfm_climb_after_successes": 3,
@@ -931,7 +931,7 @@ counts:
     tim_fields:
       obj_tim.has_preload: True
     type: int
-  matches_incap_time:
+  matches_incap:
     tim_fields:
       not:
         obj_tim.incap_time: 0
@@ -1048,7 +1048,7 @@ counts:
     tim_fields:
       obj_tim.has_preload: True
     type: int
-  lfm_matches_incap_time:
+  lfm_matches_incap:
     tim_fields:
       not:
         obj_tim.incap_time: 0

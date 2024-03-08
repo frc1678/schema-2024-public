@@ -27,9 +27,9 @@ schema:
     type: str
   weaknesses: 
     type: str
-  cant_go_under_stage: 
+  can_go_under_stage: 
     type: bool 
-  intake_source_only:
+  can_intake_ground:
     type: bool
   shoot_specific_area_only:
     type: str
