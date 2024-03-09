@@ -242,6 +242,9 @@ point_calculations:
   total_points:
     type: int
     counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_speaker: 2, tele_amplified: 5}
+  points_per_note:
+    type: float
+    counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_speaker: 2, tele_amplified: 5, trap: 5}
 
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
@@ -413,3 +416,5 @@ fail_actions:
   score_amplify:
     name: score_fail_amplify
     type: str
+
+    
