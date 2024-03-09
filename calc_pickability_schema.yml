@@ -18,7 +18,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 2
+  version: 3
 
 data:
   team_number:
@@ -31,11 +31,11 @@ calculations:
     obj_team.auto_avg_speaker: 5
     obj_team.avg_expected_speaker_cycles: 3.4
     obj_team.avg_expected_amp_cycles: 3.4
-    obj_team.trap_successes: 5
-    obj_team.climb_after_successes: 3
+    obj_team.trap_percent_success: 5
+    obj_team.stage_percent_success: 3
   second_pickability:
     type: float
-    obj_team.climb_after_successes: 2
+    obj_team.stage_percent_success: 2
   # These are the old weights (not seen in viewer, but kept for comparison)
   test_second_pickability:
     type: float
@@ -47,11 +47,11 @@ calculations:
     obj_team.lfm_auto_avg_amp: 2
     obj_team.lfm_avg_expected_speaker_cycles: 3.4
     obj_team.lfm_avg_expected_amp_cycles: 3.4
-    obj_team.lfm_trap_successes: 5
-    obj_team.lfm_climb_after_successes: 3
+    obj_team.lfm_trap_percent_success: 5
+    obj_team.lfm_stage_percent_success: 3
   lfm_second_pickability:
     type: float
-    obj_team.lfm_climb_after_successes: 2
+    obj_team.lfm_stage_percent_success: 2
   lfm_test_second_pickability:
     type: float
     obj_team.lfm_avg_total_points: 1
