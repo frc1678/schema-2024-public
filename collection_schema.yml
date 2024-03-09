@@ -134,6 +134,6 @@ collections:
   ss_tim:
     schema: 'calc_ss_tim.yml' 
     indexes:
-      - fields: ['team_number', 'match_number']
+      - fields: ['team_number', 'match_number', 'username']
         unique: True
 

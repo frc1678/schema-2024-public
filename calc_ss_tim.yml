@@ -20,6 +20,8 @@ data:
     type: str
   match_number:
     type: int
+  username:
+    type: str
 
 schema: 
   played_defense:
