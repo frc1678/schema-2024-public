@@ -26,3 +26,18 @@ calculations:
   scout_precision:
     type: float
     requires: scout_in_match_precision.sim_precision
+  auto_speaker_precision:
+    type: float
+    requires: scout_in_match_precision.auto_speaker_precision
+  auto_amp_precision:
+    type: float
+    requires: scout_in_match_precision.auto_amp_precision
+  tele_amplified_precision:
+    type: float
+    requires: scout_in_match_precision.tele_amplified_precision
+  tele_speaker_precision:
+    type: float
+    requires: scout_in_match_precision.tele_speaker_precision
+  tele_amp_precision:
+    type: float
+    requires: scout_in_match_precision.tele_amp_precision
