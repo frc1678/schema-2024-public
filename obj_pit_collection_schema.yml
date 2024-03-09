@@ -32,6 +32,8 @@ schema:
     type: bool
   can_climb:
     type: bool
+  weight:
+    type: float
 
 # Stores Enum data
 enums:
