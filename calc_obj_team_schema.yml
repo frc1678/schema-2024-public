@@ -1093,6 +1093,21 @@ super_counts:
     type: int
     tim_fields: [subj_tim.did_ferry]
 
+# Objective counts collected by stand strategist
+ss_counts:
+  matches_played_defense:
+    type: int
+    tim_fields: [ss_tim.played_defense]
+  lfm_matches_played_defense:
+    type: int
+    tim_fields: [ss_tim.played_defense]
+  matches_coopertition:
+    type: int
+    tim_fields: [ss_tim.coopertition]
+  lfm_matches_coopertition:
+    type: int
+    tim_fields: [ss_tim.coopertition]
+
 # Maximum or minimum values in consolidated TIMs
 extrema:
   auto_max_speaker:
