@@ -238,7 +238,7 @@ point_calculations:
     counts: {tele_amp: 1, tele_speaker: 2, tele_amplified: 5}
   endgame_total_points:
     type: int
-    counts: {}
+    counts: {climbed: 3, trap: 5, parked: 1}
   total_points:
     type: int
     counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_speaker: 2, tele_amplified: 5}
