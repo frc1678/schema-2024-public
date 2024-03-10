@@ -1063,12 +1063,12 @@ special_counts:
   climb_after_successes: 
     tim_fields: 
       - subj_tim.climb_after: True 
-      - obj_tim.stage_level: 'O'
+      - obj_tim.climbed: True
     type: int
   lfm_climb_after_successes:
     tim_fields:
       - subj_tim.climb_after: True
-      - obj_tim.stage_level: 'O'
+      - obj_tim.climbed: True
     type: int
 
 
