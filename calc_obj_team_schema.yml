@@ -144,7 +144,7 @@
 #     "stage_successes_all": 2,
 #     "trap_attempts": 8,
 #     "trap_successes": 7,
-#     "parked": 4,
+#     "parks": 4,
 #     "stage_fails_all": 2,
 #     "stage_fails_left": 1,
 #     "stage_fails_right": 6,
@@ -170,7 +170,7 @@
 #     "lfm_trap_attempts": 6,
 #     "trap_fails": 2,
 #     "lfm_trap_fails": 6,
-#     "lfm_parked": 1,
+#     "lfm_parks": 1,
 #     "lfm_stage_fails_left": 5,
 #     "lfm_stage_fails_right": 7,
 #     "lfm_stage_fails_center": 7,
@@ -885,7 +885,7 @@ counts:
     tim_fields:
       obj_tim.trap: 'S'
     type: int
-  parked:
+  parks:
     tim_fields:
       obj_tim.parked: True
     type: int
@@ -1002,7 +1002,7 @@ counts:
     tim_fields:
       - obj_tim.trap: 'F'
     type: int
-  lfm_parked:
+  lfm_parks:
     tim_fields:
       obj_tim.parked: True
     type: int
@@ -1544,7 +1544,7 @@ success_rates:
     team_attempts: [trap_attempts]
     type: float
   parked_percent:
-    team_successes: [parked]
+    team_successes: [parks]
     team_attempts: [matches_played]
     type: float
   lfm_stage_percent_success_all:
@@ -1572,7 +1572,7 @@ success_rates:
     team_attempts: [lfm_trap_attempts]
     type: float
   lfm_parked_percent:
-    team_successes: [parked]
+    team_successes: [parks]
     team_attempts: [matches_played]
     type: float
   lfm_auto_amp_percent_success:
