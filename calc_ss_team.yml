@@ -17,7 +17,7 @@ schema_file:
 data:
   team_number:
     type: str
-  username:
+  username: 
     type: str
 
 schema: 
@@ -33,8 +33,13 @@ schema:
     type: bool
   shoot_specific_area_only:
     type: str
+  notes:
+    type: str
 
 averages:
   avg_defense_rating:
     type: float
     tim_fields: [ss_tim.defense_rating]
+    # Required is a field that must be true
+    required: [ss_tim.played_defense]
+    

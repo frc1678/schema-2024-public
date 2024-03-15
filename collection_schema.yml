@@ -126,14 +126,19 @@ collections:
   viewer_data:
     schema: null
     indexes: null
+  unconsolidated_ss_team:
+    schema: null
+    indexes:
+      - fields: ['team_number', 'username']
+        unique: True
   ss_team:
     schema: 'calc_ss_team.yml'
     indexes:
-      - fields: ['team_number', 'username']
+      - fields: ['team_number']
         unique: True
   ss_tim:
     schema: 'calc_ss_tim.yml' 
     indexes:
-      - fields: ['team_number', 'match_number', 'username']
+      - fields: ['team_number', 'match_number']
         unique: True
 
