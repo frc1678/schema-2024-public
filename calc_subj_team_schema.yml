@@ -40,6 +40,14 @@ averaged_calculations:
     type: float
     requires: [subj_team.driver_field_awareness, subj_team.driver_quickness]
     weights: [0.2, 0.8]
+  defensive_driver_ability:
+    type: float
+    requires: [subj_team.driver_field_awareness, subj_team.driver_quickness]
+    weights: [0.75, 0.25]
+  proxy_driver_ability:
+    type: float
+    requires: [subj_team.driver_field_awareness, subj_team.driver_quickness]
+    weights: [0.75, 0.25]
   test_driver_ability:
     type: float
     requires: [subj_team.driver_field_awareness, subj_team.driver_quickness]
