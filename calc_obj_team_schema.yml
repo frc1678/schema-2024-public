@@ -1074,24 +1074,12 @@ special_counts:
 
 # Objective counts collected by Super Scouts
 super_counts:
-  matches_tippy:
-    type: int
-    tim_fields: [subj_tim.was_tippy]
-  lfm_matches_tippy:
-    type: int
-    tim_fields: [subj_tim.was_tippy]
   matches_climb_after:
     type: int
     tim_fields: [subj_tim.climb_after]
   lfm_matches_climb_after:
     type: int
     tim_fields: [subj_tim.climb_after]
-  matches_did_ferry:
-    type: int
-    tim_fields: [subj_tim.did_ferry]
-  lfm_matches_did_ferry:
-    type: int
-    tim_fields: [subj_tim.did_ferry]
 
 # Objective counts collected by stand strategist
 ss_counts:
