@@ -54,34 +54,6 @@ calculations:
     subj_team.proxy_driver_ability: 0.75
     obj_team.stage_percent_success_all: 3
     obj_team.trap_percent_success: 5
-  # Accessory Speaker scoring bot formula: Auto = 5*% made + if(Source only=1,0,1)
-  # *Notes scored*3.4[PPN on our alliance] + Climb*3 + DriverAbilityWeightScoring*DriverAbility 
-  # (DriverAbility calculated as 80% Speed+20% Awareness)
-  accessory_speaker_bot_second_pickability:
-    type: float
-    obj_team.auto_speaker_percent_success: 5
-    obj_team.stage_percent_success_all: 3
-    subj_team.driver_ability: 0 # 0 is the DriverAbilityWeightScoring (currently at 0 for Sac)
-    obj_team.tele_avg_total_pieces: 3.4
-  # Defense bot formula: Auto = 5*% made + made Climb%*3 + 
-  # 10 Notes*3.4*(DriverAbility rescaled to extend from 0 to 4 to reflect Stand Strategist ratings) 
-  # (DriverAbility calculated as 25% Speed+75% Awareness). 
-  # The Defense rating assumes that a level 5 D can reduce Notes scored by 10, and 1 D has zero impact.
-  defense_bot_second_pickability:
-    type: float
-    obj_team.auto_speaker_percent_success: 5
-    obj_team.stage_percent_success_all: 3
-    subj_team.defensive_driver_ability: 1
-    obj_team.tele_avg_total_pieces: 3.4
-  # Ferrying bot formula: Accessory Speaker scoring bot formula: Auto = 5*% made + 
-  # if(Source only=1,0,1)*Expected Full Cycles*3.4[PPN on our alliance] + Climb*3 + DriverAbilityWeightFerrying*DriverAbility 
-  # (DriverAbility calculated as 80% Speed+20% Awareness)
-  ferrying_bot_second_pickability:
-    type: float
-    obj_team.auto_speaker_percent_success: 5
-    obj_team.stage_percent_success_all: 3
-    subj_team.driver_ability: 1
-    obj_team.avg_expected_cycles: 3.4
   # LFM pickabilities
   lfm_first_pickability:
     type: float
@@ -113,24 +85,6 @@ calculations:
     subj_team.proxy_driver_ability: 0.75
     obj_team.lfm_stage_percent_success_all: 3
     obj_team.lfm_trap_percent_success: 5
-  lfm_accessory_scoring_bot_second_pickability:
-    type: float
-    obj_team.lfm_auto_speaker_percent_success: 5
-    obj_team.lfm_stage_percent_success_all: 3
-    subj_team.driver_ability: 0 # 0 is the DriverAbilityWeightScoring (currently at 0 for Sac)
-    obj_team.lfm_tele_avg_total_pieces: 3.4
-  lfm_defense_bot_second_pickability:
-    type: float
-    obj_team.lfm_auto_speaker_percent_success: 5
-    obj_team.lfm_stage_percent_success_all: 3
-    subj_team.defensive_driver_ability: 1
-    obj_team.lfm_tele_avg_total_pieces: 3.4
-  lfm_ferrying_bot_second_pickability:
-    type: float
-    obj_team.lfm_auto_speaker_percent_success: 5
-    obj_team.lfm_stage_percent_success_all: 3
-    subj_team.driver_ability: 1
-    obj_team.lfm_avg_expected_cycles: 3.4
   # These are the old weights (not seen in viewer, but kept for comparison)
   test_second_pickability:
     type: float
