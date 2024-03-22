@@ -88,3 +88,4 @@ action_type:
   fail: AT
   to_teleop: AU
   to_endgame: AV
+  score_trap: AW
