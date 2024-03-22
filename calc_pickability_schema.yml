@@ -91,7 +91,7 @@ calculations:
     obj_team.lfm_avg_expected_speaker_cycles: 3.4
     obj_team.lfm_avg_expected_amp_cycles: 3.4
     obj_team.lfm_trap_percent_success: 5
-    obj_team.lfm_stage_percent_success: 3
+    obj_team.lfm_stage_percent_success_all: 3
   lfm_scoring_second_pickability:
     type: float
     obj_team.lfm_avg_expected_notes: 3.4
