@@ -155,22 +155,16 @@ subjective_aim:
     symbol: C
     type: int
     values: [1, 2, 3]
-  was_tippy: # True if robot was tippy during match, else False
+  time_left_to_climb: # The time left to climb, when a robot goes to climb
     gen: True
     is_random: False
     symbol: D
-    type: bool
-    values: False
+    type: int
+    values: [1,2,3]
   climb_after: # True if robot climbed after, else False
     gen: True
     is_random: False
     symbol: E
-    type: bool
-    values: True
-  did_ferry:
-    gen: True
-    is_random: False
-    symbol: F
     type: bool
     values: True
 
