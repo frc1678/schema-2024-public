@@ -191,6 +191,11 @@ timeline_counts:
     type: int
     action_type: drop
     in_teleop: true
+  trap:
+    type: int
+    action_type: score_trap
+    in_teleop: true
+
 
 
 
@@ -396,9 +401,6 @@ categorical_actions:
   start_position:
     list: ["0", "1", "2", "3", "4"]
     type: str
-  trap:
-    list: ["N", "F", "S"]
-    type: str
   has_preload:
     list: [True, False]
     type: bool
@@ -415,6 +417,9 @@ fail_actions:
     type: str
   score_amplify:
     name: score_fail_amplify
+    type: str
+  score_trap:
+    name: fail_trap
     type: str
 
     

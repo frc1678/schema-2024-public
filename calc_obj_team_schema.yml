@@ -442,6 +442,12 @@ averages:
   tele_avg_drop: 
     tim_fields: [obj_tim.tele_drop]
     type: float
+  tele_avg_trap:
+    tim_fields: [obj_tim.trap]
+    type: float
+  tele_avg_failed_trap:
+    tim_fields: [obj_tim.fail_trap]
+    type: float
   lfm_auto_avg_speaker:
     tim_fields: [obj_tim.auto_speaker]
     type: float
@@ -610,6 +616,12 @@ averages:
   lfm_avg_time_from_far_to_speaker:
     tim_fields: [obj_tim.time_from_far_to_speaker]
     type: float
+  lfm_avg_tele_trap:
+    tim_fields: [obj_tim.trap]
+    type: float
+  lfm_tele_avg_failed_trap:
+    tim_fields: [obj_tim.fail_trap]
+    type: float
 
 # Standard deviations of fields in consolidated TIMs
 # Used for predictions
@@ -637,6 +649,12 @@ standard_deviations:
     type: float
   auto_sd_total_points:
     tim_fields: [obj_tim.auto_total_points]
+    type: float
+  tele_sd_trap:
+    tim_fields: [obj_tim.trap]
+    type: float
+  tele_sd_failed_trap:
+    tim_fields: [obj_tim.fail_trap]
     type: float
   tele_sd_amp:
     tim_fields: [obj_tim.tele_amp]
@@ -833,6 +851,12 @@ standard_deviations:
   lfm_sd_incap_time:
     tim_fields: [obj_tim.incap_time]
     type: float
+  lfm_tele_sd_trap:
+    tim_fields: [obj_tim.trap]
+    type: float
+  lfm_tele_sd_failed_trap:
+    tim_fields: [obj_tim.fail_trap]
+    type: float
 
 # Counts of occurrences in consolidated TIMs
 counts:
@@ -875,15 +899,6 @@ counts:
       - obj_tim.stage_level_left: 'O'
       - obj_tim.stage_level_center: 'O'
       - obj_tim.stage_level_right: 'O'
-    type: int
-  trap_attempts:
-    tim_fields:
-      - obj_tim.trap: 'S'
-      - obj_tim.trap: 'F'
-    type: int
-  trap_successes:
-    tim_fields:
-      obj_tim.trap: 'S'
     type: int
   parks:
     tim_fields:
@@ -984,23 +999,6 @@ counts:
   lfm_stage_successes_right:
     tim_fields:
       obj_tim.stage_level_right: 'O'
-    type: int
-  lfm_trap_successes:
-    tim_fields:
-      obj_tim.trap: 'S'
-    type: int
-  lfm_trap_attempts:
-    tim_fields:
-      - obj_tim.trap: 'F'
-      - obj_tim.trap: 'S'
-    type: int
-  trap_fails:
-    tim_fields:
-      - obj_tim.trap: 'F'
-    type: int
-  lfm_trap_fails:
-    tim_fields:
-      - obj_tim.trap: 'F'
     type: int
   lfm_parks:
     tim_fields:
@@ -1182,6 +1180,10 @@ extrema:
     extrema_type: max
     tim_fields: [obj_tim.tele_intakes_far]
     type: int
+  tele_max_trap:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.trap]
   max_incap_time:
     extrema_type: max
     type: int
@@ -1430,6 +1432,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.endgame_total_points]
+  lfm_tele_max_trap:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.trap]
 
 # Most common values
 modes:
@@ -1471,14 +1477,6 @@ modes:
     type: List
   lfm_mode_stage_level_all:
     tim_fields: [obj_tim.stage_level_center, obj_tim.stage_level_right, obj_tim.stage_level_left]
-    ignore: 'N'
-    type: List
-  mode_trap_state:
-    tim_fields: [obj_tim.trap]
-    ignore: 'N'
-    type: List
-  lfm_mode_trap_state:
-    tim_fields: [obj_tim.trap]
     ignore: 'N'
     type: List
 
@@ -1527,13 +1525,13 @@ success_rates:
     team_successes: [stage_successes_right]
     team_attempts: [stage_attempts_right]
     type: float
-  trap_percent_success:
-    team_successes: [trap_successes]
-    team_attempts: [trap_attempts]
-    type: float
   parked_percent:
     team_successes: [parks]
     team_attempts: [matches_played]
+    type: float
+  tele_trap_percent_success:
+    team_successes: [tele_avg_trap]
+    team_attempts: [tele_avg_trap, tele_avg_fail_trap]
     type: float
   lfm_stage_percent_success_all:
     team_successes: [stage_successes_all]
@@ -1554,10 +1552,6 @@ success_rates:
   lfm_stage_percent_success_right:
     team_successes: [stage_successes_right]
     team_attempts: [stage_attempts_right]
-    type: float
-  lfm_trap_percent_success:
-    team_successes: [lfm_trap_successes]
-    team_attempts: [lfm_trap_attempts]
     type: float
   lfm_parked_percent:
     team_successes: [parks]
@@ -1586,6 +1580,10 @@ success_rates:
   lfm_total_speaker_percent_success:
     team_successes: [auto_avg_speaker, tele_avg_speaker, tele_avg_amplified]
     team_attempts: [auto_avg_speaker, auto_avg_failed_speaker, tele_avg_speaker, tele_avg_failed_speaker, tele_avg_amplified, tele_avg_failed_amplified]
+    type: float
+  lfm_tele_trap_percent_success:
+    team_successes: [lfm_tele_avg_trap]
+    team_attempts: [lfm_tele_avg_trap, lfm_tele_avg_fail_trap]
     type: float
 
 # Calculates all the medians
