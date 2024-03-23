@@ -39,7 +39,6 @@ objective_tim:
   stage_level_right: [T, str] # str representing if a robot is onstage on the source chain, failed to get on chain, or didn't attempt
   stage_level_center: [S, str] # str representing if a robot is onstage on the blind(farthest from alliance) chain, failed to get on chain, or didn't attempt
   parked: [R, bool] # bool representing if a robot parked
-  trap: [Q, str]
 
 # Timeline is part of objective match collection QR
 # Data for an action in the timeline
