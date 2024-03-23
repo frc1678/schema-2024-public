@@ -103,6 +103,10 @@ timeline_counts:
     type: int
     action_type: score_amp
     in_teleop: false
+  auto_ferry:
+    type: int
+    action_type: ferry
+    in_teleop: false
   tele_intakes_amp:
     type: int
     action_type: intake_amp
