@@ -10,56 +10,42 @@ schema_file:
   version: 2
 
 # TODO: change back to nested variables once validation is fixed
-tele_fields:
-  score:
-    vars: [tele_avg_amp, tele_avg_speaker, tele_avg_amplified]
-    type: float
-  cycle_time:
-    vars: [avg_expected_cycles]
-    type: float
+--tele_fields:
+  score: [tele_avg_amp, tele_avg_speaker, tele_avg_amplified]
+  cycle_time: [avg_expected_cycles, avg_expected_notes]
 
 # Fields used to calculate ensemble RP and endgame score
-endgame_fields:
-  onstage_rate: 
-    var: stage_percent_success_all
-    type: float
-  park_rate:
-    var: parked_percent
-    type: float
-  climb_after_rate: 
-    var: climb_after_percent_success
-    type: float
-  trap_rate: 
-    var: trap_percent_success
-    type: float
+--endgame_fields:
+  onstage_rate: stage_percent_success_all
+  park_rate: parked_percent
+  climb_after_rate: climb_after_percent_success
+  trap_rate: trap_percent_success
 
 # Fields used to calculate win chance
-win_chance:
+--win_chance:
   auto_avg_amp:
     sd: auto_sd_amp
-    value: 2
-    type: float
+    weight: 2
   auto_avg_speaker:
     sd: auto_sd_speaker
-    value: 5
-    type: float
+    weight: 5
   tele_avg_amp:
     sd: tele_sd_amp
-    value: 1
-    type: float
+    weight: 1
   tele_avg_speaker:
     sd: tele_sd_speaker
-    value: 2
-    type: float
+    weight: 2
   tele_avg_amplified:
     sd: tele_sd_amplified
-    value: 5
-    type: float
+    weight: 5
   endgame_avg_total_points:
-    sd: None
-    value: None
-    type: float
+    sd: endgame_sd_total_points
+    weight: 1
 
+--score_weights:
+  auto: [_auto_speaker, _auto_amp, _num_leave]
+  tele: [_tele_speaker_all, _tele_amp]
+  stage: [_num_onstage, _num_trap, _num_park]
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -82,29 +68,3 @@ data:
     type: float
   won_match:
     type: bool
-  # Predicted values at time of the actual match
-  final_predicted_score:
-    type: float
-    requires: [obj_team, tba_team]
-  final_predicted_rp1:
-    type: float
-    requires: [obj_team]
-  final_predicted_rp2:
-    type: float
-    requires: [obj_team]
-
-# Information on predicted values that will be performed
-predicted_values:
-  predicted_score:
-    type: float
-    requires: [obj_team, tba_team]
-  # TODO: find RPs when TBA updates
-  predicted_rp1:
-    type: float
-    requires: [obj_team]
-  predicted_rp2:
-    type: float
-    requires: [obj_team]
-  win_chance:
-    type: float
-    requires: [obj_team]
