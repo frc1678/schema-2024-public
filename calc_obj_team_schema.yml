@@ -1105,6 +1105,12 @@ ss_counts:
   lfm_matches_coopertition:
     type: int
     tim_fields: [ss_tim.coopertition]
+  matches_with_broken_mechanism:
+    type: int
+    tim_fields: [ss_tim.broken_mechanism]
+  lfm_matches_with_broken_mechanism:
+    type: int
+    tim_fields: [ss_tim.broken_mechanism]
 
 # Maximum or minimum values in consolidated TIMs
 extrema:
