@@ -331,7 +331,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 4
+  version: 5
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -972,6 +972,10 @@ counts:
     tim_fields:
       obj_tim.has_preload: True
     type: int
+  preload_successes:
+    tim_fields:
+      obj_tim.scored_preload: True
+    type: int
   matches_incap:
     tim_fields:
       not:
@@ -1071,6 +1075,10 @@ counts:
   lfm_preloaded_starts:
     tim_fields:
       obj_tim.has_preload: True
+    type: int
+  lfm_preload_successes:
+    tim_fields:
+      obj_tim.scored_preload: True
     type: int
   lfm_matches_incap:
     tim_fields:
@@ -1577,6 +1585,10 @@ success_rates:
     team_successes: [parks]
     team_attempts: [matches_played]
     type: float
+  auto_preload_percent_success:
+    team_successes: [preload_successes]
+    team_attempts: [preloaded_starts]
+    type: float
   trap_percent_success:
     team_successes: [tele_avg_trap]
     team_attempts: [tele_avg_trap, tele_avg_failed_trap]
@@ -1632,6 +1644,10 @@ success_rates:
   lfm_trap_percent_success:
     team_successes: [lfm_tele_avg_trap]
     team_attempts: [lfm_tele_avg_trap, lfm_tele_avg_failed_trap]
+    type: float
+  lfm_auto_preload_percent_success:
+    team_successes: [lfm_preload_successes]
+    team_attempts: [lfm_preloaded_starts]
     type: float
 
 # Calculates all the medians
