@@ -193,6 +193,14 @@ timeline_counts:
     type: int
     action_type: auto_intake_center_5
     in_teleop: false
+  auto_intake_other:
+    type: int
+    action_type: auto_intake_other
+    in_teleop: false
+  auto_ferry:
+    type: int
+    action_type: auto_ferry
+    in_teleop: false
   tele_drop: 
     type: int
     action_type: drop

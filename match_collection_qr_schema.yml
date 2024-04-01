@@ -77,14 +77,15 @@ action_type:
   auto_intake_center_3: AJ
   auto_intake_center_4: AK
   auto_intake_center_5: AL
-  intake_amp: AM
-  intake_poach: AN
-  intake_center: AO
-  intake_far: AP
-  score_amplify: AQ
-  drop: AR
-  ferry: AS
-  fail: AT
-  to_teleop: AU
-  to_endgame: AV
-  score_trap: AW
+  auto_intake_other: AM
+  intake_amp: AN
+  intake_poach: AO
+  intake_center: AP
+  intake_far: AQ
+  score_amplify: AR
+  drop: AS
+  ferry: AT
+  fail: AU
+  to_teleop: AV
+  to_endgame: AW
+  score_trap: AX
