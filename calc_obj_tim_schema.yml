@@ -197,10 +197,6 @@ timeline_counts:
     type: int
     action_type: auto_intake_other
     in_teleop: false
-  auto_ferry:
-    type: int
-    action_type: auto_ferry
-    in_teleop: false
   tele_drop: 
     type: int
     action_type: drop
@@ -235,7 +231,7 @@ aggregates:
     counts: [tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
   tele_total_pieces: 
     type: int
-    counts: [tele_amp, tele_speaker, tele_amplified, score_trap]
+    counts: [tele_amp, tele_speaker, tele_amplified, trap]
   tele_total_failed_pieces:
     type: int
     counts: [tele_failed_speaker, tele_failed_amp, fail_trap]
@@ -247,7 +243,7 @@ aggregates:
     counts: [auto_intake_spike_1, auto_intake_spike_2, auto_intake_spike_3, auto_intake_center_1, auto_intake_center_2, auto_intake_center_3, auto_intake_center_4, auto_intake_center_5, tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
   total_pieces: 
     type: int
-    counts: [auto_amp, auto_speaker, tele_amp, tele_speaker, tele_amplified, score_trap]
+    counts: [auto_amp, auto_speaker, tele_amp, tele_speaker, tele_amplified, trap]
 
 #Stores scoring actions and their point values
 #total_points does not include endgame for now
