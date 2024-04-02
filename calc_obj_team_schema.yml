@@ -396,6 +396,7 @@ averages:
     type: float
   tele_avg_total_speaker_notes:
     tim_fields: [obj_tim.tele_total_speaker_notes]
+    type: float
   tele_avg_total_failed_pieces:
     tim_fields: [obj_tim.tele_total_failed_pieces]
     type: float
