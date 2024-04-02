@@ -205,6 +205,10 @@ timeline_counts:
     type: int
     action_type: score_trap
     in_teleop: true
+  failed_trap:
+    type: int
+    action_type: fail_trap
+    in_teleop: true
 
 
 
@@ -234,7 +238,7 @@ aggregates:
     counts: [tele_amp, tele_speaker, tele_amplified, trap]
   tele_total_failed_pieces:
     type: int
-    counts: [tele_failed_speaker, tele_failed_amp, fail_trap]
+    counts: [tele_failed_speaker, tele_failed_amp, failed_trap]
   tele_total_speaker_notes:
     type: int
     counts: [tele_speaker, tele_amplified]

@@ -455,7 +455,7 @@ averages:
     tim_fields: [obj_tim.trap]
     type: float
   tele_avg_failed_trap:
-    tim_fields: [obj_tim.fail_trap]
+    tim_fields: [obj_tim.failed_trap]
     type: float
   lfm_auto_avg_speaker:
     tim_fields: [obj_tim.auto_speaker]
@@ -635,7 +635,7 @@ averages:
     tim_fields: [obj_tim.trap]
     type: float
   lfm_tele_avg_failed_trap:
-    tim_fields: [obj_tim.fail_trap]
+    tim_fields: [obj_tim.failed_trap]
     type: float
 
 # Standard deviations of fields in consolidated TIMs
@@ -672,7 +672,7 @@ standard_deviations:
     tim_fields: [obj_tim.trap]
     type: float
   tele_sd_failed_trap:
-    tim_fields: [obj_tim.fail_trap]
+    tim_fields: [obj_tim.failed_trap]
     type: float
   tele_sd_amp:
     tim_fields: [obj_tim.tele_amp]
@@ -882,7 +882,7 @@ standard_deviations:
     tim_fields: [obj_tim.trap]
     type: float
   lfm_tele_sd_failed_trap:
-    tim_fields: [obj_tim.fail_trap]
+    tim_fields: [obj_tim.failed_trap]
     type: float
 
 # Counts of occurrences in consolidated TIMs
