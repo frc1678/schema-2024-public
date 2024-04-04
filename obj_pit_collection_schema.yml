@@ -24,11 +24,11 @@ schema:
     type: str
   drivetrain:
     type: Enum[str]
-  has_auto_vision:
+  has_speaker_mech:
     type: bool
-  has_vision_assisted_shot:
+  has_amp_mech:
     type: bool
-  has_hp_indicator:
+  has_trap_mech:
     type: bool
   can_climb:
     type: bool
