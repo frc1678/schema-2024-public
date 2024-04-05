@@ -331,7 +331,7 @@ calculate_expected_fields:
     calc: time
     ignore_shot_out_of_auto: True
     include_ferry_and_drop: True
-    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp]
+    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp, score_trap, fail_trap]
   expected_speaker_cycle_time:
     type: float
     calc: time
@@ -349,7 +349,7 @@ calculate_expected_fields:
     calc: num
     ignore_shot_out_of_auto: True
     include_ferry_and_drop: True
-    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp]
+    score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp, score_trap, fail_trap]
   expected_speaker_cycles:
     type: float
     calc: num
@@ -369,7 +369,7 @@ calculate_expected_fields:
     calc: num
     ignore_shot_out_of_auto: False
     include_ferry_and_drop: False
-    score_actions: [score_speaker, score_amplify, score_amp]
+    score_actions: [score_speaker, score_amplify, score_amp, score_trap]
   expected_speaker_notes:
     type: float
     calc: num
@@ -390,16 +390,16 @@ intake_weights:
       ferry_drop: 0.75
       type: float
     intake_center:
+      normal: 0.75
+      ferry_drop: 0.5625
+      type: float
+    intake_poach:
       normal: 0.5
       ferry_drop: 0.375
       type: float
-    intake_poach:
+    intake_amp:
       normal: 0.33
       ferry_drop: 0.2475
-      type: float
-    intake_amp:
-      normal: 0.25
-      ferry_drop: 0.1875
       type: float
       
 

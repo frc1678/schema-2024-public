@@ -45,7 +45,7 @@ schema_file:
 --score_weights:
   auto: [_auto_speaker, _auto_amp, _num_leave]
   tele: [_tele_speaker_all, _tele_amp]
-  stage: [_num_onstage, _num_trap, _num_park]
+  endgame: [_num_onstage, _num_trap, _num_park]
 
 # Stores fields that will be added to database but do not require calculations
 data:
