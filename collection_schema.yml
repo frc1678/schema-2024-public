@@ -116,7 +116,7 @@ collections:
   auto_paths:
     schema: 'calc_auto_paths.yml'
     indexes:
-    - fields: ['team_number', 'start_position', 'path_number']
+    - fields: ['team_number', 'path_number']
       unique: True
   picklist:
     schema: null
