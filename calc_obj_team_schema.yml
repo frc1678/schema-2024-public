@@ -331,7 +331,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 5
+  version: 6
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -1089,6 +1089,27 @@ counts:
   lfm_matches_harmonized: 
     tim_fields: 
       obj_tim.harmonized: True 
+    type: int
+
+# Counts of occurrences in consolidated TIMs that can happen multiple times in a match
+multi_counts:
+  trap_successes:
+    tim_fields: [obj_tim.trap]
+    type: int
+  trap_fails:
+    tim_fields: [obj_tim.failed_trap]
+    type: int
+  trap_attempts:
+    tim_fields: [obj_tim.trap, obj_tim.failed_trap]
+    type: int
+  lfm_trap_successes:
+    tim_fields: [obj_tim.trap]
+    type: int
+  lfm_trap_fails:
+    tim_fields: [obj_tim.failed_trap]
+    type: int
+  lfm_trap_attempts:
+    tim_fields: [obj_tim.trap, obj_tim.failed_trap]
     type: int
 
 # Counts collected from Objective and Subjective Scouts 
