@@ -26,8 +26,6 @@ data:
 schema: 
   played_defense:
     type: bool
-  coopertition:
-    type: bool
   defense_rating:
     type: int
   notes:

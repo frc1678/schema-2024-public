@@ -1143,12 +1143,6 @@ ss_counts:
   lfm_matches_played_defense:
     type: int
     tim_fields: [ss_tim.played_defense]
-  matches_coopertition:
-    type: int
-    tim_fields: [ss_tim.coopertition]
-  lfm_matches_coopertition:
-    type: int
-    tim_fields: [ss_tim.coopertition]
   matches_with_broken_mechanism:
     type: int
     tim_fields: [ss_tim.broken_mechanism]
