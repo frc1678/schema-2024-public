@@ -43,7 +43,7 @@ tim_fields:
       "score_amp": "amp",
       "score_fail_speaker": "fail_speaker",
       "score_fail_amp": "fail_amp",
-      "auto_ferry": "ferry"
+      "ferry": "ferry"
     }
     max_count: 9
 
