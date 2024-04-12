@@ -34,7 +34,7 @@ data:
 calculations:
   predicted_rps:
     type: float
-    requires: [predicted_aim.predicted_score_constant, predicted_aim.predicted_rp1, predicted_aim.predicted_rp2, predicted_aim.actual_score, predicted_aim.actual_rp1, predicted_aim.actual_rp2, predicted_aim.has_actual_data]
+    requires: [predicted_aim.predicted_score_reg, predicted_aim.predicted_rp1, predicted_aim.predicted_rp2, predicted_aim.actual_score, predicted_aim.actual_rp1, predicted_aim.actual_rp2, predicted_aim.has_actual_data]
   predicted_rank:
     type: int
     requires: [predicted_team.predicted_rps]
