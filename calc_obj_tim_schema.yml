@@ -342,37 +342,37 @@ calculate_expected_fields:
     type: float
     calc: time
     ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
+    include_ferry: True
     score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp, score_trap, fail_trap]
   expected_speaker_cycle_time:
     type: float
     calc: time
     ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
+    include_ferry: True
     score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify]
   expected_amp_cycle_time:
     type: float
     calc: time
     ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
+    include_ferry: True
     score_actions: [score_amp, score_fail_amp]
   expected_cycles:
     type: float
     calc: num
     ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
+    include_ferry: True
     score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify, score_amp, score_fail_amp, score_trap, fail_trap]
   expected_speaker_cycles:
     type: float
     calc: num
     ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
+    include_ferry: True
     score_actions: [score_speaker, score_amplify, score_fail_speaker, score_fail_amplify]
   expected_amp_cycles:
     type: float
     calc: num
     ignore_shot_out_of_auto: True
-    include_ferry_and_drop: True
+    include_ferry: True
     score_actions: [score_amp, score_fail_amp]
   # Does not include fails
   # Does not include ferry or dropped pieces
@@ -380,19 +380,19 @@ calculate_expected_fields:
     type: float
     calc: num
     ignore_shot_out_of_auto: False
-    include_ferry_and_drop: False
+    include_ferry: False
     score_actions: [score_speaker, score_amplify, score_amp, score_trap]
   expected_speaker_notes:
     type: float
     calc: num
     ignore_shot_out_of_auto: False
-    include_ferry_and_drop: False
+    include_ferry: False
     score_actions: [score_speaker, score_amplify]
   expected_amp_notes:
     type: float
     calc: num
     ignore_shot_out_of_auto: False
-    include_ferry_and_drop: False
+    include_ferry: False
     score_actions: [score_amp]
 
 
