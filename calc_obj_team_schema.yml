@@ -339,6 +339,16 @@ data:
     type: str
   avg_time_left_to_climb:
     type: float
+  lfm_avg_time_left_to_climb:
+    type: float
+  sd_time_left_to_climb:
+    type: float
+  lfm_sd_time_left_to_climb:
+    type: float
+  max_time_left_to_climb:
+    type: int
+  lfm_max_time_left_to_climb:
+    type: int
 
 # Averages of fields in consolidated TIMs
 averages:
