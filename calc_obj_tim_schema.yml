@@ -76,7 +76,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 3
+  version: 4
 
 # Data that doesn't fit into other categorical calculations
 data:
@@ -109,6 +109,10 @@ timeline_counts:
     type: int
     action_type: ferry
     in_teleop: false
+  auto_ferry_failed:
+    type: int
+    action_type: fail_ferry
+    in_teleop: false
   tele_intakes_amp:
     type: int
     action_type: intake_amp
@@ -133,9 +137,17 @@ timeline_counts:
     type: int
     action_type: score_amplify
     in_teleop: true
-  tele_ferry:
+  tele_ferry_drive:
     type: int
-    action_type: ferry
+    action_type: ferry_drive
+    in_teleop: true
+  tele_ferry_shoot:
+    type: int
+    action_type: ferry_shoot
+    in_teleop: true
+  tele_ferry_shoot_failed:
+    type: int
+    action_type: fail_ferry_shoot
     in_teleop: true
   tele_failed_amp:
     type: int

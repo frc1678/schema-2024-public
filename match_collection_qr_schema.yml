@@ -89,3 +89,5 @@ action_type:
   to_teleop: AV
   to_endgame: AW
   score_trap: AX
+  ferry_shoot: AY
+  ferry_drive: AZ

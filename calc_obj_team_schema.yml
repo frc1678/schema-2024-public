@@ -331,7 +331,7 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 6
+  version: 7
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -348,6 +348,9 @@ averages:
     type: float
   auto_avg_ferry:
     tim_fields: [obj_tim.auto_ferry]
+    type: float
+  auto_avg_ferry_failed:
+    tim_fields: [obj_tim.auto_ferry_failed]
     type: float
   auto_avg_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
@@ -385,8 +388,14 @@ averages:
   tele_avg_intake_poach:
     tim_fields: [obj_tim.tele_intakes_poach]
     type: float
-  tele_avg_ferry:
-    tim_fields: [obj_tim.tele_ferry]
+  tele_avg_ferry_drive:
+    tim_fields: [obj_tim.tele_ferry_drive]
+    type: float
+  tele_avg_ferry_shoot:
+    tim_fields: [obj_tim.tele_ferry_shoot]
+    type: float
+  tele_avg_ferry_shoot_failed:
+    tim_fields: [obj_tim.tele_ferry_shoot_failed]
     type: float
   tele_avg_total_intakes:
     tim_fields: [obj_tim.tele_total_intakes]
@@ -472,6 +481,9 @@ averages:
   lfm_auto_avg_ferry:
     tim_fields: [obj_tim.auto_ferry]
     type: float
+  lfm_auto_avg_ferry_failed:
+    tim_fields: [obj_tim.auto_ferry_failed]
+    type: float
   lfm_auto_avg_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
     type: float
@@ -514,8 +526,14 @@ averages:
   lfm_avg_incap_time:
     tim_fields: [obj_tim.incap_time]
     type: float
-  lfm_tele_avg_ferry:
-    tim_fields: [obj_tim.tele_ferry]
+  lfm_tele_avg_ferry_drive:
+    tim_fields: [obj_tim.tele_ferry_drive]
+    type: float
+  lfm_tele_avg_ferry_shoot:
+    tim_fields: [obj_tim.tele_ferry_shoot]
+    type: float
+  lfm_tele_avg_ferry_shoot_failed:
+    tim_fields: [obj_tim.tele_ferry_shoot]
     type: float
   lfm_tele_avg_drop:
     tim_fields: [obj_tim.tele_drop]
@@ -656,6 +674,9 @@ standard_deviations:
   auto_sd_ferry:
     tim_fields: [obj_tim.auto_ferry]
     type: float
+  auto_sd_ferry_failed:
+    tim_fields: [obj_tim.auto_ferry_failed]
+    type: float
   auto_sd_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
     type: float
@@ -692,8 +713,14 @@ standard_deviations:
   tele_sd_intake_poach:
     tim_fields: [obj_tim.tele_intakes_poach]
     type: float
-  tele_sd_ferry:
-    tim_fields: [obj_tim.tele_ferry]
+  tele_sd_ferry_drive:
+    tim_fields: [obj_tim.tele_ferry_drive]
+    type: float
+  tele_sd_ferry_shoot:
+    tim_fields: [obj_tim.tele_ferry_shoot]
+    type: float
+  tele_sd_ferry_shoot_failed:
+    tim_fields: [obj_tim.tele_ferry_shoot_failed]
     type: float
   tele_sd_total_intakes:
     tim_fields: [obj_tim.tele_total_intakes]
@@ -797,14 +824,23 @@ standard_deviations:
   lfm_auto_sd_ferry: 
     tim_fields: [obj_tim.auto_ferry]
     type: float
+  lfm_auto_sd_ferry_failed:
+    tim_fields: [obj_tim.auto_ferry_failed]
+    type: float
   lfm_tele_sd_speaker: 
     tim_fields: [obj_tim.tele_speaker]
     type: float
   lfm_tele_sd_failed_speaker: 
     tim_fields: [obj_tim.tele_failed_speaker, obj_tim.tele_failed_amplified]
     type: float
-  lfm_tele_sd_ferry: 
-    tim_fields: [obj_tim.tele_ferry]
+  lfm_tele_sd_ferry_drive:
+    tim_fields: [obj_tim.tele_ferry_drive]
+    type: float
+  lfm_tele_sd_ferry_shoot:
+    tim_fields: [obj_tim.tele_ferry_shoot]
+    type: float
+  lfm_tele_sd_ferry_shoot_failed:
+    tim_fields: [obj_tim.tele_ferry_shoot_failed]
     type: float
   lfm_tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
@@ -1172,6 +1208,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_ferry]
+  auto_max_ferry_failed:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_ferry_failed]
   auto_max_total_intakes:
     extrema_type: max
     type: int
@@ -1196,10 +1236,18 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_amp]
-  tele_max_ferry:
+  tele_max_ferry_drive:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_ferry]
+    tim_fields: [obj_tim.tele_ferry_drive]
+  tele_max_ferry_shoot:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_ferry_shoot]
+  tele_max_ferry_shoot_failed:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_ferry_shoot_failed]
   tele_max_total_intakes:
     extrema_type: max
     type: int
@@ -1344,6 +1392,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_ferry]
+  lfm_auto_max_ferry_failed:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.auto_ferry_failed]
   auto_max_total_points: 
     extrema_type: max
     type: int
@@ -1404,10 +1456,18 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_intakes_far]  
-  lfm_tele_max_ferry:
+  lfm_tele_max_ferry_drive:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_ferry]
+    tim_fields: [obj_tim.tele_ferry_drive]
+  lfm_tele_max_ferry_shoot:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_ferry_shoot]
+  lfm_tele_max_ferry_shoot_failed:
+    extrema_type: max
+    type: int
+    tim_fields: [obj_tim.tele_ferry_shoot_failed]
   lfm_tele_max_drop:
     extrema_type: max
     type: int
