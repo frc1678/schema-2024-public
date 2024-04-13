@@ -370,8 +370,8 @@ averages:
   tele_avg_amp:
     tim_fields: [obj_tim.tele_amp]
     type: float
-  tele_avg_speaker:
-    tim_fields: [obj_tim.tele_speaker]
+  tele_avg_unamplified_speaker:
+    tim_fields: [obj_tim.tele_unamplified_speaker]
     type: float
   tele_avg_amplified:
     tim_fields: [obj_tim.tele_amplified]
@@ -496,8 +496,8 @@ averages:
   lfm_auto_avg_total_points:
     tim_fields: [obj_tim.auto_total_points]
     type: float
-  lfm_tele_avg_speaker:
-    tim_fields: [obj_tim.tele_speaker]
+  lfm_tele_avg_unamplified_speaker:
+    tim_fields: [obj_tim.tele_unamplified_speaker]
     type: float
   lfm_tele_avg_failed_speaker: 
     tim_fields: [obj_tim.tele_failed_speaker]
@@ -698,8 +698,8 @@ standard_deviations:
   tele_sd_amp:
     tim_fields: [obj_tim.tele_amp]
     type: float
-  tele_sd_speaker:
-    tim_fields: [obj_tim.tele_speaker]
+  tele_sd_unamplified_speaker:
+    tim_fields: [obj_tim.tele_unamplified_speaker]
     type: float
   tele_sd_amplified:
     tim_fields: [obj_tim.tele_amplified]
@@ -824,11 +824,10 @@ standard_deviations:
   lfm_auto_sd_ferry: 
     tim_fields: [obj_tim.auto_ferry]
     type: float
+  lfm_tele_sd_unamplified_speaker: 
+    tim_fields: [obj_tim.tele_unamplified_speaker]
   lfm_auto_sd_ferry_failed:
     tim_fields: [obj_tim.auto_ferry_failed]
-    type: float
-  lfm_tele_sd_speaker: 
-    tim_fields: [obj_tim.tele_speaker]
     type: float
   lfm_tele_sd_failed_speaker: 
     tim_fields: [obj_tim.tele_failed_speaker, obj_tim.tele_failed_amplified]
@@ -1224,10 +1223,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_failed_pieces]
-  tele_max_speaker:
+  tele_max_unamplified_speaker:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_speaker]
+    tim_fields: [obj_tim.tele_unamplified_speaker]
   tele_max_amplified:
     extrema_type: max
     type: int
@@ -1408,10 +1407,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_pieces]
-  lfm_tele_max_speaker:
+  lfm_tele_max_unamplified_speaker:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_speaker]
+    tim_fields: [obj_tim.tele_unamplified_speaker]
   lfm_tele_max_failed_speaker: 
     extrema_type: max
     type: int
@@ -1629,7 +1628,7 @@ success_rates:
     team_successes: [auto_avg_speaker]
     team_attempts: [auto_avg_speaker, auto_avg_failed_speaker]
     type: float
-  tele_speaker_percent_success:
+  tele_unamplified_speaker_percent_success:
     team_successes: [tele_avg_speaker, tele_avg_amplified]
     team_attempts: [tele_avg_speaker, tele_avg_failed_speaker, tele_avg_amplified, tele_avg_failed_amplified]
     type: float
@@ -1709,7 +1708,7 @@ success_rates:
     team_successes: [auto_avg_speaker]
     team_attempts: [auto_avg_speaker, auto_avg_failed_speaker]
     type: float
-  lfm_tele_speaker_percent_success:
+  lfm_tele_unamplified_speaker_percent_success:
     team_successes: [tele_avg_speaker, tele_avg_amplified]
     team_attempts: [tele_avg_speaker, tele_avg_failed_speaker, tele_avg_amplified, tele_avg_failed_amplified]
     type: float

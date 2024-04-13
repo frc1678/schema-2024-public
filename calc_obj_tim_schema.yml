@@ -14,7 +14,7 @@
 #     "tele_intakes_poach": 8,
 #     "tele_intakes_center": 1,
 #     "tele_intakes_far": 9,
-#     "tele_speaker": 4,
+#     "tele_unamplified_speaker": 4,
 #     "tele_amplified": 5,
 #     "tele_ferry": 6,
 #     "tele_failed_amp": 6,
@@ -129,7 +129,7 @@ timeline_counts:
     type: int
     action_type: intake_far
     in_teleop: true
-  tele_speaker:
+  tele_unamplified_speaker:
     type: int
     action_type: score_speaker
     in_teleop: true
@@ -247,19 +247,19 @@ aggregates:
     counts: [tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
   tele_total_pieces: 
     type: int
-    counts: [tele_amp, tele_speaker, tele_amplified, trap]
+    counts: [tele_amp, tele_unamplified_speaker, tele_amplified, trap]
   tele_total_failed_pieces:
     type: int
     counts: [tele_failed_speaker, tele_failed_amp, failed_trap]
   tele_total_speaker_notes:
     type: int
-    counts: [tele_speaker, tele_amplified]
+    counts: [tele_unamplified_speaker, tele_amplified]
   total_intakes: 
     type: int
     counts: [auto_intake_spike_1, auto_intake_spike_2, auto_intake_spike_3, auto_intake_center_1, auto_intake_center_2, auto_intake_center_3, auto_intake_center_4, auto_intake_center_5, tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
   total_pieces: 
     type: int
-    counts: [auto_amp, auto_speaker, tele_amp, tele_speaker, tele_amplified, trap]
+    counts: [auto_amp, auto_speaker, tele_amp, tele_unamplified_speaker, tele_amplified, trap]
 
 #Stores scoring actions and their point values
 #total_points does not include endgame for now
@@ -269,16 +269,16 @@ point_calculations:
    counts: {auto_amp: 2, auto_speaker: 5}
   tele_total_points:
     type: int
-    counts: {tele_amp: 1, tele_speaker: 2, tele_amplified: 5}
+    counts: {tele_amp: 1, tele_unamplified_speaker: 2, tele_amplified: 5}
   endgame_total_points:
     type: int
     counts: {climbed: 3, trap: 5, parked: 1}
   total_points:
     type: int
-    counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_speaker: 2, tele_amplified: 5}
+    counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_unamplified_speaker: 2, tele_amplified: 5}
   points_per_note:
     type: float
-    counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_speaker: 2, tele_amplified: 5, trap: 5}
+    counts: {auto_amp: 2, auto_speaker: 5, tele_amp: 1, tele_unamplified_speaker: 2, tele_amplified: 5, trap: 5}
 
 # Calculations built around measuring the time between two timeline actions.
 # First item in each list is the start item key:value pair requirements, second item is the end item.
