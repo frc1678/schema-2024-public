@@ -418,6 +418,9 @@ averages:
   tele_avg_total_speaker_notes:
     tim_fields: [obj_tim.tele_total_speaker_notes]
     type: float
+  tele_avg_total_failed_speaker_notes:
+    tim_fields: [obj_tim.tele_total_failed_speaker_notes]
+    type: float
   tele_avg_total_failed_pieces:
     tim_fields: [obj_tim.tele_total_failed_pieces]
     type: float
@@ -546,6 +549,9 @@ averages:
     type: float
   lfm_tele_avg_total_speaker_notes:
     tim_fields: [obj_tim.tele_total_speaker_notes]
+    type: float
+  lfm_tele_avg_total_failed_speaker_notes:
+    tim_fields: [obj_tim.tele_total_failed_speaker_notes]
     type: float
   lfm_tele_avg_total_pieces:
     tim_fields: [obj_tim.tele_total_pieces]
@@ -743,6 +749,9 @@ standard_deviations:
   tele_sd_total_speaker_notes:
     tim_fields: [obj_tim.tele_total_speaker_notes]
     type: float
+  tele_sd_total_failed_speaker_notes:
+    tim_fields: [obj_tim.tele_total_failed_speaker_notes]
+    type: float
   tele_sd_intake_amp:
     tim_fields: [obj_tim.tele_intakes_amp]
     type: float
@@ -818,6 +827,9 @@ standard_deviations:
   lfm_tele_sd_total_speaker_notes:
     tim_fields: [obj_tim.tele_total_speaker_notes]
     type: float
+  lfm_tele_sd_total_failed_speaker_notes:
+    tim_fields: [obj_tim.tele_total_failed_speaker_notes]
+    type: float
   lfm_tele_sd_total_failed_pieces:
     tim_fields: [obj_tim.tele_total_failed_pieces]
     type: float
@@ -841,6 +853,7 @@ standard_deviations:
     type: float
   lfm_tele_sd_unamplified_speaker: 
     tim_fields: [obj_tim.tele_unamplified_speaker]
+    type: float
   lfm_auto_sd_ferry_failed:
     tim_fields: [obj_tim.auto_ferry_failed]
     type: float
@@ -1270,6 +1283,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_speaker_notes]
+  tele_max_total_failed_speaker_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_total_failed_speaker_notes]
+    type: int
   tele_max_total_pieces:
     extrema_type: max
     type: int
@@ -1446,6 +1463,10 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.tele_total_speaker_notes]
+  lfm_tele_max_total_failed_speaker_notes:
+    extrema_type: max
+    tim_fields: [obj_tim.tele_total_failed_speaker_notes]
+    type: int
   lfm_tele_max_amplified:
     extrema_type: max
     type: int

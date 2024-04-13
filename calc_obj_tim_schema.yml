@@ -254,6 +254,9 @@ aggregates:
   tele_total_speaker_notes:
     type: int
     counts: [tele_unamplified_speaker, tele_amplified]
+  tele_total_failed_speaker_notes:
+    type: int
+    counts: [tele_failed_unamplified_speaker, tele_failed_amplified]
   total_intakes: 
     type: int
     counts: [auto_intake_spike_1, auto_intake_spike_2, auto_intake_spike_3, auto_intake_center_1, auto_intake_center_2, auto_intake_center_3, auto_intake_center_4, auto_intake_center_5, tele_intakes_amp, tele_intakes_poach, tele_intakes_center, tele_intakes_far]
