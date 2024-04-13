@@ -41,6 +41,9 @@ calculations:
   tele_amp_precision:
     type: float
     requires: scout_in_match_precision.tele_amp_precision
+  trap_precision:
+    type: float
+    requires: scout_in_match_precision.trap_precision
 
 ranks:
   scout_precision_rank:

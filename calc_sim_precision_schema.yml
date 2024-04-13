@@ -70,3 +70,8 @@ calculations:
     requires:
       unconsolidated_totals.tele_amp: 1
     tba_datapoints: [teleopAmpNotePoints]
+  trap_precision:
+    type: float
+    requires:
+      unconsolidated_totals.trap: 5
+    tba_datapoints: [endGameNoteInTrapPoints]
