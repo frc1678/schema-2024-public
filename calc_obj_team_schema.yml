@@ -331,12 +331,14 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 7
+  version: 8
 
 # Stores fields that will be added to database but do not require calculations
 data:
   team_number:
     type: str
+  avg_time_left_to_climb:
+    type: float
 
 # Averages of fields in consolidated TIMs
 averages:
@@ -423,15 +425,6 @@ averages:
     type: float 
   avg_total_intakes:
     tim_fields: [obj_tim.total_intakes]
-    type: float
-  avg_expected_cycle_time:
-    tim_fields: [obj_tim.expected_cycle_time]
-    type: float
-  avg_expected_speaker_cycle_time:
-    tim_fields: [obj_tim.expected_speaker_cycle_time]
-    type: float
-  avg_expected_amp_cycle_time:
-    tim_fields: [obj_tim.expected_amp_cycle_time]
     type: float
   avg_expected_cycles:
     tim_fields: [obj_tim.expected_cycles]
@@ -574,15 +567,6 @@ averages:
   lfm_tele_avg_total_points:
     tim_fields: [obj_tim.tele_total_points]
     type: float
-  lfm_avg_expected_cycle_time:
-    tim_fields: [obj_tim.expected_cycle_time]
-    type: float
-  lfm_avg_expected_speaker_cycle_time:
-    tim_fields: [obj_tim.expected_speaker_cycle_time]
-    type: float
-  lfm_avg_expected_amp_cycle_time:
-    tim_fields: [obj_tim.expected_amp_cycle_time]
-    type: float
   lfm_avg_expected_cycles:
     tim_fields: [obj_tim.expected_cycles]
     type: float
@@ -654,6 +638,27 @@ averages:
     type: float
   lfm_tele_avg_failed_trap:
     tim_fields: [obj_tim.failed_trap]
+    type: float
+
+# Averages of expected_cycle_time fields
+average_expected_cycle_times:
+  avg_expected_cycle_time:
+    team_cycles: avg_expected_cycles
+    type: float
+  avg_expected_speaker_cycle_time:
+    team_cycles: avg_expected_speaker_cycles
+    type: float
+  avg_expected_amp_cycle_time:
+    team_cycles: avg_expected_amp_cycles
+    type: float
+  lfm_avg_expected_cycle_time:
+    team_cycles: lfm_avg_expected_cycles
+    type: float
+  lfm_avg_expected_speaker_cycle_time:
+    team_cycles: lfm_avg_expected_speaker_cycles
+    type: float
+  lfm_avg_expected_amp_cycle_time:
+    team_cycles: lfm_avg_expected_amp_cycles
     type: float
 
 # Standard deviations of fields in consolidated TIMs
