@@ -407,7 +407,7 @@ averages:
     tim_fields: [obj_tim.tele_ferry_shoot]
     type: float
   tele_avg_failed_ferry_shoot:
-    tim_fields: [obj_tim.tele_ferry_shoot_failed]
+    tim_fields: [obj_tim.tele_failed_ferry_shoot]
     type: float
   tele_avg_total_intakes:
     tim_fields: [obj_tim.tele_total_intakes]
@@ -431,7 +431,7 @@ averages:
     tim_fields: [obj_tim.tele_failed_amp]
     type: float 
   tele_avg_failed_unamplified_speaker:
-    tim_fields: [obj_tim.tele_failed_speaker]
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker]
     type: float
   avg_incap_time:
     tim_fields: [obj_tim.incap_time]
@@ -506,7 +506,7 @@ averages:
     tim_fields: [obj_tim.tele_unamplified_speaker]
     type: float
   lfm_tele_avg_failed_unamplified_speaker: 
-    tim_fields: [obj_tim.tele_failed_speaker]
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker]
     type: float
   lfm_tele_avg_failed_amp:
     tim_fields: [obj_tims.tele_failed_amp]
@@ -741,7 +741,7 @@ standard_deviations:
     tim_fields: [obj_tim.tele_ferry_shoot]
     type: float
   tele_sd_failed_ferry_shoot:
-    tim_fields: [obj_tim.tele_ferry_shoot_failed]
+    tim_fields: [obj_tim.tele_failed_ferry_shoot]
     type: float
   tele_sd_total_intakes:
     tim_fields: [obj_tim.tele_total_intakes]
@@ -768,9 +768,9 @@ standard_deviations:
     tim_fields: [obj_tim.tele_failed_amplified]
     type: float
   tele_sd_failed_speaker:
-    tim_fields: [obj_tim.tele_failed_speaker, obj_tim.tele_failed_amplified]
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker, obj_tim.tele_failed_amplified]
     type: float
-  tele_sd_drop: 
+  tele_sd_drop:
     tim_fields: [obj_tim.tele_drop]
     type: float
   tele_sd_total_points:
@@ -858,7 +858,7 @@ standard_deviations:
     tim_fields: [obj_tim.auto_ferry_failed]
     type: float
   lfm_tele_sd_failed_speaker: 
-    tim_fields: [obj_tim.tele_failed_speaker, obj_tim.tele_failed_amplified]
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker, obj_tim.tele_failed_amplified]
     type: float
   lfm_tele_sd_ferry_drive:
     tim_fields: [obj_tim.tele_ferry_drive]
@@ -867,7 +867,7 @@ standard_deviations:
     tim_fields: [obj_tim.tele_ferry_shoot]
     type: float
   lfm_tele_sd_failed_ferry_shoot:
-    tim_fields: [obj_tim.tele_ferry_shoot_failed]
+    tim_fields: [obj_tim.tele_failed_ferry_shoot]
     type: float
   lfm_tele_sd_drop: 
     tim_fields: [obj_tim.tele_drop]
@@ -1257,6 +1257,7 @@ extrema:
   tele_max_failed_unamplified_speaker:
     extrema_type: max
     type: int
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker]
   tele_max_unamplified_speaker:
     extrema_type: max
     type: int
@@ -1280,7 +1281,7 @@ extrema:
   tele_max_failed_ferry_shoot:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_ferry_shoot_failed]
+    tim_fields: [obj_tim.tele_failed_ferry_shoot]
   tele_max_total_intakes:
     extrema_type: max
     type: int
@@ -1312,7 +1313,7 @@ extrema:
   tele_max_failed_speaker:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_failed_speaker]
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker]
   tele_max_intake_amp:
     extrema_type: max
     type: int
@@ -1448,6 +1449,7 @@ extrema:
   lfm_tele_max_failed_unamplified_speaker:
     extrema_type: max
     type: int
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker]
   lfm_tele_max_unamplified_speaker:
     extrema_type: max
     type: int
@@ -1455,7 +1457,7 @@ extrema:
   lfm_tele_max_failed_speaker: 
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_failed_speaker]
+    tim_fields: [obj_tim.tele_failed_unamplified_speaker]
   lfm_tele_max_failed_amp:
     extrema_type: max
     type: int
@@ -1511,7 +1513,7 @@ extrema:
   lfm_tele_max_failed_ferry_shoot:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.tele_ferry_shoot_failed]
+    tim_fields: [obj_tim.tele_failed_ferry_shoot]
   lfm_tele_max_drop:
     extrema_type: max
     type: int
@@ -1662,12 +1664,12 @@ success_rates:
     team_attempts: [auto_avg_amp, auto_avg_failed_amp]
     type: float
   auto_ferry_percent_success:
-    team_successes: [auto_ferry]
-    team_attempts: [auto_ferry, auto_ferry_failed]
+    team_successes: [auto_avg_ferry]
+    team_attempts: [auto_avg_ferry, auto_avg_failed_ferry]
     type: float
   tele_ferry_shoot_percent_success:
-    team_successes: [tele_ferry_shoot]
-    team_attempts: [tele_ferry_shoot, tele_ferry_shoot_failed]    
+    team_successes: [tele_avg_ferry_shoot]
+    team_attempts: [tele_avg_ferry_shoot, tele_avg_failed_ferry_shoot]    
     type: float
   tele_amp_percent_success:
     team_successes: [tele_avg_amp]
@@ -1730,16 +1732,16 @@ success_rates:
     team_attempts: [tele_avg_trap, tele_avg_failed_trap]
     type: float
   lfm_auto_ferry_percent_success:
-    team_successes: [auto_ferry]
-    team_attempts: [auto_ferry, auto_ferry_failed]
+    team_successes: [auto_avg_ferry]
+    team_attempts: [auto_avg_ferry, auto_avg_failed_ferry]
     type: float
   lfm_tele_amplified_percent_success:
-    team_successes: [tele_amplified]
-    team_attempts: [tele_amplified, tele_failed_amplified]    
+    team_successes: [tele_avg_amplified]
+    team_attempts: [tele_avg_amplified, tele_avg_failed_amplified]    
     type: float
   lfm_tele_ferry_shoot_percent_success:
-    team_successes: [tele_ferry_shoot]
-    team_attempts: [tele_ferry_shoot, tele_ferry_shoot_failed]    
+    team_successes: [tele_avg_ferry_shoot]
+    team_attempts: [tele_avg_ferry_shoot, tele_avg_failed_ferry_shoot]
     type: float
   lfm_stage_percent_success_all:
     team_successes: [stage_successes_all]

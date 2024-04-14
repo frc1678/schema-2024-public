@@ -18,7 +18,7 @@
 #     "tele_amplified": 5,
 #     "tele_ferry": 6,
 #     "tele_failed_amp": 6,
-#     "tele_failed_speaker": 7,
+#     "tele_failed_unamplified_speaker": 7,
 #     "tele_failed_amplified": 4,
 #     "auto_failed_amp": 1,
 #     "auto_failed_speaker": 1,
@@ -145,7 +145,7 @@ timeline_counts:
     type: int
     action_type: ferry_shoot
     in_teleop: true
-  tele_ferry_shoot_failed:
+  tele_failed_ferry_shoot:
     type: int
     action_type: fail_ferry_shoot
     in_teleop: true
@@ -153,7 +153,7 @@ timeline_counts:
     type: int
     action_type: score_fail_amp
     in_teleop: true
-  tele_failed_speaker:
+  tele_failed_unamplified_speaker:
     type: int
     action_type: score_fail_speaker
     in_teleop: true
@@ -262,7 +262,7 @@ pre_consolidated_aggregates:
     counts: [tele_amp, tele_unamplified_speaker, tele_amplified, trap]
   tele_total_failed_pieces:
     type: int
-    counts: [tele_failed_speaker, tele_failed_amp, failed_trap]
+    counts: [tele_failed_unamplified_speaker, tele_failed_amp, failed_trap]
   total_pieces: 
     type: int
     counts: [auto_amp, auto_speaker, tele_amp, tele_unamplified_speaker, tele_amplified, trap]
