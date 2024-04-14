@@ -109,7 +109,7 @@ timeline_counts:
     type: int
     action_type: ferry
     in_teleop: false
-  auto_ferry_failed:
+  auto_failed_ferry:
     type: int
     action_type: fail_ferry
     in_teleop: false

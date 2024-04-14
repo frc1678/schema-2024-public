@@ -362,7 +362,7 @@ averages:
     tim_fields: [obj_tim.auto_ferry]
     type: float
   auto_avg_failed_ferry:
-    tim_fields: [obj_tim.auto_ferry_failed]
+    tim_fields: [obj_tim.auto_failed_ferry]
     type: float
   auto_avg_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
@@ -488,7 +488,7 @@ averages:
     tim_fields: [obj_tim.auto_ferry]
     type: float
   lfm_auto_avg_failed_ferry:
-    tim_fields: [obj_tim.auto_ferry_failed]
+    tim_fields: [obj_tim.auto_failed_ferry]
     type: float
   lfm_auto_avg_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
@@ -696,7 +696,7 @@ standard_deviations:
     tim_fields: [obj_tim.auto_ferry]
     type: float
   auto_sd_failed_ferry:
-    tim_fields: [obj_tim.auto_ferry_failed]
+    tim_fields: [obj_tim.auto_failed_ferry]
     type: float
   auto_sd_total_intakes:
     tim_fields: [obj_tim.auto_total_intakes]
@@ -855,7 +855,7 @@ standard_deviations:
     tim_fields: [obj_tim.tele_unamplified_speaker]
     type: float
   lfm_auto_sd_failed_ferry:
-    tim_fields: [obj_tim.auto_ferry_failed]
+    tim_fields: [obj_tim.auto_failed_ferry]
     type: float
   lfm_tele_sd_failed_speaker: 
     tim_fields: [obj_tim.tele_failed_unamplified_speaker, obj_tim.tele_failed_amplified]
@@ -1241,7 +1241,7 @@ extrema:
   auto_max_failed_ferry:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_ferry_failed]
+    tim_fields: [obj_tim.auto_failed_ferry]
   auto_max_total_intakes:
     extrema_type: max
     type: int
@@ -1433,7 +1433,7 @@ extrema:
   lfm_auto_max_failed_ferry:
     extrema_type: max
     type: int
-    tim_fields: [obj_tim.auto_ferry_failed]
+    tim_fields: [obj_tim.auto_failed_ferry]
   auto_max_total_points: 
     extrema_type: max
     type: int
