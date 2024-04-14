@@ -264,6 +264,12 @@ aggregates:
     type: int
     counts: [auto_amp, auto_speaker, tele_amp, tele_unamplified_speaker, tele_amplified, trap]
 
+# Aggregates that are calculated before consolidation
+pre_consolidated_aggregates:
+  tele_total_speaker_notes:
+    type: int
+    counts: [tele_speaker, tele_amplified]
+
 #Stores scoring actions and their point values
 #total_points does not include endgame for now
 point_calculations:
