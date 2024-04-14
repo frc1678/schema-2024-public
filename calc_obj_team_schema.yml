@@ -947,6 +947,9 @@ standard_deviations:
   lfm_tele_sd_failed_trap:
     tim_fields: [obj_tim.failed_trap]
     type: float
+  tele_sd_failed_unamplified_speaker:
+    tim_fields: [obj_tim.tele_failed_amplified]
+    type: float
 
 # Counts of occurrences in consolidated TIMs
 counts:
@@ -1251,6 +1254,9 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_failed_pieces]
+  tele_max_failed_unamplified_speaker:
+    extrema_type: max
+    type: int
   tele_max_unamplified_speaker:
     extrema_type: max
     type: int
@@ -1439,6 +1445,9 @@ extrema:
     extrema_type: max
     type: int
     tim_fields: [obj_tim.auto_total_pieces]
+  lfm_tele_max_failed_unamplified_speaker:
+    extrema_type: max
+    type: int
   lfm_tele_max_unamplified_speaker:
     extrema_type: max
     type: int
@@ -1652,6 +1661,14 @@ success_rates:
     team_successes: [auto_avg_amp]
     team_attempts: [auto_avg_amp, auto_avg_failed_amp]
     type: float
+  auto_ferry_percent_success:
+    team_successes: [auto_ferry]
+    team_attempts: [auto_ferry, auto_ferry_failed]
+    type: float
+  tele_ferry_shoot_percent_success:
+    team_successes: [tele_ferry_shoot]
+    team_attempts: [tele_ferry_shoot, tele_ferry_shoot_failed]    
+    type: float
   tele_amp_percent_success:
     team_successes: [tele_avg_amp]
     team_attempts: [tele_avg_amp, tele_avg_failed_amp]
@@ -1711,6 +1728,18 @@ success_rates:
   trap_percent_success:
     team_successes: [tele_avg_trap]
     team_attempts: [tele_avg_trap, tele_avg_failed_trap]
+    type: float
+  lfm_auto_ferry_percent_success:
+    team_successes: [auto_ferry]
+    team_attempts: [auto_ferry, auto_ferry_failed]
+    type: float
+  lfm_tele_amplified_percent_success:
+    team_successes: [tele_amplified]
+    team_attempts: [tele_amplified, tele_failed_amplified]    
+    type: float
+  lfm_tele_ferry_shoot_percent_success:
+    team_successes: [tele_ferry_shoot]
+    team_attempts: [tele_ferry_shoot, tele_ferry_shoot_failed]    
     type: float
   lfm_stage_percent_success_all:
     team_successes: [stage_successes_all]
