@@ -853,6 +853,7 @@ standard_deviations:
     type: float
   lfm_tele_sd_unamplified_speaker: 
     tim_fields: [obj_tim.tele_unamplified_speaker]
+    type: float
   lfm_auto_sd_failed_ferry:
     tim_fields: [obj_tim.auto_ferry_failed]
     type: float
