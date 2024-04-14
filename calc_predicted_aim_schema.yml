@@ -46,7 +46,7 @@ schema_file:
   _total_gamepieces:
     how: sum
     collection: obj_team
-    from: [auto_avg_amp, auto_avg_speaker, tele_avg_speaker, tele_avg_amplified]
+    from: [auto_avg_amp, auto_avg_speaker, tele_avg_unamplified_speaker, tele_avg_amplified]
     is_joined: False
   _num_park:
     how: normal
