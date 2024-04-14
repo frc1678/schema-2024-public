@@ -456,5 +456,11 @@ fail_actions:
   score_trap:
     name: fail_trap
     type: str
+  ferry:
+    name: fail_ferry
+    type: str
+  ferry_shoot:
+    name: fail_ferry_shoot
+    type: str
 
     
