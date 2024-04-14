@@ -448,6 +448,15 @@ averages:
   avg_expected_amp_cycles:
     tim_fields: [obj_tim.expected_amp_cycles]
     type: float
+  avg_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
+  avg_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
+    type: float
+  avg_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
   avg_expected_notes:
     tim_fields: [obj_tim.expected_notes]
     type: float
@@ -592,6 +601,15 @@ averages:
   lfm_avg_expected_amp_cycles:
     tim_fields: [obj_tim.expected_amp_cycles]
     type: float
+  lfm_avg_expected_cycle_time:
+    tim_fields: [obj_tim.expected_cycle_time]
+    type: float
+  lfm_avg_expected_speaker_cycle_time:
+    tim_fields: [obj_tim.expected_speaker_cycle_time]
+    type: float
+  lfm_avg_expected_amp_cycle_time:
+    tim_fields: [obj_tim.expected_amp_cycle_time]
+    type: float
   lfm_avg_expected_notes:
     tim_fields: [obj_tim.expected_notes]
     type: float
@@ -654,27 +672,6 @@ averages:
     type: float
   lfm_tele_avg_failed_trap:
     tim_fields: [obj_tim.failed_trap]
-    type: float
-
-# Averages of expected_cycle_time fields
-average_expected_cycle_times:
-  avg_expected_cycle_time:
-    team_cycles: avg_expected_cycles
-    type: float
-  avg_expected_speaker_cycle_time:
-    team_cycles: avg_expected_speaker_cycles
-    type: float
-  avg_expected_amp_cycle_time:
-    team_cycles: avg_expected_amp_cycles
-    type: float
-  lfm_avg_expected_cycle_time:
-    team_cycles: lfm_avg_expected_cycles
-    type: float
-  lfm_avg_expected_speaker_cycle_time:
-    team_cycles: lfm_avg_expected_speaker_cycles
-    type: float
-  lfm_avg_expected_amp_cycle_time:
-    team_cycles: lfm_avg_expected_amp_cycles
     type: float
 
 # Standard deviations of fields in consolidated TIMs
