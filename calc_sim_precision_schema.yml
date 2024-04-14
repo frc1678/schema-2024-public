@@ -65,6 +65,11 @@ calculations:
     requires:
       unconsolidated_totals.tele_unamplified_speaker: 2
     tba_datapoints: [teleopSpeakerNotePoints]
+  tele_total_speaker_precision:
+    type: float
+    requires: 
+      unconsolidated_totals.tele_total_speaker_notes: 1
+    tba_datapoints: [teleopSpeakerNoteCount, teleopSpeakerNoteAmplifiedCount]
   tele_amp_precision:
     type: float
     requires:
