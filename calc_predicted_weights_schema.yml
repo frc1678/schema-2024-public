@@ -1,0 +1,104 @@
+## Schema for TBA AIM data pulling and regressions
+
+--match_values:
+  _auto_amp:
+    how: normal
+    from: autoAmpNoteCount
+    is_joined: False
+  _auto_speaker:
+    how: normal
+    from: autoSpeakerNoteCount
+    is_joined: False
+  _num_leave:
+    how: rate
+    from: [autoLeavePoints, 2]
+    is_joined: False
+  _tele_amp:
+    how: normal
+    from: teleopAmpNoteCount
+    is_joined: False
+  _tele_speaker_all:
+    how: sum
+    from: [teleopSpeakerNoteCount, teleopSpeakerNoteAmplifiedCount]
+    is_joined: False
+  _total_gamepieces:
+    how: sum
+    from: [autoAmpNoteCount, autoSpeakerNoteCount, teleopSpeakerNoteCount, teleopSpeakerNoteAmplifiedCount]
+    is_joined: False
+  _num_park:
+    how: normal
+    from: endGameParkPoints
+    is_joined: False
+  _num_onstage:
+    how: rate
+    from: [endGameOnStagePoints, 3]
+    is_joined: False
+  _num_trap:
+    how: rate
+    from: [endGameNoteInTrapPoints, 5]
+    is_joined: False
+  _rel_score_diff:
+    how: rate
+    from: [_actual_score_no_foul_red, _actual_score_no_foul_blue]
+    is_joined: True
+  actual_score:
+    how: normal
+    from: totalPoints
+    is_joined: False
+  _actual_score_no_foul:
+    how: diff
+    from: [totalPoints, foulPoints]
+    is_joined: False
+  actual_score_auto:
+    how: normal
+    from: autoPoints
+    is_joined: False
+  actual_score_tele:
+    how: diff
+    from: [teleopPoints, endGameTotalStagePoints]
+    is_joined: False
+  actual_score_endgame:
+    how: normal
+    from: endGameTotalStagePoints
+    is_joined: False
+  actual_foul_points: 
+    how: normal
+    from: foulPoints
+    is_joined: False
+  # RPs
+  actual_rp1: # Melody
+    how: threshold
+    from: [autoAmpNoteCount, autoSpeakerNoteCount, teleopAmpNoteCount, teleopSpeakerNoteCount, teleopSpeakerNoteAmplifiedCount, 21]
+    is_joined: False
+  actual_rp2: # Ensemble
+    how: bool
+    from: ensembleBonusAchieved
+    values: [0, 1]
+    is_joined: False
+  # Misc
+  cooperated:
+    how: normal
+    from: coopertitionBonusAchieved
+    is_joined: False
+
+--regressions:
+  score:
+    dep: _actual_score_no_foul
+    indep: [_auto_speaker, _auto_amp, _num_leave, _tele_speaker_all, _tele_amp, _num_onstage, _num_trap, _num_park]
+    model_type: linear
+    is_joined: False
+  rp1:
+    dep: actual_rp1
+    indep: [_total_gamepieces]
+    model_type: logistic
+    is_joined: False
+  rp2:
+    dep: actual_rp2
+    indep: [_num_onstage, _num_trap, _num_park]
+    model_type: logistic
+    is_joined: False
+  win_chance:
+    dep: won_match
+    indep: [_rel_score_diff]
+    model_type: logistic
+    is_joined: True

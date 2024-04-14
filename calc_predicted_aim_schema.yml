@@ -43,6 +43,11 @@ schema_file:
     collection: obj_team
     from: [tele_avg_unamplified_speaker, tele_avg_amplified]
     is_joined: False
+  _total_gamepieces:
+    how: sum
+    collection: obj_team
+    from: [auto_avg_amp, auto_avg_speaker, tele_avg_speaker, tele_avg_amplified]
+    is_joined: False
   _num_park:
     how: normal
     collection: obj_team
@@ -61,7 +66,7 @@ schema_file:
   _rel_score_diff:
     how: rate
     collection: None
-    from: [predicted_score_red, predicted_score_blue]
+    from: [_predicted_score_red, _predicted_score_blue]
     is_joined: True
   
 ## Variables whose actual values we want to get from TBA.
@@ -101,29 +106,6 @@ schema_file:
   cooperated: 
     how: normal
     from: coopertitionBonusAchieved
-
-# Variables to calculate predictions
---regressions:
-  score:
-    dep: actual_score_no_foul
-    indep: [_auto_speaker, _auto_amp, _num_leave, _tele_speaker_all, _tele_amp, _num_onstage, _num_trap, _num_park]
-    model_type: linear
-    is_joined: False
-  rp1:
-    dep: actual_rp1
-    indep: [_auto_speaker, _auto_amp, _tele_speaker_all, _tele_amp]
-    model_type: logistic
-    is_joined: False
-  rp2:
-    dep: actual_rp2
-    indep: [_num_onstage, _num_trap, _num_park]
-    model_type: logistic
-    is_joined: False
-  win_chance:
-    dep: won_match
-    indep: [_rel_score_diff]
-    model_type: logistic
-    is_joined: True
 
 # Stores fields that will be added to database but do not require calculations
 data:
