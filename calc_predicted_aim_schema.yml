@@ -7,105 +7,52 @@
 schema_file:
   # Version of schema file
   # Incremented every merged schema change
-  version: 1 # Was reset after complete overhaul 2024-04-07
+  version: 2
 
-## Team averages
-# "type" encodes the way we get the variable: "normal" means we directly pull the variable,
-# "sum" means we add other variables together to get the variable, "diff" means we subtract two
-# other variables to get the variable, and  "rate" means we divide two other variables to get the variable. 
-# "collection" refers to the database collection to pull the variables from (only obj_team and tba_team in 2024).
-# "from" refers to the variable(s) to pull.
-# "is_joined" refers to whether or not the variable is calculated on the joined (full match) expected values.
-# NOTE: joined variables are calculated from the RED alliance's perspective.
---expected_values:
-  _auto_amp:
-    how: normal
-    collection: obj_team
-    from: auto_avg_amp
-    is_joined: False
-  _auto_speaker:
-    how: normal
-    collection: obj_team
-    from: auto_avg_speaker
-    is_joined: False
-  _num_leave:
-    how: rate
-    collection: tba_team
-    from: [leave_successes, matches_played]
-    is_joined: False
-  _tele_amp:
-    how: normal
-    collection: obj_team
-    from: tele_avg_amp
-    is_joined: False
-  _tele_speaker_all:
-    how: sum
-    collection: obj_team
-    from: [tele_avg_unamplified_speaker, tele_avg_amplified]
-    is_joined: False
-  _total_gamepieces:
-    how: sum
-    collection: obj_team
-    from: [auto_avg_amp, auto_avg_speaker, tele_avg_unamplified_speaker, tele_avg_amplified]
-    is_joined: False
-  _num_park:
-    how: normal
-    collection: obj_team
-    from: parked_percent # TODO: this will be changed to "parked_rate" in obj_team sometime, we will need to change it here as well.
-    is_joined: False
-  _num_onstage:
-    how: normal
-    collection: obj_team
-    from: stage_percent_success_all # TODO: this will be changed to "stage_success_rate_all" in obj_team sometime, we will need to change it here as well.
-    is_joined: False
-  _num_trap:
-    how: normal
-    collection: obj_team
-    from: trap_percent_success # TODO: this will be changed to "trap_success_rate" in obj_team sometime, we will need to change it here as well.
-    is_joined: False
-  _rel_score_diff:
-    how: rate
-    collection: None
-    from: [_predicted_score_red, _predicted_score_blue]
-    is_joined: True
-  
-## Variables whose actual values we want to get from TBA.
-# `won_match` is excluded since it remains constant every year and requires some more logic.
-# "normal" means we directly pull, "sum" means we add together, "diff" means we subtract, and "bool"
-# means we take the value at index 0 if false and index 1 if true.
---actual_values:
-  # Scores
-  actual_score: 
-    how: normal
-    from: totalPoints
-  actual_score_no_foul:
-    how: diff
-    from: [totalPoints, foulPoints]
-  actual_score_auto:
-    how: normal
-    from: autoPoints
-  actual_score_tele:
-    how: diff
-    from: [teleopPoints, endGameTotalStagePoints]
-  actual_score_endgame:
-    how: normal
-    from: endGameTotalStagePoints
-  actual_foul_points: 
-    how: normal
-    from: foulPoints
-  # RPs
-  actual_rp1: # Melody
-    how: bool
-    from: melodyBonusAchieved
-    values: [0, 1]
-  actual_rp2: # Ensemble
-    how: bool
-    from: ensembleBonusAchieved
-    values: [0, 1]
-  # Misc
-  cooperated: 
-    how: normal
-    from: coopertitionBonusAchieved
+# TODO: change back to nested variables once validation is fixed
+--tele_fields:
+  score:
+    vars: [tele_avg_amp, tele_avg_unamplified_speaker, tele_avg_amplified]
+    type: float
+  cycle_time:
+    vars: [avg_expected_notes]
+    type: float
+
+# Fields used to calculate ensemble RP and endgame score
+--endgame_fields:
+  onstage_rate: 
+    var: stage_percent_success_all
+    type: float
+  park_rate:
+    var: parked_percent
+    type: float
+  climb_after_rate: 
+    var: climb_after_percent_success
+    type: float
+  trap_rate: 
+    var: trap_percent_success
+    type: float
+
+# Fields used to calculate win chance
+--win_chance:
+  auto_avg_amp:
+    sd: auto_sd_amp
+    weight: 2
+  auto_avg_speaker:
+    sd: auto_sd_speaker
+    weight: 5
+  tele_avg_amp:
+    sd: tele_sd_amp
+    weight: 1
+  tele_avg_unamplified_speaker:
+    sd: tele_sd_unamplified_speaker
+    weight: 2
+  tele_avg_amplified:
+    sd: tele_sd_amplified
+    weight: 5
+  endgame_avg_total_points:
+    sd: endgame_sd_total_points
+    weight: 1
 
 # Stores fields that will be added to database but do not require calculations
 data:
@@ -115,5 +62,42 @@ data:
     type: List 
   alliance_color_is_red:
     type: bool
-  event_key:
-    type: str
+  # Whether or not actual TBA data has been pulled to replace the predicted data
+  has_actual_data:
+    type: bool
+  actual_score:
+    type: int
+  # Charge RP
+  actual_rp1:
+    type: float
+  # Link RP
+  actual_rp2:
+    type: float
+  won_match:
+    type: bool
+  # Predicted values at time of the actual match
+  final_predicted_score:
+    type: float
+    requires: [obj_team, tba_team]
+  final_predicted_rp1:
+    type: float
+    requires: [obj_team]
+  final_predicted_rp2:
+    type: float
+    requires: [obj_team]
+
+# Information on predicted values that will be performed
+predicted_values:
+  predicted_score:
+    type: float
+    requires: [obj_team, tba_team]
+  # TODO: find RPs when TBA updates
+  predicted_rp1:
+    type: float
+    requires: [obj_team]
+  predicted_rp2:
+    type: float
+    requires: [obj_team]
+  win_chance:
+    type: float
+    requires: [obj_team]
