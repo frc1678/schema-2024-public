@@ -402,19 +402,19 @@ calculate_expected_fields:
 intake_weights:
     intake_far:
       normal: 1
-      ferry_drop: 0.75
+      ferry: 0.75
       type: float
     intake_center:
       normal: 0.75
-      ferry_drop: 0.5625
+      ferry: 0.5625
       type: float
     intake_poach:
       normal: 0.5
-      ferry_drop: 0.375
+      ferry: 0.375
       type: float
     intake_amp:
       normal: 0.33
-      ferry_drop: 0.2475
+      ferry: 0.2475
       type: float
       
 

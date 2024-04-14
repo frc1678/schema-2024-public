@@ -1773,27 +1773,27 @@ medians:
     type: float
   median_nonzero_expected_cycle_time:
     tim_fields: [obj_tim.expected_cycle_time]
-    ignore: 0
+    ignore: 135
     type: float
   lfm_median_nonzero_expected_cycle_time:
     tim_fields: [obj_tim.expected_cycle_time]
-    ignore: 0
+    ignore: 135
     type: float
   median_nonzero_expected_speaker_cycle_time:
     tim_fields: [obj_tim.expected_speaker_cycle_time]
-    ignore: 0
+    ignore: 135
     type: float
   lfm_median_nonzero_expected_speaker_cycle_time:
     tim_fields: [obj_tim.expected_speaker_cycle_time]
-    ignore: 0
+    ignore: 135
     type: float
   median_nonzero_expected_amp_cycle_time:
     tim_fields: [obj_tim.expected_amp_cycle_time]
-    ignore: 0
+    ignore: 135
     type: float
   lfm_median_nonzero_expected_amp_cycle_time:
     tim_fields: [obj_tim.expected_amp_cycle_time]
-    ignore: 0
+    ignore: 135
     type: float
   median_nonzero_expected_cycles:
     tim_fields: [obj_tim.expected_cycles]
