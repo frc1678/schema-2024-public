@@ -764,9 +764,6 @@ standard_deviations:
   tele_sd_failed_amplified:
     tim_fields: [obj_tim.tele_failed_amplified]
     type: float
-  tele_sd_failed_speaker:
-    tim_fields: [obj_tim.tele_failed_unamplified_speaker, obj_tim.tele_failed_amplified]
-    type: float
   tele_sd_drop:
     tim_fields: [obj_tim.tele_drop]
     type: float
@@ -853,9 +850,6 @@ standard_deviations:
     type: float
   lfm_auto_sd_failed_ferry:
     tim_fields: [obj_tim.auto_failed_ferry]
-    type: float
-  lfm_tele_sd_failed_speaker: 
-    tim_fields: [obj_tim.tele_failed_unamplified_speaker, obj_tim.tele_failed_amplified]
     type: float
   lfm_tele_sd_ferry_drive:
     tim_fields: [obj_tim.tele_ferry_drive]
